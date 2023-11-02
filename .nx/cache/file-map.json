@@ -1,0 +1,107 @@
+{
+  "version": "6.0",
+  "nxVersion": "17.0.2",
+  "deps": {
+    "nx": "^17.0.2"
+  },
+  "pathMappings": {},
+  "nxJsonPlugins": [],
+  "fileMap": {
+    "projectFileMap": {
+      "cloudbite-ui": [
+        {
+          "file": "apps/cloudbite-ui/.eslintrc.json",
+          "hash": "10616060546436571437"
+        },
+        {
+          "file": "apps/cloudbite-ui/app/favicon.ico",
+          "hash": "9157999678830540297"
+        },
+        {
+          "file": "apps/cloudbite-ui/app/globals.css",
+          "hash": "15329929398110739341"
+        },
+        {
+          "file": "apps/cloudbite-ui/app/layout.tsx",
+          "hash": "12602682569488516909"
+        },
+        {
+          "file": "apps/cloudbite-ui/app/page.tsx",
+          "hash": "2836343666376469033"
+        },
+        {
+          "file": "apps/cloudbite-ui/next.config.js",
+          "hash": "14594058484359092244"
+        },
+        {
+          "file": "apps/cloudbite-ui/package.json",
+          "hash": "9673959511206167697",
+          "deps": [
+            "npm:react",
+            "npm:react-dom",
+            "npm:next",
+            "npm:typescript",
+            "npm:@types/node",
+            "npm:@types/react",
+            "npm:@types/react-dom",
+            "npm:autoprefixer",
+            "npm:postcss",
+            "npm:tailwindcss",
+            "npm:eslint",
+            "npm:eslint-config-next"
+          ]
+        },
+        {
+          "file": "apps/cloudbite-ui/postcss.config.js",
+          "hash": "1579725330904862112"
+        },
+        {
+          "file": "apps/cloudbite-ui/public/next.svg",
+          "hash": "8300767200008744458"
+        },
+        {
+          "file": "apps/cloudbite-ui/public/vercel.svg",
+          "hash": "2376673330454856631"
+        },
+        {
+          "file": "apps/cloudbite-ui/tailwind.config.ts",
+          "hash": "8021277806032496745"
+        },
+        {
+          "file": "apps/cloudbite-ui/tsconfig.json",
+          "hash": "13566095390403677056"
+        }
+      ]
+    },
+    "nonProjectFiles": [
+      {
+        "file": ".nx/cache/file-map.json",
+        "hash": "7400270322936348255"
+      },
+      {
+        "file": ".nx/cache/lockfile.hash",
+        "hash": "3697254596230522506"
+      },
+      {
+        "file": ".nx/cache/parsed-lock-file.json",
+        "hash": "5708837477671845722"
+      },
+      {
+        "file": ".nx/cache/project-graph.json",
+        "hash": "2873605836507652355"
+      },
+      {
+        "file": "package.json",
+        "hash": "15267077954264166868"
+      },
+      {
+        "file": "pnpm-lock.yaml",
+        "hash": "10303577404718238697"
+      },
+      {
+        "file": "pnpm-workspace.yaml",
+        "hash": "14689568310383457353"
+      }
+    ]
+  }
+}
