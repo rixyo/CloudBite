@@ -8,10 +8,136 @@
   "nxJsonPlugins": [],
   "fileMap": {
     "projectFileMap": {
+      "admin-deshboard": [
+        {
+          "file": "apps/admin-deshboard/.npmrc",
+          "hash": "16306061729883149313"
+        },
+        {
+          "file": "apps/admin-deshboard/README.md",
+          "hash": "4698455699917367128"
+        },
+        {
+          "file": "apps/admin-deshboard/package.json",
+          "hash": "2403681157962215034",
+          "deps": [
+            "npm:tslib",
+            "npm:typescript"
+          ]
+        },
+        {
+          "file": "apps/admin-deshboard/src/app.d.ts",
+          "hash": "16562497431412516793"
+        },
+        {
+          "file": "apps/admin-deshboard/src/app.html",
+          "hash": "5424204588206306853"
+        },
+        {
+          "file": "apps/admin-deshboard/src/lib/images/github.svg",
+          "hash": "13787482120730406276"
+        },
+        {
+          "file": "apps/admin-deshboard/src/lib/images/svelte-logo.svg",
+          "hash": "50607055863844636"
+        },
+        {
+          "file": "apps/admin-deshboard/src/lib/images/svelte-welcome.png",
+          "hash": "6822672916961572373"
+        },
+        {
+          "file": "apps/admin-deshboard/src/lib/images/svelte-welcome.webp",
+          "hash": "13869206264489747508"
+        },
+        {
+          "file": "apps/admin-deshboard/src/routes/+layout.svelte",
+          "hash": "12931536233518173843"
+        },
+        {
+          "file": "apps/admin-deshboard/src/routes/+page.svelte",
+          "hash": "422099954338210215"
+        },
+        {
+          "file": "apps/admin-deshboard/src/routes/+page.ts",
+          "hash": "14652161136502518409"
+        },
+        {
+          "file": "apps/admin-deshboard/src/routes/Counter.svelte",
+          "hash": "14306128295230377954"
+        },
+        {
+          "file": "apps/admin-deshboard/src/routes/Header.svelte",
+          "hash": "4813508233276348033"
+        },
+        {
+          "file": "apps/admin-deshboard/src/routes/about/+page.svelte",
+          "hash": "6308177958949180646"
+        },
+        {
+          "file": "apps/admin-deshboard/src/routes/about/+page.ts",
+          "hash": "15015075006330636340"
+        },
+        {
+          "file": "apps/admin-deshboard/src/routes/styles.css",
+          "hash": "17151588166810062473"
+        },
+        {
+          "file": "apps/admin-deshboard/src/routes/sverdle/+page.server.ts",
+          "hash": "6465730322999779943"
+        },
+        {
+          "file": "apps/admin-deshboard/src/routes/sverdle/+page.svelte",
+          "hash": "15204950900237787567"
+        },
+        {
+          "file": "apps/admin-deshboard/src/routes/sverdle/game.ts",
+          "hash": "1821188256998946061"
+        },
+        {
+          "file": "apps/admin-deshboard/src/routes/sverdle/how-to-play/+page.svelte",
+          "hash": "15809750105546441065"
+        },
+        {
+          "file": "apps/admin-deshboard/src/routes/sverdle/how-to-play/+page.ts",
+          "hash": "15015075006330636340"
+        },
+        {
+          "file": "apps/admin-deshboard/src/routes/sverdle/reduced-motion.ts",
+          "hash": "15395234801780387763"
+        },
+        {
+          "file": "apps/admin-deshboard/src/routes/sverdle/words.server.ts",
+          "hash": "5397874253920099445"
+        },
+        {
+          "file": "apps/admin-deshboard/static/favicon.png",
+          "hash": "11504680974745960892"
+        },
+        {
+          "file": "apps/admin-deshboard/static/robots.txt",
+          "hash": "2790380794362165217"
+        },
+        {
+          "file": "apps/admin-deshboard/svelte.config.js",
+          "hash": "16642884738902743595"
+        },
+        {
+          "file": "apps/admin-deshboard/tsconfig.json",
+          "hash": "7370341274632808282"
+        },
+        {
+          "file": "apps/admin-deshboard/vite.config.ts",
+          "hash": "5384789963550844849"
+        }
+      ],
       "cloudbite-ui": [
         {
           "file": "apps/cloudbite-ui/.eslintrc.json",
           "hash": "10616060546436571437"
+        },
+        {
+          "file": "apps/cloudbite-ui/README.md",
+          "hash": "12205685531602560652"
         },
         {
           "file": "apps/cloudbite-ui/app/favicon.ico",
@@ -19,15 +145,15 @@
         },
         {
           "file": "apps/cloudbite-ui/app/globals.css",
-          "hash": "15329929398110739341"
+          "hash": "8997952570524310529"
         },
         {
           "file": "apps/cloudbite-ui/app/layout.tsx",
-          "hash": "12602682569488516909"
+          "hash": "1015384366686536191"
         },
         {
           "file": "apps/cloudbite-ui/app/page.tsx",
-          "hash": "2836343666376469033"
+          "hash": "3336082234392174966"
         },
         {
           "file": "apps/cloudbite-ui/next.config.js",
@@ -56,14 +182,6 @@
           "hash": "1579725330904862112"
         },
         {
-          "file": "apps/cloudbite-ui/public/next.svg",
-          "hash": "8300767200008744458"
-        },
-        {
-          "file": "apps/cloudbite-ui/public/vercel.svg",
-          "hash": "2376673330454856631"
-        },
-        {
           "file": "apps/cloudbite-ui/tailwind.config.ts",
           "hash": "8021277806032496745"
         },
@@ -76,7 +194,7 @@
     "nonProjectFiles": [
       {
         "file": ".nx/cache/file-map.json",
-        "hash": "7400270322936348255"
+        "hash": "17254582717002643216"
       },
       {
         "file": ".nx/cache/lockfile.hash",
@@ -88,7 +206,15 @@
       },
       {
         "file": ".nx/cache/project-graph.json",
-        "hash": "2873605836507652355"
+        "hash": "1365414237871902655"
+      },
+      {
+        "file": ".nx/cache/run.json",
+        "hash": "6572390270926412729"
+      },
+      {
+        "file": ".nx/cache/terminalOutputs/4070330892455209188",
+        "hash": "12358985241678765940"
       },
       {
         "file": "package.json",
@@ -96,7 +222,7 @@
       },
       {
         "file": "pnpm-lock.yaml",
-        "hash": "10303577404718238697"
+        "hash": "7818176402742621715"
       },
       {
         "file": "pnpm-workspace.yaml",
