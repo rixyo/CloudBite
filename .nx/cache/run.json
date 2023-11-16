@@ -1,8 +1,8 @@
 {
   "run": {
     "command": "nx dev admin-deshboard",
-    "startTime": "2023-11-02T19:26:02.536Z",
-    "endTime": "2023-11-02T19:26:02.936Z",
+    "startTime": "2023-11-02T19:28:17.924Z",
+    "endTime": "2023-11-02T20:44:04.363Z",
     "inner": false
   },
   "tasks": [
@@ -10,9 +10,9 @@
       "taskId": "admin-deshboard:dev",
       "target": "dev",
       "projectName": "admin-deshboard",
-      "hash": "4070330892455209188",
-      "startTime": "2023-11-02T19:26:02.540Z",
-      "endTime": "2023-11-02T19:26:02.936Z",
+      "hash": "4329737914100833380",
+      "startTime": "2023-11-02T19:28:17.930Z",
+      "endTime": "2023-11-02T20:44:04.362Z",
       "params": "",
       "cacheStatus": "cache-miss",
       "status": 1

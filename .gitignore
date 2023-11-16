@@ -3,3 +3,7 @@ dist
 buils
 .env
 .gitignore
+.nx
+.nx/cache
+.nxignore
+.husky

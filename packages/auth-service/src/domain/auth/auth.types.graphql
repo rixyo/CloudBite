@@ -1,0 +1,14 @@
+type Query {
+  login(loginUserInput: LoginUserInput!): LoginResult!
+  refreshToken: String!
+}
+
+type LoginResult {
+  user: User!
+  token: String!
+}
+
+input LoginUserInput {
+  email: String
+  password: String!
+}
