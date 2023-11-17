@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
 import './globals.css'
+import TopNavigation from '@/components/navbar/top-navigation'
 
-const inter = Inter({ subsets: ['latin'] })
+
 
 export const metadata: Metadata = {
   title: 'CloudBite: A Cloud-Native Food Delivery Experience​',
@@ -16,7 +16,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body>
+        <div className=' bg-gray-200 p-3  w-full'>
+
+        <TopNavigation/>
+        </div>
+        {children}
+      </body>
     </html>
   )
 }

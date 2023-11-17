@@ -4,7 +4,6 @@ import {
   HttpStatus,
   HttpException,
   UnauthorizedException,
-  MiddlewareConsumer,
 } from '@nestjs/common';
 import { IntrospectAndCompose } from '@apollo/gateway';
 import { ApolloGatewayDriver, ApolloGatewayDriverConfig } from '@nestjs/apollo';

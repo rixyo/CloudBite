@@ -3,9 +3,7 @@ services:
   postgres-auth:
     image: postgres:latest
     restart: unless-stopped
-  postgres-home-manager:
+  postgres-resturant:
     image: postgres:latest
     restart: unless-stopped
-  postgres-booking-manager:
-    image: postgres:latest
-    restart: unless-stopped
+ 

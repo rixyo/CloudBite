@@ -1,10 +1,19 @@
+import LandingPage from "@/components/landingpages/landing-page-desktop";
+import OtherLandingPage from "@/components/landingpages/other-landing-page";
 
 export default function Home() {
   return (
     <main className="">
-     <h1>
-      Checking is everything is working
-     </h1>
+     
+
+      {/* desktop view */}
+     <div className="hidden lg:block md:p-5">
+      <LandingPage/>
+     </div>
+     {/* mobile/tab view */}
+     <div className="block lg:hidden">
+      <OtherLandingPage/>
+      </div>
     </main>
   )
 }
