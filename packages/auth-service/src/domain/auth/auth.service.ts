@@ -61,8 +61,8 @@ export class AuthService {
     }
     const data: JwtPayload = {
       userId: user.id,
-      username: user.username,
       permissions: user.permissions,
+      email: user.email,
       expiration,
     };
 
@@ -81,7 +81,7 @@ export class AuthService {
     payload: JwtPayload,
   ): Promise<UserEntity | undefined> {
     // This will be used when the user has already logged in and has a JWT
-    const user = await this.usersService.findOneByUsername(payload.username);
+    const user = await this.usersService.findOneByEmail(payload.email);
     // Ensure the user exists and their account isn't disabled
     if (user) {
       user.updated_at = new Date();

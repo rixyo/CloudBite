@@ -13,14 +13,7 @@ export class UsersService {
     private configService: ConfigService,
     private logger: Logger,
   ) {}
-  async findOneByUsername(username: string): Promise<UserEntity | undefined> {
-    const user = await this.userRepo.findOne({
-      where: { lowercaseUsername: username.toLowerCase() },
-    });
-    if (user) {
-      return user;
-    }
-  }
+
 
   /**
    * Gets all the users that are registered
@@ -62,19 +55,12 @@ export class UsersService {
   }
   // this function is used to register an admin with a secret key
   async createAdmin(createAdminInput: CreateAdminInput): Promise<UserEntity> {
-    const existingUser = await this.findOneByUsername(
-      createAdminInput.username,
-    );
-    if (existingUser) {
-      throw new Error('Username already exists');
-    }
     const userEntity = this.userRepo.create(createAdminInput);
     const pass = await this.hashPassword(userEntity.password);
     const saveEntity = {
       ...userEntity,
       ...createAdminInput,
       password: pass,
-      lowercaseUsername: createAdminInput.username.toLowerCase(),
       lowercaseEmail: createAdminInput.email.toLowerCase(),
       permissions: ['admin'],
     };
@@ -92,14 +78,6 @@ export class UsersService {
     }
     this.logger.info(`Admin created: ${(user.id, user.created_at)}`);
     return user;
-  }
-  async getUserByUsername(username: string): Promise<UserEntity> {
-    const user = await this.userRepo.findOne({
-      where: { lowercaseUsername: username.toLowerCase() },
-    });
-    if (user) {
-      return user;
-    }
   }
   // this function is used to get a users by their email
   async findOneByEmail(email: string): Promise<UserEntity> {

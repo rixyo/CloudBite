@@ -1,24 +1,14 @@
 "use client"
-import React, { useState } from 'react';
-import Image from 'next/image';
-import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuIndicator,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-  NavigationMenuViewport,
-} from "@/components/ui/navigation-menu";
+import React, { Suspense, useState } from 'react';
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Input } from '../ui/input';
-
+import { useAuthModal } from "@/context/AuthModalContext";
 
 const TopNavigation:React.FC = () => {
       const [search, setSearch] = useState("");
+       const authModal = useAuthModal();
     return (
-      <div className="flex justify-between items-center ">
+      <div className="hidden lg:flex justify-between items-center">
         <div className="flex items-center cursor-pointer">
           <div className="bg-[#39DB4A] w-[2rem] h-[2rem] p-2 rounded-lg">
             <svg
@@ -61,46 +51,7 @@ const TopNavigation:React.FC = () => {
             </svg>
           </div>
         </div>
-        <div className="flex items-center justify-between gap-10 w-1/3 p-2 ">
-          <div className="text-[#272727] text-[1.5rem] font-[500] cursor-pointer hover:border-b-2 hover:border-[#39DB4A]">
-            <p>Home</p>
-          </div>
-          <div className="">
-            <NavigationMenu className="">
-              <NavigationMenuList className="">
-                <NavigationMenuItem>
-                  <NavigationMenuTrigger className="text-[1.5rem] text-[#272727] font-[500]">
-                    Menu
-                  </NavigationMenuTrigger>
-                  <NavigationMenuContent className="bg-[#39DB4A] p-10">
-                    <NavigationMenuLink>
-                      <p className="text-center">Signin/Signup</p>
-                    </NavigationMenuLink>
-                  </NavigationMenuContent>
-                </NavigationMenuItem>
-              </NavigationMenuList>
-            </NavigationMenu>
-          </div>
-          <div className="">
-            <NavigationMenu className="w-full">
-              <NavigationMenuList className="w-full">
-                <NavigationMenuItem>
-                  <NavigationMenuTrigger className="text-[1.5rem] text-[#272727] font-[500]">
-                    Service
-                  </NavigationMenuTrigger>
-                  <NavigationMenuContent className="bg-[#39DB4A] p-5 w-screen">
-                    <NavigationMenuLink>
-                      <p className="text-center">Helllo</p>
-                    </NavigationMenuLink>
-                  </NavigationMenuContent>
-                </NavigationMenuItem>
-              </NavigationMenuList>
-            </NavigationMenu>
-          </div>
-          <div className="text-[#272727] text-[1.5rem] font-[500] cursor-pointer hover:border-b-2 hover:border-[#39DB4A]">
-            <p>Offers</p>
-          </div>
-        </div>
+       {/** probabley add someting in future */}
         <div className="flex w-1/3 items-center justify-between  p-2">
           <div className="w-[25rem] h-[2rem] ">
             <div className="relative">
@@ -161,10 +112,11 @@ const TopNavigation:React.FC = () => {
               </div>
             </div>
           </div>
-          <div className="cursor-pointer">
+          <div className="cursor-pointer" onClick={authModal.onOpen}>
             <Avatar>
+              <Suspense fallback={<AvatarFallback>user</AvatarFallback>}>
               <AvatarImage src="https://github.com/shadcn.png" />
-              <AvatarFallback>CN</AvatarFallback>
+              </Suspense>
             </Avatar>
           </div>
         </div>

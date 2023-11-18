@@ -33,7 +33,7 @@ export class UsersResolver {
       const { email, username, password } = createUserInput;
       const userSignup = new UserSignup();
       userSignup.email = email;
-      userSignup.username = username;
+      userSignup.fullName = username;
       userSignup.password = password;
       const errors = await validate(userSignup);
 
@@ -61,7 +61,7 @@ export class UsersResolver {
       const { email, username, password, secretKey } = createAdminInput;
       const userSignup = new AdminSignup();
       userSignup.email = email;
-      userSignup.username = username;
+      userSignup.fullName = username;
       userSignup.password = password;
       userSignup.secretKey = secretKey;
       const errors = await validate(userSignup);

@@ -1,6 +1,11 @@
 import type { Metadata } from 'next'
 import './globals.css'
 import TopNavigation from '@/components/navbar/top-navigation'
+import MobileBottomNavigation from '@/components/navbar/mobilte-bottom-navigation'
+import MobileTopBar from '@/components/navbar/mobile-topbar'
+import TabTopbar from '@/components/navbar/tab-topbar'
+import AuthModalProvider from '@/providers/auth-modal-provider'
+import { AuthModalContextProvider } from '@/context/AuthModalContext'
 
 
 
@@ -17,12 +22,17 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <div className=' bg-gray-200 p-3  w-full'>
-
-        <TopNavigation/>
-        </div>
-        {children}
+        <AuthModalContextProvider>
+          <div className=" bg-gray-200 p-3 w-full">
+            <TopNavigation />
+            <MobileBottomNavigation />
+            <MobileTopBar />
+            <TabTopbar />
+          </div>
+          <AuthModalProvider />
+          {children}
+        </AuthModalContextProvider>
       </body>
     </html>
-  )
+  );
 }

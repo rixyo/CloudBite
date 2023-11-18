@@ -6,7 +6,7 @@ import { Button } from "../ui/button";
 const OtherLandingPage:React.FC= () => {
     
     return (
-      <div className="max-w-[108rem] max-h-[74rem] bg-gradient-to-b from-#FAFAFA via-#FCFCFC to-#FCFCFC md:p-5 border-2 border-blue-500">
+      <div className="max-w-[108rem] max-h-[74rem] bg-gradient-to-b from-#FAFAFA via-#FCFCFC to-#FCFCFC md:p-5 ">
         <div className="flex-col items-center justify-between w-full p-5 ">
           {/* top side */}
           <div className="p-5 flex flex-col ">
@@ -71,12 +71,12 @@ const OtherLandingPage:React.FC= () => {
           </div>
           <div className=" flex-col items-center justify-center  p-5 ">
             <div>
-              <h1 className="text-black font-inter text-2xl md:text-4xl md:font-[600] max-w-[70%] font-extrabold ">
+              <h1 className="text-black font-inter text-2xl md:text-4xl md:font-[600] max-w-[70%] md:max-w-[60%] font-extrabold ">
                 Dive into Delights Of Delectabl
                 <span className="text-[#39DB4A] hover:underline"> Food</span>
               </h1>
             </div>
-            <div className="text-[#4A4A4A] text-md md:text-[2rem] md:font-[600] md:max-w-[70%]  mt-5">
+            <div className="text-[#4A4A4A] text-md md:text-[2rem] md:font-[600] md:max-w-[80%]  mt-5">
               <h3>
                 Where Each Plate Weaves a Story of Culinary Mastery and
                 Passionate Craftsmanship

@@ -9,7 +9,7 @@ export class UserSignup {
   @IsDefined()
   @MinLength(6)
   @IsString()
-  public username!: string;
+  public fullName!: string;
 
   @IsDefined()
   @MinLength(6)
@@ -25,7 +25,7 @@ export class AdminSignup {
   @IsDefined()
   @MinLength(6)
   @IsString()
-  public username!: string;
+  public fullName!: string;
 
   @IsDefined()
   @MinLength(6)

@@ -14,15 +14,15 @@ type Mutation {
   createUser(createUserInput: CreateUserInput): User!
   deleteUsers: Messages!
   createAdmin(createAdminInput: CreateAdminInput): User!
-  updateUser(fieldsToUpdate: UpdateUserInput!, username: String): User!
-  addAdminPermission(username: String!): User!
-  removeAdminPermission(username: String!): User!
-  resetPassword(username: String!, code: String!, password: String!): User!
+  updateUser(fieldsToUpdate: UpdateUserInput!, email: String): User!
+  addAdminPermission(email: String!): User!
+  removeAdminPermission(email: String!): User!
+  resetPassword(email: String!, code: String!, password: String!): User!
 }
 
 type User @key(fields: "id") {
   id: ID!
-  username: String!
+  fullName: String!
   email: String!
   permissions: [String!]!
   created_at: Date!
@@ -30,12 +30,12 @@ type User @key(fields: "id") {
 }
 
 input CreateUserInput {
-  username: String!
+  fullName: String!
   email: String!
   password: String!
 }
 input CreateAdminInput {
-  username: String!
+  fullName: String!
   email: String!
   password: String!
   secretKey: String!
@@ -43,7 +43,7 @@ input CreateAdminInput {
 }
 
 input UpdateUserInput {
-  username: String
+  fullName: String
   email: String
   password: UpdatePasswordInput
   enabled: Boolean
