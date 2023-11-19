@@ -1,7 +1,7 @@
 "use client"
 import React, { Suspense } from 'react';
 import { Avatar, AvatarFallback, AvatarImage } from '../ui/avatar';
-import { useAuthModal } from "@/context/AuthModalContext";
+import  useAuthModal  from "@/hooks/useAuthModal";
 
 
 

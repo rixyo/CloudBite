@@ -2,7 +2,7 @@
 import React, { Suspense, useState } from 'react';
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Input } from '../ui/input';
-import { useAuthModal } from "@/context/AuthModalContext";
+import  useAuthModal  from "@/hooks/useAuthModal";
 
 const TopNavigation:React.FC = () => {
       const [search, setSearch] = useState("");

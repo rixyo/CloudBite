@@ -1,0 +1,81 @@
+scalar Date
+
+type Query{
+    restaurants: [Restaurant!]!
+    restaurant(id: ID!): Restaurant
+}
+
+type Mutation {
+    createRestaurant(createRestaurantInput:CreateRestaurantInput): Restaurant!
+    updateRestaurant(id: ID!, fieldToUpdate:UpdateRestaurantInput): Restaurant!
+    deleteRestaurant(id: ID!): Restaurant!
+}
+input AddressInput {
+  street: String!
+  city: String!
+  state: String!
+  country: String!
+  pincode: String!
+}
+type AddressType {
+  street: String!
+  city: String!
+  state: String!
+  country: String!
+  pincode: String!
+}
+
+type Restaurant @key(fields: "id") {
+  name: String!
+  description: String!
+  average_price: Int
+  latitude: String!
+  longitude: String!
+  contact_no: String!
+  banner: String!
+  delivery_options: String
+  pickup_options: String
+  opens_at: String!
+  address: AddressType!
+  closes_at: String
+  email: String!
+  website: String!
+  user: User!
+  createdAt: Date!
+  updatedAt: Date!
+}
+ input CreateRestaurantInput{
+    name: String!
+    description: String!
+    average_price: Int
+    latitude: String!
+    longitude: String!
+    contact_no: String!
+    banner: String!
+    delivery_options: String
+    pickup_options: String
+    opens_at: String!
+    address: AddressInput!
+    closes_at: String
+    email: String!
+    website: String!
+ }
+ extend type User @key(fields: "id") {
+  id: ID! @external
+}
+ input UpdateRestaurantInput {
+    name: String!
+    description: String!
+    average_price: Int
+    latitude: String!
+    longitude: String!
+    contact_no: String!
+    banner: String!
+    delivery_options: String
+    pickup_options: String
+    opens_at: String!
+    address: AddressInput!
+    closes_at: String
+    email: String!
+    website: String!
+ }

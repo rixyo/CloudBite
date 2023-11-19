@@ -1,0 +1,62 @@
+scalar Date
+
+type Query {
+  users: [User!]!
+  user: User!
+  forgotPassword(email: String): Boolean
+}
+
+type Messages {
+  message: String!
+}
+
+type Mutation {
+  createUser(createUserInput: CreateUserInput): User!
+  deleteUsers: Messages!
+  createAdmin(createAdminInput: CreateAdminInput): User!
+  createRestaurantOwner(createRestaurantOwnerInput: CreateRestaurantOwnerInput): User!
+  updateUser(fieldsToUpdate: UpdateUserInput!, email: String): User!
+  addAdminPermission(email: String!): User!
+  removeAdminPermission(email: String!): User!
+  resetPassword(email: String!, code: String!, password: String!): User!
+}
+
+type User @key(fields: "id") {
+  id: ID!
+  fullName: String!
+  email: String!
+  permissions: [String!]!
+  created_at: Date!
+  updated_at: Date!
+}
+
+input CreateUserInput {
+  fullName: String!
+  email: String!
+  password: String!
+}
+input CreateAdminInput {
+  fullName: String!
+  email: String!
+  password: String!
+  secretKey: String!
+
+}
+input CreateRestaurantOwnerInput {
+  fullName: String!
+  email: String!
+  password: String!
+  secretKey: String!
+}
+
+input UpdateUserInput {
+  fullName: String
+  email: String
+  password: UpdatePasswordInput
+  enabled: Boolean
+}
+
+input UpdatePasswordInput {
+  oldPassword: String!
+  newPassword: String!
+}

@@ -5,7 +5,7 @@ import MobileBottomNavigation from '@/components/navbar/mobilte-bottom-navigatio
 import MobileTopBar from '@/components/navbar/mobile-topbar'
 import TabTopbar from '@/components/navbar/tab-topbar'
 import AuthModalProvider from '@/providers/auth-modal-provider'
-import { AuthModalContextProvider } from '@/context/AuthModalContext'
+
 
 
 
@@ -22,7 +22,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <AuthModalContextProvider>
           <div className=" bg-gray-200 p-3 w-full">
             <TopNavigation />
             <MobileBottomNavigation />
@@ -31,7 +30,6 @@ export default function RootLayout({
           </div>
           <AuthModalProvider />
           {children}
-        </AuthModalContextProvider>
       </body>
     </html>
   );

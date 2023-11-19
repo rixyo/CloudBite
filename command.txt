@@ -1,0 +1,5 @@
+useful workspace command
+pnpm add nx -D -w
+pnpm --filter app-name dev
+pnpm add --filter app-name 
+pnpm run --parallel -r build
