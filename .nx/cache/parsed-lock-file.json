@@ -405,6 +405,15 @@
         "hash": "sha512-XktuhWlJ5g+3TJXc5upd9Ks1HutSArik6jf2eAjYFyIOf4ej3RN+184cZbzDvbPnuTJIUhPKKJE3cIsYTiAT3w=="
       }
     },
+    "npm:@babel/code-frame@7.23.4": {
+      "type": "npm",
+      "name": "npm:@babel/code-frame@7.23.4",
+      "data": {
+        "version": "7.23.4",
+        "packageName": "@babel/code-frame",
+        "hash": "sha512-r1IONyb6Ia+jYR2vvIDhdWdlTGhqbBoFqLTQidzZ4kepUFH15ejXvFHxCVbtl7BOXIudsIubf4E81xeA3h3IXA=="
+      }
+    },
     "npm:@babel/compat-data": {
       "type": "npm",
       "name": "npm:@babel/compat-data",
@@ -630,13 +639,22 @@
         "hash": "sha512-lzchcp8SjTSVe/fPmLwtWVBFC7+Tbn8LGHDVfDp9JGxpAY5opSaEFgt8UQvrnECWOTdji2mOWMz1rOhkHscmGQ=="
       }
     },
-    "npm:@babel/highlight": {
+    "npm:@babel/highlight@7.22.20": {
       "type": "npm",
-      "name": "npm:@babel/highlight",
+      "name": "npm:@babel/highlight@7.22.20",
       "data": {
         "version": "7.22.20",
         "packageName": "@babel/highlight",
         "hash": "sha512-dkdMCN3py0+ksCgYmGG8jKeGA/8Tk+gJwSYYlFGxG5lmhfKNoAy004YpLxpS1W2J8m/EK2Ew+yOs9pVRwO89mg=="
+      }
+    },
+    "npm:@babel/highlight": {
+      "type": "npm",
+      "name": "npm:@babel/highlight",
+      "data": {
+        "version": "7.23.4",
+        "packageName": "@babel/highlight",
+        "hash": "sha512-acGdbYSfp2WheJoJm/EBBBLh/ID8KDc64ISZ9DYtBmC8/Q204PZJLHyzeB5qMzJ5trcOkybd78M4x2KWsUq++A=="
       }
     },
     "npm:@babel/parser@7.23.0": {
@@ -1111,15 +1129,6 @@
       "type": "npm",
       "name": "npm:@eslint/eslintrc",
       "data": {
-        "version": "2.1.2",
-        "packageName": "@eslint/eslintrc",
-        "hash": "sha512-+wvgpDsrB1YqAMdEUCcnTlpfVBH7Vqn6A/NT3D8WVXFIaKMlErPIZT3oCIAVCOtarRpMtelZLqJeU3t7WY6X6g=="
-      }
-    },
-    "npm:@eslint/eslintrc@2.1.3": {
-      "type": "npm",
-      "name": "npm:@eslint/eslintrc@2.1.3",
-      "data": {
         "version": "2.1.3",
         "packageName": "@eslint/eslintrc",
         "hash": "sha512-yZzuIG+jnVu6hNSzFEN07e8BxF3uAzYtQb6uDkaYZLo6oYZDCq454c5kB8zxnzfCYyP4MIuyBn10L0DqwujTmA=="
@@ -1128,15 +1137,6 @@
     "npm:@eslint/js": {
       "type": "npm",
       "name": "npm:@eslint/js",
-      "data": {
-        "version": "8.52.0",
-        "packageName": "@eslint/js",
-        "hash": "sha512-mjZVbpaeMZludF2fsWLD0Z9gCref1Tk4i9+wddjRvpUNqqcndPkBD09N/Mapey0b3jaXbLm2kICwFv2E64QinA=="
-      }
-    },
-    "npm:@eslint/js@8.53.0": {
-      "type": "npm",
-      "name": "npm:@eslint/js@8.53.0",
       "data": {
         "version": "8.53.0",
         "packageName": "@eslint/js",
@@ -1179,6 +1179,15 @@
         "hash": "sha512-BMm99mqdNZbEYeTPK3it9r9S6rsZsQKtlqJsSBknAclXq2pGEfOxjcIZi+kBSkHZKPKCRrYDd5vY0+rUmIHVLg=="
       }
     },
+    "npm:@graphql-tools/merge": {
+      "type": "npm",
+      "name": "npm:@graphql-tools/merge",
+      "data": {
+        "version": "8.3.18",
+        "packageName": "@graphql-tools/merge",
+        "hash": "sha512-R8nBglvRWPAyLpZL/f3lxsY7wjnAeE0l056zHhcO/CgpvK76KYUt9oEkR05i8Hmt8DLRycBN0FiotJ0yDQWTVA=="
+      }
+    },
     "npm:@graphql-tools/merge@8.4.2": {
       "type": "npm",
       "name": "npm:@graphql-tools/merge@8.4.2",
@@ -1188,9 +1197,9 @@
         "hash": "sha512-XbrHAaj8yDuINph+sAfuq3QCZ/tKblrTLOpirK0+CAgNlZUCHs0Fa+xtMUURgwCVThLle1AF7svJCxFizygLsw=="
       }
     },
-    "npm:@graphql-tools/merge": {
+    "npm:@graphql-tools/merge@9.0.0": {
       "type": "npm",
-      "name": "npm:@graphql-tools/merge",
+      "name": "npm:@graphql-tools/merge@9.0.0",
       "data": {
         "version": "9.0.0",
         "packageName": "@graphql-tools/merge",
@@ -1224,6 +1233,15 @@
         "hash": "sha512-0Esilsh0P/qYcB5DKQpiKeQs/jevzIadNTaT0jeWklPMwNbT7yMX4EqZany7mbeRRlSRwMzNzL5olyFdffHBZg=="
       }
     },
+    "npm:@graphql-tools/schema@9.0.16": {
+      "type": "npm",
+      "name": "npm:@graphql-tools/schema@9.0.16",
+      "data": {
+        "version": "9.0.16",
+        "packageName": "@graphql-tools/schema",
+        "hash": "sha512-kF+tbYPPf/6K2aHG3e1SWIbapDLQaqnIHVRG6ow3onkFoowwtKszvUyOASL6Krcv2x9bIMvd1UkvRf9OaoROQQ=="
+      }
+    },
     "npm:@graphql-tools/schema": {
       "type": "npm",
       "name": "npm:@graphql-tools/schema",
@@ -1233,9 +1251,9 @@
         "hash": "sha512-oBRPoNBtCkk0zbUsyP4GaIzCt8C0aCI4ycIRUL67KK5pOHljKLBBtGT+Jr6hkzA74C8Gco8bpZPe7aWFjiaK2w=="
       }
     },
-    "npm:@graphql-tools/utils": {
+    "npm:@graphql-tools/utils@10.0.8": {
       "type": "npm",
-      "name": "npm:@graphql-tools/utils",
+      "name": "npm:@graphql-tools/utils@10.0.8",
       "data": {
         "version": "10.0.8",
         "packageName": "@graphql-tools/utils",
@@ -1251,9 +1269,9 @@
         "hash": "sha512-pjJIWH0XOVnYGXCqej8g/u/tsfV4LvLlj0eATKQu5zwnxd/TiTHq7Cg313qUPTFFHZ3PP5wJ15chYVtLDwaymg=="
       }
     },
-    "npm:@graphql-tools/utils@9.2.1": {
+    "npm:@graphql-tools/utils": {
       "type": "npm",
-      "name": "npm:@graphql-tools/utils@9.2.1",
+      "name": "npm:@graphql-tools/utils",
       "data": {
         "version": "9.2.1",
         "packageName": "@graphql-tools/utils",
@@ -1561,6 +1579,15 @@
       "type": "npm",
       "name": "npm:@nestjs/apollo",
       "data": {
+        "version": "10.2.1",
+        "packageName": "@nestjs/apollo",
+        "hash": "sha512-xAui+/ZQ5THeO09YgAyP+AZyPvJplH8F3azwV8sMJjbbEaQev6gyzbZsCCbcVcCiHIL0t20JmNPmLIY9BIdRrg=="
+      }
+    },
+    "npm:@nestjs/apollo@12.0.11": {
+      "type": "npm",
+      "name": "npm:@nestjs/apollo@12.0.11",
+      "data": {
         "version": "12.0.11",
         "packageName": "@nestjs/apollo",
         "hash": "sha512-E8kBOyGBZ8Zx4qMLnK3+ECZgmLKqNHyYbtkOi0fXWr8ackosLMkRqGgtDVffXRlVA3eo6G3RgnL0Qyu3VvfD5A=="
@@ -1588,6 +1615,15 @@
       "type": "npm",
       "name": "npm:@nestjs/core",
       "data": {
+        "version": "8.4.7",
+        "packageName": "@nestjs/core",
+        "hash": "sha512-XB9uexHqzr2xkPo6QSiQWJJttyYYLmvQ5My64cFvWFi7Wk2NIus0/xUNInwX3kmFWB6pF1ab5Y2ZBvWdPwGBhw=="
+      }
+    },
+    "npm:@nestjs/core@9.4.3": {
+      "type": "npm",
+      "name": "npm:@nestjs/core@9.4.3",
+      "data": {
         "version": "9.4.3",
         "packageName": "@nestjs/core",
         "hash": "sha512-Qi63+wi55Jh4sDyaj5Hhx2jOpKqT386aeo+VOKsxnd+Ql9VvkO/FjmuwBGUyzkJt29ENYc+P0Sx/k5LtstNpPQ=="
@@ -1596,6 +1632,15 @@
     "npm:@nestjs/graphql": {
       "type": "npm",
       "name": "npm:@nestjs/graphql",
+      "data": {
+        "version": "10.2.1",
+        "packageName": "@nestjs/graphql",
+        "hash": "sha512-FBzYTymT4oopiGMpej7GTRyhz1BgJxLlXZPUueamC5J9u1WxCwJyETkzBI/zeUkUydlklF/xd5zDd/Md6//hEw=="
+      }
+    },
+    "npm:@nestjs/graphql@12.0.11": {
+      "type": "npm",
+      "name": "npm:@nestjs/graphql@12.0.11",
       "data": {
         "version": "12.0.11",
         "packageName": "@nestjs/graphql",
@@ -1614,6 +1659,15 @@
     "npm:@nestjs/mapped-types": {
       "type": "npm",
       "name": "npm:@nestjs/mapped-types",
+      "data": {
+        "version": "1.2.2",
+        "packageName": "@nestjs/mapped-types",
+        "hash": "sha512-3dHxLXs3M0GPiriAcCFFJQHoDFUuzTD5w6JDhE7TyfT89YKpe6tcCCIqOZWdXmt9AZjjK30RkHRSFF+QEnWFQg=="
+      }
+    },
+    "npm:@nestjs/mapped-types@2.0.2": {
+      "type": "npm",
+      "name": "npm:@nestjs/mapped-types@2.0.2",
       "data": {
         "version": "2.0.2",
         "packageName": "@nestjs/mapped-types",
@@ -1903,9 +1957,9 @@
       "type": "npm",
       "name": "npm:@nrwl/tao",
       "data": {
-        "version": "17.0.2",
+        "version": "17.1.2",
         "packageName": "@nrwl/tao",
-        "hash": "sha512-H+htIRzQR6Ibael34rhQkpNkpFFFmaSTsIzdqkBqL4j5+FzSpZh67NJnWSY8vsYQGQL8Ncc+MHvpQC+7pyfgGw=="
+        "hash": "sha512-tL+dlygeor/kLG5fuK5qaiVFJ4hEtvJ/E+xY9epp20UKCNQSEkrSFiesiXtX6E/PPf4YbOQ4B4itWR2EYCm03Q=="
       }
     },
     "npm:@nuxtjs/opencollective": {
@@ -1921,90 +1975,90 @@
       "type": "npm",
       "name": "npm:@nx/nx-darwin-arm64",
       "data": {
-        "version": "17.0.2",
+        "version": "17.1.2",
         "packageName": "@nx/nx-darwin-arm64",
-        "hash": "sha512-OSZLRfV8VplYPEqMcIg3mbAsJXlXEHKrdlJ0KUTk8Hih2+wl7cxuSEwG7X7qfBUOz+ognxaqicL+hueNrgwjlQ=="
+        "hash": "sha512-U8fwkuw0vmDfeRQX9LSMt1XiAXM57fxOiuHlrIBn8hUBvMAugAgSAYd7K9YQjrFf9UFUtQeSHDU9N/c/n63hdg=="
       }
     },
     "npm:@nx/nx-darwin-x64": {
       "type": "npm",
       "name": "npm:@nx/nx-darwin-x64",
       "data": {
-        "version": "17.0.2",
+        "version": "17.1.2",
         "packageName": "@nx/nx-darwin-x64",
-        "hash": "sha512-olGt5R2dWYwdl1+I2RfJ8LdZO1elqhr9yDPnMIx//ZuN6T6wJA+Wdp2P3qpM1bY0F1lI/6AgjqzRyrTLUZ9cDA=="
+        "hash": "sha512-QR9Jrm32UK2nLdDRtjFabfCvF5SOQJ2IuYkw6Sxe16xGZU2DS9nQku0TQO3Uy2HV1xSR7vzj7ys5z4eI2k+/mA=="
       }
     },
     "npm:@nx/nx-freebsd-x64": {
       "type": "npm",
       "name": "npm:@nx/nx-freebsd-x64",
       "data": {
-        "version": "17.0.2",
+        "version": "17.1.2",
         "packageName": "@nx/nx-freebsd-x64",
-        "hash": "sha512-+mta0J2G2byd+rfZ275oZs0aYXC/s92nI9ySBFQFQZnKJ6bsAagdZHe+uETsnE4xdhFXD8kvNMJU1WTGlyFyjg=="
+        "hash": "sha512-6rDuFHJREVg5XpcM5RlE8pHP4bgcbns8sSemF/g75SV4iEkBqxRvSe88oBtF44b7IpX2zdONRDV4qQcRf3DxRg=="
       }
     },
     "npm:@nx/nx-linux-arm-gnueabihf": {
       "type": "npm",
       "name": "npm:@nx/nx-linux-arm-gnueabihf",
       "data": {
-        "version": "17.0.2",
+        "version": "17.1.2",
         "packageName": "@nx/nx-linux-arm-gnueabihf",
-        "hash": "sha512-m80CmxHHyNAJ8j/0rkjc0hg/eGQlf6V2sLsV+gEJkz2sTEEdgSOK4DvnWcZRWO/SWBnqigxoHX4Kf5TH1nmoHA=="
+        "hash": "sha512-4FwqUX7NxVfJ0v7frBKNbjENz6pvp3slDfoG2/WmnAj5a6TCu7magwlg1qLQaHYJ1m/i8u7RrG0Uz4SYHWzkVw=="
       }
     },
     "npm:@nx/nx-linux-arm64-gnu": {
       "type": "npm",
       "name": "npm:@nx/nx-linux-arm64-gnu",
       "data": {
-        "version": "17.0.2",
+        "version": "17.1.2",
         "packageName": "@nx/nx-linux-arm64-gnu",
-        "hash": "sha512-AsD1H6wt68MK1u6vkmtNaFaxDMcyuk6dpo5kq1YT9cfUd614ys3qMUjVp3P2CXxzXh+0UDZeGrc6qotNKOkpJw=="
+        "hash": "sha512-r6UATY0dVdxwpVJPf/f/KfRkFpMP06wC6HcfNMGbTBTKiKtsdYF42bWoSkDgtgP2bOx9FDH+Hwu3U/Rtj44FIA=="
       }
     },
     "npm:@nx/nx-linux-arm64-musl": {
       "type": "npm",
       "name": "npm:@nx/nx-linux-arm64-musl",
       "data": {
-        "version": "17.0.2",
+        "version": "17.1.2",
         "packageName": "@nx/nx-linux-arm64-musl",
-        "hash": "sha512-f8pUFoZHBFQtHnopHgTEuwIiu0Rzem0dD7iK8SyyBy/lRAADtHCAHxaPAG+iatHAJ9h4DFIB50k9ybYxDtH2mg=="
+        "hash": "sha512-MXGYY/KCzQhbj5UKwnRO2/GhByOkRlI+EeH1Mazam8wZ1BiBfcVWZoOUybIlxxes1o4cAnkZwB527tCmwrHvGw=="
       }
     },
     "npm:@nx/nx-linux-x64-gnu": {
       "type": "npm",
       "name": "npm:@nx/nx-linux-x64-gnu",
       "data": {
-        "version": "17.0.2",
+        "version": "17.1.2",
         "packageName": "@nx/nx-linux-x64-gnu",
-        "hash": "sha512-PISrHjLTxv5w8bz50vPZH6puYos88xu28o4IbVyYWrUrhoFsAx9Zbn1D6gWDPMSaKJU32v1l+5bTciQjQJU8fQ=="
+        "hash": "sha512-3cC131hJ3VhuxjzzBlwIdVp46onykOo78EmnURNdLxcWOpmcKgYXn7OnVwjrglYi+JL7D0vABGKKUpt1cs6/rA=="
       }
     },
     "npm:@nx/nx-linux-x64-musl": {
       "type": "npm",
       "name": "npm:@nx/nx-linux-x64-musl",
       "data": {
-        "version": "17.0.2",
+        "version": "17.1.2",
         "packageName": "@nx/nx-linux-x64-musl",
-        "hash": "sha512-2wsqyBRjsxmAjxW+0lnGFtJLTk+AxgW7gjMv8NgLK8P1bc/sJYQB+g0o5op2z+szXRG3Noi0RZ9C0fG39EPFZw=="
+        "hash": "sha512-1UrR87ByhE0zSXt0C+RNT5ZiAsctOSWZwPYQAGolz8K70BxomDeRVtIaRog5KK5SHlEd1ILvgsmrhovjLjrJNw=="
       }
     },
     "npm:@nx/nx-win32-arm64-msvc": {
       "type": "npm",
       "name": "npm:@nx/nx-win32-arm64-msvc",
       "data": {
-        "version": "17.0.2",
+        "version": "17.1.2",
         "packageName": "@nx/nx-win32-arm64-msvc",
-        "hash": "sha512-Sc3sQUcS5xdk05PABe/knG6orG5rmHZdSUj6SMRpvYfN2tM3ziNn6/wCF/LJoW6n70OxrOEXXwLSRK/5WigXbA=="
+        "hash": "sha512-2M7FfzfPGAN7tCUWZilPGNk/RbbGcA00MKOA4MDqMwJtLobW8KqfMedilRNTEuyNibejOHwvGzA9T/Ac/ahHgA=="
       }
     },
     "npm:@nx/nx-win32-x64-msvc": {
       "type": "npm",
       "name": "npm:@nx/nx-win32-x64-msvc",
       "data": {
-        "version": "17.0.2",
+        "version": "17.1.2",
         "packageName": "@nx/nx-win32-x64-msvc",
-        "hash": "sha512-XhET0BDk6fbvTBCs7m5gZii8+2WhLpiC1sZchJw4LAJN2VJBiy3I3xnvpQYGFOAWaCb/iUGpuN/qP/NlQ+LNgA=="
+        "hash": "sha512-oxKCKunuo4wRusMlNu7PlhBijhtNy7eBZPAWyqUsdfnb+CjY2QncjCguW3fnsG9gHQFCa+y0b1WkSkvJ5G1DiQ=="
       }
     },
     "npm:@opentelemetry/api": {
@@ -2421,6 +2475,15 @@
         "hash": "sha512-vxhUy4J8lyeyinH7Azl1pdd43GJhZH/tP2weN8TntQblOY+A0XbT8DJk1/oCPuOOyg/Ja757rG0CgHcWC8OfMA=="
       }
     },
+    "npm:@types/accepts": {
+      "type": "npm",
+      "name": "npm:@types/accepts",
+      "data": {
+        "version": "1.3.7",
+        "packageName": "@types/accepts",
+        "hash": "sha512-Pay9fq2lM2wXPWbteBsRAGiWH2hig4ZE2asK+mm7kUzlxRTfL961rj89I6zV/E3PcIkDqyuBEcMxFT7rccugeQ=="
+      }
+    },
     "npm:@types/babel__core": {
       "type": "npm",
       "name": "npm:@types/babel__core",
@@ -2466,6 +2529,15 @@
         "hash": "sha512-9xlo6R2qDs5uixm0bcIqCeMCE6HiQsIyel9KQySStiyqNl2tnj2mP3DX1Nf56MD6KMenNNlBBsy3LJ7gUEQPXQ=="
       }
     },
+    "npm:@types/body-parser@1.19.2": {
+      "type": "npm",
+      "name": "npm:@types/body-parser@1.19.2",
+      "data": {
+        "version": "1.19.2",
+        "packageName": "@types/body-parser",
+        "hash": "sha512-ALYone6pm6QmwZoAgeyNksccT9Q4AWZQ6PvfwR37GT6r6FWUPguq6sUmNGSMV2Wr761oQoBxwGGa6DR5o1DC9g=="
+      }
+    },
     "npm:@types/body-parser": {
       "type": "npm",
       "name": "npm:@types/body-parser",
@@ -2500,6 +2572,15 @@
         "version": "2.1.4",
         "packageName": "@types/cookiejar",
         "hash": "sha512-b698BLJ6kPVd6uhHsY7wlebZdrWPXYied883PDSzpJZYOP97EOn/oGdLCH3jJf157srkFReIZY5v0H1s8Dozrg=="
+      }
+    },
+    "npm:@types/cors": {
+      "type": "npm",
+      "name": "npm:@types/cors",
+      "data": {
+        "version": "2.8.12",
+        "packageName": "@types/cors",
+        "hash": "sha512-vt+kDhq/M2ayberEtJcIN/hxXy1Pk+59g2FV/ZQceeaTyCtCucjL2Q7FXlFjtWn4n15KCr1NE2lNNFhp0lEThw=="
       }
     },
     "npm:@types/eslint-scope": {
@@ -2538,6 +2619,15 @@
         "hash": "sha512-/kYRxGDLWzHOB7q+wtSUQlFrtcdUccpfy+X+9iMBpHK8QLLhx2wIPYuS5DYtR9Wa/YlZAbIovy7qVdB1Aq6Lyw=="
       }
     },
+    "npm:@types/express-serve-static-core@4.17.31": {
+      "type": "npm",
+      "name": "npm:@types/express-serve-static-core@4.17.31",
+      "data": {
+        "version": "4.17.31",
+        "packageName": "@types/express-serve-static-core",
+        "hash": "sha512-DxMhY+NAsTwMMFHBTtJFNp5qiHKJ7TeqOo23zVEM9alT1Ml27Q3xcTH0xwxn7Q0BbMcVEJOs/7aQtUWupUQN3Q=="
+      }
+    },
     "npm:@types/express-serve-static-core": {
       "type": "npm",
       "name": "npm:@types/express-serve-static-core",
@@ -2545,6 +2635,15 @@
         "version": "4.17.41",
         "packageName": "@types/express-serve-static-core",
         "hash": "sha512-OaJ7XLaelTgrvlZD8/aa0vvvxZdUmlCn6MtWeB7TkiKW70BQLc9XEPpDLPdbo52ZhXUCrznlWdCHWxJWtdyajA=="
+      }
+    },
+    "npm:@types/express@4.17.14": {
+      "type": "npm",
+      "name": "npm:@types/express@4.17.14",
+      "data": {
+        "version": "4.17.14",
+        "packageName": "@types/express",
+        "hash": "sha512-TEbt+vaPFQ+xpxFLFssxUDXj5cWCxZJjIcB7Yg0k0GMHGtgtQgpvx/MUQUeAkNbA9AAGrwkAsoeItdTgS7FMyg=="
       }
     },
     "npm:@types/express": {
@@ -3429,6 +3528,15 @@
         "hash": "sha512-xnZJ5QWs6FixHICXHxUfm+ZWqqxrNuPlQ+kj5m6RtEgIpekOPssH/SD9gf2B4HuWV0QozorrygwZnux8POvyPA=="
       }
     },
+    "npm:apollo-server-express": {
+      "type": "npm",
+      "name": "npm:apollo-server-express",
+      "data": {
+        "version": "3.13.0",
+        "packageName": "apollo-server-express",
+        "hash": "sha512-iSxICNbDUyebOuM8EKb3xOrpIwOQgKxGbR2diSr4HP3IW8T3njKFOoMce50vr+moOCe1ev8BnLcw9SNbuUtf7g=="
+      }
+    },
     "npm:apollo-server-plugin-base": {
       "type": "npm",
       "name": "npm:apollo-server-plugin-base",
@@ -3694,9 +3802,9 @@
       "type": "npm",
       "name": "npm:axios",
       "data": {
-        "version": "1.6.0",
+        "version": "1.6.2",
         "packageName": "axios",
-        "hash": "sha512-EZ1DYihju9pwVB+jg67ogm+Tmqc6JmhamRN6I4Zt8DfZu5lbcQGw3ozH9lFejSJgs/ibaef3A9PMXPLeefFGJg=="
+        "hash": "sha512-7i24Ri4pmDRfJTR7LDBhsOTtcm+9kjX5WiY1X3wIisx6G9So3pfMkEiU7emUBe46oceVImccTEM3k6C5dbVW8A=="
       }
     },
     "npm:axobject-query": {
@@ -4120,6 +4228,15 @@
         "version": "1.2.3",
         "packageName": "cjs-module-lexer",
         "hash": "sha512-0TNiGstbQmCFwt4akjjBg5pLRTSyj/PkWQ1ZoO2zntmg9yLqSRxwEa4iCfQLGjqhiqBfOJa7W/E8wfGrTDmlZQ=="
+      }
+    },
+    "npm:class-transformer": {
+      "type": "npm",
+      "name": "npm:class-transformer",
+      "data": {
+        "version": "0.5.1",
+        "packageName": "class-transformer",
+        "hash": "sha512-SQa1Ws6hUbfC98vKGxZH3KFY0Y1lm5Zm0SY8XX9zbK7FJCyVEac3ATW0RIpwzW+oOfmHE5PMPufDG9hCfoEOMw=="
       }
     },
     "npm:class-validator": {
@@ -5292,15 +5409,6 @@
         "hash": "sha512-wpc+LXeiyiisxPlEkUzU6svyS1frIO3Mgxj1fdy7Pm8Ygzguax2N3Fa/D/ag1WqbOprdI+uY6wMUl8/a2G+iag=="
       }
     },
-    "npm:eslint": {
-      "type": "npm",
-      "name": "npm:eslint",
-      "data": {
-        "version": "8.52.0",
-        "packageName": "eslint",
-        "hash": "sha512-zh/JHnaixqHZsolRB/w9/02akBk9EPrOs9JwcTP2ek7yL5bVvXuRariiaAjjoJ5DvuwQ1WAE/HsMz+w17YgBCg=="
-      }
-    },
     "npm:eslint@8.53.0": {
       "type": "npm",
       "name": "npm:eslint@8.53.0",
@@ -5310,9 +5418,9 @@
         "hash": "sha512-N4VuiPjXDUa4xVeV/GC/RV3hQW9Nw+Y463lkWaKKXKYMvmRiRDAtfpuPFLN+E1/6ZhyR8J2ig+eVREnYgUsiag=="
       }
     },
-    "npm:eslint@8.54.0": {
+    "npm:eslint": {
       "type": "npm",
-      "name": "npm:eslint@8.54.0",
+      "name": "npm:eslint",
       "data": {
         "version": "8.54.0",
         "packageName": "eslint",
@@ -5508,6 +5616,15 @@
         "hash": "sha512-VxPP4NqbUjj6MaAOafWeUn2cXWLcCtljklUtZf0Ind4XQ+QPtmA0b18zZy0jIQx+ExRVCR/ZQpBmik5lXshNsw=="
       }
     },
+    "npm:fast-glob": {
+      "type": "npm",
+      "name": "npm:fast-glob",
+      "data": {
+        "version": "3.2.12",
+        "packageName": "fast-glob",
+        "hash": "sha512-DVj4CQIYYow0BlaelwK1pHl5n5cRSJfM60UA0zK891sVInoPri2Ekj7+e1CT3/3qxXenpI+nBBmQAcJPJgaj4w=="
+      }
+    },
     "npm:fast-glob@3.3.1": {
       "type": "npm",
       "name": "npm:fast-glob@3.3.1",
@@ -5517,9 +5634,9 @@
         "hash": "sha512-kNFPyjhh5cKjrUltxs+wFx+ZkbRaxxmZ+X0ZU31SOsxCEtP9VPgtq2teZw1DebupL5GmDaNQ6yKMMVcM41iqDg=="
       }
     },
-    "npm:fast-glob": {
+    "npm:fast-glob@3.3.2": {
       "type": "npm",
-      "name": "npm:fast-glob",
+      "name": "npm:fast-glob@3.3.2",
       "data": {
         "version": "3.3.2",
         "packageName": "fast-glob",
@@ -6133,6 +6250,15 @@
       "type": "npm",
       "name": "npm:graphql-ws",
       "data": {
+        "version": "5.11.3",
+        "packageName": "graphql-ws",
+        "hash": "sha512-fU8zwSgAX2noXAsuFiCZ8BtXeXZOzXyK5u1LloCdacsVth4skdBMPO74EG51lBoWSIZ8beUocdpV8+cQHBODnQ=="
+      }
+    },
+    "npm:graphql-ws@5.14.2": {
+      "type": "npm",
+      "name": "npm:graphql-ws@5.14.2",
+      "data": {
         "version": "5.14.2",
         "packageName": "graphql-ws",
         "hash": "sha512-LycmCwhZ+Op2GlHz4BZDsUYHKRiiUz+3r9wbhBATMETNlORQJAaFlAgTFoeRh6xQoQegwYwIylVD1Qns9/DA3w=="
@@ -6361,15 +6487,6 @@
         "version": "1.2.1",
         "packageName": "ieee754",
         "hash": "sha512-dcyqhDvX1C46lXZcVqCpK+FtMRQVdIMN6/Df5js2zouUsqG7I6sFxitIC+7KYK29KdXOLHdu9zL4sFnoVQnqaA=="
-      }
-    },
-    "npm:ignore@5.2.4": {
-      "type": "npm",
-      "name": "npm:ignore@5.2.4",
-      "data": {
-        "version": "5.2.4",
-        "packageName": "ignore",
-        "hash": "sha512-MAb38BcSbH0eHNBxn7ql2NH/kX33OkB3lZ1BNdh7ENeRChHTYsTvWrMubiIAMNS2llXEEgZ1MUOBtXChP3kaFQ=="
       }
     },
     "npm:ignore": {
@@ -7519,9 +7636,9 @@
       "type": "npm",
       "name": "npm:lines-and-columns",
       "data": {
-        "version": "2.0.3",
+        "version": "2.0.4",
         "packageName": "lines-and-columns",
-        "hash": "sha512-cNOjgCnLB+FnvWWtyRTzmB3POJ+cXxTA81LoW7u8JdmhfXzriropYwpjShnz1QLLWsQwY7nIxoDmcPTwphDK9w=="
+        "hash": "sha512-wM1+Z03eypVAVUCE7QdSqpVIvelbOakn1M0bPDoA4SGWPx3sNDVUiMo3L6To6WWGClB7VyXnhQ4Sn7gxiJbE6A=="
       }
     },
     "npm:loader-runner": {
@@ -8455,9 +8572,9 @@
       "type": "npm",
       "name": "npm:nx",
       "data": {
-        "version": "17.0.2",
+        "version": "17.1.2",
         "packageName": "nx",
-        "hash": "sha512-utk9ufxLlRd210nEV6cKjMLVK0gup2ZMlNT41lLgUX/gp3Q59G1NkyLo3o29DxBh3AhNJ9q5MKgybmzDNdpudA=="
+        "hash": "sha512-pf94ri36cAiSzbYcPTJwQzttgAsHSjCLEni0Ilw6aVdjpoV2l6cggYxwddX7pgtCWuokVp/6KhAxVkbzvH65wg=="
       }
     },
     "npm:object-assign": {
@@ -9175,9 +9292,9 @@
       "type": "npm",
       "name": "npm:prettier",
       "data": {
-        "version": "3.0.3",
+        "version": "3.1.0",
         "packageName": "prettier",
-        "hash": "sha512-L/4pUDMxcNa8R/EthV08Zt42WBO4h1rarVtK0K+QJG0X187OLo7l699jWw0GKuwzkPQ//jMFA/8Xm6Fh3J/DAg=="
+        "hash": "sha512-TQLvXjq5IAibjh8EpBIkNKxO749UEWABoiIZehEPiY4GNpVdhaFKqSTu+QrlU6D2dPAfubRmtJTi4K4YkQ5eXw=="
       }
     },
     "npm:pretty-format": {
@@ -10755,6 +10872,24 @@
         "hash": "sha512-Xni35NKzjgMrwevysHTCArtLDpPvye8zV/0E4EyYn43P7/7qvQwPh9BGkHewbMulVntbigmcT7rdX3BNo9wRJg=="
       }
     },
+    "npm:tslib@2.4.0": {
+      "type": "npm",
+      "name": "npm:tslib@2.4.0",
+      "data": {
+        "version": "2.4.0",
+        "packageName": "tslib",
+        "hash": "sha512-d6xOpEDfsi2CZVlPQzGeux8XMwLT9hssAsaPYExaQMuYskwb+x1x7J371tWlbBdWHroy99KnVB6qIkUbs5X3UQ=="
+      }
+    },
+    "npm:tslib@2.5.0": {
+      "type": "npm",
+      "name": "npm:tslib@2.5.0",
+      "data": {
+        "version": "2.5.0",
+        "packageName": "tslib",
+        "hash": "sha512-336iVw3rtn2BUK7ORdIAHTyxHGRIHVReokCR3XjbckJMK7ms8FysBfhLR8IXnAgy7T0PTPNBWKiH514FOW/WSg=="
+      }
+    },
     "npm:tslib@2.5.3": {
       "type": "npm",
       "name": "npm:tslib@2.5.3",
@@ -10899,6 +11034,15 @@
         "hash": "sha512-mI4WrpHsbCIcwT9cF4FZvr80QUeKvsUsUvKDoR+X/7XHQH98xYD8YHZg7ANtz2GtZt/CBq2QJ0thkGJMHfqc1w=="
       }
     },
+    "npm:typescript@5.3.2": {
+      "type": "npm",
+      "name": "npm:typescript@5.3.2",
+      "data": {
+        "version": "5.3.2",
+        "packageName": "typescript",
+        "hash": "sha512-6l+RyNy7oAHDfxC4FzSJcz9vnjTKxrLpDG5M2Vu4SHRVNg6xzqZp6LYSR9zjqQTu8DU/f5xwxUdADOkbrIX2gQ=="
+      }
+    },
     "npm:uid": {
       "type": "npm",
       "name": "npm:uid",
@@ -11041,6 +11185,24 @@
         "version": "1.0.1",
         "packageName": "utils-merge",
         "hash": "sha512-pMZTvIkT1d+TFGvDOqodOclx0QWkkgi6Tdoa8gC8ffGAAqz9pzPTZWAybbsHHoED/ztMtkv/VoYTYyShUn81hA=="
+      }
+    },
+    "npm:uuid@8.3.2": {
+      "type": "npm",
+      "name": "npm:uuid@8.3.2",
+      "data": {
+        "version": "8.3.2",
+        "packageName": "uuid",
+        "hash": "sha512-+NYs2QeMWy+GWFOEm9xnn6HCDp0l7QBD7ml8zLUmJ+93Q5NF0NocErnwkTkXVFNiX3/fpC6afS8Dhb/gz7R7eg=="
+      }
+    },
+    "npm:uuid@9.0.0": {
+      "type": "npm",
+      "name": "npm:uuid@9.0.0",
+      "data": {
+        "version": "9.0.0",
+        "packageName": "uuid",
+        "hash": "sha512-MXcSTerfPa4uqyzStbRoTgt5XIe3x5+42+q1sDuy3R5MDk66URdLMOZe5aPX/SQd+kuYAh0FdP/pO28IkQyTeg=="
       }
     },
     "npm:uuid": {
@@ -11361,6 +11523,15 @@
     "npm:ws": {
       "type": "npm",
       "name": "npm:ws",
+      "data": {
+        "version": "8.12.0",
+        "packageName": "ws",
+        "hash": "sha512-kU62emKIdKVeEIOIKVegvqpXMSTAMLJozpHZaJNDYqBjzlSYXQGviYwN1osDLJ9av68qHd4a2oSjd7yD4pacig=="
+      }
+    },
+    "npm:ws@8.14.2": {
+      "type": "npm",
+      "name": "npm:ws@8.14.2",
       "data": {
         "version": "8.14.2",
         "packageName": "ws",
@@ -12316,11 +12487,21 @@
     },
     {
       "source": "npm:@babel/code-frame",
-      "target": "npm:@babel/highlight",
+      "target": "npm:@babel/highlight@7.22.20",
       "type": "static"
     },
     {
       "source": "npm:@babel/code-frame",
+      "target": "npm:chalk@2.4.2",
+      "type": "static"
+    },
+    {
+      "source": "npm:@babel/code-frame@7.23.4",
+      "target": "npm:@babel/highlight",
+      "type": "static"
+    },
+    {
+      "source": "npm:@babel/code-frame@7.23.4",
       "target": "npm:chalk@2.4.2",
       "type": "static"
     },
@@ -12735,6 +12916,21 @@
       "type": "static"
     },
     {
+      "source": "npm:@babel/highlight@7.22.20",
+      "target": "npm:@babel/helper-validator-identifier",
+      "type": "static"
+    },
+    {
+      "source": "npm:@babel/highlight@7.22.20",
+      "target": "npm:chalk@2.4.2",
+      "type": "static"
+    },
+    {
+      "source": "npm:@babel/highlight@7.22.20",
+      "target": "npm:js-tokens",
+      "type": "static"
+    },
+    {
       "source": "npm:@babel/highlight",
       "target": "npm:@babel/helper-validator-identifier",
       "type": "static"
@@ -13096,16 +13292,6 @@
     },
     {
       "source": "npm:@eslint-community/eslint-utils",
-      "target": "npm:eslint",
-      "type": "static"
-    },
-    {
-      "source": "npm:@eslint-community/eslint-utils",
-      "target": "npm:eslint-visitor-keys",
-      "type": "static"
-    },
-    {
-      "source": "npm:@eslint-community/eslint-utils",
       "target": "npm:eslint@8.53.0",
       "type": "static"
     },
@@ -13116,7 +13302,7 @@
     },
     {
       "source": "npm:@eslint-community/eslint-utils",
-      "target": "npm:eslint@8.54.0",
+      "target": "npm:eslint",
       "type": "static"
     },
     {
@@ -13146,71 +13332,26 @@
     },
     {
       "source": "npm:@eslint/eslintrc",
-      "target": "npm:ignore@5.2.4",
-      "type": "static"
-    },
-    {
-      "source": "npm:@eslint/eslintrc",
-      "target": "npm:import-fresh",
-      "type": "static"
-    },
-    {
-      "source": "npm:@eslint/eslintrc",
-      "target": "npm:js-yaml",
-      "type": "static"
-    },
-    {
-      "source": "npm:@eslint/eslintrc",
-      "target": "npm:minimatch",
-      "type": "static"
-    },
-    {
-      "source": "npm:@eslint/eslintrc",
-      "target": "npm:strip-json-comments",
-      "type": "static"
-    },
-    {
-      "source": "npm:@eslint/eslintrc@2.1.3",
-      "target": "npm:ajv",
-      "type": "static"
-    },
-    {
-      "source": "npm:@eslint/eslintrc@2.1.3",
-      "target": "npm:debug",
-      "type": "static"
-    },
-    {
-      "source": "npm:@eslint/eslintrc@2.1.3",
-      "target": "npm:espree",
-      "type": "static"
-    },
-    {
-      "source": "npm:@eslint/eslintrc@2.1.3",
-      "target": "npm:globals",
-      "type": "static"
-    },
-    {
-      "source": "npm:@eslint/eslintrc@2.1.3",
       "target": "npm:ignore",
       "type": "static"
     },
     {
-      "source": "npm:@eslint/eslintrc@2.1.3",
+      "source": "npm:@eslint/eslintrc",
       "target": "npm:import-fresh",
       "type": "static"
     },
     {
-      "source": "npm:@eslint/eslintrc@2.1.3",
+      "source": "npm:@eslint/eslintrc",
       "target": "npm:js-yaml",
       "type": "static"
     },
     {
-      "source": "npm:@eslint/eslintrc@2.1.3",
+      "source": "npm:@eslint/eslintrc",
       "target": "npm:minimatch",
       "type": "static"
     },
     {
-      "source": "npm:@eslint/eslintrc@2.1.3",
+      "source": "npm:@eslint/eslintrc",
       "target": "npm:strip-json-comments",
       "type": "static"
     },
@@ -13230,21 +13371,6 @@
       "type": "static"
     },
     {
-      "source": "npm:@graphql-tools/merge@8.4.2",
-      "target": "npm:@graphql-tools/utils@9.2.1",
-      "type": "static"
-    },
-    {
-      "source": "npm:@graphql-tools/merge@8.4.2",
-      "target": "npm:graphql",
-      "type": "static"
-    },
-    {
-      "source": "npm:@graphql-tools/merge@8.4.2",
-      "target": "npm:tslib",
-      "type": "static"
-    },
-    {
       "source": "npm:@graphql-tools/merge",
       "target": "npm:@graphql-tools/utils",
       "type": "static"
@@ -13260,13 +13386,43 @@
       "type": "static"
     },
     {
+      "source": "npm:@graphql-tools/merge@8.4.2",
+      "target": "npm:@graphql-tools/utils",
+      "type": "static"
+    },
+    {
+      "source": "npm:@graphql-tools/merge@8.4.2",
+      "target": "npm:graphql",
+      "type": "static"
+    },
+    {
+      "source": "npm:@graphql-tools/merge@8.4.2",
+      "target": "npm:tslib",
+      "type": "static"
+    },
+    {
+      "source": "npm:@graphql-tools/merge@9.0.0",
+      "target": "npm:@graphql-tools/utils@10.0.8",
+      "type": "static"
+    },
+    {
+      "source": "npm:@graphql-tools/merge@9.0.0",
+      "target": "npm:graphql",
+      "type": "static"
+    },
+    {
+      "source": "npm:@graphql-tools/merge@9.0.0",
+      "target": "npm:tslib",
+      "type": "static"
+    },
+    {
       "source": "npm:@graphql-tools/mock",
       "target": "npm:@graphql-tools/schema",
       "type": "static"
     },
     {
       "source": "npm:@graphql-tools/mock",
-      "target": "npm:@graphql-tools/utils@9.2.1",
+      "target": "npm:@graphql-tools/utils",
       "type": "static"
     },
     {
@@ -13286,12 +13442,12 @@
     },
     {
       "source": "npm:@graphql-tools/schema@10.0.0",
-      "target": "npm:@graphql-tools/merge",
+      "target": "npm:@graphql-tools/merge@9.0.0",
       "type": "static"
     },
     {
       "source": "npm:@graphql-tools/schema@10.0.0",
-      "target": "npm:@graphql-tools/utils",
+      "target": "npm:@graphql-tools/utils@10.0.8",
       "type": "static"
     },
     {
@@ -13335,13 +13491,38 @@
       "type": "static"
     },
     {
+      "source": "npm:@graphql-tools/schema@9.0.16",
+      "target": "npm:@graphql-tools/merge",
+      "type": "static"
+    },
+    {
+      "source": "npm:@graphql-tools/schema@9.0.16",
+      "target": "npm:@graphql-tools/utils",
+      "type": "static"
+    },
+    {
+      "source": "npm:@graphql-tools/schema@9.0.16",
+      "target": "npm:graphql",
+      "type": "static"
+    },
+    {
+      "source": "npm:@graphql-tools/schema@9.0.16",
+      "target": "npm:tslib",
+      "type": "static"
+    },
+    {
+      "source": "npm:@graphql-tools/schema@9.0.16",
+      "target": "npm:value-or-promise",
+      "type": "static"
+    },
+    {
       "source": "npm:@graphql-tools/schema",
       "target": "npm:@graphql-tools/merge@8.4.2",
       "type": "static"
     },
     {
       "source": "npm:@graphql-tools/schema",
-      "target": "npm:@graphql-tools/utils@9.2.1",
+      "target": "npm:@graphql-tools/utils",
       "type": "static"
     },
     {
@@ -13360,27 +13541,27 @@
       "type": "static"
     },
     {
-      "source": "npm:@graphql-tools/utils",
+      "source": "npm:@graphql-tools/utils@10.0.8",
       "target": "npm:@graphql-typed-document-node/core",
       "type": "static"
     },
     {
-      "source": "npm:@graphql-tools/utils",
+      "source": "npm:@graphql-tools/utils@10.0.8",
       "target": "npm:cross-inspect",
       "type": "static"
     },
     {
-      "source": "npm:@graphql-tools/utils",
+      "source": "npm:@graphql-tools/utils@10.0.8",
       "target": "npm:dset",
       "type": "static"
     },
     {
-      "source": "npm:@graphql-tools/utils",
+      "source": "npm:@graphql-tools/utils@10.0.8",
       "target": "npm:graphql",
       "type": "static"
     },
     {
-      "source": "npm:@graphql-tools/utils",
+      "source": "npm:@graphql-tools/utils@10.0.8",
       "target": "npm:tslib",
       "type": "static"
     },
@@ -13395,17 +13576,17 @@
       "type": "static"
     },
     {
-      "source": "npm:@graphql-tools/utils@9.2.1",
+      "source": "npm:@graphql-tools/utils",
       "target": "npm:@graphql-typed-document-node/core",
       "type": "static"
     },
     {
-      "source": "npm:@graphql-tools/utils@9.2.1",
+      "source": "npm:@graphql-tools/utils",
       "target": "npm:graphql",
       "type": "static"
     },
     {
-      "source": "npm:@graphql-tools/utils@9.2.1",
+      "source": "npm:@graphql-tools/utils",
       "target": "npm:tslib",
       "type": "static"
     },
@@ -14091,66 +14272,6 @@
     },
     {
       "source": "npm:@nestjs/apollo",
-      "target": "npm:@apollo/gateway",
-      "type": "static"
-    },
-    {
-      "source": "npm:@nestjs/apollo",
-      "target": "npm:@apollo/server",
-      "type": "static"
-    },
-    {
-      "source": "npm:@nestjs/apollo",
-      "target": "npm:@apollo/server-plugin-landing-page-graphql-playground",
-      "type": "static"
-    },
-    {
-      "source": "npm:@nestjs/apollo",
-      "target": "npm:@nestjs/common",
-      "type": "static"
-    },
-    {
-      "source": "npm:@nestjs/apollo",
-      "target": "npm:@nestjs/core",
-      "type": "static"
-    },
-    {
-      "source": "npm:@nestjs/apollo",
-      "target": "npm:@nestjs/graphql",
-      "type": "static"
-    },
-    {
-      "source": "npm:@nestjs/apollo",
-      "target": "npm:graphql",
-      "type": "static"
-    },
-    {
-      "source": "npm:@nestjs/apollo",
-      "target": "npm:iterall",
-      "type": "static"
-    },
-    {
-      "source": "npm:@nestjs/apollo",
-      "target": "npm:lodash.omit",
-      "type": "static"
-    },
-    {
-      "source": "npm:@nestjs/apollo",
-      "target": "npm:tslib",
-      "type": "static"
-    },
-    {
-      "source": "npm:@nestjs/apollo",
-      "target": "npm:@apollo/server",
-      "type": "static"
-    },
-    {
-      "source": "npm:@nestjs/apollo",
-      "target": "npm:@apollo/server-plugin-landing-page-graphql-playground",
-      "type": "static"
-    },
-    {
-      "source": "npm:@nestjs/apollo",
       "target": "npm:@apollo/subgraph",
       "type": "static"
     },
@@ -14171,6 +14292,16 @@
     },
     {
       "source": "npm:@nestjs/apollo",
+      "target": "npm:apollo-server-core",
+      "type": "static"
+    },
+    {
+      "source": "npm:@nestjs/apollo",
+      "target": "npm:apollo-server-express",
+      "type": "static"
+    },
+    {
+      "source": "npm:@nestjs/apollo",
       "target": "npm:graphql",
       "type": "static"
     },
@@ -14186,6 +14317,106 @@
     },
     {
       "source": "npm:@nestjs/apollo",
+      "target": "npm:tslib@2.5.0",
+      "type": "static"
+    },
+    {
+      "source": "npm:@nestjs/apollo@12.0.11",
+      "target": "npm:@apollo/gateway",
+      "type": "static"
+    },
+    {
+      "source": "npm:@nestjs/apollo@12.0.11",
+      "target": "npm:@apollo/server",
+      "type": "static"
+    },
+    {
+      "source": "npm:@nestjs/apollo@12.0.11",
+      "target": "npm:@apollo/server-plugin-landing-page-graphql-playground",
+      "type": "static"
+    },
+    {
+      "source": "npm:@nestjs/apollo@12.0.11",
+      "target": "npm:@nestjs/common",
+      "type": "static"
+    },
+    {
+      "source": "npm:@nestjs/apollo@12.0.11",
+      "target": "npm:@nestjs/core@9.4.3",
+      "type": "static"
+    },
+    {
+      "source": "npm:@nestjs/apollo@12.0.11",
+      "target": "npm:@nestjs/graphql@12.0.11",
+      "type": "static"
+    },
+    {
+      "source": "npm:@nestjs/apollo@12.0.11",
+      "target": "npm:graphql",
+      "type": "static"
+    },
+    {
+      "source": "npm:@nestjs/apollo@12.0.11",
+      "target": "npm:iterall",
+      "type": "static"
+    },
+    {
+      "source": "npm:@nestjs/apollo@12.0.11",
+      "target": "npm:lodash.omit",
+      "type": "static"
+    },
+    {
+      "source": "npm:@nestjs/apollo@12.0.11",
+      "target": "npm:tslib",
+      "type": "static"
+    },
+    {
+      "source": "npm:@nestjs/apollo@12.0.11",
+      "target": "npm:@apollo/server",
+      "type": "static"
+    },
+    {
+      "source": "npm:@nestjs/apollo@12.0.11",
+      "target": "npm:@apollo/server-plugin-landing-page-graphql-playground",
+      "type": "static"
+    },
+    {
+      "source": "npm:@nestjs/apollo@12.0.11",
+      "target": "npm:@apollo/subgraph",
+      "type": "static"
+    },
+    {
+      "source": "npm:@nestjs/apollo@12.0.11",
+      "target": "npm:@nestjs/common",
+      "type": "static"
+    },
+    {
+      "source": "npm:@nestjs/apollo@12.0.11",
+      "target": "npm:@nestjs/core@9.4.3",
+      "type": "static"
+    },
+    {
+      "source": "npm:@nestjs/apollo@12.0.11",
+      "target": "npm:@nestjs/graphql@12.0.11",
+      "type": "static"
+    },
+    {
+      "source": "npm:@nestjs/apollo@12.0.11",
+      "target": "npm:graphql",
+      "type": "static"
+    },
+    {
+      "source": "npm:@nestjs/apollo@12.0.11",
+      "target": "npm:iterall",
+      "type": "static"
+    },
+    {
+      "source": "npm:@nestjs/apollo@12.0.11",
+      "target": "npm:lodash.omit",
+      "type": "static"
+    },
+    {
+      "source": "npm:@nestjs/apollo@12.0.11",
       "target": "npm:tslib",
       "type": "static"
     },
@@ -14301,6 +14532,11 @@
     },
     {
       "source": "npm:@nestjs/common",
+      "target": "npm:class-transformer",
+      "type": "static"
+    },
+    {
+      "source": "npm:@nestjs/common",
       "target": "npm:class-validator",
       "type": "static"
     },
@@ -14356,6 +14592,11 @@
     },
     {
       "source": "npm:@nestjs/core",
+      "target": "npm:object-hash",
+      "type": "static"
+    },
+    {
+      "source": "npm:@nestjs/core",
       "target": "npm:path-to-regexp",
       "type": "static"
     },
@@ -14371,11 +14612,61 @@
     },
     {
       "source": "npm:@nestjs/core",
-      "target": "npm:tslib@2.5.3",
+      "target": "npm:tslib@2.4.0",
       "type": "static"
     },
     {
       "source": "npm:@nestjs/core",
+      "target": "npm:uuid@8.3.2",
+      "type": "static"
+    },
+    {
+      "source": "npm:@nestjs/core@9.4.3",
+      "target": "npm:@nestjs/common",
+      "type": "static"
+    },
+    {
+      "source": "npm:@nestjs/core@9.4.3",
+      "target": "npm:@nestjs/platform-express",
+      "type": "static"
+    },
+    {
+      "source": "npm:@nestjs/core@9.4.3",
+      "target": "npm:@nuxtjs/opencollective",
+      "type": "static"
+    },
+    {
+      "source": "npm:@nestjs/core@9.4.3",
+      "target": "npm:fast-safe-stringify",
+      "type": "static"
+    },
+    {
+      "source": "npm:@nestjs/core@9.4.3",
+      "target": "npm:iterare",
+      "type": "static"
+    },
+    {
+      "source": "npm:@nestjs/core@9.4.3",
+      "target": "npm:path-to-regexp",
+      "type": "static"
+    },
+    {
+      "source": "npm:@nestjs/core@9.4.3",
+      "target": "npm:reflect-metadata",
+      "type": "static"
+    },
+    {
+      "source": "npm:@nestjs/core@9.4.3",
+      "target": "npm:rxjs",
+      "type": "static"
+    },
+    {
+      "source": "npm:@nestjs/core@9.4.3",
+      "target": "npm:tslib@2.5.3",
+      "type": "static"
+    },
+    {
+      "source": "npm:@nestjs/core@9.4.3",
       "target": "npm:uid",
       "type": "static"
     },
@@ -14391,7 +14682,7 @@
     },
     {
       "source": "npm:@nestjs/graphql",
-      "target": "npm:@graphql-tools/schema@10.0.0",
+      "target": "npm:@graphql-tools/schema@9.0.16",
       "type": "static"
     },
     {
@@ -14471,12 +14762,12 @@
     },
     {
       "source": "npm:@nestjs/graphql",
-      "target": "npm:tslib",
+      "target": "npm:tslib@2.5.0",
       "type": "static"
     },
     {
       "source": "npm:@nestjs/graphql",
-      "target": "npm:uuid",
+      "target": "npm:uuid@9.0.0",
       "type": "static"
     },
     {
@@ -14485,98 +14776,203 @@
       "type": "static"
     },
     {
-      "source": "npm:@nestjs/graphql",
-      "target": "npm:@graphql-tools/merge",
+      "source": "npm:@nestjs/graphql@12.0.11",
+      "target": "npm:@apollo/subgraph",
       "type": "static"
     },
     {
-      "source": "npm:@nestjs/graphql",
+      "source": "npm:@nestjs/graphql@12.0.11",
+      "target": "npm:@graphql-tools/merge@9.0.0",
+      "type": "static"
+    },
+    {
+      "source": "npm:@nestjs/graphql@12.0.11",
       "target": "npm:@graphql-tools/schema@10.0.0",
       "type": "static"
     },
     {
-      "source": "npm:@nestjs/graphql",
-      "target": "npm:@graphql-tools/utils",
+      "source": "npm:@nestjs/graphql@12.0.11",
+      "target": "npm:@graphql-tools/utils@10.0.8",
       "type": "static"
     },
     {
-      "source": "npm:@nestjs/graphql",
+      "source": "npm:@nestjs/graphql@12.0.11",
       "target": "npm:@nestjs/common",
       "type": "static"
     },
     {
-      "source": "npm:@nestjs/graphql",
-      "target": "npm:@nestjs/core",
+      "source": "npm:@nestjs/graphql@12.0.11",
+      "target": "npm:@nestjs/core@9.4.3",
       "type": "static"
     },
     {
-      "source": "npm:@nestjs/graphql",
-      "target": "npm:@nestjs/mapped-types",
+      "source": "npm:@nestjs/graphql@12.0.11",
+      "target": "npm:@nestjs/mapped-types@2.0.2",
       "type": "static"
     },
     {
-      "source": "npm:@nestjs/graphql",
+      "source": "npm:@nestjs/graphql@12.0.11",
       "target": "npm:chokidar",
       "type": "static"
     },
     {
-      "source": "npm:@nestjs/graphql",
-      "target": "npm:fast-glob",
+      "source": "npm:@nestjs/graphql@12.0.11",
+      "target": "npm:class-transformer",
       "type": "static"
     },
     {
-      "source": "npm:@nestjs/graphql",
+      "source": "npm:@nestjs/graphql@12.0.11",
+      "target": "npm:class-validator",
+      "type": "static"
+    },
+    {
+      "source": "npm:@nestjs/graphql@12.0.11",
+      "target": "npm:fast-glob@3.3.2",
+      "type": "static"
+    },
+    {
+      "source": "npm:@nestjs/graphql@12.0.11",
       "target": "npm:graphql",
       "type": "static"
     },
     {
-      "source": "npm:@nestjs/graphql",
+      "source": "npm:@nestjs/graphql@12.0.11",
       "target": "npm:graphql-tag",
       "type": "static"
     },
     {
-      "source": "npm:@nestjs/graphql",
-      "target": "npm:graphql-ws",
+      "source": "npm:@nestjs/graphql@12.0.11",
+      "target": "npm:graphql-ws@5.14.2",
       "type": "static"
     },
     {
-      "source": "npm:@nestjs/graphql",
+      "source": "npm:@nestjs/graphql@12.0.11",
       "target": "npm:lodash",
       "type": "static"
     },
     {
-      "source": "npm:@nestjs/graphql",
+      "source": "npm:@nestjs/graphql@12.0.11",
       "target": "npm:normalize-path",
       "type": "static"
     },
     {
-      "source": "npm:@nestjs/graphql",
+      "source": "npm:@nestjs/graphql@12.0.11",
       "target": "npm:reflect-metadata",
       "type": "static"
     },
     {
-      "source": "npm:@nestjs/graphql",
+      "source": "npm:@nestjs/graphql@12.0.11",
       "target": "npm:subscriptions-transport-ws",
       "type": "static"
     },
     {
-      "source": "npm:@nestjs/graphql",
-      "target": "npm:ts-morph",
-      "type": "static"
-    },
-    {
-      "source": "npm:@nestjs/graphql",
+      "source": "npm:@nestjs/graphql@12.0.11",
       "target": "npm:tslib",
       "type": "static"
     },
     {
-      "source": "npm:@nestjs/graphql",
+      "source": "npm:@nestjs/graphql@12.0.11",
       "target": "npm:uuid",
       "type": "static"
     },
     {
-      "source": "npm:@nestjs/graphql",
-      "target": "npm:ws",
+      "source": "npm:@nestjs/graphql@12.0.11",
+      "target": "npm:ws@8.14.2",
+      "type": "static"
+    },
+    {
+      "source": "npm:@nestjs/graphql@12.0.11",
+      "target": "npm:@graphql-tools/merge@9.0.0",
+      "type": "static"
+    },
+    {
+      "source": "npm:@nestjs/graphql@12.0.11",
+      "target": "npm:@graphql-tools/schema@10.0.0",
+      "type": "static"
+    },
+    {
+      "source": "npm:@nestjs/graphql@12.0.11",
+      "target": "npm:@graphql-tools/utils@10.0.8",
+      "type": "static"
+    },
+    {
+      "source": "npm:@nestjs/graphql@12.0.11",
+      "target": "npm:@nestjs/common",
+      "type": "static"
+    },
+    {
+      "source": "npm:@nestjs/graphql@12.0.11",
+      "target": "npm:@nestjs/core@9.4.3",
+      "type": "static"
+    },
+    {
+      "source": "npm:@nestjs/graphql@12.0.11",
+      "target": "npm:@nestjs/mapped-types@2.0.2",
+      "type": "static"
+    },
+    {
+      "source": "npm:@nestjs/graphql@12.0.11",
+      "target": "npm:chokidar",
+      "type": "static"
+    },
+    {
+      "source": "npm:@nestjs/graphql@12.0.11",
+      "target": "npm:fast-glob@3.3.2",
+      "type": "static"
+    },
+    {
+      "source": "npm:@nestjs/graphql@12.0.11",
+      "target": "npm:graphql",
+      "type": "static"
+    },
+    {
+      "source": "npm:@nestjs/graphql@12.0.11",
+      "target": "npm:graphql-tag",
+      "type": "static"
+    },
+    {
+      "source": "npm:@nestjs/graphql@12.0.11",
+      "target": "npm:graphql-ws@5.14.2",
+      "type": "static"
+    },
+    {
+      "source": "npm:@nestjs/graphql@12.0.11",
+      "target": "npm:lodash",
+      "type": "static"
+    },
+    {
+      "source": "npm:@nestjs/graphql@12.0.11",
+      "target": "npm:normalize-path",
+      "type": "static"
+    },
+    {
+      "source": "npm:@nestjs/graphql@12.0.11",
+      "target": "npm:reflect-metadata",
+      "type": "static"
+    },
+    {
+      "source": "npm:@nestjs/graphql@12.0.11",
+      "target": "npm:subscriptions-transport-ws",
+      "type": "static"
+    },
+    {
+      "source": "npm:@nestjs/graphql@12.0.11",
+      "target": "npm:ts-morph",
+      "type": "static"
+    },
+    {
+      "source": "npm:@nestjs/graphql@12.0.11",
+      "target": "npm:tslib",
+      "type": "static"
+    },
+    {
+      "source": "npm:@nestjs/graphql@12.0.11",
+      "target": "npm:uuid",
+      "type": "static"
+    },
+    {
+      "source": "npm:@nestjs/graphql@12.0.11",
+      "target": "npm:ws@8.14.2",
       "type": "static"
     },
     {
@@ -14610,6 +15006,26 @@
       "type": "static"
     },
     {
+      "source": "npm:@nestjs/mapped-types@2.0.2",
+      "target": "npm:@nestjs/common",
+      "type": "static"
+    },
+    {
+      "source": "npm:@nestjs/mapped-types@2.0.2",
+      "target": "npm:class-transformer",
+      "type": "static"
+    },
+    {
+      "source": "npm:@nestjs/mapped-types@2.0.2",
+      "target": "npm:class-validator",
+      "type": "static"
+    },
+    {
+      "source": "npm:@nestjs/mapped-types@2.0.2",
+      "target": "npm:reflect-metadata",
+      "type": "static"
+    },
+    {
       "source": "npm:@nestjs/passport",
       "target": "npm:@nestjs/common",
       "type": "static"
@@ -14627,6 +15043,41 @@
     {
       "source": "npm:@nestjs/platform-express",
       "target": "npm:@nestjs/core",
+      "type": "static"
+    },
+    {
+      "source": "npm:@nestjs/platform-express",
+      "target": "npm:body-parser",
+      "type": "static"
+    },
+    {
+      "source": "npm:@nestjs/platform-express",
+      "target": "npm:cors",
+      "type": "static"
+    },
+    {
+      "source": "npm:@nestjs/platform-express",
+      "target": "npm:express",
+      "type": "static"
+    },
+    {
+      "source": "npm:@nestjs/platform-express",
+      "target": "npm:multer",
+      "type": "static"
+    },
+    {
+      "source": "npm:@nestjs/platform-express",
+      "target": "npm:tslib@2.5.3",
+      "type": "static"
+    },
+    {
+      "source": "npm:@nestjs/platform-express",
+      "target": "npm:@nestjs/common",
+      "type": "static"
+    },
+    {
+      "source": "npm:@nestjs/platform-express",
+      "target": "npm:@nestjs/core@9.4.3",
       "type": "static"
     },
     {
@@ -14725,6 +15176,26 @@
       "type": "static"
     },
     {
+      "source": "npm:@nestjs/testing",
+      "target": "npm:@nestjs/common",
+      "type": "static"
+    },
+    {
+      "source": "npm:@nestjs/testing",
+      "target": "npm:@nestjs/core@9.4.3",
+      "type": "static"
+    },
+    {
+      "source": "npm:@nestjs/testing",
+      "target": "npm:@nestjs/platform-express",
+      "type": "static"
+    },
+    {
+      "source": "npm:@nestjs/testing",
+      "target": "npm:tslib@2.5.3",
+      "type": "static"
+    },
+    {
       "source": "npm:@nestjs/typeorm",
       "target": "npm:@nestjs/common",
       "type": "static"
@@ -14732,6 +15203,36 @@
     {
       "source": "npm:@nestjs/typeorm",
       "target": "npm:@nestjs/core",
+      "type": "static"
+    },
+    {
+      "source": "npm:@nestjs/typeorm",
+      "target": "npm:reflect-metadata",
+      "type": "static"
+    },
+    {
+      "source": "npm:@nestjs/typeorm",
+      "target": "npm:rxjs",
+      "type": "static"
+    },
+    {
+      "source": "npm:@nestjs/typeorm",
+      "target": "npm:typeorm",
+      "type": "static"
+    },
+    {
+      "source": "npm:@nestjs/typeorm",
+      "target": "npm:uuid",
+      "type": "static"
+    },
+    {
+      "source": "npm:@nestjs/typeorm",
+      "target": "npm:@nestjs/common",
+      "type": "static"
+    },
+    {
+      "source": "npm:@nestjs/typeorm",
+      "target": "npm:@nestjs/core@9.4.3",
       "type": "static"
     },
     {
@@ -15451,7 +15952,7 @@
     },
     {
       "source": "npm:@ts-morph/common@0.19.0",
-      "target": "npm:fast-glob",
+      "target": "npm:fast-glob@3.3.2",
       "type": "static"
     },
     {
@@ -15471,7 +15972,7 @@
     },
     {
       "source": "npm:@ts-morph/common",
-      "target": "npm:fast-glob",
+      "target": "npm:fast-glob@3.3.2",
       "type": "static"
     },
     {
@@ -15487,6 +15988,11 @@
     {
       "source": "npm:@ts-morph/common",
       "target": "npm:path-browserify",
+      "type": "static"
+    },
+    {
+      "source": "npm:@types/accepts",
+      "target": "npm:@types/node",
       "type": "static"
     },
     {
@@ -15535,6 +16041,16 @@
       "type": "static"
     },
     {
+      "source": "npm:@types/body-parser@1.19.2",
+      "target": "npm:@types/connect",
+      "type": "static"
+    },
+    {
+      "source": "npm:@types/body-parser@1.19.2",
+      "target": "npm:@types/node",
+      "type": "static"
+    },
+    {
       "source": "npm:@types/body-parser",
       "target": "npm:@types/connect",
       "type": "static"
@@ -15570,8 +16086,23 @@
       "type": "static"
     },
     {
-      "source": "npm:@types/express-serve-static-core",
+      "source": "npm:@types/express-serve-static-core@4.17.31",
       "target": "npm:@types/node",
+      "type": "static"
+    },
+    {
+      "source": "npm:@types/express-serve-static-core@4.17.31",
+      "target": "npm:@types/qs",
+      "type": "static"
+    },
+    {
+      "source": "npm:@types/express-serve-static-core@4.17.31",
+      "target": "npm:@types/range-parser",
+      "type": "static"
+    },
+    {
+      "source": "npm:@types/express-serve-static-core",
+      "target": "npm:@types/node@18.16.12",
       "type": "static"
     },
     {
@@ -15587,6 +16118,26 @@
     {
       "source": "npm:@types/express-serve-static-core",
       "target": "npm:@types/send",
+      "type": "static"
+    },
+    {
+      "source": "npm:@types/express@4.17.14",
+      "target": "npm:@types/body-parser",
+      "type": "static"
+    },
+    {
+      "source": "npm:@types/express@4.17.14",
+      "target": "npm:@types/express-serve-static-core",
+      "type": "static"
+    },
+    {
+      "source": "npm:@types/express@4.17.14",
+      "target": "npm:@types/qs",
+      "type": "static"
+    },
+    {
+      "source": "npm:@types/express@4.17.14",
+      "target": "npm:@types/serve-static",
       "type": "static"
     },
     {
@@ -15611,7 +16162,7 @@
     },
     {
       "source": "npm:@types/graceful-fs",
-      "target": "npm:@types/node",
+      "target": "npm:@types/node@18.16.12",
       "type": "static"
     },
     {
@@ -15731,7 +16282,7 @@
     },
     {
       "source": "npm:@types/serve-static",
-      "target": "npm:@types/node",
+      "target": "npm:@types/node@18.16.12",
       "type": "static"
     },
     {
@@ -15786,7 +16337,7 @@
     },
     {
       "source": "npm:@typescript-eslint/eslint-plugin",
-      "target": "npm:eslint@8.54.0",
+      "target": "npm:eslint",
       "type": "static"
     },
     {
@@ -15871,7 +16422,7 @@
     },
     {
       "source": "npm:@typescript-eslint/parser",
-      "target": "npm:eslint@8.54.0",
+      "target": "npm:eslint",
       "type": "static"
     },
     {
@@ -15906,7 +16457,7 @@
     },
     {
       "source": "npm:@typescript-eslint/type-utils",
-      "target": "npm:eslint@8.54.0",
+      "target": "npm:eslint",
       "type": "static"
     },
     {
@@ -15991,7 +16542,7 @@
     },
     {
       "source": "npm:@typescript-eslint/utils",
-      "target": "npm:eslint@8.54.0",
+      "target": "npm:eslint",
       "type": "static"
     },
     {
@@ -16472,6 +17023,71 @@
     {
       "source": "npm:apollo-server-errors",
       "target": "npm:graphql",
+      "type": "static"
+    },
+    {
+      "source": "npm:apollo-server-express",
+      "target": "npm:@types/accepts",
+      "type": "static"
+    },
+    {
+      "source": "npm:apollo-server-express",
+      "target": "npm:@types/body-parser@1.19.2",
+      "type": "static"
+    },
+    {
+      "source": "npm:apollo-server-express",
+      "target": "npm:@types/cors",
+      "type": "static"
+    },
+    {
+      "source": "npm:apollo-server-express",
+      "target": "npm:@types/express@4.17.14",
+      "type": "static"
+    },
+    {
+      "source": "npm:apollo-server-express",
+      "target": "npm:@types/express-serve-static-core@4.17.31",
+      "type": "static"
+    },
+    {
+      "source": "npm:apollo-server-express",
+      "target": "npm:accepts",
+      "type": "static"
+    },
+    {
+      "source": "npm:apollo-server-express",
+      "target": "npm:apollo-server-core",
+      "type": "static"
+    },
+    {
+      "source": "npm:apollo-server-express",
+      "target": "npm:apollo-server-types",
+      "type": "static"
+    },
+    {
+      "source": "npm:apollo-server-express",
+      "target": "npm:body-parser",
+      "type": "static"
+    },
+    {
+      "source": "npm:apollo-server-express",
+      "target": "npm:cors",
+      "type": "static"
+    },
+    {
+      "source": "npm:apollo-server-express",
+      "target": "npm:express",
+      "type": "static"
+    },
+    {
+      "source": "npm:apollo-server-express",
+      "target": "npm:graphql",
+      "type": "static"
+    },
+    {
+      "source": "npm:apollo-server-express",
+      "target": "npm:parseurl",
       "type": "static"
     },
     {
@@ -18436,7 +19052,7 @@
     },
     {
       "source": "npm:eslint-config-prettier",
-      "target": "npm:eslint@8.54.0",
+      "target": "npm:eslint",
       "type": "static"
     },
     {
@@ -18481,7 +19097,7 @@
     },
     {
       "source": "npm:eslint-import-resolver-typescript",
-      "target": "npm:fast-glob",
+      "target": "npm:fast-glob@3.3.2",
       "type": "static"
     },
     {
@@ -18706,7 +19322,7 @@
     },
     {
       "source": "npm:eslint-plugin-prettier",
-      "target": "npm:eslint@8.54.0",
+      "target": "npm:eslint",
       "type": "static"
     },
     {
@@ -18835,6 +19451,196 @@
       "type": "static"
     },
     {
+      "source": "npm:eslint@8.53.0",
+      "target": "npm:@eslint-community/eslint-utils",
+      "type": "static"
+    },
+    {
+      "source": "npm:eslint@8.53.0",
+      "target": "npm:@eslint-community/regexpp",
+      "type": "static"
+    },
+    {
+      "source": "npm:eslint@8.53.0",
+      "target": "npm:@eslint/eslintrc",
+      "type": "static"
+    },
+    {
+      "source": "npm:eslint@8.53.0",
+      "target": "npm:@eslint/js",
+      "type": "static"
+    },
+    {
+      "source": "npm:eslint@8.53.0",
+      "target": "npm:@humanwhocodes/config-array",
+      "type": "static"
+    },
+    {
+      "source": "npm:eslint@8.53.0",
+      "target": "npm:@humanwhocodes/module-importer",
+      "type": "static"
+    },
+    {
+      "source": "npm:eslint@8.53.0",
+      "target": "npm:@nodelib/fs.walk",
+      "type": "static"
+    },
+    {
+      "source": "npm:eslint@8.53.0",
+      "target": "npm:@ungap/structured-clone",
+      "type": "static"
+    },
+    {
+      "source": "npm:eslint@8.53.0",
+      "target": "npm:ajv",
+      "type": "static"
+    },
+    {
+      "source": "npm:eslint@8.53.0",
+      "target": "npm:chalk",
+      "type": "static"
+    },
+    {
+      "source": "npm:eslint@8.53.0",
+      "target": "npm:cross-spawn",
+      "type": "static"
+    },
+    {
+      "source": "npm:eslint@8.53.0",
+      "target": "npm:debug",
+      "type": "static"
+    },
+    {
+      "source": "npm:eslint@8.53.0",
+      "target": "npm:doctrine",
+      "type": "static"
+    },
+    {
+      "source": "npm:eslint@8.53.0",
+      "target": "npm:escape-string-regexp",
+      "type": "static"
+    },
+    {
+      "source": "npm:eslint@8.53.0",
+      "target": "npm:eslint-scope",
+      "type": "static"
+    },
+    {
+      "source": "npm:eslint@8.53.0",
+      "target": "npm:eslint-visitor-keys",
+      "type": "static"
+    },
+    {
+      "source": "npm:eslint@8.53.0",
+      "target": "npm:espree",
+      "type": "static"
+    },
+    {
+      "source": "npm:eslint@8.53.0",
+      "target": "npm:esquery",
+      "type": "static"
+    },
+    {
+      "source": "npm:eslint@8.53.0",
+      "target": "npm:esutils",
+      "type": "static"
+    },
+    {
+      "source": "npm:eslint@8.53.0",
+      "target": "npm:fast-deep-equal",
+      "type": "static"
+    },
+    {
+      "source": "npm:eslint@8.53.0",
+      "target": "npm:file-entry-cache",
+      "type": "static"
+    },
+    {
+      "source": "npm:eslint@8.53.0",
+      "target": "npm:find-up",
+      "type": "static"
+    },
+    {
+      "source": "npm:eslint@8.53.0",
+      "target": "npm:glob-parent",
+      "type": "static"
+    },
+    {
+      "source": "npm:eslint@8.53.0",
+      "target": "npm:globals",
+      "type": "static"
+    },
+    {
+      "source": "npm:eslint@8.53.0",
+      "target": "npm:graphemer",
+      "type": "static"
+    },
+    {
+      "source": "npm:eslint@8.53.0",
+      "target": "npm:ignore",
+      "type": "static"
+    },
+    {
+      "source": "npm:eslint@8.53.0",
+      "target": "npm:imurmurhash",
+      "type": "static"
+    },
+    {
+      "source": "npm:eslint@8.53.0",
+      "target": "npm:is-glob",
+      "type": "static"
+    },
+    {
+      "source": "npm:eslint@8.53.0",
+      "target": "npm:is-path-inside",
+      "type": "static"
+    },
+    {
+      "source": "npm:eslint@8.53.0",
+      "target": "npm:js-yaml",
+      "type": "static"
+    },
+    {
+      "source": "npm:eslint@8.53.0",
+      "target": "npm:json-stable-stringify-without-jsonify",
+      "type": "static"
+    },
+    {
+      "source": "npm:eslint@8.53.0",
+      "target": "npm:levn",
+      "type": "static"
+    },
+    {
+      "source": "npm:eslint@8.53.0",
+      "target": "npm:lodash.merge",
+      "type": "static"
+    },
+    {
+      "source": "npm:eslint@8.53.0",
+      "target": "npm:minimatch",
+      "type": "static"
+    },
+    {
+      "source": "npm:eslint@8.53.0",
+      "target": "npm:natural-compare",
+      "type": "static"
+    },
+    {
+      "source": "npm:eslint@8.53.0",
+      "target": "npm:optionator",
+      "type": "static"
+    },
+    {
+      "source": "npm:eslint@8.53.0",
+      "target": "npm:strip-ansi",
+      "type": "static"
+    },
+    {
+      "source": "npm:eslint@8.53.0",
+      "target": "npm:text-table",
+      "type": "static"
+    },
+    {
       "source": "npm:eslint",
       "target": "npm:@eslint-community/eslint-utils",
       "type": "static"
@@ -18851,556 +19657,176 @@
     },
     {
       "source": "npm:eslint",
-      "target": "npm:@eslint/js",
-      "type": "static"
-    },
-    {
-      "source": "npm:eslint",
-      "target": "npm:@humanwhocodes/config-array",
-      "type": "static"
-    },
-    {
-      "source": "npm:eslint",
-      "target": "npm:@humanwhocodes/module-importer",
-      "type": "static"
-    },
-    {
-      "source": "npm:eslint",
-      "target": "npm:@nodelib/fs.walk",
-      "type": "static"
-    },
-    {
-      "source": "npm:eslint",
-      "target": "npm:@ungap/structured-clone",
-      "type": "static"
-    },
-    {
-      "source": "npm:eslint",
-      "target": "npm:ajv",
-      "type": "static"
-    },
-    {
-      "source": "npm:eslint",
-      "target": "npm:chalk",
-      "type": "static"
-    },
-    {
-      "source": "npm:eslint",
-      "target": "npm:cross-spawn",
-      "type": "static"
-    },
-    {
-      "source": "npm:eslint",
-      "target": "npm:debug",
-      "type": "static"
-    },
-    {
-      "source": "npm:eslint",
-      "target": "npm:doctrine",
-      "type": "static"
-    },
-    {
-      "source": "npm:eslint",
-      "target": "npm:escape-string-regexp",
-      "type": "static"
-    },
-    {
-      "source": "npm:eslint",
-      "target": "npm:eslint-scope",
-      "type": "static"
-    },
-    {
-      "source": "npm:eslint",
-      "target": "npm:eslint-visitor-keys",
-      "type": "static"
-    },
-    {
-      "source": "npm:eslint",
-      "target": "npm:espree",
-      "type": "static"
-    },
-    {
-      "source": "npm:eslint",
-      "target": "npm:esquery",
-      "type": "static"
-    },
-    {
-      "source": "npm:eslint",
-      "target": "npm:esutils",
-      "type": "static"
-    },
-    {
-      "source": "npm:eslint",
-      "target": "npm:fast-deep-equal",
-      "type": "static"
-    },
-    {
-      "source": "npm:eslint",
-      "target": "npm:file-entry-cache",
-      "type": "static"
-    },
-    {
-      "source": "npm:eslint",
-      "target": "npm:find-up",
-      "type": "static"
-    },
-    {
-      "source": "npm:eslint",
-      "target": "npm:glob-parent",
-      "type": "static"
-    },
-    {
-      "source": "npm:eslint",
-      "target": "npm:globals",
-      "type": "static"
-    },
-    {
-      "source": "npm:eslint",
-      "target": "npm:graphemer",
-      "type": "static"
-    },
-    {
-      "source": "npm:eslint",
-      "target": "npm:ignore@5.2.4",
-      "type": "static"
-    },
-    {
-      "source": "npm:eslint",
-      "target": "npm:imurmurhash",
-      "type": "static"
-    },
-    {
-      "source": "npm:eslint",
-      "target": "npm:is-glob",
-      "type": "static"
-    },
-    {
-      "source": "npm:eslint",
-      "target": "npm:is-path-inside",
-      "type": "static"
-    },
-    {
-      "source": "npm:eslint",
-      "target": "npm:js-yaml",
-      "type": "static"
-    },
-    {
-      "source": "npm:eslint",
-      "target": "npm:json-stable-stringify-without-jsonify",
-      "type": "static"
-    },
-    {
-      "source": "npm:eslint",
-      "target": "npm:levn",
-      "type": "static"
-    },
-    {
-      "source": "npm:eslint",
-      "target": "npm:lodash.merge",
-      "type": "static"
-    },
-    {
-      "source": "npm:eslint",
-      "target": "npm:minimatch",
-      "type": "static"
-    },
-    {
-      "source": "npm:eslint",
-      "target": "npm:natural-compare",
-      "type": "static"
-    },
-    {
-      "source": "npm:eslint",
-      "target": "npm:optionator",
-      "type": "static"
-    },
-    {
-      "source": "npm:eslint",
-      "target": "npm:strip-ansi",
-      "type": "static"
-    },
-    {
-      "source": "npm:eslint",
-      "target": "npm:text-table",
-      "type": "static"
-    },
-    {
-      "source": "npm:eslint@8.53.0",
-      "target": "npm:@eslint-community/eslint-utils",
-      "type": "static"
-    },
-    {
-      "source": "npm:eslint@8.53.0",
-      "target": "npm:@eslint-community/regexpp",
-      "type": "static"
-    },
-    {
-      "source": "npm:eslint@8.53.0",
-      "target": "npm:@eslint/eslintrc@2.1.3",
-      "type": "static"
-    },
-    {
-      "source": "npm:eslint@8.53.0",
-      "target": "npm:@eslint/js@8.53.0",
-      "type": "static"
-    },
-    {
-      "source": "npm:eslint@8.53.0",
-      "target": "npm:@humanwhocodes/config-array",
-      "type": "static"
-    },
-    {
-      "source": "npm:eslint@8.53.0",
-      "target": "npm:@humanwhocodes/module-importer",
-      "type": "static"
-    },
-    {
-      "source": "npm:eslint@8.53.0",
-      "target": "npm:@nodelib/fs.walk",
-      "type": "static"
-    },
-    {
-      "source": "npm:eslint@8.53.0",
-      "target": "npm:@ungap/structured-clone",
-      "type": "static"
-    },
-    {
-      "source": "npm:eslint@8.53.0",
-      "target": "npm:ajv",
-      "type": "static"
-    },
-    {
-      "source": "npm:eslint@8.53.0",
-      "target": "npm:chalk",
-      "type": "static"
-    },
-    {
-      "source": "npm:eslint@8.53.0",
-      "target": "npm:cross-spawn",
-      "type": "static"
-    },
-    {
-      "source": "npm:eslint@8.53.0",
-      "target": "npm:debug",
-      "type": "static"
-    },
-    {
-      "source": "npm:eslint@8.53.0",
-      "target": "npm:doctrine",
-      "type": "static"
-    },
-    {
-      "source": "npm:eslint@8.53.0",
-      "target": "npm:escape-string-regexp",
-      "type": "static"
-    },
-    {
-      "source": "npm:eslint@8.53.0",
-      "target": "npm:eslint-scope",
-      "type": "static"
-    },
-    {
-      "source": "npm:eslint@8.53.0",
-      "target": "npm:eslint-visitor-keys",
-      "type": "static"
-    },
-    {
-      "source": "npm:eslint@8.53.0",
-      "target": "npm:espree",
-      "type": "static"
-    },
-    {
-      "source": "npm:eslint@8.53.0",
-      "target": "npm:esquery",
-      "type": "static"
-    },
-    {
-      "source": "npm:eslint@8.53.0",
-      "target": "npm:esutils",
-      "type": "static"
-    },
-    {
-      "source": "npm:eslint@8.53.0",
-      "target": "npm:fast-deep-equal",
-      "type": "static"
-    },
-    {
-      "source": "npm:eslint@8.53.0",
-      "target": "npm:file-entry-cache",
-      "type": "static"
-    },
-    {
-      "source": "npm:eslint@8.53.0",
-      "target": "npm:find-up",
-      "type": "static"
-    },
-    {
-      "source": "npm:eslint@8.53.0",
-      "target": "npm:glob-parent",
-      "type": "static"
-    },
-    {
-      "source": "npm:eslint@8.53.0",
-      "target": "npm:globals",
-      "type": "static"
-    },
-    {
-      "source": "npm:eslint@8.53.0",
-      "target": "npm:graphemer",
-      "type": "static"
-    },
-    {
-      "source": "npm:eslint@8.53.0",
-      "target": "npm:ignore",
-      "type": "static"
-    },
-    {
-      "source": "npm:eslint@8.53.0",
-      "target": "npm:imurmurhash",
-      "type": "static"
-    },
-    {
-      "source": "npm:eslint@8.53.0",
-      "target": "npm:is-glob",
-      "type": "static"
-    },
-    {
-      "source": "npm:eslint@8.53.0",
-      "target": "npm:is-path-inside",
-      "type": "static"
-    },
-    {
-      "source": "npm:eslint@8.53.0",
-      "target": "npm:js-yaml",
-      "type": "static"
-    },
-    {
-      "source": "npm:eslint@8.53.0",
-      "target": "npm:json-stable-stringify-without-jsonify",
-      "type": "static"
-    },
-    {
-      "source": "npm:eslint@8.53.0",
-      "target": "npm:levn",
-      "type": "static"
-    },
-    {
-      "source": "npm:eslint@8.53.0",
-      "target": "npm:lodash.merge",
-      "type": "static"
-    },
-    {
-      "source": "npm:eslint@8.53.0",
-      "target": "npm:minimatch",
-      "type": "static"
-    },
-    {
-      "source": "npm:eslint@8.53.0",
-      "target": "npm:natural-compare",
-      "type": "static"
-    },
-    {
-      "source": "npm:eslint@8.53.0",
-      "target": "npm:optionator",
-      "type": "static"
-    },
-    {
-      "source": "npm:eslint@8.53.0",
-      "target": "npm:strip-ansi",
-      "type": "static"
-    },
-    {
-      "source": "npm:eslint@8.53.0",
-      "target": "npm:text-table",
-      "type": "static"
-    },
-    {
-      "source": "npm:eslint@8.54.0",
-      "target": "npm:@eslint-community/eslint-utils",
-      "type": "static"
-    },
-    {
-      "source": "npm:eslint@8.54.0",
-      "target": "npm:@eslint-community/regexpp",
-      "type": "static"
-    },
-    {
-      "source": "npm:eslint@8.54.0",
-      "target": "npm:@eslint/eslintrc@2.1.3",
-      "type": "static"
-    },
-    {
-      "source": "npm:eslint@8.54.0",
       "target": "npm:@eslint/js@8.54.0",
       "type": "static"
     },
     {
-      "source": "npm:eslint@8.54.0",
+      "source": "npm:eslint",
       "target": "npm:@humanwhocodes/config-array",
       "type": "static"
     },
     {
-      "source": "npm:eslint@8.54.0",
+      "source": "npm:eslint",
       "target": "npm:@humanwhocodes/module-importer",
       "type": "static"
     },
     {
-      "source": "npm:eslint@8.54.0",
+      "source": "npm:eslint",
       "target": "npm:@nodelib/fs.walk",
       "type": "static"
     },
     {
-      "source": "npm:eslint@8.54.0",
+      "source": "npm:eslint",
       "target": "npm:@ungap/structured-clone",
       "type": "static"
     },
     {
-      "source": "npm:eslint@8.54.0",
+      "source": "npm:eslint",
       "target": "npm:ajv",
       "type": "static"
     },
     {
-      "source": "npm:eslint@8.54.0",
+      "source": "npm:eslint",
       "target": "npm:chalk",
       "type": "static"
     },
     {
-      "source": "npm:eslint@8.54.0",
+      "source": "npm:eslint",
       "target": "npm:cross-spawn",
       "type": "static"
     },
     {
-      "source": "npm:eslint@8.54.0",
+      "source": "npm:eslint",
       "target": "npm:debug",
       "type": "static"
     },
     {
-      "source": "npm:eslint@8.54.0",
+      "source": "npm:eslint",
       "target": "npm:doctrine",
       "type": "static"
     },
     {
-      "source": "npm:eslint@8.54.0",
+      "source": "npm:eslint",
       "target": "npm:escape-string-regexp",
       "type": "static"
     },
     {
-      "source": "npm:eslint@8.54.0",
+      "source": "npm:eslint",
       "target": "npm:eslint-scope",
       "type": "static"
     },
     {
-      "source": "npm:eslint@8.54.0",
+      "source": "npm:eslint",
       "target": "npm:eslint-visitor-keys",
       "type": "static"
     },
     {
-      "source": "npm:eslint@8.54.0",
+      "source": "npm:eslint",
       "target": "npm:espree",
       "type": "static"
     },
     {
-      "source": "npm:eslint@8.54.0",
+      "source": "npm:eslint",
       "target": "npm:esquery",
       "type": "static"
     },
     {
-      "source": "npm:eslint@8.54.0",
+      "source": "npm:eslint",
       "target": "npm:esutils",
       "type": "static"
     },
     {
-      "source": "npm:eslint@8.54.0",
+      "source": "npm:eslint",
       "target": "npm:fast-deep-equal",
       "type": "static"
     },
     {
-      "source": "npm:eslint@8.54.0",
+      "source": "npm:eslint",
       "target": "npm:file-entry-cache",
       "type": "static"
     },
     {
-      "source": "npm:eslint@8.54.0",
+      "source": "npm:eslint",
       "target": "npm:find-up",
       "type": "static"
     },
     {
-      "source": "npm:eslint@8.54.0",
+      "source": "npm:eslint",
       "target": "npm:glob-parent",
       "type": "static"
     },
     {
-      "source": "npm:eslint@8.54.0",
+      "source": "npm:eslint",
       "target": "npm:globals",
       "type": "static"
     },
     {
-      "source": "npm:eslint@8.54.0",
+      "source": "npm:eslint",
       "target": "npm:graphemer",
       "type": "static"
     },
     {
-      "source": "npm:eslint@8.54.0",
+      "source": "npm:eslint",
       "target": "npm:ignore",
       "type": "static"
     },
     {
-      "source": "npm:eslint@8.54.0",
+      "source": "npm:eslint",
       "target": "npm:imurmurhash",
       "type": "static"
     },
     {
-      "source": "npm:eslint@8.54.0",
+      "source": "npm:eslint",
       "target": "npm:is-glob",
       "type": "static"
     },
     {
-      "source": "npm:eslint@8.54.0",
+      "source": "npm:eslint",
       "target": "npm:is-path-inside",
       "type": "static"
     },
     {
-      "source": "npm:eslint@8.54.0",
+      "source": "npm:eslint",
       "target": "npm:js-yaml",
       "type": "static"
     },
     {
-      "source": "npm:eslint@8.54.0",
+      "source": "npm:eslint",
       "target": "npm:json-stable-stringify-without-jsonify",
       "type": "static"
     },
     {
-      "source": "npm:eslint@8.54.0",
+      "source": "npm:eslint",
       "target": "npm:levn",
       "type": "static"
     },
     {
-      "source": "npm:eslint@8.54.0",
+      "source": "npm:eslint",
       "target": "npm:lodash.merge",
       "type": "static"
     },
     {
-      "source": "npm:eslint@8.54.0",
+      "source": "npm:eslint",
       "target": "npm:minimatch",
       "type": "static"
     },
     {
-      "source": "npm:eslint@8.54.0",
+      "source": "npm:eslint",
       "target": "npm:natural-compare",
       "type": "static"
     },
     {
-      "source": "npm:eslint@8.54.0",
+      "source": "npm:eslint",
       "target": "npm:optionator",
       "type": "static"
     },
     {
-      "source": "npm:eslint@8.54.0",
+      "source": "npm:eslint",
       "target": "npm:strip-ansi",
       "type": "static"
     },
     {
-      "source": "npm:eslint@8.54.0",
+      "source": "npm:eslint",
       "target": "npm:text-table",
       "type": "static"
     },
@@ -19765,6 +20191,31 @@
       "type": "static"
     },
     {
+      "source": "npm:fast-glob",
+      "target": "npm:@nodelib/fs.stat",
+      "type": "static"
+    },
+    {
+      "source": "npm:fast-glob",
+      "target": "npm:@nodelib/fs.walk",
+      "type": "static"
+    },
+    {
+      "source": "npm:fast-glob",
+      "target": "npm:glob-parent@5.1.2",
+      "type": "static"
+    },
+    {
+      "source": "npm:fast-glob",
+      "target": "npm:merge2",
+      "type": "static"
+    },
+    {
+      "source": "npm:fast-glob",
+      "target": "npm:micromatch",
+      "type": "static"
+    },
+    {
       "source": "npm:fast-glob@3.3.1",
       "target": "npm:@nodelib/fs.stat",
       "type": "static"
@@ -19790,27 +20241,27 @@
       "type": "static"
     },
     {
-      "source": "npm:fast-glob",
+      "source": "npm:fast-glob@3.3.2",
       "target": "npm:@nodelib/fs.stat",
       "type": "static"
     },
     {
-      "source": "npm:fast-glob",
+      "source": "npm:fast-glob@3.3.2",
       "target": "npm:@nodelib/fs.walk",
       "type": "static"
     },
     {
-      "source": "npm:fast-glob",
+      "source": "npm:fast-glob@3.3.2",
       "target": "npm:glob-parent@5.1.2",
       "type": "static"
     },
     {
-      "source": "npm:fast-glob",
+      "source": "npm:fast-glob@3.3.2",
       "target": "npm:merge2",
       "type": "static"
     },
     {
-      "source": "npm:fast-glob",
+      "source": "npm:fast-glob@3.3.2",
       "target": "npm:micromatch",
       "type": "static"
     },
@@ -19936,7 +20387,7 @@
     },
     {
       "source": "npm:fork-ts-checker-webpack-plugin",
-      "target": "npm:@babel/code-frame",
+      "target": "npm:@babel/code-frame@7.23.4",
       "type": "static"
     },
     {
@@ -20206,7 +20657,7 @@
     },
     {
       "source": "npm:glob",
-      "target": "npm:minimatch",
+      "target": "npm:minimatch@3.0.5",
       "type": "static"
     },
     {
@@ -20376,7 +20827,7 @@
     },
     {
       "source": "npm:globby",
-      "target": "npm:fast-glob",
+      "target": "npm:fast-glob@3.3.2",
       "type": "static"
     },
     {
@@ -20411,6 +20862,11 @@
     },
     {
       "source": "npm:graphql-ws",
+      "target": "npm:graphql",
+      "type": "static"
+    },
+    {
+      "source": "npm:graphql-ws@5.14.2",
       "target": "npm:graphql",
       "type": "static"
     },
@@ -23011,7 +23467,7 @@
     },
     {
       "source": "npm:nx",
-      "target": "npm:ignore@5.2.4",
+      "target": "npm:ignore",
       "type": "static"
     },
     {
@@ -25051,7 +25507,7 @@
     },
     {
       "source": "npm:tailwindcss",
-      "target": "npm:fast-glob",
+      "target": "npm:fast-glob@3.3.2",
       "type": "static"
     },
     {
@@ -25421,7 +25877,7 @@
     },
     {
       "source": "npm:ts-jest",
-      "target": "npm:typescript",
+      "target": "npm:typescript@5.3.2",
       "type": "static"
     },
     {

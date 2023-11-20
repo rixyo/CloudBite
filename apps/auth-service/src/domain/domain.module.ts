@@ -1,4 +1,4 @@
-import { ApolloFederationDriver } from '@nestjs/apollo';
+import { ApolloFederationDriver, ApolloDriverConfig } from '@nestjs/apollo';
 import { Module } from '@nestjs/common';
 import { GraphQLModule } from '@nestjs/graphql';
 import { join } from 'path';
@@ -10,8 +10,8 @@ import { ConfigModule } from '../config/config.module';
 import { LoggerModule } from '../logger/logger.module';
 @Module({
   imports: [
-    GraphQLModule.forRoot({
-      typePaths: ['./**/*.graphql'],
+    GraphQLModule.forRoot<ApolloDriverConfig>({
+      typePaths: ['./src/**/*.graphql'],
       driver: ApolloFederationDriver,
       context: ({ req }: any) => ({ req }),
       definitions: {
@@ -27,8 +27,5 @@ import { LoggerModule } from '../logger/logger.module';
     ConfigModule,
     LoggerModule,
   ],
-  controllers: [],
-  exports: [],
-  providers: [],
 })
 export class DomainModule {}

@@ -25,9 +25,6 @@ export class RestaurantAddressEntity extends BaseEntity {
   public street!: string;
 
   @Column({ type: 'varchar', length: 255 })
-  public pincode!: string;
-
-  @Column({ type: 'varchar', length: 255 })
   public country!: string;
 
   @Column({ type: 'varchar', length: 255 })

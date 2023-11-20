@@ -4,7 +4,5 @@ import { ConfigModule } from './config/config.module';
 import { LoggerModule } from './logger/logger.module';
 @Module({
   imports: [DomainModule, ConfigModule, LoggerModule],
-  controllers: [],
-  providers: [],
 })
 export class AppModule {}

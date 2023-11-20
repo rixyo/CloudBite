@@ -16,6 +16,7 @@ type Mutation {
   createAdmin(createAdminInput: CreateAdminInput): User!
   createRestaurantOwner(createRestaurantOwnerInput: CreateRestaurantOwnerInput): User!
   updateUser(fieldsToUpdate: UpdateUserInput!, email: String): User!
+  generateSceretKey(email:String): Messages!
   addAdminPermission(email: String!): User!
   removeAdminPermission(email: String!): User!
   resetPassword(email: String!, code: String!, password: String!): User!

@@ -5,11 +5,10 @@ export interface ConfigDBData {
   url?: string;
 }
 
-/*export interface SendGridConfig {
-  apiKey: string;
-  verifiedEmail: string;
+export interface AuthConfig {
+  jwtSecret: string;
+  expireIn: number;
 }
-*/
 
 /**
  * Configuration data for the app.
@@ -26,6 +25,7 @@ export interface ConfigData {
   port: number;
   /** Database connection details. */
   db: ConfigDBData;
+  auth: AuthConfig;
 
   // sendGrid: SendGridConfig;
   /**

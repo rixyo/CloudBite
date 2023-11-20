@@ -1,13 +1,13 @@
 {
   "version": "6.0",
-  "nxVersion": "17.0.2",
+  "nxVersion": "17.1.2",
   "deps": {
     "@types/node": "^20.9.2",
-    "eslint": "^8",
+    "eslint": "^8.54.0",
     "husky": "^8.0.3",
     "jest": "^29.7.0",
-    "nx": "^17.0.2",
-    "prettier": "^3.0.3",
+    "nx": "^17.1.2",
+    "prettier": "^3.1.0",
     "ts-jest": "^29.1.1"
   },
   "pathMappings": {},
@@ -65,15 +65,15 @@
       },
       {
         "file": "package.json",
-        "hash": "15156131610133716244"
+        "hash": "3032574788624168442"
       },
       {
         "file": "pnpm-lock.yaml",
-        "hash": "2851882127293772325"
+        "hash": "7008395916644906050"
       },
       {
         "file": "pnpm-workspace.yaml",
-        "hash": "9750177317466281158"
+        "hash": "13108396804214547201"
       }
     ],
     "projectFileMap": {
@@ -189,177 +189,6 @@
         {
           "file": "apps/admin-deshboard/vite.config.ts",
           "hash": "1078119010161581234"
-        }
-      ],
-      "restaurant-service": [
-        {
-          "file": "apps/restaurant-service/.env",
-          "hash": "12457127219199164626"
-        },
-        {
-          "file": "apps/restaurant-service/.eslintrc.js",
-          "hash": "7461846271827386206"
-        },
-        {
-          "file": "apps/restaurant-service/.gitignore",
-          "hash": "672911037926083482"
-        },
-        {
-          "file": "apps/restaurant-service/.prettierrc",
-          "hash": "4808572120966128913"
-        },
-        {
-          "file": "apps/restaurant-service/README.md",
-          "hash": "8286378509751487236"
-        },
-        {
-          "file": "apps/restaurant-service/nest-cli.json",
-          "hash": "789240945379598733"
-        },
-        {
-          "file": "apps/restaurant-service/package.json",
-          "hash": "5794266885058583748",
-          "deps": [
-            "npm:@apollo/federation",
-            "npm:@apollo/server",
-            "npm:@apollo/subgraph",
-            "npm:@nestjs/apollo",
-            "npm:@nestjs/common",
-            "npm:@nestjs/core",
-            "npm:@nestjs/graphql",
-            "npm:@nestjs/platform-express",
-            "npm:@nestjs/typeorm",
-            "npm:class-validator",
-            "npm:graphql",
-            "npm:moment",
-            "npm:pg",
-            "npm:reflect-metadata",
-            "npm:rxjs",
-            "npm:typeorm",
-            "npm:uuid",
-            "npm:winston",
-            "npm:@nestjs/cli",
-            "npm:@nestjs/schematics",
-            "npm:@nestjs/testing",
-            "npm:@types/express",
-            "npm:@types/jest",
-            "npm:@types/node",
-            "npm:@types/supertest",
-            "npm:@typescript-eslint/eslint-plugin",
-            "npm:@typescript-eslint/parser",
-            "npm:eslint",
-            "npm:eslint-config-prettier",
-            "npm:eslint-plugin-prettier",
-            "npm:jest",
-            "npm:prettier",
-            "npm:source-map-support",
-            "npm:supertest",
-            "npm:ts-jest",
-            "npm:ts-loader",
-            "npm:ts-node",
-            "npm:tsconfig-paths",
-            "npm:typescript"
-          ]
-        },
-        {
-          "file": "apps/restaurant-service/src/app.module.ts",
-          "hash": "5001930803680005856"
-        },
-        {
-          "file": "apps/restaurant-service/src/config/config.default.ts",
-          "hash": "15356789030616922920"
-        },
-        {
-          "file": "apps/restaurant-service/src/config/config.interface.ts",
-          "hash": "10385138027009178803"
-        },
-        {
-          "file": "apps/restaurant-service/src/config/config.module.ts",
-          "hash": "13143047207281215892"
-        },
-        {
-          "file": "apps/restaurant-service/src/config/config.service.ts",
-          "hash": "4984824231005166022"
-        },
-        {
-          "file": "apps/restaurant-service/src/db/db.errors.ts",
-          "hash": "2646672877639124408"
-        },
-        {
-          "file": "apps/restaurant-service/src/db/db.interface.ts",
-          "hash": "12011516664509660283"
-        },
-        {
-          "file": "apps/restaurant-service/src/db/db.logger.ts",
-          "hash": "9157591969086587730"
-        },
-        {
-          "file": "apps/restaurant-service/src/db/db.module.ts",
-          "hash": "8098263017839089877"
-        },
-        {
-          "file": "apps/restaurant-service/src/domain/domain.module.ts",
-          "hash": "5755557000944609242"
-        },
-        {
-          "file": "apps/restaurant-service/src/domain/restaurant/entity/restaurant.address.entity.ts",
-          "hash": "1027834218848573301"
-        },
-        {
-          "file": "apps/restaurant-service/src/domain/restaurant/entity/restaurant.dish.entity.ts",
-          "hash": "13720102685417785367"
-        },
-        {
-          "file": "apps/restaurant-service/src/domain/restaurant/entity/restaurant.entity.ts",
-          "hash": "18220769114991091900"
-        },
-        {
-          "file": "apps/restaurant-service/src/domain/restaurant/restaurant.type.graphql",
-          "hash": "1302263006384315169"
-        },
-        {
-          "file": "apps/restaurant-service/src/domain/restaurant/restaurants.resolver.ts",
-          "hash": "12886947944298821205"
-        },
-        {
-          "file": "apps/restaurant-service/src/domain/restaurant/restaurants.service.ts",
-          "hash": "3244421341483603138"
-        },
-        {
-          "file": "apps/restaurant-service/src/logger/logger.middleware.ts",
-          "hash": "4718963090654727106"
-        },
-        {
-          "file": "apps/restaurant-service/src/logger/logger.module.ts",
-          "hash": "15466574737607319651"
-        },
-        {
-          "file": "apps/restaurant-service/src/logger/logger.ts",
-          "hash": "1023051881361434160"
-        },
-        {
-          "file": "apps/restaurant-service/src/logger/loglevel.ts",
-          "hash": "14252412105708514145"
-        },
-        {
-          "file": "apps/restaurant-service/src/main.ts",
-          "hash": "14786801265124824379"
-        },
-        {
-          "file": "apps/restaurant-service/test/app.e2e-spec.ts",
-          "hash": "15142680097789702029"
-        },
-        {
-          "file": "apps/restaurant-service/test/jest-e2e.json",
-          "hash": "7570273541430074424"
-        },
-        {
-          "file": "apps/restaurant-service/tsconfig.build.json",
-          "hash": "276845246908739715"
-        },
-        {
-          "file": "apps/restaurant-service/tsconfig.json",
-          "hash": "5073866550243764688"
         }
       ],
       "cloudbite-ui": [
@@ -637,6 +466,312 @@
           "hash": "13566095390403677056"
         }
       ],
+      "gateway-service": [
+        {
+          "file": "apps/gateway-service/.eslintrc.js",
+          "hash": "7461846271827386206"
+        },
+        {
+          "file": "apps/gateway-service/.prettierrc",
+          "hash": "4808572120966128913"
+        },
+        {
+          "file": "apps/gateway-service/README.md",
+          "hash": "8286378509751487236"
+        },
+        {
+          "file": "apps/gateway-service/nest-cli.json",
+          "hash": "789240945379598733"
+        },
+        {
+          "file": "apps/gateway-service/package.json",
+          "hash": "9570528920511756323",
+          "deps": [
+            "npm:@apollo/gateway",
+            "npm:@nestjs/apollo",
+            "npm:@nestjs/common",
+            "npm:@nestjs/core",
+            "npm:@nestjs/graphql",
+            "npm:@nestjs/platform-express",
+            "npm:jsonwebtoken",
+            "npm:reflect-metadata",
+            "npm:rxjs",
+            "npm:ts-morph",
+            "npm:@nestjs/cli",
+            "npm:@nestjs/schematics",
+            "npm:@nestjs/testing",
+            "npm:@types/express",
+            "npm:@types/jest",
+            "npm:@types/jsonwebtoken",
+            "npm:@types/node",
+            "npm:@types/supertest",
+            "npm:@typescript-eslint/eslint-plugin",
+            "npm:@typescript-eslint/parser",
+            "npm:eslint",
+            "npm:eslint-config-prettier",
+            "npm:eslint-plugin-prettier",
+            "npm:jest",
+            "npm:prettier",
+            "npm:source-map-support",
+            "npm:supertest",
+            "npm:ts-jest",
+            "npm:ts-loader",
+            "npm:ts-node",
+            "npm:tsconfig-paths",
+            "npm:typescript"
+          ]
+        },
+        {
+          "file": "apps/gateway-service/src/app.constants.ts",
+          "hash": "9551429742564215431"
+        },
+        {
+          "file": "apps/gateway-service/src/app.module.ts",
+          "hash": "17872730805441302655"
+        },
+        {
+          "file": "apps/gateway-service/src/main.ts",
+          "hash": "18026612521859915819"
+        },
+        {
+          "file": "apps/gateway-service/test/app.e2e-spec.ts",
+          "hash": "15142680097789702029"
+        },
+        {
+          "file": "apps/gateway-service/test/jest-e2e.json",
+          "hash": "7570273541430074424"
+        },
+        {
+          "file": "apps/gateway-service/tsconfig.build.json",
+          "hash": "276845246908739715"
+        },
+        {
+          "file": "apps/gateway-service/tsconfig.json",
+          "hash": "5073866550243764688"
+        }
+      ],
+      "restaurant-service": [
+        {
+          "file": "apps/restaurant-service/.eslintrc.js",
+          "hash": "7461846271827386206"
+        },
+        {
+          "file": "apps/restaurant-service/.prettierrc",
+          "hash": "4808572120966128913"
+        },
+        {
+          "file": "apps/restaurant-service/README.md",
+          "hash": "8286378509751487236"
+        },
+        {
+          "file": "apps/restaurant-service/nest-cli.json",
+          "hash": "789240945379598733"
+        },
+        {
+          "file": "apps/restaurant-service/package.json",
+          "hash": "3811226262305034851",
+          "deps": [
+            "npm:@apollo/federation",
+            "npm:@apollo/server",
+            "npm:@apollo/subgraph",
+            "npm:@nestjs/apollo",
+            "npm:@nestjs/common",
+            "npm:@nestjs/core",
+            "npm:@nestjs/graphql",
+            "npm:@nestjs/jwt",
+            "npm:@nestjs/passport",
+            "npm:@nestjs/platform-express",
+            "npm:@nestjs/typeorm",
+            "npm:apollo-server-core",
+            "npm:class-transformer",
+            "npm:class-validator",
+            "npm:graphql",
+            "npm:jsonwebtoken",
+            "npm:moment",
+            "npm:passport-jwt",
+            "npm:pg",
+            "npm:reflect-metadata",
+            "npm:rxjs",
+            "npm:typeorm",
+            "npm:uuid",
+            "npm:winston",
+            "npm:@nestjs/cli",
+            "npm:@nestjs/schematics",
+            "npm:@nestjs/testing",
+            "npm:@types/express",
+            "npm:@types/jest",
+            "npm:@types/node",
+            "npm:@types/passport-jwt",
+            "npm:@types/supertest",
+            "npm:@typescript-eslint/eslint-plugin",
+            "npm:@typescript-eslint/parser",
+            "npm:eslint",
+            "npm:eslint-config-prettier",
+            "npm:eslint-plugin-prettier",
+            "npm:jest",
+            "npm:prettier",
+            "npm:source-map-support",
+            "npm:supertest",
+            "npm:ts-jest",
+            "npm:ts-loader",
+            "npm:ts-node",
+            "npm:tsconfig-paths",
+            "npm:typescript"
+          ]
+        },
+        {
+          "file": "apps/restaurant-service/src/app.module.ts",
+          "hash": "18241164477453897799"
+        },
+        {
+          "file": "apps/restaurant-service/src/config/config.default.ts",
+          "hash": "5419642320862044416"
+        },
+        {
+          "file": "apps/restaurant-service/src/config/config.interface.ts",
+          "hash": "15494570587749928678"
+        },
+        {
+          "file": "apps/restaurant-service/src/config/config.module.ts",
+          "hash": "13143047207281215892"
+        },
+        {
+          "file": "apps/restaurant-service/src/config/config.service.ts",
+          "hash": "7126432097134560747"
+        },
+        {
+          "file": "apps/restaurant-service/src/db/db.errors.ts",
+          "hash": "2646672877639124408"
+        },
+        {
+          "file": "apps/restaurant-service/src/db/db.interface.ts",
+          "hash": "12011516664509660283"
+        },
+        {
+          "file": "apps/restaurant-service/src/db/db.logger.ts",
+          "hash": "9157591969086587730"
+        },
+        {
+          "file": "apps/restaurant-service/src/db/db.module.ts",
+          "hash": "6317241663369063495"
+        },
+        {
+          "file": "apps/restaurant-service/src/domain/auth/auth.module.ts",
+          "hash": "16699654050739106601"
+        },
+        {
+          "file": "apps/restaurant-service/src/domain/auth/auth.service.ts",
+          "hash": "10532622087662135070"
+        },
+        {
+          "file": "apps/restaurant-service/src/domain/auth/guards/admin.guard.ts",
+          "hash": "800017346527875327"
+        },
+        {
+          "file": "apps/restaurant-service/src/domain/auth/guards/jwtauth.guard.ts",
+          "hash": "9310120318481956847"
+        },
+        {
+          "file": "apps/restaurant-service/src/domain/auth/guards/restaurant-owner.guard.ts",
+          "hash": "16651500931502197256"
+        },
+        {
+          "file": "apps/restaurant-service/src/domain/auth/interfaces/jwt-payload.interface.ts",
+          "hash": "9020398436396176444"
+        },
+        {
+          "file": "apps/restaurant-service/src/domain/auth/strategies/jwt.stragegy.ts",
+          "hash": "16863595006745382817"
+        },
+        {
+          "file": "apps/restaurant-service/src/domain/domain.module.ts",
+          "hash": "6708987486187312133"
+        },
+        {
+          "file": "apps/restaurant-service/src/domain/graphql.schama.ts",
+          "hash": "11544068874333690390"
+        },
+        {
+          "file": "apps/restaurant-service/src/domain/restaurant/dto/restaurant.dish.dto.ts",
+          "hash": "15080889295520630701"
+        },
+        {
+          "file": "apps/restaurant-service/src/domain/restaurant/dto/restaurant.dto.ts",
+          "hash": "6853476223738278878"
+        },
+        {
+          "file": "apps/restaurant-service/src/domain/restaurant/entity/restaurant.address.entity.ts",
+          "hash": "15765111996901134287"
+        },
+        {
+          "file": "apps/restaurant-service/src/domain/restaurant/entity/restaurant.dish.entity.ts",
+          "hash": "13720102685417785367"
+        },
+        {
+          "file": "apps/restaurant-service/src/domain/restaurant/entity/restaurant.entity.ts",
+          "hash": "7756762967442423171"
+        },
+        {
+          "file": "apps/restaurant-service/src/domain/restaurant/resolvers/restauant.dish.resolver.ts",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "apps/restaurant-service/src/domain/restaurant/resolvers/restaurants.resolver.ts",
+          "hash": "15200374413434512312"
+        },
+        {
+          "file": "apps/restaurant-service/src/domain/restaurant/restaurant.module.ts",
+          "hash": "8606198353679574788"
+        },
+        {
+          "file": "apps/restaurant-service/src/domain/restaurant/restaurant.type.graphql",
+          "hash": "4466780811815690020"
+        },
+        {
+          "file": "apps/restaurant-service/src/domain/restaurant/services/restaurant.dish.service.ts",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "apps/restaurant-service/src/domain/restaurant/services/restaurants.service.ts",
+          "hash": "1406252435311116669"
+        },
+        {
+          "file": "apps/restaurant-service/src/logger/logger.middleware.ts",
+          "hash": "4718963090654727106"
+        },
+        {
+          "file": "apps/restaurant-service/src/logger/logger.module.ts",
+          "hash": "15466574737607319651"
+        },
+        {
+          "file": "apps/restaurant-service/src/logger/logger.ts",
+          "hash": "1023051881361434160"
+        },
+        {
+          "file": "apps/restaurant-service/src/logger/loglevel.ts",
+          "hash": "14252412105708514145"
+        },
+        {
+          "file": "apps/restaurant-service/src/main.ts",
+          "hash": "4818147095531908433"
+        },
+        {
+          "file": "apps/restaurant-service/test/app.e2e-spec.ts",
+          "hash": "15142680097789702029"
+        },
+        {
+          "file": "apps/restaurant-service/test/jest-e2e.json",
+          "hash": "7570273541430074424"
+        },
+        {
+          "file": "apps/restaurant-service/tsconfig.build.json",
+          "hash": "276845246908739715"
+        },
+        {
+          "file": "apps/restaurant-service/tsconfig.json",
+          "hash": "5073866550243764688"
+        }
+      ],
       "auth-service": [
         {
           "file": "apps/auth-service/.eslintrc.js",
@@ -656,8 +791,9 @@
         },
         {
           "file": "apps/auth-service/package.json",
-          "hash": "12260505722779393999",
+          "hash": "17508459313760489461",
           "deps": [
+            "npm:@apollo/federation",
             "npm:@apollo/server",
             "npm:@apollo/subgraph",
             "npm:@nestjs/apollo",
@@ -669,6 +805,7 @@
             "npm:@nestjs/platform-express",
             "npm:@nestjs/typeorm",
             "npm:apollo-server-core",
+            "npm:apollo-server-express",
             "npm:bcryptjs",
             "npm:class-validator",
             "npm:graphql",
@@ -711,7 +848,7 @@
         },
         {
           "file": "apps/auth-service/src/app.module.ts",
-          "hash": "11275741013759997852"
+          "hash": "1353521834207668320"
         },
         {
           "file": "apps/auth-service/src/config/config.default.ts",
@@ -783,7 +920,7 @@
         },
         {
           "file": "apps/auth-service/src/domain/domain.module.ts",
-          "hash": "10380632049907349434"
+          "hash": "12109104674669387479"
         },
         {
           "file": "apps/auth-service/src/domain/users/decorator/user.decorator.ts",
@@ -803,19 +940,19 @@
         },
         {
           "file": "apps/auth-service/src/domain/users/users.resolver.ts",
-          "hash": "7651408350914680475"
+          "hash": "6677388218950830413"
         },
         {
           "file": "apps/auth-service/src/domain/users/users.service.ts",
-          "hash": "5596810435120719024"
+          "hash": "17347511384584932399"
         },
         {
           "file": "apps/auth-service/src/domain/users/users.types.graphql",
-          "hash": "8055481930219730792"
+          "hash": "1545409323586780489"
         },
         {
           "file": "apps/auth-service/src/graphql.classes.ts",
-          "hash": "8316114838495080892"
+          "hash": "3409943393091044441"
         },
         {
           "file": "apps/auth-service/src/logger/logger.middleware.ts",
@@ -835,7 +972,7 @@
         },
         {
           "file": "apps/auth-service/src/main.ts",
-          "hash": "16689042231636051678"
+          "hash": "12044100279147995"
         },
         {
           "file": "apps/auth-service/test/app.e2e-spec.ts",
@@ -851,90 +988,6 @@
         },
         {
           "file": "apps/auth-service/tsconfig.json",
-          "hash": "5073866550243764688"
-        }
-      ],
-      "gateway-service": [
-        {
-          "file": "apps/gateway-service/.eslintrc.js",
-          "hash": "7461846271827386206"
-        },
-        {
-          "file": "apps/gateway-service/.prettierrc",
-          "hash": "4808572120966128913"
-        },
-        {
-          "file": "apps/gateway-service/README.md",
-          "hash": "8286378509751487236"
-        },
-        {
-          "file": "apps/gateway-service/nest-cli.json",
-          "hash": "789240945379598733"
-        },
-        {
-          "file": "apps/gateway-service/package.json",
-          "hash": "9570528920511756323",
-          "deps": [
-            "npm:@apollo/gateway",
-            "npm:@nestjs/apollo",
-            "npm:@nestjs/common",
-            "npm:@nestjs/core",
-            "npm:@nestjs/graphql",
-            "npm:@nestjs/platform-express",
-            "npm:jsonwebtoken",
-            "npm:reflect-metadata",
-            "npm:rxjs",
-            "npm:ts-morph",
-            "npm:@nestjs/cli",
-            "npm:@nestjs/schematics",
-            "npm:@nestjs/testing",
-            "npm:@types/express",
-            "npm:@types/jest",
-            "npm:@types/jsonwebtoken",
-            "npm:@types/node",
-            "npm:@types/supertest",
-            "npm:@typescript-eslint/eslint-plugin",
-            "npm:@typescript-eslint/parser",
-            "npm:eslint",
-            "npm:eslint-config-prettier",
-            "npm:eslint-plugin-prettier",
-            "npm:jest",
-            "npm:prettier",
-            "npm:source-map-support",
-            "npm:supertest",
-            "npm:ts-jest",
-            "npm:ts-loader",
-            "npm:ts-node",
-            "npm:tsconfig-paths",
-            "npm:typescript"
-          ]
-        },
-        {
-          "file": "apps/gateway-service/src/app.constants.ts",
-          "hash": "9551429742564215431"
-        },
-        {
-          "file": "apps/gateway-service/src/app.module.ts",
-          "hash": "2553057894580216172"
-        },
-        {
-          "file": "apps/gateway-service/src/main.ts",
-          "hash": "18164888518820569362"
-        },
-        {
-          "file": "apps/gateway-service/test/app.e2e-spec.ts",
-          "hash": "15142680097789702029"
-        },
-        {
-          "file": "apps/gateway-service/test/jest-e2e.json",
-          "hash": "7570273541430074424"
-        },
-        {
-          "file": "apps/gateway-service/tsconfig.build.json",
-          "hash": "276845246908739715"
-        },
-        {
-          "file": "apps/gateway-service/tsconfig.json",
           "hash": "5073866550243764688"
         }
       ]

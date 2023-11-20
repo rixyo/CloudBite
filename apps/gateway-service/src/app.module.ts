@@ -1,11 +1,10 @@
-import { RemoteGraphQLDataSource } from '@apollo/gateway';
+import { RemoteGraphQLDataSource, IntrospectAndCompose } from '@apollo/gateway';
 import {
   Module,
   HttpStatus,
   HttpException,
   UnauthorizedException,
 } from '@nestjs/common';
-import { IntrospectAndCompose } from '@apollo/gateway';
 import { ApolloGatewayDriver, ApolloGatewayDriverConfig } from '@nestjs/apollo';
 import { GraphQLModule } from '@nestjs/graphql';
 import { verify } from 'jsonwebtoken';
@@ -20,11 +19,12 @@ const getToken = (authToken: string): string => {
       HttpStatus.UNAUTHORIZED,
     );
   }
-  // console.log(match[1]);
+  //console.log(match[1]);
   return match[1];
 };
 
 const decodeToken = (tokenString: string) => {
+  //console.log(process.env.SECRET_KEY,'secret');
   const decoded = verify(tokenString, process.env.SECRET_KEY);
   if (!decoded) {
     throw new HttpException(
@@ -72,8 +72,8 @@ const handleAuth = ({ req }) => {
         },
         supergraphSdl: new IntrospectAndCompose({
           subgraphs: [
-            { name: 'User', url: 'http://localhost:3001/graphql' },
-            { name: 'Restaurant', url: 'http://localhost:3002/graphql' },
+            { name: 'User', url: 'http://localhost:5001/graphql' },
+            { name: 'Restaurant', url: 'http://localhost:5002/graphql' },
           ],
         }),
       },

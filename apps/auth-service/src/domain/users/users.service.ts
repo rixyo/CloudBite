@@ -82,28 +82,30 @@ export class UsersService {
   async createRestaurantOwner(
     createRestaurantOwnerInput: CreateRestaurantOwnerInput,
   ): Promise<UserEntity> {
-    const pass = await this.hashPassword(createRestaurantOwnerInput.password);
-    const saveEntity = {
-      ...createRestaurantOwnerInput,
-      password: pass,
-      lowercaseEmail: createRestaurantOwnerInput.email.toLowerCase(),
-      permissions: [UsersRole.RESTAURANT_OWNER],
-    };
-    const userEntity = this.userRepo.create(saveEntity);
-    let user: UserEntity | null;
-    try {
-      const secretKey = this.configService.get().admin.secretKey;
-      if (createRestaurantOwnerInput.secretKey !== secretKey) {
-        throw new Error('Invalid secret key');
+    const generatedSecretKey = await this.generateSecretKey(
+      createRestaurantOwnerInput.email,
+    );
+    if ((createRestaurantOwnerInput.secretKey = generatedSecretKey)) {
+      const pass = await this.hashPassword(createRestaurantOwnerInput.password);
+      const saveEntity = {
+        ...createRestaurantOwnerInput,
+        password: pass,
+        lowercaseEmail: createRestaurantOwnerInput.email.toLowerCase(),
+        permissions: [UsersRole.RESTAURANT_OWNER],
+      };
+      const userEntity = this.userRepo.create(saveEntity);
+      let user: UserEntity | null;
+      try {
+        user = await this.userRepo.save(userEntity);
+      } catch (error) {
+        this.logger.error(`Error creating Restaurant Owner: ${error}`);
+        throw this.evaluateDBError(error, createRestaurantOwnerInput);
       }
-
-      user = await this.userRepo.save(userEntity);
-    } catch (error) {
-      this.logger.error(`Error creating Admin: ${error}`);
-      throw this.evaluateDBError(error, createRestaurantOwnerInput);
+      this.logger.info(`Restaurant Owner created: ${user.id}`);
+      return user;
+    } else {
+      throw new Error('Invalid secret key');
     }
-    this.logger.info(`Restaurant Owner created: ${(user.id, user.created_at)}`);
-    return user;
   }
   // this function is used to get a users by their email
   async findOneByEmail(email: string): Promise<UserEntity> {
@@ -118,6 +120,10 @@ export class UsersService {
   }
   isAdmin(permissions: string[]): boolean {
     return permissions.includes(UsersRole.ADMIN);
+  }
+  async generateSecretKey(email: string) {
+    const hash = await bcrypt.hash(email, 12);
+    return hash;
   }
   // this function is used to hash the password
   private async hashPassword(password: any) {

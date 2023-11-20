@@ -16,7 +16,7 @@ export class DbModule {
   ): TypeOrmModuleOptions {
     const dbdata = config.get().db;
     if (!dbdata) {
-      throw new DbConfigError('Database config is mSissing');
+      throw new DbConfigError('Database config is missing');
     }
     const connectionOptions = DbModule.getConnectionOptionsPostgres(dbdata);
     return {
@@ -53,9 +53,6 @@ export class DbModule {
           inject: [ConfigService],
         }),
       ],
-      controllers: [],
-      providers: [],
-      exports: [],
     };
   }
 }

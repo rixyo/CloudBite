@@ -7,12 +7,10 @@ export const DEFAULT_CONFIG: ConfigData = {
   db: {
     url: process.env.DATABASE_URL,
   },
-  /* sendGrid: {
-    apiKey: '',
-    verifiedEmail: '',
+  auth: {
+    jwtSecret: process.env.JWT_SECRET || '',
+    expireIn: 0,
   },
-  */
-
   debug: 'qapi:*',
   port: 3000,
   logLevel: 'info',

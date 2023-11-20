@@ -77,6 +77,8 @@ export abstract class IMutation {
 
     abstract updateUser(fieldsToUpdate: UpdateUserInput, email?: Nullable<string>): User | Promise<User>;
 
+    abstract generateSceretKey(email?: Nullable<string>): Messages | Promise<Messages>;
+
     abstract addAdminPermission(email: string): User | Promise<User>;
 
     abstract removeAdminPermission(email: string): User | Promise<User>;

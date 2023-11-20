@@ -14,7 +14,7 @@ export class RestaurantEntity extends BaseEntity {
   @PrimaryGeneratedColumn('uuid')
   public id!: string;
 
-  @Column({ type: 'varchar', length: 255, select: true })
+  @Column({ type: 'varchar', length: 255, select: true, unique: true })
   public name!: string;
 
   @Column({ type: 'varchar', default: null })
@@ -24,31 +24,10 @@ export class RestaurantEntity extends BaseEntity {
   public owner_id!: string;
 
   @Column({ type: 'varchar', default: null })
-  public website_url!: string;
-
-  @Column({ type: 'jsonb', default: null })
-  public social_links!: any;
-
-  @Column({ type: 'varchar', default: null })
   public cuisine!: string;
-
-  @Column({ type: 'int', default: null })
-  public average_price!: number;
-
-  @Column({ type: 'int', default: null })
-  public average_rating!: number;
-
-  @Column({ type: 'varchar' })
-  public latitude!: string;
 
   @Column({ type: 'boolean', default: true })
   public is_available!: string;
-
-  @Column({ type: 'varchar' })
-  public longitude!: string;
-
-  @Column({ type: 'varchar', default: null })
-  public contact_no!: string;
 
   @Column({ type: 'varchar', default: null })
   public banner!: string;
@@ -56,14 +35,8 @@ export class RestaurantEntity extends BaseEntity {
   @Column({ type: 'varchar', default: null })
   public delivery_options!: string;
 
-  @Column({ type: 'varchar' })
+  @Column({ type: 'varchar', default: null })
   public pickup_options!: string;
-
-  @Column({ type: 'varchar' })
-  public opens_at!: string;
-
-  @Column({ type: 'varchar' })
-  public closes_at!: string;
 
   @OneToMany(() => RestaurantDishEntity, (event) => event.restaurant)
   public dishes!: RestaurantDishEntity[];

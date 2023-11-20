@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { DEFAULT_CONFIG } from './config.default';
-import { ConfigData, ConfigDBData } from './config.interface';
+import { AuthConfig, ConfigData, ConfigDBData } from './config.interface';
 
 /**
  * Provides a means to access the application configuration.
@@ -28,6 +28,7 @@ export class ConfigService {
       logLevel: env.LOG_LEVEL || DEFAULT_CONFIG.logLevel,
       debug: env.DEBUG || 'qapi:*',
       newRelicKey: env.NEW_RELIC_KEY || DEFAULT_CONFIG.newRelicKey,
+      auth: this.parseAuthConfigFromEnv(env),
     };
   }
 
@@ -37,6 +38,12 @@ export class ConfigService {
   ): ConfigDBData {
     return {
       url: env.DATABASE_URL || defaultConfig.url,
+    };
+  }
+  private parseAuthConfigFromEnv(env: NodeJS.ProcessEnv): AuthConfig {
+    return {
+      jwtSecret: env.JWT_SECRET || '',
+      expireIn: Number(env.JWT_EXPIRE_IN) || 268000,
     };
   }
 

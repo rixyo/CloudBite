@@ -1,6 +1,11 @@
-import { UserInputError } from '@nestjs/apollo';
 import { BadRequestException, UseGuards } from '@nestjs/common';
-import { Args, Mutation, Resolver, Query } from '@nestjs/graphql';
+import {
+  Args,
+  Mutation,
+  Resolver,
+  Query,
+  ResolveReference,
+} from '@nestjs/graphql';
 import { UserEntity } from './enity/user.entity';
 import {
   CreateUserInput,
@@ -43,11 +48,10 @@ export class UsersResolver {
       }
       return await this.usersService.create(createUserInput);
     } catch (error) {
-      throw new UserInputError(error.message);
+      throw new BadRequestException(error.message);
     }
   }
   @Mutation('createAdmin')
-  @UseGuards(AdminGuard)
   async createAdmin(
     @Args('createAdminInput') createAdminInput: CreateAdminInput,
   ): Promise<UserEntity> {
@@ -72,11 +76,10 @@ export class UsersResolver {
       return createdAdmin;
     } catch (error) {
       this.logger.error(`Error creating user: ${error}`);
-      throw new UserInputError(error.message);
+      throw new BadRequestException(error.message);
     }
   }
   @Mutation('createRestaurantOwner')
-  @UseGuards(AdminGuard)
   async createRestaurantOwner(
     @Args('createRestaurantOwnerInput')
     createRestaurantOwnerInput: CreateRestaurantOwnerInput,
@@ -105,7 +108,7 @@ export class UsersResolver {
       return createdAdmin;
     } catch (error) {
       this.logger.error(`Error creating user: ${error}`);
-      throw new UserInputError(error.message);
+      throw new BadRequestException(error.message);
     }
   }
   @Query(() => [UserEntity], { name: 'users' })
@@ -114,8 +117,13 @@ export class UsersResolver {
     const users = await this.usersService.getAllUsers();
     return users;
   }
-  @Mutation('deleteUsers')
+  @Mutation('generateSceretKey')
   @UseGuards(AdminGuard)
+  async generateSceretKey(@Args('email') email: string): Promise<Messages> {
+    const secretKey = await this.usersService.generateSecretKey(email);
+    return { message: secretKey };
+  }
+  @Mutation('deleteUsers')
   async delateUsers(): Promise<Messages> {
     await this.usersService.deleteUsers();
     return { message: 'Users deleted' };
@@ -126,5 +134,10 @@ export class UsersResolver {
     console.log(cuser, 'cuser.');
     const user = await this.usersService.findOneByUserId(cuser.userId);
     return user;
+  }
+  @ResolveReference()
+  async resolveReference(reference: { __typename: string; id: string }) {
+    this.logger.http('ResolveReference :: user');
+    return await this.usersService.findOneByUserId(reference.id);
   }
 }
