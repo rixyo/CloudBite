@@ -29,13 +29,11 @@ export class RestaurantService {
     try {
       await queryRunner.connect();
       await queryRunner.startTransaction();
-      console.log(userid,'service restaurant');
       const restaurant = await this.CreateUserRestaurant(
         createRestaurantInput,
         userid,
         queryRunner,
       );
-      console.log(restaurant,'service restaurant');
       const address = await this.createAddress(
         createRestaurantInput.address,
         restaurant,

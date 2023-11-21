@@ -14,10 +14,6 @@ import { RestaurantEntity } from './restaurant.entity';
 export class RestaurantAddressEntity extends BaseEntity {
   @PrimaryGeneratedColumn('uuid')
   public id!: string;
-
-  @Column({ type: 'varchar', length: 255, select: true })
-  public name!: string;
-
   @Column({ type: 'varchar' })
   public city!: string;
 

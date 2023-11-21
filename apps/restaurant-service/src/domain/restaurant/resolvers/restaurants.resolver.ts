@@ -1,4 +1,12 @@
-import { Args, Mutation, Resolver, Query, Context, ResolveField, Parent } from '@nestjs/graphql';
+import {
+  Args,
+  Mutation,
+  Resolver,
+  Query,
+  Context,
+  ResolveField,
+  Parent,
+} from '@nestjs/graphql';
 import { RestaurantEntity } from '../entity/restaurant.entity';
 import { CreateRestaurantInput } from '../../graphql.schama';
 import { CreateRestaurantDto } from '../dto/restaurant.dto';
@@ -27,8 +35,7 @@ export class RestaurantsResolver {
     @Context() context: any,
   ): Promise<RestaurantEntity> {
     try {
-      const  userId = context.req.headers.userid;
-      console.log(userId);
+      const userId = context.req.headers.userid;
       const { name, description, address, banner } = createRestaurantInput;
       const createRestaurant = new CreateRestaurantDto();
       createRestaurant.name = name;
