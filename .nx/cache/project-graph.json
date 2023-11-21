@@ -278,59 +278,6 @@
         "tags": []
       }
     },
-    "restaurant-cms": {
-      "name": "restaurant-cms",
-      "type": "lib",
-      "data": {
-        "root": "apps/restaurant-cms",
-        "sourceRoot": "apps/restaurant-cms",
-        "name": "restaurant-cms",
-        "projectType": "library",
-        "targets": {
-          "dev": {
-            "executor": "nx:run-script",
-            "options": {
-              "script": "dev"
-            },
-            "configurations": {}
-          },
-          "build": {
-            "dependsOn": [
-              "^build"
-            ],
-            "executor": "nx:run-script",
-            "options": {
-              "script": "build"
-            },
-            "configurations": {}
-          },
-          "start": {
-            "executor": "nx:run-script",
-            "options": {
-              "script": "start"
-            },
-            "configurations": {}
-          },
-          "lint": {
-            "executor": "nx:run-script",
-            "options": {
-              "script": "lint"
-            },
-            "configurations": {}
-          },
-          "nx-release-publish": {
-            "dependsOn": [
-              "^nx-release-publish"
-            ],
-            "executor": "@nx/js:release-publish",
-            "options": {},
-            "configurations": {}
-          }
-        },
-        "implicitDependencies": [],
-        "tags": []
-      }
-    },
     "auth-service": {
       "name": "auth-service",
       "type": "lib",
@@ -12616,68 +12563,6 @@
         "type": "static"
       }
     ],
-    "restaurant-cms": [
-      {
-        "source": "restaurant-cms",
-        "target": "npm:react",
-        "type": "static"
-      },
-      {
-        "source": "restaurant-cms",
-        "target": "npm:react-dom",
-        "type": "static"
-      },
-      {
-        "source": "restaurant-cms",
-        "target": "npm:next",
-        "type": "static"
-      },
-      {
-        "source": "restaurant-cms",
-        "target": "npm:typescript",
-        "type": "static"
-      },
-      {
-        "source": "restaurant-cms",
-        "target": "npm:@types/node",
-        "type": "static"
-      },
-      {
-        "source": "restaurant-cms",
-        "target": "npm:@types/react",
-        "type": "static"
-      },
-      {
-        "source": "restaurant-cms",
-        "target": "npm:@types/react-dom",
-        "type": "static"
-      },
-      {
-        "source": "restaurant-cms",
-        "target": "npm:autoprefixer",
-        "type": "static"
-      },
-      {
-        "source": "restaurant-cms",
-        "target": "npm:postcss",
-        "type": "static"
-      },
-      {
-        "source": "restaurant-cms",
-        "target": "npm:tailwindcss",
-        "type": "static"
-      },
-      {
-        "source": "restaurant-cms",
-        "target": "npm:eslint",
-        "type": "static"
-      },
-      {
-        "source": "restaurant-cms",
-        "target": "npm:eslint-config-next",
-        "type": "static"
-      }
-    ],
     "auth-service": [
       {
         "source": "auth-service",
@@ -16028,11 +15913,6 @@
         "source": "npm:@nestjs/apollo@12.0.11",
         "target": "npm:tslib",
         "type": "static"
-      },
-      {
-        "source": "npm:@nestjs/apollo@12.0.11",
-        "target": "npm:@apollo/subgraph",
-        "type": "static"
       }
     ],
     "npm:@nestjs/cli": [
@@ -16336,6 +16216,11 @@
       },
       {
         "source": "npm:@nestjs/graphql",
+        "target": "npm:class-transformer",
+        "type": "static"
+      },
+      {
+        "source": "npm:@nestjs/graphql",
         "target": "npm:class-validator",
         "type": "static"
       },
@@ -16381,11 +16266,6 @@
       },
       {
         "source": "npm:@nestjs/graphql",
-        "target": "npm:ts-morph",
-        "type": "static"
-      },
-      {
-        "source": "npm:@nestjs/graphql",
         "target": "npm:tslib@2.5.0",
         "type": "static"
       },
@@ -16398,14 +16278,14 @@
         "source": "npm:@nestjs/graphql",
         "target": "npm:ws",
         "type": "static"
+      },
+      {
+        "source": "npm:@nestjs/graphql",
+        "target": "npm:ts-morph",
+        "type": "static"
       }
     ],
     "npm:@nestjs/graphql@12.0.11": [
-      {
-        "source": "npm:@nestjs/graphql@12.0.11",
-        "target": "npm:@apollo/subgraph",
-        "type": "static"
-      },
       {
         "source": "npm:@nestjs/graphql@12.0.11",
         "target": "npm:@graphql-tools/merge@9.0.0",
@@ -16439,16 +16319,6 @@
       {
         "source": "npm:@nestjs/graphql@12.0.11",
         "target": "npm:chokidar",
-        "type": "static"
-      },
-      {
-        "source": "npm:@nestjs/graphql@12.0.11",
-        "target": "npm:class-transformer",
-        "type": "static"
-      },
-      {
-        "source": "npm:@nestjs/graphql@12.0.11",
-        "target": "npm:class-validator",
         "type": "static"
       },
       {
@@ -16493,6 +16363,11 @@
       },
       {
         "source": "npm:@nestjs/graphql@12.0.11",
+        "target": "npm:ts-morph",
+        "type": "static"
+      },
+      {
+        "source": "npm:@nestjs/graphql@12.0.11",
         "target": "npm:tslib",
         "type": "static"
       },
@@ -16504,11 +16379,6 @@
       {
         "source": "npm:@nestjs/graphql@12.0.11",
         "target": "npm:ws@8.14.2",
-        "type": "static"
-      },
-      {
-        "source": "npm:@nestjs/graphql@12.0.11",
-        "target": "npm:ts-morph",
         "type": "static"
       }
     ],
@@ -16537,6 +16407,11 @@
       },
       {
         "source": "npm:@nestjs/mapped-types",
+        "target": "npm:class-transformer",
+        "type": "static"
+      },
+      {
+        "source": "npm:@nestjs/mapped-types",
         "target": "npm:class-validator",
         "type": "static"
       },
@@ -16550,16 +16425,6 @@
       {
         "source": "npm:@nestjs/mapped-types@2.0.2",
         "target": "npm:@nestjs/common",
-        "type": "static"
-      },
-      {
-        "source": "npm:@nestjs/mapped-types@2.0.2",
-        "target": "npm:class-transformer",
-        "type": "static"
-      },
-      {
-        "source": "npm:@nestjs/mapped-types@2.0.2",
-        "target": "npm:class-validator",
         "type": "static"
       },
       {
@@ -16710,11 +16575,6 @@
       {
         "source": "npm:@nestjs/typeorm",
         "target": "npm:uuid",
-        "type": "static"
-      },
-      {
-        "source": "npm:@nestjs/typeorm",
-        "target": "npm:@nestjs/core@9.4.3",
         "type": "static"
       }
     ],

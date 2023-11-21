@@ -46,11 +46,16 @@ export class Restaurant {
 }
 
 
+
 export abstract class IQuery {
-    abstract restaurants(): Nullable<Restaurant[]> | Promise<Nullable<Restaurant[]>>;
+  abstract restaurants(page: Nullable<number>):
+    | Nullable<Restaurant[]>
+    | Promise<Nullable<Restaurant[]>>;
+  abstract userRestaurant():
+    | Nullable<Restaurant[]>
+    | Promise<Nullable<Restaurant[]>>;
 
-    abstract restaurant(id?: Nullable<string>): Restaurant | Promise<Restaurant>;
-
+  abstract restaurant(id?: Nullable<string>): Restaurant | Promise<Restaurant>;
 }
 
 export abstract class IMutation {

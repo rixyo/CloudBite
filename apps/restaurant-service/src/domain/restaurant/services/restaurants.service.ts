@@ -2,7 +2,10 @@ import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Like, Repository, Connection, QueryRunner } from 'typeorm';
 import { RestaurantEntity } from '../entity/restaurant.entity';
-import { CreateRestaurantInput } from '../../graphql.schama';
+import {
+  CreateRestaurantInput,
+  UpdateRestaurantInput,
+} from '../../graphql.schama';
 import { Logger } from '../../../logger/logger';
 import { AddressDto } from '../dto/restaurant.dto';
 import { RestaurantAddressEntity } from '../entity/restaurant.address.entity';
@@ -21,6 +24,7 @@ export class RestaurantService {
    * @returns {Promise<RestaurantEntity[]>}
    * @memberof RestaurantsService
    */
+  // create restaurant method is used to create a restaurant and its address
   async createRestaurant(
     createRestaurantInput: CreateRestaurantInput,
     userid: string,
@@ -48,17 +52,18 @@ export class RestaurantService {
       await queryRunner.release();
     }
   }
+  // create CreateUserRestaurant method is used to create a restaurant
   async CreateUserRestaurant(
     createRestaurantInput: CreateRestaurantInput,
     userid: string,
     queryRunner: QueryRunner,
   ): Promise<RestaurantEntity> {
-    console.log(userid);
     return await queryRunner.manager.save(RestaurantEntity, {
       ...createRestaurantInput,
       owner_id: userid,
     });
   }
+  // create address method is used to create a address
   async createAddress(
     address: AddressDto,
     restaurant: RestaurantEntity,
@@ -68,6 +73,34 @@ export class RestaurantService {
       ...address,
       restaurant: restaurant,
     });
+  }
+  // get User Restaurant method is used to get a restaurant by user id
+  async getUserRestaurants(userid: string): Promise<RestaurantEntity[]> {
+    const restaurnt = await this.restaurantRepo.find({
+      where: { owner_id: userid },
+    });
+    console.log(restaurnt, 'restaurnt');
+    return restaurnt;
+  }
+  async updateRestaurant(
+    id: string,
+    updateRestaurantInput: UpdateRestaurantInput,
+  ): Promise<RestaurantEntity> {
+    const query = this.restaurantRepo.createQueryBuilder('restaurant');
+    query.where('restaurant.id = :id', { id: id });
+    const restaurant = await query.getOne();
+    restaurant.name = updateRestaurantInput.name;
+    restaurant.banner = updateRestaurantInput.banner;
+    restaurant.description = updateRestaurantInput.description;
+    restaurant.delivery_options = updateRestaurantInput.delivery_options;
+    restaurant.pickup_options = updateRestaurantInput.pickup_options;
+    await this.restaurantRepo.save(restaurant);
+    return restaurant;
+  }
+  async getAllRestaurants(page: number): Promise<RestaurantEntity[]> {
+    const query = this.restaurantRepo.createQueryBuilder('restaurant');
+    query.skip((page - 1) * 10);
+    return await query.take(10).getMany();
   }
   private evaluateDBError(
     error: Error,

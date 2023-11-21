@@ -7,6 +7,8 @@ import { Logger } from '@nestjs/common';
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   await app.listen(process.env.PORT || 5002);
-  Logger.log(`🚀 Server ready at http://localhost:${process.env.PORT}/graphql`);
+  Logger.log(
+    `🚀 Gateway Server ready at http://localhost:${process.env.PORT}/graphql`,
+  );
 }
 bootstrap();

@@ -136,8 +136,12 @@ export class UsersResolver {
     return user;
   }
   @ResolveReference()
-  async resolveReference(reference: { __typename: string; id: string }) {
+  async resolveReference(reference: {
+    __typename: string;
+    id: string;
+  }): Promise<UserEntity> {
     this.logger.http('ResolveReference :: user');
+    console.log(reference.id);
     return await this.usersService.findOneByUserId(reference.id);
   }
 }

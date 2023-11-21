@@ -14321,6 +14321,51 @@
       "type": "static"
     },
     {
+      "source": "npm:@nestjs/apollo",
+      "target": "npm:@apollo/subgraph",
+      "type": "static"
+    },
+    {
+      "source": "npm:@nestjs/apollo",
+      "target": "npm:@nestjs/common",
+      "type": "static"
+    },
+    {
+      "source": "npm:@nestjs/apollo",
+      "target": "npm:@nestjs/core",
+      "type": "static"
+    },
+    {
+      "source": "npm:@nestjs/apollo",
+      "target": "npm:@nestjs/graphql",
+      "type": "static"
+    },
+    {
+      "source": "npm:@nestjs/apollo",
+      "target": "npm:apollo-server-core",
+      "type": "static"
+    },
+    {
+      "source": "npm:@nestjs/apollo",
+      "target": "npm:graphql",
+      "type": "static"
+    },
+    {
+      "source": "npm:@nestjs/apollo",
+      "target": "npm:iterall",
+      "type": "static"
+    },
+    {
+      "source": "npm:@nestjs/apollo",
+      "target": "npm:lodash.omit",
+      "type": "static"
+    },
+    {
+      "source": "npm:@nestjs/apollo",
+      "target": "npm:tslib@2.5.0",
+      "type": "static"
+    },
+    {
       "source": "npm:@nestjs/apollo@12.0.11",
       "target": "npm:@apollo/gateway",
       "type": "static"
@@ -14333,56 +14378,6 @@
     {
       "source": "npm:@nestjs/apollo@12.0.11",
       "target": "npm:@apollo/server-plugin-landing-page-graphql-playground",
-      "type": "static"
-    },
-    {
-      "source": "npm:@nestjs/apollo@12.0.11",
-      "target": "npm:@nestjs/common",
-      "type": "static"
-    },
-    {
-      "source": "npm:@nestjs/apollo@12.0.11",
-      "target": "npm:@nestjs/core@9.4.3",
-      "type": "static"
-    },
-    {
-      "source": "npm:@nestjs/apollo@12.0.11",
-      "target": "npm:@nestjs/graphql@12.0.11",
-      "type": "static"
-    },
-    {
-      "source": "npm:@nestjs/apollo@12.0.11",
-      "target": "npm:graphql",
-      "type": "static"
-    },
-    {
-      "source": "npm:@nestjs/apollo@12.0.11",
-      "target": "npm:iterall",
-      "type": "static"
-    },
-    {
-      "source": "npm:@nestjs/apollo@12.0.11",
-      "target": "npm:lodash.omit",
-      "type": "static"
-    },
-    {
-      "source": "npm:@nestjs/apollo@12.0.11",
-      "target": "npm:tslib",
-      "type": "static"
-    },
-    {
-      "source": "npm:@nestjs/apollo@12.0.11",
-      "target": "npm:@apollo/server",
-      "type": "static"
-    },
-    {
-      "source": "npm:@nestjs/apollo@12.0.11",
-      "target": "npm:@apollo/server-plugin-landing-page-graphql-playground",
-      "type": "static"
-    },
-    {
-      "source": "npm:@nestjs/apollo@12.0.11",
-      "target": "npm:@apollo/subgraph",
       "type": "static"
     },
     {
@@ -14712,6 +14707,111 @@
     },
     {
       "source": "npm:@nestjs/graphql",
+      "target": "npm:class-transformer",
+      "type": "static"
+    },
+    {
+      "source": "npm:@nestjs/graphql",
+      "target": "npm:class-validator",
+      "type": "static"
+    },
+    {
+      "source": "npm:@nestjs/graphql",
+      "target": "npm:fast-glob",
+      "type": "static"
+    },
+    {
+      "source": "npm:@nestjs/graphql",
+      "target": "npm:graphql",
+      "type": "static"
+    },
+    {
+      "source": "npm:@nestjs/graphql",
+      "target": "npm:graphql-tag",
+      "type": "static"
+    },
+    {
+      "source": "npm:@nestjs/graphql",
+      "target": "npm:graphql-ws",
+      "type": "static"
+    },
+    {
+      "source": "npm:@nestjs/graphql",
+      "target": "npm:lodash",
+      "type": "static"
+    },
+    {
+      "source": "npm:@nestjs/graphql",
+      "target": "npm:normalize-path",
+      "type": "static"
+    },
+    {
+      "source": "npm:@nestjs/graphql",
+      "target": "npm:reflect-metadata",
+      "type": "static"
+    },
+    {
+      "source": "npm:@nestjs/graphql",
+      "target": "npm:subscriptions-transport-ws",
+      "type": "static"
+    },
+    {
+      "source": "npm:@nestjs/graphql",
+      "target": "npm:tslib@2.5.0",
+      "type": "static"
+    },
+    {
+      "source": "npm:@nestjs/graphql",
+      "target": "npm:uuid@9.0.0",
+      "type": "static"
+    },
+    {
+      "source": "npm:@nestjs/graphql",
+      "target": "npm:ws",
+      "type": "static"
+    },
+    {
+      "source": "npm:@nestjs/graphql",
+      "target": "npm:@apollo/subgraph",
+      "type": "static"
+    },
+    {
+      "source": "npm:@nestjs/graphql",
+      "target": "npm:@graphql-tools/merge",
+      "type": "static"
+    },
+    {
+      "source": "npm:@nestjs/graphql",
+      "target": "npm:@graphql-tools/schema@9.0.16",
+      "type": "static"
+    },
+    {
+      "source": "npm:@nestjs/graphql",
+      "target": "npm:@graphql-tools/utils",
+      "type": "static"
+    },
+    {
+      "source": "npm:@nestjs/graphql",
+      "target": "npm:@nestjs/common",
+      "type": "static"
+    },
+    {
+      "source": "npm:@nestjs/graphql",
+      "target": "npm:@nestjs/core",
+      "type": "static"
+    },
+    {
+      "source": "npm:@nestjs/graphql",
+      "target": "npm:@nestjs/mapped-types",
+      "type": "static"
+    },
+    {
+      "source": "npm:@nestjs/graphql",
+      "target": "npm:chokidar",
+      "type": "static"
+    },
+    {
+      "source": "npm:@nestjs/graphql",
       "target": "npm:class-validator",
       "type": "static"
     },
@@ -14773,111 +14873,6 @@
     {
       "source": "npm:@nestjs/graphql",
       "target": "npm:ws",
-      "type": "static"
-    },
-    {
-      "source": "npm:@nestjs/graphql@12.0.11",
-      "target": "npm:@apollo/subgraph",
-      "type": "static"
-    },
-    {
-      "source": "npm:@nestjs/graphql@12.0.11",
-      "target": "npm:@graphql-tools/merge@9.0.0",
-      "type": "static"
-    },
-    {
-      "source": "npm:@nestjs/graphql@12.0.11",
-      "target": "npm:@graphql-tools/schema@10.0.0",
-      "type": "static"
-    },
-    {
-      "source": "npm:@nestjs/graphql@12.0.11",
-      "target": "npm:@graphql-tools/utils@10.0.8",
-      "type": "static"
-    },
-    {
-      "source": "npm:@nestjs/graphql@12.0.11",
-      "target": "npm:@nestjs/common",
-      "type": "static"
-    },
-    {
-      "source": "npm:@nestjs/graphql@12.0.11",
-      "target": "npm:@nestjs/core@9.4.3",
-      "type": "static"
-    },
-    {
-      "source": "npm:@nestjs/graphql@12.0.11",
-      "target": "npm:@nestjs/mapped-types@2.0.2",
-      "type": "static"
-    },
-    {
-      "source": "npm:@nestjs/graphql@12.0.11",
-      "target": "npm:chokidar",
-      "type": "static"
-    },
-    {
-      "source": "npm:@nestjs/graphql@12.0.11",
-      "target": "npm:class-transformer",
-      "type": "static"
-    },
-    {
-      "source": "npm:@nestjs/graphql@12.0.11",
-      "target": "npm:class-validator",
-      "type": "static"
-    },
-    {
-      "source": "npm:@nestjs/graphql@12.0.11",
-      "target": "npm:fast-glob@3.3.2",
-      "type": "static"
-    },
-    {
-      "source": "npm:@nestjs/graphql@12.0.11",
-      "target": "npm:graphql",
-      "type": "static"
-    },
-    {
-      "source": "npm:@nestjs/graphql@12.0.11",
-      "target": "npm:graphql-tag",
-      "type": "static"
-    },
-    {
-      "source": "npm:@nestjs/graphql@12.0.11",
-      "target": "npm:graphql-ws@5.14.2",
-      "type": "static"
-    },
-    {
-      "source": "npm:@nestjs/graphql@12.0.11",
-      "target": "npm:lodash",
-      "type": "static"
-    },
-    {
-      "source": "npm:@nestjs/graphql@12.0.11",
-      "target": "npm:normalize-path",
-      "type": "static"
-    },
-    {
-      "source": "npm:@nestjs/graphql@12.0.11",
-      "target": "npm:reflect-metadata",
-      "type": "static"
-    },
-    {
-      "source": "npm:@nestjs/graphql@12.0.11",
-      "target": "npm:subscriptions-transport-ws",
-      "type": "static"
-    },
-    {
-      "source": "npm:@nestjs/graphql@12.0.11",
-      "target": "npm:tslib",
-      "type": "static"
-    },
-    {
-      "source": "npm:@nestjs/graphql@12.0.11",
-      "target": "npm:uuid",
-      "type": "static"
-    },
-    {
-      "source": "npm:@nestjs/graphql@12.0.11",
-      "target": "npm:ws@8.14.2",
       "type": "static"
     },
     {
@@ -14997,6 +14992,11 @@
     },
     {
       "source": "npm:@nestjs/mapped-types",
+      "target": "npm:class-transformer",
+      "type": "static"
+    },
+    {
+      "source": "npm:@nestjs/mapped-types",
       "target": "npm:class-validator",
       "type": "static"
     },
@@ -15008,16 +15008,6 @@
     {
       "source": "npm:@nestjs/mapped-types@2.0.2",
       "target": "npm:@nestjs/common",
-      "type": "static"
-    },
-    {
-      "source": "npm:@nestjs/mapped-types@2.0.2",
-      "target": "npm:class-transformer",
-      "type": "static"
-    },
-    {
-      "source": "npm:@nestjs/mapped-types@2.0.2",
-      "target": "npm:class-validator",
       "type": "static"
     },
     {
@@ -15203,36 +15193,6 @@
     {
       "source": "npm:@nestjs/typeorm",
       "target": "npm:@nestjs/core",
-      "type": "static"
-    },
-    {
-      "source": "npm:@nestjs/typeorm",
-      "target": "npm:reflect-metadata",
-      "type": "static"
-    },
-    {
-      "source": "npm:@nestjs/typeorm",
-      "target": "npm:rxjs",
-      "type": "static"
-    },
-    {
-      "source": "npm:@nestjs/typeorm",
-      "target": "npm:typeorm",
-      "type": "static"
-    },
-    {
-      "source": "npm:@nestjs/typeorm",
-      "target": "npm:uuid",
-      "type": "static"
-    },
-    {
-      "source": "npm:@nestjs/typeorm",
-      "target": "npm:@nestjs/common",
-      "type": "static"
-    },
-    {
-      "source": "npm:@nestjs/typeorm",
-      "target": "npm:@nestjs/core@9.4.3",
       "type": "static"
     },
     {

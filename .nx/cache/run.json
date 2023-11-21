@@ -1,18 +1,18 @@
 {
   "run": {
-    "command": "nx run restaurant-service:start:dev",
-    "startTime": "2023-11-20T16:34:27.372Z",
-    "endTime": "2023-11-20T16:35:04.216Z",
+    "command": "nx run auth-service:start:dev",
+    "startTime": "2023-11-21T12:01:18.055Z",
+    "endTime": "2023-11-21T13:10:11.014Z",
     "inner": false
   },
   "tasks": [
     {
-      "taskId": "restaurant-service:start:dev",
+      "taskId": "auth-service:start:dev",
       "target": "start:dev",
-      "projectName": "restaurant-service",
-      "hash": "10039826321906156284",
-      "startTime": "2023-11-20T16:34:27.379Z",
-      "endTime": "2023-11-20T16:35:04.215Z",
+      "projectName": "auth-service",
+      "hash": "6202029005342028528",
+      "startTime": "2023-11-21T12:01:18.063Z",
+      "endTime": "2023-11-21T13:10:11.011Z",
       "params": "",
       "cacheStatus": "cache-miss",
       "status": 1

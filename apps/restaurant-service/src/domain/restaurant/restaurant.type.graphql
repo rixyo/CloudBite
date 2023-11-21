@@ -1,8 +1,9 @@
 scalar Date
 
 type Query{
-    restaurants: [Restaurant!]!
+    restaurants(page:Int!): [Restaurant!]!
     restaurant(id: ID!): Restaurant
+    userRestaurants: [Restaurant!]!
 }
 
 type Mutation {
