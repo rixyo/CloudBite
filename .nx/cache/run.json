@@ -1,18 +1,18 @@
 {
   "run": {
-    "command": "nx run auth-service:start:dev",
-    "startTime": "2023-11-21T12:01:18.055Z",
-    "endTime": "2023-11-21T13:10:11.014Z",
+    "command": "nx run restaurant-cms:dev",
+    "startTime": "2023-11-21T13:10:27.770Z",
+    "endTime": "2023-11-21T13:51:53.320Z",
     "inner": false
   },
   "tasks": [
     {
-      "taskId": "auth-service:start:dev",
-      "target": "start:dev",
-      "projectName": "auth-service",
-      "hash": "6202029005342028528",
-      "startTime": "2023-11-21T12:01:18.063Z",
-      "endTime": "2023-11-21T13:10:11.011Z",
+      "taskId": "restaurant-cms:dev",
+      "target": "dev",
+      "projectName": "restaurant-cms",
+      "hash": "4623457464408806671",
+      "startTime": "2023-11-21T13:10:27.775Z",
+      "endTime": "2023-11-21T13:51:53.318Z",
       "params": "",
       "cacheStatus": "cache-miss",
       "status": 1
