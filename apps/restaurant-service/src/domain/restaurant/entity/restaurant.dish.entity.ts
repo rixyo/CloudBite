@@ -22,15 +22,6 @@ export class RestaurantDishEntity extends BaseEntity {
   public description!: string;
 
   @Column({ type: 'varchar', default: null })
-  public category!: string;
-
-  @Column({ type: 'varchar', default: null })
-  public food_type!: string;
-
-  @Column({ type: 'varchar', default: null })
-  public meal_type!: string;
-
-  @Column({ type: 'varchar', default: null })
   public cuisine_type!: string;
 
   @Column({ type: 'varchar', default: null })

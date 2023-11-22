@@ -7,7 +7,6 @@ import {
   IsString,
   IsUrl,
   IsUUID,
-  ValidateNested,
 } from 'class-validator';
 export class fetchRestaurantByIdDto {
   @IsUUID()
@@ -72,4 +71,25 @@ export class CreateRestaurantDto {
   @IsDefined()
   @ValidateType(() => AddressDto)
   public address!: AddressDto;
+}
+export class UpdateRestaurantDto {
+  @IsDefined()
+  @IsString()
+  public name!: string;
+
+  @IsOptional()
+  public description!: string;
+
+  @IsOptional()
+  @IsString()
+  @IsUrl()
+  public banner!: string;
+
+  @IsOptional()
+  @IsString()
+  public delivery_options!: string;
+
+  @IsOptional()
+  @IsString()
+  public pickup_options!: string;
 }

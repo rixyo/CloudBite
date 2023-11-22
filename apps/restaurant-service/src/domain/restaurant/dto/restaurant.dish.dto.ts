@@ -14,18 +14,6 @@ export enum mealType {
   'lunch' = 'lunch',
   'dinner' = 'dinner',
 }
-export enum cuisineType {
-  'indian' = 'indian',
-  'italian' = 'italian',
-  'chinese' = 'chinese',
-}
-
-export enum foodType {
-  'veg' = 'veg',
-  'non_veg' = 'non_veg',
-  'vegan' = 'vegan',
-}
-
 export class RestaurantParamParamDto {
   @IsUUID()
   public id!: string;
@@ -36,7 +24,7 @@ export class UpdateDishItemParamDto extends RestaurantParamParamDto {
   public dish_id!: string;
 }
 
-export class CreateRestaurantDishBodyDto {
+export class CreateRestaurantDishDto {
   @IsDefined()
   @IsString()
   public name!: string;
@@ -45,22 +33,12 @@ export class CreateRestaurantDishBodyDto {
   @IsString()
   public description!: string;
 
-  @IsEnum(cuisineType)
-  public cuisine_type!: string;
-
   @IsEnum(mealType)
   public meal_type!: string;
 
   @IsOptional()
   @IsString()
-  public category!: string;
-
-  @IsOptional()
-  @IsString()
   public ingredients!: string;
-
-  @IsEnum(foodType)
-  public food_type!: string;
 
   @IsNumber()
   public price!: number;

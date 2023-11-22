@@ -26,6 +26,8 @@ export class UsersService {
    */
   async getAllUsers(): Promise<UserEntity[]> {
     const users = await this.userRepo.find();
+    this.logger.info(`Users found: ${users}`);
+    if (!users) return [];
     return users;
   }
   // this function is used to find a user by their id
@@ -76,7 +78,7 @@ export class UsersService {
       this.logger.error(`Error creating Admin: ${error}`);
       throw this.evaluateDBError(error, createAdminInput);
     }
-    this.logger.info(`Admin created: ${(user.id, user.created_at)}`);
+    this.logger.info(`Admin created: ${JSON.stringify(user.id)}`);
     return user;
   }
   async createRestaurantOwner(

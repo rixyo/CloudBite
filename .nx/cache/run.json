@@ -1,18 +1,18 @@
 {
   "run": {
-    "command": "nx run restaurant-cms:dev",
-    "startTime": "2023-11-21T13:10:27.770Z",
-    "endTime": "2023-11-21T13:51:53.320Z",
+    "command": "nx run gateway-service:start:dev",
+    "startTime": "2023-11-22T11:20:03.088Z",
+    "endTime": "2023-11-22T13:28:22.646Z",
     "inner": false
   },
   "tasks": [
     {
-      "taskId": "restaurant-cms:dev",
-      "target": "dev",
-      "projectName": "restaurant-cms",
-      "hash": "4623457464408806671",
-      "startTime": "2023-11-21T13:10:27.775Z",
-      "endTime": "2023-11-21T13:51:53.318Z",
+      "taskId": "gateway-service:start:dev",
+      "target": "start:dev",
+      "projectName": "gateway-service",
+      "hash": "16821826536282050202",
+      "startTime": "2023-11-22T11:20:03.094Z",
+      "endTime": "2023-11-22T13:28:22.645Z",
       "params": "",
       "cacheStatus": "cache-miss",
       "status": 1

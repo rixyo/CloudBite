@@ -1,6 +1,6 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, NotFoundException } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
-import { Like, Repository, Connection, QueryRunner } from 'typeorm';
+import { Repository, Connection, QueryRunner } from 'typeorm';
 import { RestaurantEntity } from '../entity/restaurant.entity';
 import {
   CreateRestaurantInput,
@@ -79,7 +79,7 @@ export class RestaurantService {
     const restaurnt = await this.restaurantRepo.find({
       where: { owner_id: userid },
     });
-    console.log(restaurnt, 'restaurnt');
+    if (!restaurnt) throw new Error('No restaurant found');
     return restaurnt;
   }
   async updateRestaurant(
@@ -89,6 +89,7 @@ export class RestaurantService {
     const query = this.restaurantRepo.createQueryBuilder('restaurant');
     query.where('restaurant.id = :id', { id: id });
     const restaurant = await query.getOne();
+    if (!restaurant) throw new Error('No restaurant found');
     restaurant.name = updateRestaurantInput.name;
     restaurant.banner = updateRestaurantInput.banner;
     restaurant.description = updateRestaurantInput.description;
@@ -100,7 +101,35 @@ export class RestaurantService {
   async getAllRestaurants(page: number): Promise<RestaurantEntity[]> {
     const query = this.restaurantRepo.createQueryBuilder('restaurant');
     query.skip((page - 1) * 10);
-    return await query.take(10).getMany();
+    const restaurents = await query.take(10).getMany();
+    if (!restaurents) return [];
+    return restaurents;
+  }
+  async validateAuthorization(
+    userId: string,
+    restaurantId: string,
+  ): Promise<RestaurantEntity> {
+    const restaurant = await this.restaurantRepo.findOne({
+      where: { id: restaurantId },
+    });
+    if (!restaurant) {
+      throw new NotFoundException(
+        `restaurant with this Id not found ${restaurantId}`,
+      );
+    }
+    if (restaurant.owner_id !== userId) {
+      throw new Error('You are not authorized to perform this action');
+    }
+    return restaurant;
+  }
+  async getRestaurantById(id: string): Promise<RestaurantEntity> {
+    const restaurant = await this.restaurantRepo.findOne({
+      where: { id: id },
+    });
+    if (!restaurant) {
+      throw new NotFoundException(`restaurant with this Id not found ${id}`);
+    }
+    return restaurant;
   }
   private evaluateDBError(
     error: Error,

@@ -164,8 +164,16 @@
           "hash": "441627600165318814"
         },
         {
+          "file": "apps/cloudbite-merchants/public/imgs/delivery.jpg",
+          "hash": "1961540311588923040"
+        },
+        {
           "file": "apps/cloudbite-merchants/public/imgs/landingImg4.jpg",
           "hash": "3868958362597746999"
+        },
+        {
+          "file": "apps/cloudbite-merchants/public/imgs/manage.jpg",
+          "hash": "11707121597204294682"
         },
         {
           "file": "apps/cloudbite-merchants/public/next.svg",
@@ -182,1424 +190,6 @@
         {
           "file": "apps/cloudbite-merchants/tsconfig.json",
           "hash": "13566095390403677056"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/package.json",
-          "hash": "11338307439248427064"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/trace",
-          "hash": "15248365622984446613"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/server/server-reference-manifest.js",
-          "hash": "18358365812163416153"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/server/next-font-manifest.json",
-          "hash": "6401154132278371951"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/build-manifest.json",
-          "hash": "6814567380374998635"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/server/server-reference-manifest.json",
-          "hash": "3539677367077342386"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/development/_ssgManifest.js",
-          "hash": "17018243955171961484"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/chunks/polyfills.js",
-          "hash": "3837536670243305325"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/types/package.json",
-          "hash": "6094546126370684104"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/server/next-font-manifest.js",
-          "hash": "1969517768797717864"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/react-loadable-manifest.json",
-          "hash": "1389868326933519382"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/server/middleware-build-manifest.js",
-          "hash": "15165393696546301535"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/server/pages-manifest.json",
-          "hash": "7436115861000753943"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/server/middleware-react-loadable-manifest.js",
-          "hash": "9185069726031651908"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/server/middleware-manifest.json",
-          "hash": "11919384916463558595"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/development/_buildManifest.js",
-          "hash": "15027855675350871605"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/server/app-paths-manifest.json",
-          "hash": "3461746076699786547"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/app-build-manifest.json",
-          "hash": "10587770091749095375"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/cache/webpack/client-development/0.pack.gz",
-          "hash": "14340588460369083491"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/cache/webpack/client-development/index.pack.gz.old",
-          "hash": "9246123097094064209"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/types/app/page.ts",
-          "hash": "7851047834009547712"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/server/vendor-chunks/@radix-ui+react-compose-refs@1.0.1_@types+react@18.2.37_react@18.2.0.js",
-          "hash": "12519338332146606135"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/server/vendor-chunks/@babel+runtime@7.23.2.js",
-          "hash": "9814834289023968651"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/types/app/layout.ts",
-          "hash": "15252593581674368827"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/server/vendor-chunks/next@14.0.3_@babel+core@7.23.3_react-dom@18.2.0_react@18.2.0.js",
-          "hash": "14152263163295352571"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/server/vendor-chunks/class-variance-authority@0.7.0.js",
-          "hash": "13303372898652804960"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/server/vendor-chunks/tailwind-merge@2.0.0.js",
-          "hash": "1215591323650854056"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/server/app/page.js",
-          "hash": "8387738065339498502"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/server/vendor-chunks/clsx@2.0.0.js",
-          "hash": "8250903403674190165"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/server/vendor-chunks/@swc+helpers@0.5.2.js",
-          "hash": "14692997063490433640"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/server/vendor-chunks/@opentelemetry+api@1.7.0.js",
-          "hash": "4029895466811438711"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/server/webpack-runtime.js",
-          "hash": "10589795611830505757"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/server/vendor-chunks/react-multi-carousel@2.8.4.js",
-          "hash": "9539090229800068969"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/server/vendor-chunks/@radix-ui+react-slot@1.0.2_@types+react@18.2.37_react@18.2.0.js",
-          "hash": "16251643573429955086"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/css/app/page.css",
-          "hash": "12003637325825198438"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/media/c9a5bc6a7c948fb0-s.p.woff2",
-          "hash": "11465176741445189059"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/media/ec159349637c90ad-s.woff2",
-          "hash": "16820765298638722424"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/media/05a31a2ca4975f99-s.woff2",
-          "hash": "6505203201854852356"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/media/d6b16ce4a6175f26-s.woff2",
-          "hash": "3642167842161800342"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/css/app/layout.css",
-          "hash": "5708650268779523290"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/chunks/main-app.js",
-          "hash": "4118028902738322835"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/server/app/page_client-reference-manifest.js",
-          "hash": "5434839968932418213"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/media/revicons.b96bdb22.ttf",
-          "hash": "844441952816900993"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/chunks/app/page.js",
-          "hash": "6440266688407620985"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/chunks/app/layout.js",
-          "hash": "12670343848574799275"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/media/revicons.652e7269.eot",
-          "hash": "7583819126177996877"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/chunks/webpack.js",
-          "hash": "18244656629590364396"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/media/fd4db3eb5472fc27-s.woff2",
-          "hash": "5476130556128662205"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/media/51ed15f9841b9f9d-s.woff2",
-          "hash": "1566259182284839014"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/media/revicons.ff59b316.woff",
-          "hash": "3809767918247825115"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/media/513657b02c5c193f-s.woff2",
-          "hash": "3896700749526335924"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/chunks/app-pages-internals.js",
-          "hash": "6706251041737131392"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/app/layout.0580a2f1741cf76a.hot-update.js",
-          "hash": "330582682892219685"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/0580a2f1741cf76a.webpack.hot-update.json",
-          "hash": "8773209185785337189"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/webpack.0580a2f1741cf76a.hot-update.js",
-          "hash": "1195322928539167422"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/cache/webpack/server-development/index.pack.gz.old",
-          "hash": "4472256987298776365"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/cache/webpack/server-development/0.pack.gz",
-          "hash": "13301334281412880757"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/server/app/favicon.ico/route.js",
-          "hash": "11934650945912620200"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/webpack.11f0bb0630f9dbe8.hot-update.js",
-          "hash": "13359255768241748669"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/cache/webpack/client-development/1.pack.gz",
-          "hash": "8956304244482198226"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/app/layout.11f0bb0630f9dbe8.hot-update.js",
-          "hash": "16943628866875687168"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/11f0bb0630f9dbe8.webpack.hot-update.json",
-          "hash": "4645229789570933222"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/app/layout.03d1cb477237319e.hot-update.js",
-          "hash": "11572629170474430983"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/app/page.03d1cb477237319e.hot-update.js",
-          "hash": "9763343471431099299"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/webpack.03d1cb477237319e.hot-update.js",
-          "hash": "15558955807155764324"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/03d1cb477237319e.webpack.hot-update.json",
-          "hash": "5389549738508277482"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/b8f93cacc3d9255b.webpack.hot-update.json",
-          "hash": "5389549738508277482"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/app/page.b8f93cacc3d9255b.hot-update.js",
-          "hash": "5106042519261690977"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/webpack.b8f93cacc3d9255b.hot-update.js",
-          "hash": "15192951621626061299"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/app/layout.b8f93cacc3d9255b.hot-update.js",
-          "hash": "8498017077555017060"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/cache/webpack/server-development/1.pack.gz",
-          "hash": "12080865075249839491"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/cache/webpack/server-development/2.pack.gz",
-          "hash": "8589015335017724171"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/cache/webpack/client-development/2.pack.gz",
-          "hash": "7794291970593955868"
-        },
-        {
-          "file": "apps/cloudbite-merchants/public/imgs/delivery.jpg",
-          "hash": "1961540311588923040"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/webpack.7c8a07703964c25e.hot-update.js",
-          "hash": "9716459141854075158"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/app/page.7c8a07703964c25e.hot-update.js",
-          "hash": "16958504886200532006"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/app/layout.7c8a07703964c25e.hot-update.js",
-          "hash": "4980620148067875210"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/7c8a07703964c25e.webpack.hot-update.json",
-          "hash": "5389549738508277482"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/webpack.ce7ddd9f085d97fd.hot-update.js",
-          "hash": "7708959788074426867"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/server/app/not-found_client-reference-manifest.js",
-          "hash": "14756651120859895655"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/server/app/_not-found_client-reference-manifest.js",
-          "hash": "12578465121222867557"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/chunks/app/not-found.js",
-          "hash": "4010578811137258141"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/ce7ddd9f085d97fd.webpack.hot-update.json",
-          "hash": "13405125561290911638"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/server/app/not-found.js",
-          "hash": "9739399050850436203"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/4f1979173d0693e4.webpack.hot-update.json",
-          "hash": "5389549738508277482"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/app/layout.4f1979173d0693e4.hot-update.js",
-          "hash": "15252392188986721695"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/app/page.4f1979173d0693e4.hot-update.js",
-          "hash": "1847116506517925871"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/webpack.4f1979173d0693e4.hot-update.js",
-          "hash": "5850839992022783286"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/43d15897f702c8e2.webpack.hot-update.json",
-          "hash": "5389549738508277482"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/app/layout.43d15897f702c8e2.hot-update.js",
-          "hash": "3114214126792470912"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/webpack.43d15897f702c8e2.hot-update.js",
-          "hash": "4227463019685462683"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/app/page.43d15897f702c8e2.hot-update.js",
-          "hash": "15745981795522483175"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/22365492ef1af998.webpack.hot-update.json",
-          "hash": "5389549738508277482"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/app/page.22365492ef1af998.hot-update.js",
-          "hash": "13171451956052804762"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/app/layout.22365492ef1af998.hot-update.js",
-          "hash": "8798434782945968444"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/webpack.22365492ef1af998.hot-update.js",
-          "hash": "8206115098551211088"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/app/layout.97de3d3239386024.hot-update.js",
-          "hash": "3834830818048100116"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/webpack.97de3d3239386024.hot-update.js",
-          "hash": "824787596216312913"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/app/page.97de3d3239386024.hot-update.js",
-          "hash": "9994570323371596422"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/97de3d3239386024.webpack.hot-update.json",
-          "hash": "5389549738508277482"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/app/page.6d1861301dcfb7b6.hot-update.js",
-          "hash": "12950003936077660392"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/webpack.6d1861301dcfb7b6.hot-update.js",
-          "hash": "3393892530915959484"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/6d1861301dcfb7b6.webpack.hot-update.json",
-          "hash": "5389549738508277482"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/app/layout.6d1861301dcfb7b6.hot-update.js",
-          "hash": "14524600038206473987"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/app/page.fcd36bee6832eaed.hot-update.js",
-          "hash": "18400774932012155658"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/app/layout.fcd36bee6832eaed.hot-update.js",
-          "hash": "4924364307862815142"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/fcd36bee6832eaed.webpack.hot-update.json",
-          "hash": "14699436516615263602"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/webpack.fcd36bee6832eaed.hot-update.js",
-          "hash": "8726509907121438424"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/app/page.d1282102a2b3af5a.hot-update.js",
-          "hash": "14536794589119880031"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/d1282102a2b3af5a.webpack.hot-update.json",
-          "hash": "5389549738508277482"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/app/layout.d1282102a2b3af5a.hot-update.js",
-          "hash": "13579356797528468177"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/webpack.d1282102a2b3af5a.hot-update.js",
-          "hash": "1970005506023080203"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/66b48c85df972d42.webpack.hot-update.json",
-          "hash": "5389549738508277482"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/app/page.66b48c85df972d42.hot-update.js",
-          "hash": "11615151102953835285"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/app/layout.66b48c85df972d42.hot-update.js",
-          "hash": "1723450478024608683"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/webpack.66b48c85df972d42.hot-update.js",
-          "hash": "11566409895405034234"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/app/page.29b172684f884daa.hot-update.js",
-          "hash": "8346356256993687687"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/app/layout.29b172684f884daa.hot-update.js",
-          "hash": "8501486007336060261"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/webpack.29b172684f884daa.hot-update.js",
-          "hash": "9652658926934294573"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/29b172684f884daa.webpack.hot-update.json",
-          "hash": "5389549738508277482"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/app/layout.30ab5c9249a4a347.hot-update.js",
-          "hash": "13240646265773838798"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/webpack.30ab5c9249a4a347.hot-update.js",
-          "hash": "9042810990669051242"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/app/page.30ab5c9249a4a347.hot-update.js",
-          "hash": "13080902588043584766"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/30ab5c9249a4a347.webpack.hot-update.json",
-          "hash": "5389549738508277482"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/app/page.f1b593aac8c4aa98.hot-update.js",
-          "hash": "8791484057782973641"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/app/layout.f1b593aac8c4aa98.hot-update.js",
-          "hash": "16782725674303730830"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/webpack.f1b593aac8c4aa98.hot-update.js",
-          "hash": "15885543709564212268"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/f1b593aac8c4aa98.webpack.hot-update.json",
-          "hash": "5389549738508277482"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/86bdf72e037c81fd.webpack.hot-update.json",
-          "hash": "5389549738508277482"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/app/page.86bdf72e037c81fd.hot-update.js",
-          "hash": "8496684597428854045"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/webpack.86bdf72e037c81fd.hot-update.js",
-          "hash": "7176380567920011208"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/app/layout.86bdf72e037c81fd.hot-update.js",
-          "hash": "16229921368872669455"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/app/page.a76c3349bbf1d5a0.hot-update.js",
-          "hash": "1286977837603804998"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/a76c3349bbf1d5a0.webpack.hot-update.json",
-          "hash": "5389549738508277482"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/webpack.a76c3349bbf1d5a0.hot-update.js",
-          "hash": "6849236443607996696"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/app/layout.a76c3349bbf1d5a0.hot-update.js",
-          "hash": "337313251123519874"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/app/page.0de3f2a0cd5ee582.hot-update.js",
-          "hash": "5113512417987960276"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/webpack.0de3f2a0cd5ee582.hot-update.js",
-          "hash": "6334770538092497733"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/app/layout.0de3f2a0cd5ee582.hot-update.js",
-          "hash": "957117451500248292"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/0de3f2a0cd5ee582.webpack.hot-update.json",
-          "hash": "5389549738508277482"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/app/page.628d2b42c45c7951.hot-update.js",
-          "hash": "17038029047635982574"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/app/layout.628d2b42c45c7951.hot-update.js",
-          "hash": "689028649297158856"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/webpack.628d2b42c45c7951.hot-update.js",
-          "hash": "3095763409292694391"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/628d2b42c45c7951.webpack.hot-update.json",
-          "hash": "5389549738508277482"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/b5d82d067eba87d8.webpack.hot-update.json",
-          "hash": "5389549738508277482"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/app/layout.b5d82d067eba87d8.hot-update.js",
-          "hash": "1380233172878071020"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/webpack.b5d82d067eba87d8.hot-update.js",
-          "hash": "1448527657291250447"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/app/page.b5d82d067eba87d8.hot-update.js",
-          "hash": "5818785302060125838"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/app/layout.cef08a8521cefc81.hot-update.js",
-          "hash": "2479109053097902367"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/webpack.cef08a8521cefc81.hot-update.js",
-          "hash": "1262983042517911728"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/app/page.cef08a8521cefc81.hot-update.js",
-          "hash": "2296813830413045266"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/cef08a8521cefc81.webpack.hot-update.json",
-          "hash": "5389549738508277482"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/app/layout.0f96c57a94152d46.hot-update.js",
-          "hash": "16918159700604954207"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/webpack.0f96c57a94152d46.hot-update.js",
-          "hash": "16144030483274316138"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/app/page.0f96c57a94152d46.hot-update.js",
-          "hash": "14611724397770363838"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/0f96c57a94152d46.webpack.hot-update.json",
-          "hash": "5389549738508277482"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/webpack.449c0e4b620ab5a5.hot-update.js",
-          "hash": "682114366917172855"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/449c0e4b620ab5a5.webpack.hot-update.json",
-          "hash": "5389549738508277482"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/app/page.449c0e4b620ab5a5.hot-update.js",
-          "hash": "5442737050223477608"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/app/layout.449c0e4b620ab5a5.hot-update.js",
-          "hash": "6166928249056304515"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/483225c5a7aa0ac5.webpack.hot-update.json",
-          "hash": "13405125561290911638"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/webpack.483225c5a7aa0ac5.hot-update.js",
-          "hash": "7174372370189247295"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/89488c3ea5b04ff1.webpack.hot-update.json",
-          "hash": "5389549738508277482"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/webpack.89488c3ea5b04ff1.hot-update.js",
-          "hash": "13646781795268218492"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/app/layout.89488c3ea5b04ff1.hot-update.js",
-          "hash": "3977065515331581217"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/app/page.89488c3ea5b04ff1.hot-update.js",
-          "hash": "9008478326249911886"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/app/layout.f9defcbbc89a8cbb.hot-update.js",
-          "hash": "11640430507937822089"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/webpack.f9defcbbc89a8cbb.hot-update.js",
-          "hash": "14009474305813430383"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/f9defcbbc89a8cbb.webpack.hot-update.json",
-          "hash": "5389549738508277482"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/app/page.f9defcbbc89a8cbb.hot-update.js",
-          "hash": "5638465213619211944"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/app/layout.230f4499604fef6a.hot-update.js",
-          "hash": "3088296420287082500"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/app/page.230f4499604fef6a.hot-update.js",
-          "hash": "4176600430037700004"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/230f4499604fef6a.webpack.hot-update.json",
-          "hash": "5389549738508277482"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/webpack.230f4499604fef6a.hot-update.js",
-          "hash": "1745966182704212537"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/app/page.8a52892674cc7725.hot-update.js",
-          "hash": "2416148654817446907"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/webpack.8a52892674cc7725.hot-update.js",
-          "hash": "7795504006247316076"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/app/layout.8a52892674cc7725.hot-update.js",
-          "hash": "10656233688835899680"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/8a52892674cc7725.webpack.hot-update.json",
-          "hash": "5389549738508277482"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/app/page.9d859e50cce05bc3.hot-update.js",
-          "hash": "15645816379329312904"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/app/layout.9d859e50cce05bc3.hot-update.js",
-          "hash": "11565487998362335848"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/9d859e50cce05bc3.webpack.hot-update.json",
-          "hash": "5389549738508277482"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/webpack.9d859e50cce05bc3.hot-update.js",
-          "hash": "11551153974562272321"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/app/page.ce1af288bb0b5547.hot-update.js",
-          "hash": "3846142432998087768"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/ce1af288bb0b5547.webpack.hot-update.json",
-          "hash": "5389549738508277482"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/webpack.ce1af288bb0b5547.hot-update.js",
-          "hash": "11661085582234650359"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/app/layout.ce1af288bb0b5547.hot-update.js",
-          "hash": "7047668326608086513"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/app/page.f160810064841401.hot-update.js",
-          "hash": "17361502025837019245"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/webpack.f160810064841401.hot-update.js",
-          "hash": "8689861863316675633"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/app/layout.f160810064841401.hot-update.js",
-          "hash": "5106191528105393839"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/f160810064841401.webpack.hot-update.json",
-          "hash": "5389549738508277482"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/app/layout.eadcb5b654cd9250.hot-update.js",
-          "hash": "6093246047434450038"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/webpack.eadcb5b654cd9250.hot-update.js",
-          "hash": "14704288402214042250"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/app/page.eadcb5b654cd9250.hot-update.js",
-          "hash": "4241719525548757801"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/eadcb5b654cd9250.webpack.hot-update.json",
-          "hash": "5389549738508277482"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/webpack.70cdcf10f8383765.hot-update.js",
-          "hash": "7499346277327404768"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/app/page.70cdcf10f8383765.hot-update.js",
-          "hash": "12321403273440369758"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/app/layout.70cdcf10f8383765.hot-update.js",
-          "hash": "6549176723604536397"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/70cdcf10f8383765.webpack.hot-update.json",
-          "hash": "14699436516615263602"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/504e072af5d41e21.webpack.hot-update.json",
-          "hash": "5389549738508277482"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/webpack.504e072af5d41e21.hot-update.js",
-          "hash": "12415891834875190421"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/app/page.504e072af5d41e21.hot-update.js",
-          "hash": "6745722097230522884"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/app/layout.504e072af5d41e21.hot-update.js",
-          "hash": "370001759952604194"
-        },
-        {
-          "file": "apps/cloudbite-merchants/public/imgs/manage.jpg",
-          "hash": "11707121597204294682"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/cache/webpack/server-development/3.pack.gz",
-          "hash": "10627893115571506867"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/cache/webpack/client-development/3.pack.gz",
-          "hash": "8015834690913191993"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/cache/webpack/client-development/4.pack.gz",
-          "hash": "13887515290093017227"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/9384fd39d6567b05.webpack.hot-update.json",
-          "hash": "5389549738508277482"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/webpack.9384fd39d6567b05.hot-update.js",
-          "hash": "13433757135161367141"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/app/layout.9384fd39d6567b05.hot-update.js",
-          "hash": "11309071065331596205"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/app/page.9384fd39d6567b05.hot-update.js",
-          "hash": "7501153616076131585"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/app/page.e65f3fd75ada8811.hot-update.js",
-          "hash": "2592460728816964210"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/app/layout.e65f3fd75ada8811.hot-update.js",
-          "hash": "4870815172321762245"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/e65f3fd75ada8811.webpack.hot-update.json",
-          "hash": "5389549738508277482"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/webpack.e65f3fd75ada8811.hot-update.js",
-          "hash": "17513646673147036177"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/2ded51e9be1d57b7.webpack.hot-update.json",
-          "hash": "5389549738508277482"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/app/page.2ded51e9be1d57b7.hot-update.js",
-          "hash": "2861537929497637595"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/webpack.2ded51e9be1d57b7.hot-update.js",
-          "hash": "14910098484318283181"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/app/layout.2ded51e9be1d57b7.hot-update.js",
-          "hash": "1867347748807832938"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/webpack.4eec7a10d699c72f.hot-update.js",
-          "hash": "9309773411745105207"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/4eec7a10d699c72f.webpack.hot-update.json",
-          "hash": "5389549738508277482"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/app/page.4eec7a10d699c72f.hot-update.js",
-          "hash": "17704464371132557803"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/app/layout.4eec7a10d699c72f.hot-update.js",
-          "hash": "16892655348740093603"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/app/layout.46051cef5d7a50fb.hot-update.js",
-          "hash": "4364656496247179351"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/46051cef5d7a50fb.webpack.hot-update.json",
-          "hash": "5389549738508277482"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/webpack.46051cef5d7a50fb.hot-update.js",
-          "hash": "14800392003305592911"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/app/page.46051cef5d7a50fb.hot-update.js",
-          "hash": "10533689123017655554"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/webpack.a57f5d49d7116efa.hot-update.js",
-          "hash": "10456021186668346151"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/app/layout.a57f5d49d7116efa.hot-update.js",
-          "hash": "10574884010589253881"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/a57f5d49d7116efa.webpack.hot-update.json",
-          "hash": "8773209185785337189"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/app/page.abfe643faa3c91bd.hot-update.js",
-          "hash": "11804340930832618827"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/webpack.abfe643faa3c91bd.hot-update.js",
-          "hash": "6776327603212392413"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/abfe643faa3c91bd.webpack.hot-update.json",
-          "hash": "5389549738508277482"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/app/layout.abfe643faa3c91bd.hot-update.js",
-          "hash": "11998857837660025599"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/3714fe3c776f9601.webpack.hot-update.json",
-          "hash": "14489256064066906474"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/app/page.3714fe3c776f9601.hot-update.js",
-          "hash": "8949542241758348577"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/webpack.3714fe3c776f9601.hot-update.js",
-          "hash": "6361464046267485571"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/app/layout.3714fe3c776f9601.hot-update.js",
-          "hash": "5484497882748485697"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/fallback-build-manifest.json",
-          "hash": "4060846737409831828"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/chunks/fallback/webpack.js",
-          "hash": "15016981695434854925"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/chunks/fallback/amp.js",
-          "hash": "6180926047373925372"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/chunks/fallback/pages/_app.js",
-          "hash": "15191085794781342411"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/chunks/fallback/pages/_error.js",
-          "hash": "15175535224133315107"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/chunks/fallback/main.js",
-          "hash": "12308024080006009452"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/chunks/fallback/react-refresh.js",
-          "hash": "7027737316283460349"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/chunks/react-refresh.js",
-          "hash": "7027737316283460349"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/chunks/pages/_app.js",
-          "hash": "15191085794781342411"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/app/page.b98fa0be4e48439a.hot-update.js",
-          "hash": "13429593590872421706"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/webpack.b98fa0be4e48439a.hot-update.js",
-          "hash": "16921219303376609302"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/chunks/main.js",
-          "hash": "13130110987126613068"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/chunks/pages/_error.js",
-          "hash": "15175535224133315107"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/b98fa0be4e48439a.webpack.hot-update.json",
-          "hash": "14407351047949543112"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/chunks/_error.js",
-          "hash": "11550045148934486383"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/app/layout.b98fa0be4e48439a.hot-update.js",
-          "hash": "9699505205628724939"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/server/pages/_document.js",
-          "hash": "10650310492413740922"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/server/pages/_app.js",
-          "hash": "15335419496836136385"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/server/pages/_error.js",
-          "hash": "4096003100835116020"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/server/_error.js",
-          "hash": "16300238417674911619"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/cache/webpack/client-development-fallback/0.pack.gz",
-          "hash": "1433966243210584115"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/cache/webpack/client-development-fallback/index.pack.gz.old",
-          "hash": "5687449040110031973"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/app/page.d4e203c98ee5ca6f.hot-update.js",
-          "hash": "6119444390729473593"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/app/layout.d4e203c98ee5ca6f.hot-update.js",
-          "hash": "17674202928815791278"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/webpack.d4e203c98ee5ca6f.hot-update.js",
-          "hash": "10352116188359510027"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/d4e203c98ee5ca6f.webpack.hot-update.json",
-          "hash": "5389549738508277482"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/33544b70788df3eb.webpack.hot-update.json",
-          "hash": "5389549738508277482"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/app/layout.33544b70788df3eb.hot-update.js",
-          "hash": "15926104962164762512"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/app/page.33544b70788df3eb.hot-update.js",
-          "hash": "8631196087011762489"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/webpack.33544b70788df3eb.hot-update.js",
-          "hash": "1266054754883629527"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/app/page.e94bacf733573d51.hot-update.js",
-          "hash": "5995841840788226643"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/e94bacf733573d51.webpack.hot-update.json",
-          "hash": "5389549738508277482"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/webpack.e94bacf733573d51.hot-update.js",
-          "hash": "15468899838680921468"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/static/webpack/app/layout.e94bacf733573d51.hot-update.js",
-          "hash": "1894035680664883945"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/cache/webpack/server-development/6.pack.gz",
-          "hash": "1165356535586392943"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/cache/webpack/client-development/7.pack.gz",
-          "hash": "2526918596472803836"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/cache/webpack/server-development/index.pack.gz",
-          "hash": "408915636907556662"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/cache/webpack/client-development/6.pack.gz",
-          "hash": "1239798657597939682"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/cache/webpack/server-development/4.pack.gz",
-          "hash": "8418592425973844286"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/cache/webpack/server-development/5.pack.gz",
-          "hash": "17678842193002535991"
-        },
-        {
-          "file": "apps/cloudbite-merchants/.next/cache/webpack/client-development/5.pack.gz",
-          "hash": "8606359966061490120"
-        }
-      ],
-      "restaurant-service": [
-        {
-          "file": "apps/restaurant-service/.eslintrc.js",
-          "hash": "7461846271827386206"
-        },
-        {
-          "file": "apps/restaurant-service/.prettierrc",
-          "hash": "4808572120966128913"
-        },
-        {
-          "file": "apps/restaurant-service/README.md",
-          "hash": "8286378509751487236"
-        },
-        {
-          "file": "apps/restaurant-service/nest-cli.json",
-          "hash": "789240945379598733"
-        },
-        {
-          "file": "apps/restaurant-service/package.json",
-          "hash": "2574748337823436484",
-          "deps": [
-            "npm:@apollo/federation",
-            "npm:@apollo/server",
-            "npm:@apollo/subgraph",
-            "npm:@nestjs/apollo",
-            "npm:@nestjs/common",
-            "npm:@nestjs/core",
-            "npm:@nestjs/graphql",
-            "npm:@nestjs/jwt",
-            "npm:@nestjs/passport",
-            "npm:@nestjs/platform-express",
-            "npm:@nestjs/typeorm",
-            "npm:apollo-server-core",
-            "npm:class-transformer",
-            "npm:class-validator",
-            "npm:graphql",
-            "npm:jsonwebtoken",
-            "npm:moment",
-            "npm:passport-jwt",
-            "npm:pg",
-            "npm:reflect-metadata",
-            "npm:rxjs",
-            "npm:typeorm",
-            "npm:uuid",
-            "npm:winston",
-            "npm:@nestjs/cli",
-            "npm:@nestjs/schematics",
-            "npm:@nestjs/testing",
-            "npm:@types/express",
-            "npm:@types/jest",
-            "npm:@types/node",
-            "npm:@types/passport-jwt",
-            "npm:@types/supertest",
-            "npm:@typescript-eslint/eslint-plugin",
-            "npm:@typescript-eslint/parser",
-            "npm:eslint",
-            "npm:eslint-config-prettier",
-            "npm:eslint-plugin-prettier",
-            "npm:jest",
-            "npm:prettier",
-            "npm:source-map-support",
-            "npm:supertest",
-            "npm:ts-jest",
-            "npm:ts-loader",
-            "npm:ts-node",
-            "npm:tsconfig-paths",
-            "npm:typescript"
-          ]
-        },
-        {
-          "file": "apps/restaurant-service/src/app.module.ts",
-          "hash": "18241164477453897799"
-        },
-        {
-          "file": "apps/restaurant-service/src/config/config.default.ts",
-          "hash": "5419642320862044416"
-        },
-        {
-          "file": "apps/restaurant-service/src/config/config.interface.ts",
-          "hash": "15494570587749928678"
-        },
-        {
-          "file": "apps/restaurant-service/src/config/config.module.ts",
-          "hash": "13143047207281215892"
-        },
-        {
-          "file": "apps/restaurant-service/src/config/config.service.ts",
-          "hash": "7126432097134560747"
-        },
-        {
-          "file": "apps/restaurant-service/src/db/db.errors.ts",
-          "hash": "2646672877639124408"
-        },
-        {
-          "file": "apps/restaurant-service/src/db/db.interface.ts",
-          "hash": "12011516664509660283"
-        },
-        {
-          "file": "apps/restaurant-service/src/db/db.logger.ts",
-          "hash": "9157591969086587730"
-        },
-        {
-          "file": "apps/restaurant-service/src/db/db.module.ts",
-          "hash": "6317241663369063495"
-        },
-        {
-          "file": "apps/restaurant-service/src/domain/auth/auth.module.ts",
-          "hash": "16699654050739106601"
-        },
-        {
-          "file": "apps/restaurant-service/src/domain/auth/auth.service.ts",
-          "hash": "10532622087662135070"
-        },
-        {
-          "file": "apps/restaurant-service/src/domain/auth/guards/admin.guard.ts",
-          "hash": "800017346527875327"
-        },
-        {
-          "file": "apps/restaurant-service/src/domain/auth/guards/jwtauth.guard.ts",
-          "hash": "9310120318481956847"
-        },
-        {
-          "file": "apps/restaurant-service/src/domain/auth/guards/restaurant-owner.guard.ts",
-          "hash": "16651500931502197256"
-        },
-        {
-          "file": "apps/restaurant-service/src/domain/auth/interfaces/jwt-payload.interface.ts",
-          "hash": "9020398436396176444"
-        },
-        {
-          "file": "apps/restaurant-service/src/domain/auth/strategies/jwt.stragegy.ts",
-          "hash": "16863595006745382817"
-        },
-        {
-          "file": "apps/restaurant-service/src/domain/domain.module.ts",
-          "hash": "6708987486187312133"
-        },
-        {
-          "file": "apps/restaurant-service/src/domain/graphql.schama.ts",
-          "hash": "7240989123911170134"
-        },
-        {
-          "file": "apps/restaurant-service/src/domain/restaurant/dto/restaurant.dish.dto.ts",
-          "hash": "15080889295520630701"
-        },
-        {
-          "file": "apps/restaurant-service/src/domain/restaurant/dto/restaurant.dto.ts",
-          "hash": "6853476223738278878"
-        },
-        {
-          "file": "apps/restaurant-service/src/domain/restaurant/entity/restaurant.address.entity.ts",
-          "hash": "16541746298747562689"
-        },
-        {
-          "file": "apps/restaurant-service/src/domain/restaurant/entity/restaurant.dish.entity.ts",
-          "hash": "13720102685417785367"
-        },
-        {
-          "file": "apps/restaurant-service/src/domain/restaurant/entity/restaurant.entity.ts",
-          "hash": "7756762967442423171"
-        },
-        {
-          "file": "apps/restaurant-service/src/domain/restaurant/resolvers/restauant.dish.resolver.ts",
-          "hash": "3244421341483603138"
-        },
-        {
-          "file": "apps/restaurant-service/src/domain/restaurant/resolvers/restaurants.resolver.ts",
-          "hash": "6002155684092191470"
-        },
-        {
-          "file": "apps/restaurant-service/src/domain/restaurant/restaurant.module.ts",
-          "hash": "8606198353679574788"
-        },
-        {
-          "file": "apps/restaurant-service/src/domain/restaurant/restaurant.type.graphql",
-          "hash": "305189533505741329"
-        },
-        {
-          "file": "apps/restaurant-service/src/domain/restaurant/services/restaurant.dish.service.ts",
-          "hash": "3244421341483603138"
-        },
-        {
-          "file": "apps/restaurant-service/src/domain/restaurant/services/restaurants.service.ts",
-          "hash": "17678358382043144953"
-        },
-        {
-          "file": "apps/restaurant-service/src/logger/logger.middleware.ts",
-          "hash": "4718963090654727106"
-        },
-        {
-          "file": "apps/restaurant-service/src/logger/logger.module.ts",
-          "hash": "15466574737607319651"
-        },
-        {
-          "file": "apps/restaurant-service/src/logger/logger.ts",
-          "hash": "1023051881361434160"
-        },
-        {
-          "file": "apps/restaurant-service/src/logger/loglevel.ts",
-          "hash": "14252412105708514145"
-        },
-        {
-          "file": "apps/restaurant-service/src/main.ts",
-          "hash": "4818147095531908433"
-        },
-        {
-          "file": "apps/restaurant-service/test/app.e2e-spec.ts",
-          "hash": "15142680097789702029"
-        },
-        {
-          "file": "apps/restaurant-service/test/jest-e2e.json",
-          "hash": "7570273541430074424"
-        },
-        {
-          "file": "apps/restaurant-service/tsconfig.build.json",
-          "hash": "276845246908739715"
-        },
-        {
-          "file": "apps/restaurant-service/tsconfig.json",
-          "hash": "5073866550243764688"
-        }
-      ],
-      "gateway-service": [
-        {
-          "file": "apps/gateway-service/.eslintrc.js",
-          "hash": "7461846271827386206"
-        },
-        {
-          "file": "apps/gateway-service/.prettierrc",
-          "hash": "4808572120966128913"
-        },
-        {
-          "file": "apps/gateway-service/README.md",
-          "hash": "8286378509751487236"
-        },
-        {
-          "file": "apps/gateway-service/nest-cli.json",
-          "hash": "789240945379598733"
-        },
-        {
-          "file": "apps/gateway-service/package.json",
-          "hash": "9570528920511756323",
-          "deps": [
-            "npm:@apollo/gateway",
-            "npm:@nestjs/apollo",
-            "npm:@nestjs/common",
-            "npm:@nestjs/core",
-            "npm:@nestjs/graphql",
-            "npm:@nestjs/platform-express",
-            "npm:jsonwebtoken",
-            "npm:reflect-metadata",
-            "npm:rxjs",
-            "npm:ts-morph",
-            "npm:@nestjs/cli",
-            "npm:@nestjs/schematics",
-            "npm:@nestjs/testing",
-            "npm:@types/express",
-            "npm:@types/jest",
-            "npm:@types/jsonwebtoken",
-            "npm:@types/node",
-            "npm:@types/supertest",
-            "npm:@typescript-eslint/eslint-plugin",
-            "npm:@typescript-eslint/parser",
-            "npm:eslint",
-            "npm:eslint-config-prettier",
-            "npm:eslint-plugin-prettier",
-            "npm:jest",
-            "npm:prettier",
-            "npm:source-map-support",
-            "npm:supertest",
-            "npm:ts-jest",
-            "npm:ts-loader",
-            "npm:ts-node",
-            "npm:tsconfig-paths",
-            "npm:typescript"
-          ]
-        },
-        {
-          "file": "apps/gateway-service/src/app.constants.ts",
-          "hash": "9551429742564215431"
-        },
-        {
-          "file": "apps/gateway-service/src/app.module.ts",
-          "hash": "17872730805441302655"
-        },
-        {
-          "file": "apps/gateway-service/src/main.ts",
-          "hash": "10947680636689207823"
-        },
-        {
-          "file": "apps/gateway-service/test/app.e2e-spec.ts",
-          "hash": "15142680097789702029"
-        },
-        {
-          "file": "apps/gateway-service/test/jest-e2e.json",
-          "hash": "7570273541430074424"
-        },
-        {
-          "file": "apps/gateway-service/tsconfig.build.json",
-          "hash": "276845246908739715"
-        },
-        {
-          "file": "apps/gateway-service/tsconfig.json",
-          "hash": "5073866550243764688"
         }
       ],
       "admin-deshboard": [
@@ -1888,7 +478,7 @@
         },
         {
           "file": "apps/auth-service/src/domain/users/users.service.ts",
-          "hash": "17347511384584932399"
+          "hash": "6307483395891304307"
         },
         {
           "file": "apps/auth-service/src/domain/users/users.types.graphql",
@@ -2140,6 +730,312 @@
         {
           "file": "apps/cloudbite-ui/tsconfig.json",
           "hash": "13566095390403677056"
+        }
+      ],
+      "restaurant-service": [
+        {
+          "file": "apps/restaurant-service/.eslintrc.js",
+          "hash": "7461846271827386206"
+        },
+        {
+          "file": "apps/restaurant-service/.prettierrc",
+          "hash": "4808572120966128913"
+        },
+        {
+          "file": "apps/restaurant-service/README.md",
+          "hash": "8286378509751487236"
+        },
+        {
+          "file": "apps/restaurant-service/nest-cli.json",
+          "hash": "789240945379598733"
+        },
+        {
+          "file": "apps/restaurant-service/package.json",
+          "hash": "2574748337823436484",
+          "deps": [
+            "npm:@apollo/federation",
+            "npm:@apollo/server",
+            "npm:@apollo/subgraph",
+            "npm:@nestjs/apollo",
+            "npm:@nestjs/common",
+            "npm:@nestjs/core",
+            "npm:@nestjs/graphql",
+            "npm:@nestjs/jwt",
+            "npm:@nestjs/passport",
+            "npm:@nestjs/platform-express",
+            "npm:@nestjs/typeorm",
+            "npm:apollo-server-core",
+            "npm:class-transformer",
+            "npm:class-validator",
+            "npm:graphql",
+            "npm:jsonwebtoken",
+            "npm:moment",
+            "npm:passport-jwt",
+            "npm:pg",
+            "npm:reflect-metadata",
+            "npm:rxjs",
+            "npm:typeorm",
+            "npm:uuid",
+            "npm:winston",
+            "npm:@nestjs/cli",
+            "npm:@nestjs/schematics",
+            "npm:@nestjs/testing",
+            "npm:@types/express",
+            "npm:@types/jest",
+            "npm:@types/node",
+            "npm:@types/passport-jwt",
+            "npm:@types/supertest",
+            "npm:@typescript-eslint/eslint-plugin",
+            "npm:@typescript-eslint/parser",
+            "npm:eslint",
+            "npm:eslint-config-prettier",
+            "npm:eslint-plugin-prettier",
+            "npm:jest",
+            "npm:prettier",
+            "npm:source-map-support",
+            "npm:supertest",
+            "npm:ts-jest",
+            "npm:ts-loader",
+            "npm:ts-node",
+            "npm:tsconfig-paths",
+            "npm:typescript"
+          ]
+        },
+        {
+          "file": "apps/restaurant-service/src/app.module.ts",
+          "hash": "18241164477453897799"
+        },
+        {
+          "file": "apps/restaurant-service/src/config/config.default.ts",
+          "hash": "5419642320862044416"
+        },
+        {
+          "file": "apps/restaurant-service/src/config/config.interface.ts",
+          "hash": "15494570587749928678"
+        },
+        {
+          "file": "apps/restaurant-service/src/config/config.module.ts",
+          "hash": "13143047207281215892"
+        },
+        {
+          "file": "apps/restaurant-service/src/config/config.service.ts",
+          "hash": "7126432097134560747"
+        },
+        {
+          "file": "apps/restaurant-service/src/db/db.errors.ts",
+          "hash": "2646672877639124408"
+        },
+        {
+          "file": "apps/restaurant-service/src/db/db.interface.ts",
+          "hash": "12011516664509660283"
+        },
+        {
+          "file": "apps/restaurant-service/src/db/db.logger.ts",
+          "hash": "9157591969086587730"
+        },
+        {
+          "file": "apps/restaurant-service/src/db/db.module.ts",
+          "hash": "6317241663369063495"
+        },
+        {
+          "file": "apps/restaurant-service/src/domain/auth/auth.module.ts",
+          "hash": "16699654050739106601"
+        },
+        {
+          "file": "apps/restaurant-service/src/domain/auth/auth.service.ts",
+          "hash": "10532622087662135070"
+        },
+        {
+          "file": "apps/restaurant-service/src/domain/auth/guards/admin.guard.ts",
+          "hash": "800017346527875327"
+        },
+        {
+          "file": "apps/restaurant-service/src/domain/auth/guards/jwtauth.guard.ts",
+          "hash": "9310120318481956847"
+        },
+        {
+          "file": "apps/restaurant-service/src/domain/auth/guards/restaurant-owner.guard.ts",
+          "hash": "16651500931502197256"
+        },
+        {
+          "file": "apps/restaurant-service/src/domain/auth/interfaces/jwt-payload.interface.ts",
+          "hash": "9020398436396176444"
+        },
+        {
+          "file": "apps/restaurant-service/src/domain/auth/strategies/jwt.stragegy.ts",
+          "hash": "16863595006745382817"
+        },
+        {
+          "file": "apps/restaurant-service/src/domain/domain.module.ts",
+          "hash": "6708987486187312133"
+        },
+        {
+          "file": "apps/restaurant-service/src/domain/graphql.schama.ts",
+          "hash": "1222498972684613396"
+        },
+        {
+          "file": "apps/restaurant-service/src/domain/restaurant/dto/restaurant.dish.dto.ts",
+          "hash": "17986580490332757386"
+        },
+        {
+          "file": "apps/restaurant-service/src/domain/restaurant/dto/restaurant.dto.ts",
+          "hash": "11681277744411695863"
+        },
+        {
+          "file": "apps/restaurant-service/src/domain/restaurant/entity/restaurant.address.entity.ts",
+          "hash": "16541746298747562689"
+        },
+        {
+          "file": "apps/restaurant-service/src/domain/restaurant/entity/restaurant.dish.entity.ts",
+          "hash": "3192516138632863515"
+        },
+        {
+          "file": "apps/restaurant-service/src/domain/restaurant/entity/restaurant.entity.ts",
+          "hash": "7756762967442423171"
+        },
+        {
+          "file": "apps/restaurant-service/src/domain/restaurant/resolvers/restauant.dish.resolver.ts",
+          "hash": "7886200994304325387"
+        },
+        {
+          "file": "apps/restaurant-service/src/domain/restaurant/resolvers/restaurants.resolver.ts",
+          "hash": "11250468476214467654"
+        },
+        {
+          "file": "apps/restaurant-service/src/domain/restaurant/restaurant.module.ts",
+          "hash": "1759238150558619715"
+        },
+        {
+          "file": "apps/restaurant-service/src/domain/restaurant/restaurant.type.graphql",
+          "hash": "15778602858446519368"
+        },
+        {
+          "file": "apps/restaurant-service/src/domain/restaurant/services/restaurant.dish.service.ts",
+          "hash": "9904647727340655248"
+        },
+        {
+          "file": "apps/restaurant-service/src/domain/restaurant/services/restaurants.service.ts",
+          "hash": "18356468405013342687"
+        },
+        {
+          "file": "apps/restaurant-service/src/logger/logger.middleware.ts",
+          "hash": "4718963090654727106"
+        },
+        {
+          "file": "apps/restaurant-service/src/logger/logger.module.ts",
+          "hash": "15466574737607319651"
+        },
+        {
+          "file": "apps/restaurant-service/src/logger/logger.ts",
+          "hash": "1023051881361434160"
+        },
+        {
+          "file": "apps/restaurant-service/src/logger/loglevel.ts",
+          "hash": "14252412105708514145"
+        },
+        {
+          "file": "apps/restaurant-service/src/main.ts",
+          "hash": "4818147095531908433"
+        },
+        {
+          "file": "apps/restaurant-service/test/app.e2e-spec.ts",
+          "hash": "15142680097789702029"
+        },
+        {
+          "file": "apps/restaurant-service/test/jest-e2e.json",
+          "hash": "7570273541430074424"
+        },
+        {
+          "file": "apps/restaurant-service/tsconfig.build.json",
+          "hash": "276845246908739715"
+        },
+        {
+          "file": "apps/restaurant-service/tsconfig.json",
+          "hash": "5073866550243764688"
+        }
+      ],
+      "gateway-service": [
+        {
+          "file": "apps/gateway-service/.eslintrc.js",
+          "hash": "7461846271827386206"
+        },
+        {
+          "file": "apps/gateway-service/.prettierrc",
+          "hash": "4808572120966128913"
+        },
+        {
+          "file": "apps/gateway-service/README.md",
+          "hash": "8286378509751487236"
+        },
+        {
+          "file": "apps/gateway-service/nest-cli.json",
+          "hash": "789240945379598733"
+        },
+        {
+          "file": "apps/gateway-service/package.json",
+          "hash": "9570528920511756323",
+          "deps": [
+            "npm:@apollo/gateway",
+            "npm:@nestjs/apollo",
+            "npm:@nestjs/common",
+            "npm:@nestjs/core",
+            "npm:@nestjs/graphql",
+            "npm:@nestjs/platform-express",
+            "npm:jsonwebtoken",
+            "npm:reflect-metadata",
+            "npm:rxjs",
+            "npm:ts-morph",
+            "npm:@nestjs/cli",
+            "npm:@nestjs/schematics",
+            "npm:@nestjs/testing",
+            "npm:@types/express",
+            "npm:@types/jest",
+            "npm:@types/jsonwebtoken",
+            "npm:@types/node",
+            "npm:@types/supertest",
+            "npm:@typescript-eslint/eslint-plugin",
+            "npm:@typescript-eslint/parser",
+            "npm:eslint",
+            "npm:eslint-config-prettier",
+            "npm:eslint-plugin-prettier",
+            "npm:jest",
+            "npm:prettier",
+            "npm:source-map-support",
+            "npm:supertest",
+            "npm:ts-jest",
+            "npm:ts-loader",
+            "npm:ts-node",
+            "npm:tsconfig-paths",
+            "npm:typescript"
+          ]
+        },
+        {
+          "file": "apps/gateway-service/src/app.constants.ts",
+          "hash": "9551429742564215431"
+        },
+        {
+          "file": "apps/gateway-service/src/app.module.ts",
+          "hash": "17872730805441302655"
+        },
+        {
+          "file": "apps/gateway-service/src/main.ts",
+          "hash": "10947680636689207823"
+        },
+        {
+          "file": "apps/gateway-service/test/app.e2e-spec.ts",
+          "hash": "15142680097789702029"
+        },
+        {
+          "file": "apps/gateway-service/test/jest-e2e.json",
+          "hash": "7570273541430074424"
+        },
+        {
+          "file": "apps/gateway-service/tsconfig.build.json",
+          "hash": "276845246908739715"
+        },
+        {
+          "file": "apps/gateway-service/tsconfig.json",
+          "hash": "5073866550243764688"
         }
       ]
     }

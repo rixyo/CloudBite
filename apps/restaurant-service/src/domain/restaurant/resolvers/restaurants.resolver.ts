@@ -12,7 +12,10 @@ import {
   CreateRestaurantInput,
   UpdateRestaurantInput,
 } from '../../graphql.schama';
-import { CreateRestaurantDto } from '../dto/restaurant.dto';
+import {
+  CreateRestaurantDto,
+  UpdateRestaurantDto,
+} from '../dto/restaurant.dto';
 import { validate } from 'class-validator';
 import { BadRequestException, UseGuards } from '@nestjs/common';
 import { Logger } from 'src/logger/logger';
@@ -69,19 +72,12 @@ export class RestaurantsResolver {
     @Args('updateRestaurantInput') updateRestaurantInput: UpdateRestaurantInput,
   ): Promise<RestaurantEntity> {
     try {
-      const {
-        name,
-        banner,
-        address,
-        delivery_options,
-        pickup_options,
-        description,
-      } = updateRestaurantInput;
-      const createRestaurant = new CreateRestaurantDto();
+      const { name, banner, delivery_options, pickup_options, description } =
+        updateRestaurantInput;
+      const createRestaurant = new UpdateRestaurantDto();
       createRestaurant.name = name;
       createRestaurant.description = description;
       createRestaurant.banner = banner;
-      createRestaurant.address = address;
       createRestaurant.delivery_options = delivery_options;
       createRestaurant.pickup_options = pickup_options;
       const errors = await validate(createRestaurant);
@@ -108,6 +104,15 @@ export class RestaurantsResolver {
         userId,
       );
       return restaurants;
+    } catch (error) {
+      throw new BadRequestException(error.message);
+    }
+  }
+  @Query('restaurant')
+  async restaurant(@Args('id') id: string): Promise<RestaurantEntity> {
+    try {
+      const restaurant = await this.restaurantsService.getRestaurantById(id);
+      return restaurant;
     } catch (error) {
       throw new BadRequestException(error.message);
     }

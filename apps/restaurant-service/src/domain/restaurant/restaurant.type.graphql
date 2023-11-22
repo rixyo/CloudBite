@@ -4,12 +4,18 @@ type Query{
     restaurants(page:Int!): [Restaurant!]!
     restaurant(id: ID!): Restaurant
     userRestaurants: [Restaurant!]!
+    restaurantDishes(page:Int!, restaurantId: ID!): [RestaurantDish!]!
+    dishes(page:Int!): [RestaurantDish!]!
+    dish(id: ID!): RestaurantDish
+
 }
 
 type Mutation {
     createRestaurant(createRestaurantInput:CreateRestaurantInput): Restaurant!
     updateRestaurant(id: ID!, fieldToUpdate:UpdateRestaurantInput): Restaurant!
     deleteRestaurant(id: ID!): Restaurant!
+    createDish(restaurantId: ID!, createDishInput:CreateDishInput): RestaurantDish!
+    updateDish(restaurantId: ID!, dishId: ID!, updateDishInput:UpdateDishInput): RestaurantDish!
 }
 input AddressInput {
   street: String!
@@ -23,6 +29,22 @@ type AddressType {
   state: String!
   country: String!
 
+}
+
+type RestaurantDish @key(fields: "id"){
+    id: ID!
+    name: String!
+    description: String!
+    price: Float!
+    thumbnails: [String!]!
+    category: String!
+    ingredinets: String!
+    meal_type: String!
+    cuisine_type: String!
+    food_type: String!
+    restaurant: Restaurant!
+    createdAt: Date!
+    updatedAt: Date!
 }
 
 type Restaurant @key(fields: "id") {
@@ -52,5 +74,20 @@ type Restaurant @key(fields: "id") {
     banner: String!
     delivery_options: String
     pickup_options: String
-    address: AddressInput!
  }
+  input CreateDishInput {
+      name: String!
+      description: String!
+      price: Float!
+      thumbnails: [String!]!
+      food_type: String!
+      meal_type: String!
+  }
+  input UpdateDishInput {
+      name: String!
+      description: String!
+      price: Float!
+      thumbnails: [String!]!
+      category: String!
+      food_type: String!
+  }
