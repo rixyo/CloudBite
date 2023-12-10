@@ -50,10 +50,6 @@ export class CreateRestaurantDto {
   @IsDefined()
   @IsString()
   public name!: string;
-
-  @IsOptional()
-  public description!: string;
-
   @IsOptional()
   @IsString()
   @IsUrl()

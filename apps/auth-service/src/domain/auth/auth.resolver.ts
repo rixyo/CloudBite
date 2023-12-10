@@ -18,6 +18,10 @@ export class AuthResolver {
     const result = await this.authService.validateUserByPassword(
       loginUserInput,
     );
+    if (!result)
+      throw new AuthenticationError(
+        'Could not log-in with the provided credentials',
+      );
     this.logger.log(`User logged in: ${JSON.stringify(result)}`);
     return result;
   }

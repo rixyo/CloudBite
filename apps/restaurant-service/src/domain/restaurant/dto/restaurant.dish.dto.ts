@@ -3,16 +3,17 @@ import {
   IsArray,
   IsDefined,
   IsEnum,
+  IsNotEmpty,
   IsNumber,
   IsOptional,
   IsString,
   IsUUID,
 } from 'class-validator';
 
-export enum mealType {
-  'breakfast' = 'breakfast',
-  'lunch' = 'lunch',
-  'dinner' = 'dinner',
+export enum dishType {
+  'pizza' = 'pizza',
+  'biryani' = 'biryani',
+  'burgers' = 'burgers',
 }
 export class RestaurantParamParamDto {
   @IsUUID()
@@ -33,15 +34,12 @@ export class CreateRestaurantDishDto {
   @IsString()
   public description!: string;
 
-  @IsEnum(mealType)
-  public meal_type!: string;
+  @IsEnum(dishType)
+  public dish_type!: string;
 
-  @IsOptional()
   @IsString()
-  public ingredients!: string;
-
-  @IsNumber()
-  public price!: number;
+  @IsNotEmpty()
+  public price!: string;
 
   @IsOptional()
   @IsArray()

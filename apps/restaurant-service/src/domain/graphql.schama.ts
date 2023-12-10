@@ -8,26 +8,21 @@
 /* eslint-disable */
 export class CreateRestaurantInput {
   name: string;
-  description: string;
   banner: string;
   address: AddressInput;
 }
 export class CreateDishInput {
   name: string;
   description: string;
-  cuisine_type: string;
-  meal_type: string;
-  ingredients: string;
-  price: number;
+  dish_type: string;
+  price: string;
   thumbnails: string[];
 }
 export class UpdateDishInput {
   name: string;
   description: string;
-  cuisine_type: string;
-  meal_type: string;
-  ingredients: string;
-  price: number;
+  dish_type: string;
+  price: string;
   thumbnails: string[];
 }
 export class UpdateDishItemParamDto {
@@ -43,7 +38,7 @@ export class RestaurantDish {
   description: string;
   meal_type: string;
   thumbnails: string[];
-  price: number;
+  price: string;
   restaurant: Restaurant;
 
 }
@@ -61,7 +56,6 @@ class Address{
 }
 export class UpdateRestaurantInput {
   name: string;
-  description: string;
   banner: string;
   delivery_options: string;
   pickup_options: string;
@@ -70,9 +64,7 @@ export class UpdateRestaurantInput {
 export class Restaurant {
     id: string;
     name: string;
-    description: string;
     owner_id: string;
-    cuisine: string;
     banner: string;
     delivery_options: string;
     pickup_options: string;

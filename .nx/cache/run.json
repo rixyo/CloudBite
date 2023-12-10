@@ -1,18 +1,18 @@
 {
   "run": {
-    "command": "nx run gateway-service:start:dev",
-    "startTime": "2023-11-22T11:20:03.088Z",
-    "endTime": "2023-11-22T13:28:22.646Z",
+    "command": "nx run auth-service:start:dev",
+    "startTime": "2023-12-10T17:44:49.644Z",
+    "endTime": "2023-12-10T17:51:42.622Z",
     "inner": false
   },
   "tasks": [
     {
-      "taskId": "gateway-service:start:dev",
+      "taskId": "auth-service:start:dev",
       "target": "start:dev",
-      "projectName": "gateway-service",
-      "hash": "16821826536282050202",
-      "startTime": "2023-11-22T11:20:03.094Z",
-      "endTime": "2023-11-22T13:28:22.645Z",
+      "projectName": "auth-service",
+      "hash": "13316193873001755483",
+      "startTime": "2023-12-10T17:44:49.651Z",
+      "endTime": "2023-12-10T17:51:42.617Z",
       "params": "",
       "cacheStatus": "cache-miss",
       "status": 1

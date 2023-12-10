@@ -77,454 +77,6 @@
       }
     ],
     "projectFileMap": {
-      "cloudbite-merchants": [
-        {
-          "file": "apps/cloudbite-merchants/.eslintrc.json",
-          "hash": "10616060546436571437"
-        },
-        {
-          "file": "apps/cloudbite-merchants/README.md",
-          "hash": "12205685531602560652"
-        },
-        {
-          "file": "apps/cloudbite-merchants/app/favicon.ico",
-          "hash": "9157999678830540297"
-        },
-        {
-          "file": "apps/cloudbite-merchants/app/globals.css",
-          "hash": "2048989005741957698"
-        },
-        {
-          "file": "apps/cloudbite-merchants/app/layout.tsx",
-          "hash": "5777689452509174248"
-        },
-        {
-          "file": "apps/cloudbite-merchants/app/page.tsx",
-          "hash": "15041653934477953984"
-        },
-        {
-          "file": "apps/cloudbite-merchants/components/landing_pages/landing_page.tsx",
-          "hash": "8266521936356025994"
-        },
-        {
-          "file": "apps/cloudbite-merchants/components/ui/button.tsx",
-          "hash": "15867611193771364424"
-        },
-        {
-          "file": "apps/cloudbite-merchants/components/why-us/why_us.tsx",
-          "hash": "4889780814433062466"
-        },
-        {
-          "file": "apps/cloudbite-merchants/components/why-us/why_us_second.tsx",
-          "hash": "3474350678973890657"
-        },
-        {
-          "file": "apps/cloudbite-merchants/components.json",
-          "hash": "6721803946631579074"
-        },
-        {
-          "file": "apps/cloudbite-merchants/lib/utils.ts",
-          "hash": "4410618641919237161"
-        },
-        {
-          "file": "apps/cloudbite-merchants/next.config.js",
-          "hash": "14594058484359092244"
-        },
-        {
-          "file": "apps/cloudbite-merchants/package.json",
-          "hash": "11729180593829389517",
-          "deps": [
-            "npm:@radix-ui/react-slot",
-            "npm:class-variance-authority",
-            "npm:clsx",
-            "npm:lucide-react",
-            "npm:next",
-            "npm:react",
-            "npm:react-dom",
-            "npm:react-multi-carousel",
-            "npm:tailwind-merge",
-            "npm:tailwindcss-animate",
-            "npm:@types/node",
-            "npm:@types/react",
-            "npm:@types/react-dom",
-            "npm:autoprefixer",
-            "npm:eslint",
-            "npm:eslint-config-next",
-            "npm:postcss",
-            "npm:tailwindcss",
-            "npm:typescript"
-          ]
-        },
-        {
-          "file": "apps/cloudbite-merchants/postcss.config.js",
-          "hash": "1579725330904862112"
-        },
-        {
-          "file": "apps/cloudbite-merchants/public/imgs/UE1.webp",
-          "hash": "441627600165318814"
-        },
-        {
-          "file": "apps/cloudbite-merchants/public/imgs/delivery.jpg",
-          "hash": "1961540311588923040"
-        },
-        {
-          "file": "apps/cloudbite-merchants/public/imgs/landingImg4.jpg",
-          "hash": "3868958362597746999"
-        },
-        {
-          "file": "apps/cloudbite-merchants/public/imgs/manage.jpg",
-          "hash": "11707121597204294682"
-        },
-        {
-          "file": "apps/cloudbite-merchants/public/next.svg",
-          "hash": "8300767200008744458"
-        },
-        {
-          "file": "apps/cloudbite-merchants/public/vercel.svg",
-          "hash": "2376673330454856631"
-        },
-        {
-          "file": "apps/cloudbite-merchants/tailwind.config.ts",
-          "hash": "2520089696046008267"
-        },
-        {
-          "file": "apps/cloudbite-merchants/tsconfig.json",
-          "hash": "13566095390403677056"
-        }
-      ],
-      "admin-deshboard": [
-        {
-          "file": "apps/admin-deshboard/.npmrc",
-          "hash": "16306061729883149313"
-        },
-        {
-          "file": "apps/admin-deshboard/README.md",
-          "hash": "4698455699917367128"
-        },
-        {
-          "file": "apps/admin-deshboard/package.json",
-          "hash": "2403681157962215034",
-          "deps": [
-            "npm:@fontsource/fira-mono",
-            "npm:@neoconfetti/svelte",
-            "npm:@sveltejs/adapter-auto",
-            "npm:@sveltejs/kit",
-            "npm:@types/cookie",
-            "npm:svelte",
-            "npm:svelte-check",
-            "npm:tslib",
-            "npm:typescript",
-            "npm:vite"
-          ]
-        },
-        {
-          "file": "apps/admin-deshboard/src/app.d.ts",
-          "hash": "1283883096245253343"
-        },
-        {
-          "file": "apps/admin-deshboard/src/app.html",
-          "hash": "5424204588206306853"
-        },
-        {
-          "file": "apps/admin-deshboard/src/lib/images/svelte-logo.svg",
-          "hash": "50607055863844636"
-        },
-        {
-          "file": "apps/admin-deshboard/src/lib/images/svelte-welcome.png",
-          "hash": "6822672916961572373"
-        },
-        {
-          "file": "apps/admin-deshboard/src/lib/images/svelte-welcome.webp",
-          "hash": "13869206264489747508"
-        },
-        {
-          "file": "apps/admin-deshboard/src/routes/+layout.svelte",
-          "hash": "12931536233518173843"
-        },
-        {
-          "file": "apps/admin-deshboard/src/routes/+page.svelte",
-          "hash": "11308493136310347906"
-        },
-        {
-          "file": "apps/admin-deshboard/src/routes/+page.ts",
-          "hash": "14652161136502518409"
-        },
-        {
-          "file": "apps/admin-deshboard/src/routes/Header.svelte",
-          "hash": "6814393832029012314"
-        },
-        {
-          "file": "apps/admin-deshboard/src/routes/styles.css",
-          "hash": "17151588166810062473"
-        },
-        {
-          "file": "apps/admin-deshboard/src/routes/sverdle/+page.server.ts",
-          "hash": "9545514246482666485"
-        },
-        {
-          "file": "apps/admin-deshboard/src/routes/sverdle/+page.svelte",
-          "hash": "15204950900237787567"
-        },
-        {
-          "file": "apps/admin-deshboard/src/routes/sverdle/game.ts",
-          "hash": "9918117607732655424"
-        },
-        {
-          "file": "apps/admin-deshboard/src/routes/sverdle/how-to-play/+page.svelte",
-          "hash": "15809750105546441065"
-        },
-        {
-          "file": "apps/admin-deshboard/src/routes/sverdle/how-to-play/+page.ts",
-          "hash": "18238793656975733832"
-        },
-        {
-          "file": "apps/admin-deshboard/src/routes/sverdle/reduced-motion.ts",
-          "hash": "6776028337307270008"
-        },
-        {
-          "file": "apps/admin-deshboard/src/routes/sverdle/words.server.ts",
-          "hash": "12989778873600289049"
-        },
-        {
-          "file": "apps/admin-deshboard/static/favicon.png",
-          "hash": "11504680974745960892"
-        },
-        {
-          "file": "apps/admin-deshboard/static/robots.txt",
-          "hash": "2790380794362165217"
-        },
-        {
-          "file": "apps/admin-deshboard/svelte.config.js",
-          "hash": "4251569798425376480"
-        },
-        {
-          "file": "apps/admin-deshboard/tsconfig.json",
-          "hash": "7370341274632808282"
-        },
-        {
-          "file": "apps/admin-deshboard/vite.config.ts",
-          "hash": "1078119010161581234"
-        }
-      ],
-      "auth-service": [
-        {
-          "file": "apps/auth-service/.eslintrc.js",
-          "hash": "7461846271827386206"
-        },
-        {
-          "file": "apps/auth-service/.prettierrc",
-          "hash": "4808572120966128913"
-        },
-        {
-          "file": "apps/auth-service/README.md",
-          "hash": "8286378509751487236"
-        },
-        {
-          "file": "apps/auth-service/nest-cli.json",
-          "hash": "789240945379598733"
-        },
-        {
-          "file": "apps/auth-service/package.json",
-          "hash": "17508459313760489461",
-          "deps": [
-            "npm:@apollo/federation",
-            "npm:@apollo/server",
-            "npm:@apollo/subgraph",
-            "npm:@nestjs/apollo",
-            "npm:@nestjs/common",
-            "npm:@nestjs/core",
-            "npm:@nestjs/graphql",
-            "npm:@nestjs/jwt",
-            "npm:@nestjs/passport",
-            "npm:@nestjs/platform-express",
-            "npm:@nestjs/typeorm",
-            "npm:apollo-server-core",
-            "npm:apollo-server-express",
-            "npm:bcryptjs",
-            "npm:class-validator",
-            "npm:graphql",
-            "npm:jsonwebtoken",
-            "npm:moment",
-            "npm:passport-jwt",
-            "npm:pg",
-            "npm:reflect-metadata",
-            "npm:rxjs",
-            "npm:ts-morph",
-            "npm:typeorm",
-            "npm:url-join-ts",
-            "npm:uuid",
-            "npm:winston",
-            "npm:@nestjs/cli",
-            "npm:@nestjs/schematics",
-            "npm:@nestjs/testing",
-            "npm:@types/bcryptjs",
-            "npm:@types/express",
-            "npm:@types/jest",
-            "npm:@types/node",
-            "npm:@types/passport-jwt",
-            "npm:@types/supertest",
-            "npm:@types/uuid",
-            "npm:@typescript-eslint/eslint-plugin",
-            "npm:@typescript-eslint/parser",
-            "npm:eslint",
-            "npm:eslint-config-prettier",
-            "npm:eslint-plugin-prettier",
-            "npm:jest",
-            "npm:prettier",
-            "npm:source-map-support",
-            "npm:supertest",
-            "npm:ts-jest",
-            "npm:ts-loader",
-            "npm:ts-node",
-            "npm:tsconfig-paths",
-            "npm:typescript"
-          ]
-        },
-        {
-          "file": "apps/auth-service/src/app.module.ts",
-          "hash": "1353521834207668320"
-        },
-        {
-          "file": "apps/auth-service/src/config/config.default.ts",
-          "hash": "18093462160000923226"
-        },
-        {
-          "file": "apps/auth-service/src/config/config.interface.ts",
-          "hash": "10140988805191124762"
-        },
-        {
-          "file": "apps/auth-service/src/config/config.module.ts",
-          "hash": "13143047207281215892"
-        },
-        {
-          "file": "apps/auth-service/src/config/config.service.ts",
-          "hash": "13509326749113076370"
-        },
-        {
-          "file": "apps/auth-service/src/db/db.errors.ts",
-          "hash": "2646672877639124408"
-        },
-        {
-          "file": "apps/auth-service/src/db/db.interface.ts",
-          "hash": "12011516664509660283"
-        },
-        {
-          "file": "apps/auth-service/src/db/db.logger.ts",
-          "hash": "9157591969086587730"
-        },
-        {
-          "file": "apps/auth-service/src/db/db.module.ts",
-          "hash": "8098263017839089877"
-        },
-        {
-          "file": "apps/auth-service/src/db/db.service.ts",
-          "hash": "3244421341483603138"
-        },
-        {
-          "file": "apps/auth-service/src/domain/auth/auth.module.ts",
-          "hash": "3798926409806005054"
-        },
-        {
-          "file": "apps/auth-service/src/domain/auth/auth.resolver.ts",
-          "hash": "6291103846153558946"
-        },
-        {
-          "file": "apps/auth-service/src/domain/auth/auth.service.ts",
-          "hash": "10871306169139884451"
-        },
-        {
-          "file": "apps/auth-service/src/domain/auth/auth.types.graphql",
-          "hash": "16531727513960571672"
-        },
-        {
-          "file": "apps/auth-service/src/domain/auth/guards/admin.guard.ts",
-          "hash": "800017346527875327"
-        },
-        {
-          "file": "apps/auth-service/src/domain/auth/guards/jwtauth.guard.ts",
-          "hash": "9310120318481956847"
-        },
-        {
-          "file": "apps/auth-service/src/domain/auth/interfaces/jwt-payload.interface.ts",
-          "hash": "9020398436396176444"
-        },
-        {
-          "file": "apps/auth-service/src/domain/auth/strategies/jwt.stragegy.ts",
-          "hash": "16863595006745382817"
-        },
-        {
-          "file": "apps/auth-service/src/domain/domain.module.ts",
-          "hash": "12109104674669387479"
-        },
-        {
-          "file": "apps/auth-service/src/domain/users/decorator/user.decorator.ts",
-          "hash": "605648286877934460"
-        },
-        {
-          "file": "apps/auth-service/src/domain/users/dto/users.dto.ts",
-          "hash": "13187988898653391703"
-        },
-        {
-          "file": "apps/auth-service/src/domain/users/enity/user.entity.ts",
-          "hash": "8092383781826095834"
-        },
-        {
-          "file": "apps/auth-service/src/domain/users/users.module.ts",
-          "hash": "4836916562149808583"
-        },
-        {
-          "file": "apps/auth-service/src/domain/users/users.resolver.ts",
-          "hash": "13864209338497556420"
-        },
-        {
-          "file": "apps/auth-service/src/domain/users/users.service.ts",
-          "hash": "6307483395891304307"
-        },
-        {
-          "file": "apps/auth-service/src/domain/users/users.types.graphql",
-          "hash": "1545409323586780489"
-        },
-        {
-          "file": "apps/auth-service/src/graphql.classes.ts",
-          "hash": "3409943393091044441"
-        },
-        {
-          "file": "apps/auth-service/src/logger/logger.middleware.ts",
-          "hash": "4718963090654727106"
-        },
-        {
-          "file": "apps/auth-service/src/logger/logger.module.ts",
-          "hash": "15466574737607319651"
-        },
-        {
-          "file": "apps/auth-service/src/logger/logger.ts",
-          "hash": "1023051881361434160"
-        },
-        {
-          "file": "apps/auth-service/src/logger/loglevel.ts",
-          "hash": "14252412105708514145"
-        },
-        {
-          "file": "apps/auth-service/src/main.ts",
-          "hash": "12044100279147995"
-        },
-        {
-          "file": "apps/auth-service/test/app.e2e-spec.ts",
-          "hash": "15142680097789702029"
-        },
-        {
-          "file": "apps/auth-service/test/jest-e2e.json",
-          "hash": "7570273541430074424"
-        },
-        {
-          "file": "apps/auth-service/tsconfig.build.json",
-          "hash": "276845246908739715"
-        },
-        {
-          "file": "apps/auth-service/tsconfig.json",
-          "hash": "5073866550243764688"
-        }
-      ],
       "cloudbite-ui": [
         {
           "file": "apps/cloudbite-ui/.eslintrc.json",
@@ -732,6 +284,204 @@
           "hash": "13566095390403677056"
         }
       ],
+      "gateway-service": [
+        {
+          "file": "apps/gateway-service/.eslintrc.js",
+          "hash": "7461846271827386206"
+        },
+        {
+          "file": "apps/gateway-service/.prettierrc",
+          "hash": "4808572120966128913"
+        },
+        {
+          "file": "apps/gateway-service/README.md",
+          "hash": "8286378509751487236"
+        },
+        {
+          "file": "apps/gateway-service/nest-cli.json",
+          "hash": "789240945379598733"
+        },
+        {
+          "file": "apps/gateway-service/package.json",
+          "hash": "9570528920511756323",
+          "deps": [
+            "npm:@apollo/gateway",
+            "npm:@nestjs/apollo",
+            "npm:@nestjs/common",
+            "npm:@nestjs/core",
+            "npm:@nestjs/graphql",
+            "npm:@nestjs/platform-express",
+            "npm:jsonwebtoken",
+            "npm:reflect-metadata",
+            "npm:rxjs",
+            "npm:ts-morph",
+            "npm:@nestjs/cli",
+            "npm:@nestjs/schematics",
+            "npm:@nestjs/testing",
+            "npm:@types/express",
+            "npm:@types/jest",
+            "npm:@types/jsonwebtoken",
+            "npm:@types/node",
+            "npm:@types/supertest",
+            "npm:@typescript-eslint/eslint-plugin",
+            "npm:@typescript-eslint/parser",
+            "npm:eslint",
+            "npm:eslint-config-prettier",
+            "npm:eslint-plugin-prettier",
+            "npm:jest",
+            "npm:prettier",
+            "npm:source-map-support",
+            "npm:supertest",
+            "npm:ts-jest",
+            "npm:ts-loader",
+            "npm:ts-node",
+            "npm:tsconfig-paths",
+            "npm:typescript"
+          ]
+        },
+        {
+          "file": "apps/gateway-service/src/app.constants.ts",
+          "hash": "9551429742564215431"
+        },
+        {
+          "file": "apps/gateway-service/src/app.module.ts",
+          "hash": "17872730805441302655"
+        },
+        {
+          "file": "apps/gateway-service/src/main.ts",
+          "hash": "10947680636689207823"
+        },
+        {
+          "file": "apps/gateway-service/test/app.e2e-spec.ts",
+          "hash": "15142680097789702029"
+        },
+        {
+          "file": "apps/gateway-service/test/jest-e2e.json",
+          "hash": "7570273541430074424"
+        },
+        {
+          "file": "apps/gateway-service/tsconfig.build.json",
+          "hash": "276845246908739715"
+        },
+        {
+          "file": "apps/gateway-service/tsconfig.json",
+          "hash": "5073866550243764688"
+        }
+      ],
+      "admin-deshboard": [
+        {
+          "file": "apps/admin-deshboard/.npmrc",
+          "hash": "16306061729883149313"
+        },
+        {
+          "file": "apps/admin-deshboard/README.md",
+          "hash": "4698455699917367128"
+        },
+        {
+          "file": "apps/admin-deshboard/package.json",
+          "hash": "2403681157962215034",
+          "deps": [
+            "npm:@fontsource/fira-mono",
+            "npm:@neoconfetti/svelte",
+            "npm:@sveltejs/adapter-auto",
+            "npm:@sveltejs/kit",
+            "npm:@types/cookie",
+            "npm:svelte",
+            "npm:svelte-check",
+            "npm:tslib",
+            "npm:typescript",
+            "npm:vite"
+          ]
+        },
+        {
+          "file": "apps/admin-deshboard/src/app.d.ts",
+          "hash": "1283883096245253343"
+        },
+        {
+          "file": "apps/admin-deshboard/src/app.html",
+          "hash": "5424204588206306853"
+        },
+        {
+          "file": "apps/admin-deshboard/src/lib/images/svelte-logo.svg",
+          "hash": "50607055863844636"
+        },
+        {
+          "file": "apps/admin-deshboard/src/lib/images/svelte-welcome.png",
+          "hash": "6822672916961572373"
+        },
+        {
+          "file": "apps/admin-deshboard/src/lib/images/svelte-welcome.webp",
+          "hash": "13869206264489747508"
+        },
+        {
+          "file": "apps/admin-deshboard/src/routes/+layout.svelte",
+          "hash": "12931536233518173843"
+        },
+        {
+          "file": "apps/admin-deshboard/src/routes/+page.svelte",
+          "hash": "11308493136310347906"
+        },
+        {
+          "file": "apps/admin-deshboard/src/routes/+page.ts",
+          "hash": "14652161136502518409"
+        },
+        {
+          "file": "apps/admin-deshboard/src/routes/Header.svelte",
+          "hash": "6814393832029012314"
+        },
+        {
+          "file": "apps/admin-deshboard/src/routes/styles.css",
+          "hash": "17151588166810062473"
+        },
+        {
+          "file": "apps/admin-deshboard/src/routes/sverdle/+page.server.ts",
+          "hash": "9545514246482666485"
+        },
+        {
+          "file": "apps/admin-deshboard/src/routes/sverdle/+page.svelte",
+          "hash": "15204950900237787567"
+        },
+        {
+          "file": "apps/admin-deshboard/src/routes/sverdle/game.ts",
+          "hash": "9918117607732655424"
+        },
+        {
+          "file": "apps/admin-deshboard/src/routes/sverdle/how-to-play/+page.svelte",
+          "hash": "15809750105546441065"
+        },
+        {
+          "file": "apps/admin-deshboard/src/routes/sverdle/how-to-play/+page.ts",
+          "hash": "18238793656975733832"
+        },
+        {
+          "file": "apps/admin-deshboard/src/routes/sverdle/reduced-motion.ts",
+          "hash": "6776028337307270008"
+        },
+        {
+          "file": "apps/admin-deshboard/src/routes/sverdle/words.server.ts",
+          "hash": "12989778873600289049"
+        },
+        {
+          "file": "apps/admin-deshboard/static/favicon.png",
+          "hash": "11504680974745960892"
+        },
+        {
+          "file": "apps/admin-deshboard/static/robots.txt",
+          "hash": "2790380794362165217"
+        },
+        {
+          "file": "apps/admin-deshboard/svelte.config.js",
+          "hash": "4251569798425376480"
+        },
+        {
+          "file": "apps/admin-deshboard/tsconfig.json",
+          "hash": "7370341274632808282"
+        },
+        {
+          "file": "apps/admin-deshboard/vite.config.ts",
+          "hash": "1078119010161581234"
+        }
+      ],
       "restaurant-service": [
         {
           "file": "apps/restaurant-service/.eslintrc.js",
@@ -871,15 +621,15 @@
         },
         {
           "file": "apps/restaurant-service/src/domain/graphql.schama.ts",
-          "hash": "1222498972684613396"
+          "hash": "17290911452188803906"
         },
         {
           "file": "apps/restaurant-service/src/domain/restaurant/dto/restaurant.dish.dto.ts",
-          "hash": "17986580490332757386"
+          "hash": "3703740110301253759"
         },
         {
           "file": "apps/restaurant-service/src/domain/restaurant/dto/restaurant.dto.ts",
-          "hash": "11681277744411695863"
+          "hash": "14335223415663707802"
         },
         {
           "file": "apps/restaurant-service/src/domain/restaurant/entity/restaurant.address.entity.ts",
@@ -887,19 +637,19 @@
         },
         {
           "file": "apps/restaurant-service/src/domain/restaurant/entity/restaurant.dish.entity.ts",
-          "hash": "3192516138632863515"
+          "hash": "95055611909853912"
         },
         {
           "file": "apps/restaurant-service/src/domain/restaurant/entity/restaurant.entity.ts",
-          "hash": "7756762967442423171"
+          "hash": "17862731085483846280"
         },
         {
           "file": "apps/restaurant-service/src/domain/restaurant/resolvers/restauant.dish.resolver.ts",
-          "hash": "7886200994304325387"
+          "hash": "12749705360885197527"
         },
         {
           "file": "apps/restaurant-service/src/domain/restaurant/resolvers/restaurants.resolver.ts",
-          "hash": "11250468476214467654"
+          "hash": "14837551231553803082"
         },
         {
           "file": "apps/restaurant-service/src/domain/restaurant/restaurant.module.ts",
@@ -907,15 +657,15 @@
         },
         {
           "file": "apps/restaurant-service/src/domain/restaurant/restaurant.type.graphql",
-          "hash": "15778602858446519368"
+          "hash": "11635133024063205398"
         },
         {
           "file": "apps/restaurant-service/src/domain/restaurant/services/restaurant.dish.service.ts",
-          "hash": "9904647727340655248"
+          "hash": "11621706859775728085"
         },
         {
           "file": "apps/restaurant-service/src/domain/restaurant/services/restaurants.service.ts",
-          "hash": "18356468405013342687"
+          "hash": "11138093354422457624"
         },
         {
           "file": "apps/restaurant-service/src/logger/logger.middleware.ts",
@@ -954,45 +704,179 @@
           "hash": "5073866550243764688"
         }
       ],
-      "gateway-service": [
+      "cloudbite-merchants": [
         {
-          "file": "apps/gateway-service/.eslintrc.js",
+          "file": "apps/cloudbite-merchants/.eslintrc.json",
+          "hash": "10616060546436571437"
+        },
+        {
+          "file": "apps/cloudbite-merchants/README.md",
+          "hash": "12205685531602560652"
+        },
+        {
+          "file": "apps/cloudbite-merchants/app/favicon.ico",
+          "hash": "9157999678830540297"
+        },
+        {
+          "file": "apps/cloudbite-merchants/app/globals.css",
+          "hash": "2048989005741957698"
+        },
+        {
+          "file": "apps/cloudbite-merchants/app/layout.tsx",
+          "hash": "5777689452509174248"
+        },
+        {
+          "file": "apps/cloudbite-merchants/app/page.tsx",
+          "hash": "15041653934477953984"
+        },
+        {
+          "file": "apps/cloudbite-merchants/components/landing_pages/landing_page.tsx",
+          "hash": "8266521936356025994"
+        },
+        {
+          "file": "apps/cloudbite-merchants/components/ui/button.tsx",
+          "hash": "15867611193771364424"
+        },
+        {
+          "file": "apps/cloudbite-merchants/components/why-us/why_us.tsx",
+          "hash": "4889780814433062466"
+        },
+        {
+          "file": "apps/cloudbite-merchants/components/why-us/why_us_second.tsx",
+          "hash": "3474350678973890657"
+        },
+        {
+          "file": "apps/cloudbite-merchants/components.json",
+          "hash": "6721803946631579074"
+        },
+        {
+          "file": "apps/cloudbite-merchants/lib/utils.ts",
+          "hash": "4410618641919237161"
+        },
+        {
+          "file": "apps/cloudbite-merchants/next.config.js",
+          "hash": "14594058484359092244"
+        },
+        {
+          "file": "apps/cloudbite-merchants/package.json",
+          "hash": "11729180593829389517",
+          "deps": [
+            "npm:@radix-ui/react-slot",
+            "npm:class-variance-authority",
+            "npm:clsx",
+            "npm:lucide-react",
+            "npm:next",
+            "npm:react",
+            "npm:react-dom",
+            "npm:react-multi-carousel",
+            "npm:tailwind-merge",
+            "npm:tailwindcss-animate",
+            "npm:@types/node",
+            "npm:@types/react",
+            "npm:@types/react-dom",
+            "npm:autoprefixer",
+            "npm:eslint",
+            "npm:eslint-config-next",
+            "npm:postcss",
+            "npm:tailwindcss",
+            "npm:typescript"
+          ]
+        },
+        {
+          "file": "apps/cloudbite-merchants/postcss.config.js",
+          "hash": "1579725330904862112"
+        },
+        {
+          "file": "apps/cloudbite-merchants/public/imgs/UE1.webp",
+          "hash": "441627600165318814"
+        },
+        {
+          "file": "apps/cloudbite-merchants/public/imgs/delivery.jpg",
+          "hash": "1961540311588923040"
+        },
+        {
+          "file": "apps/cloudbite-merchants/public/imgs/landingImg4.jpg",
+          "hash": "3868958362597746999"
+        },
+        {
+          "file": "apps/cloudbite-merchants/public/imgs/manage.jpg",
+          "hash": "11707121597204294682"
+        },
+        {
+          "file": "apps/cloudbite-merchants/public/next.svg",
+          "hash": "8300767200008744458"
+        },
+        {
+          "file": "apps/cloudbite-merchants/public/vercel.svg",
+          "hash": "2376673330454856631"
+        },
+        {
+          "file": "apps/cloudbite-merchants/tailwind.config.ts",
+          "hash": "2520089696046008267"
+        },
+        {
+          "file": "apps/cloudbite-merchants/tsconfig.json",
+          "hash": "13566095390403677056"
+        }
+      ],
+      "auth-service": [
+        {
+          "file": "apps/auth-service/.eslintrc.js",
           "hash": "7461846271827386206"
         },
         {
-          "file": "apps/gateway-service/.prettierrc",
+          "file": "apps/auth-service/.prettierrc",
           "hash": "4808572120966128913"
         },
         {
-          "file": "apps/gateway-service/README.md",
+          "file": "apps/auth-service/README.md",
           "hash": "8286378509751487236"
         },
         {
-          "file": "apps/gateway-service/nest-cli.json",
+          "file": "apps/auth-service/nest-cli.json",
           "hash": "789240945379598733"
         },
         {
-          "file": "apps/gateway-service/package.json",
-          "hash": "9570528920511756323",
+          "file": "apps/auth-service/package.json",
+          "hash": "17508459313760489461",
           "deps": [
-            "npm:@apollo/gateway",
+            "npm:@apollo/federation",
+            "npm:@apollo/server",
+            "npm:@apollo/subgraph",
             "npm:@nestjs/apollo",
             "npm:@nestjs/common",
             "npm:@nestjs/core",
             "npm:@nestjs/graphql",
+            "npm:@nestjs/jwt",
+            "npm:@nestjs/passport",
             "npm:@nestjs/platform-express",
+            "npm:@nestjs/typeorm",
+            "npm:apollo-server-core",
+            "npm:apollo-server-express",
+            "npm:bcryptjs",
+            "npm:class-validator",
+            "npm:graphql",
             "npm:jsonwebtoken",
+            "npm:moment",
+            "npm:passport-jwt",
+            "npm:pg",
             "npm:reflect-metadata",
             "npm:rxjs",
             "npm:ts-morph",
+            "npm:typeorm",
+            "npm:url-join-ts",
+            "npm:uuid",
+            "npm:winston",
             "npm:@nestjs/cli",
             "npm:@nestjs/schematics",
             "npm:@nestjs/testing",
+            "npm:@types/bcryptjs",
             "npm:@types/express",
             "npm:@types/jest",
-            "npm:@types/jsonwebtoken",
             "npm:@types/node",
+            "npm:@types/passport-jwt",
             "npm:@types/supertest",
+            "npm:@types/uuid",
             "npm:@typescript-eslint/eslint-plugin",
             "npm:@typescript-eslint/parser",
             "npm:eslint",
@@ -1010,31 +894,147 @@
           ]
         },
         {
-          "file": "apps/gateway-service/src/app.constants.ts",
-          "hash": "9551429742564215431"
+          "file": "apps/auth-service/src/app.module.ts",
+          "hash": "1353521834207668320"
         },
         {
-          "file": "apps/gateway-service/src/app.module.ts",
-          "hash": "17872730805441302655"
+          "file": "apps/auth-service/src/config/config.default.ts",
+          "hash": "18093462160000923226"
         },
         {
-          "file": "apps/gateway-service/src/main.ts",
-          "hash": "10947680636689207823"
+          "file": "apps/auth-service/src/config/config.interface.ts",
+          "hash": "10140988805191124762"
         },
         {
-          "file": "apps/gateway-service/test/app.e2e-spec.ts",
+          "file": "apps/auth-service/src/config/config.module.ts",
+          "hash": "13143047207281215892"
+        },
+        {
+          "file": "apps/auth-service/src/config/config.service.ts",
+          "hash": "13509326749113076370"
+        },
+        {
+          "file": "apps/auth-service/src/db/db.errors.ts",
+          "hash": "2646672877639124408"
+        },
+        {
+          "file": "apps/auth-service/src/db/db.interface.ts",
+          "hash": "12011516664509660283"
+        },
+        {
+          "file": "apps/auth-service/src/db/db.logger.ts",
+          "hash": "9157591969086587730"
+        },
+        {
+          "file": "apps/auth-service/src/db/db.module.ts",
+          "hash": "8098263017839089877"
+        },
+        {
+          "file": "apps/auth-service/src/db/db.service.ts",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "apps/auth-service/src/domain/auth/auth.module.ts",
+          "hash": "3798926409806005054"
+        },
+        {
+          "file": "apps/auth-service/src/domain/auth/auth.resolver.ts",
+          "hash": "13286884091140077619"
+        },
+        {
+          "file": "apps/auth-service/src/domain/auth/auth.service.ts",
+          "hash": "10871306169139884451"
+        },
+        {
+          "file": "apps/auth-service/src/domain/auth/auth.types.graphql",
+          "hash": "16531727513960571672"
+        },
+        {
+          "file": "apps/auth-service/src/domain/auth/guards/admin.guard.ts",
+          "hash": "800017346527875327"
+        },
+        {
+          "file": "apps/auth-service/src/domain/auth/guards/jwtauth.guard.ts",
+          "hash": "9310120318481956847"
+        },
+        {
+          "file": "apps/auth-service/src/domain/auth/interfaces/jwt-payload.interface.ts",
+          "hash": "9020398436396176444"
+        },
+        {
+          "file": "apps/auth-service/src/domain/auth/strategies/jwt.stragegy.ts",
+          "hash": "16863595006745382817"
+        },
+        {
+          "file": "apps/auth-service/src/domain/domain.module.ts",
+          "hash": "12109104674669387479"
+        },
+        {
+          "file": "apps/auth-service/src/domain/users/decorator/user.decorator.ts",
+          "hash": "605648286877934460"
+        },
+        {
+          "file": "apps/auth-service/src/domain/users/dto/users.dto.ts",
+          "hash": "13187988898653391703"
+        },
+        {
+          "file": "apps/auth-service/src/domain/users/enity/user.entity.ts",
+          "hash": "8092383781826095834"
+        },
+        {
+          "file": "apps/auth-service/src/domain/users/users.module.ts",
+          "hash": "4836916562149808583"
+        },
+        {
+          "file": "apps/auth-service/src/domain/users/users.resolver.ts",
+          "hash": "13864209338497556420"
+        },
+        {
+          "file": "apps/auth-service/src/domain/users/users.service.ts",
+          "hash": "6307483395891304307"
+        },
+        {
+          "file": "apps/auth-service/src/domain/users/users.types.graphql",
+          "hash": "1545409323586780489"
+        },
+        {
+          "file": "apps/auth-service/src/graphql.classes.ts",
+          "hash": "3409943393091044441"
+        },
+        {
+          "file": "apps/auth-service/src/logger/logger.middleware.ts",
+          "hash": "4718963090654727106"
+        },
+        {
+          "file": "apps/auth-service/src/logger/logger.module.ts",
+          "hash": "15466574737607319651"
+        },
+        {
+          "file": "apps/auth-service/src/logger/logger.ts",
+          "hash": "1023051881361434160"
+        },
+        {
+          "file": "apps/auth-service/src/logger/loglevel.ts",
+          "hash": "14252412105708514145"
+        },
+        {
+          "file": "apps/auth-service/src/main.ts",
+          "hash": "12044100279147995"
+        },
+        {
+          "file": "apps/auth-service/test/app.e2e-spec.ts",
           "hash": "15142680097789702029"
         },
         {
-          "file": "apps/gateway-service/test/jest-e2e.json",
+          "file": "apps/auth-service/test/jest-e2e.json",
           "hash": "7570273541430074424"
         },
         {
-          "file": "apps/gateway-service/tsconfig.build.json",
+          "file": "apps/auth-service/tsconfig.build.json",
           "hash": "276845246908739715"
         },
         {
-          "file": "apps/gateway-service/tsconfig.json",
+          "file": "apps/auth-service/tsconfig.json",
           "hash": "5073866550243764688"
         }
       ]

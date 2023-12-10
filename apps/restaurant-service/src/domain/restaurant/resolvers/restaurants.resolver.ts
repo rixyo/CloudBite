@@ -43,10 +43,9 @@ export class RestaurantsResolver {
   ): Promise<RestaurantEntity> {
     try {
       const userId = context.req.headers.userid;
-      const { name, description, address, banner } = createRestaurantInput;
+      const { name, address, banner } = createRestaurantInput;
       const createRestaurant = new CreateRestaurantDto();
       createRestaurant.name = name;
-      createRestaurant.description = description;
       createRestaurant.banner = banner;
       createRestaurant.address = address;
       const errors = await validate(createRestaurant);
@@ -72,11 +71,10 @@ export class RestaurantsResolver {
     @Args('updateRestaurantInput') updateRestaurantInput: UpdateRestaurantInput,
   ): Promise<RestaurantEntity> {
     try {
-      const { name, banner, delivery_options, pickup_options, description } =
+      const { name, banner, delivery_options, pickup_options } =
         updateRestaurantInput;
       const createRestaurant = new UpdateRestaurantDto();
       createRestaurant.name = name;
-      createRestaurant.description = description;
       createRestaurant.banner = banner;
       createRestaurant.delivery_options = delivery_options;
       createRestaurant.pickup_options = pickup_options;

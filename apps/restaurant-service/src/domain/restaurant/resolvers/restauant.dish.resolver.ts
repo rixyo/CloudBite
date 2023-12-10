@@ -1,5 +1,4 @@
 import { Args, Mutation, Resolver, Query, Context } from '@nestjs/graphql';
-import { RestaurantEntity } from '../entity/restaurant.entity';
 import { CreateDishInput, UpdateDishInput } from '../../graphql.schama';
 import { CreateRestaurantDishDto } from '../dto/restaurant.dish.dto';
 import { validate } from 'class-validator';
@@ -32,14 +31,14 @@ export class RestaurantDishResolver {
   ): Promise<RestaurantDishEntity> {
     try {
       const userId = context.req.headers.userid;
-      const { name, description, price, thumbnails, meal_type } =
+      const { name, description, price, thumbnails, dish_type } =
         createDishInput;
       const createRestaurantDish = new CreateRestaurantDishDto();
       createRestaurantDish.name = name;
       createRestaurantDish.description = description;
       createRestaurantDish.price = price;
       createRestaurantDish.thumbnails = thumbnails;
-      createRestaurantDish.meal_type = meal_type;
+      createRestaurantDish.dish_type = dish_type;
       const errors = await validate(createRestaurantDish);
       if (errors.length > 0) {
         const errorsResponse: any = errors.map((val: any) => {
@@ -66,5 +65,59 @@ export class RestaurantDishResolver {
     @Args('page', { defaultValue: 1 }) page: number,
   ): Promise<RestaurantDishEntity[]> {
     return await this.restauranDishService.getDishes(page);
+  }
+  @Mutation('updateDish')
+  @UseGuards(RestaurantOwnerGuard)
+  async updateRestaurant(
+    @Args('restaurantId') restaurantId: string,
+    @Args('id') id: string,
+    @Context() context: any,
+    @Args('updateDishInput') updateDishInput: UpdateDishInput,
+  ): Promise<RestaurantDishEntity> {
+    try {
+      const userId = context.req.headers.userid;
+      const { name, description, price, thumbnails, dish_type } =
+        updateDishInput;
+      const createRestaurantDish = new CreateRestaurantDishDto();
+      createRestaurantDish.name = name;
+      createRestaurantDish.description = description;
+      createRestaurantDish.price = price;
+      createRestaurantDish.thumbnails = thumbnails;
+      createRestaurantDish.dish_type = dish_type;
+      const errors = await validate(createRestaurantDish);
+      if (errors.length > 0) {
+        const errorsResponse: any = errors.map((val: any) => {
+          return Object.values(val.constraints)[0] as string;
+        });
+        throw new BadRequestException(errorsResponse.join(','));
+      }
+      const dish = await this.restauranDishService.updateDish(
+        userId,
+        id,
+        restaurantId,
+        updateDishInput,
+      );
+      return dish;
+    } catch (error) {
+      throw new BadRequestException(error.message);
+    }
+  }
+  @Mutation('deleteDish')
+  @UseGuards(RestaurantOwnerGuard)
+  async deleteDish(
+    @Args('id') id: string,
+    @Args('restaurantId') restaurantId: string,
+    @Context() context: any,
+  ): Promise<any> {
+    try {
+      const userId = context.req.headers.userid;
+      return await this.restauranDishService.deleteDish(
+        id,
+        restaurantId,
+        userId,
+      );
+    } catch (error) {
+      throw new BadRequestException(error.message);
+    }
   }
 }

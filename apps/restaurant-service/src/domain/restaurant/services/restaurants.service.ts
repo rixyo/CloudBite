@@ -92,7 +92,6 @@ export class RestaurantService {
     if (!restaurant) throw new Error('No restaurant found');
     restaurant.name = updateRestaurantInput.name;
     restaurant.banner = updateRestaurantInput.banner;
-    restaurant.description = updateRestaurantInput.description;
     restaurant.delivery_options = updateRestaurantInput.delivery_options;
     restaurant.pickup_options = updateRestaurantInput.pickup_options;
     await this.restaurantRepo.save(restaurant);

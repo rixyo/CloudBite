@@ -17,9 +17,6 @@ export class RestaurantEntity extends BaseEntity {
   @Column({ type: 'varchar', length: 255, select: true, unique: true })
   public name!: string;
 
-  @Column({ type: 'varchar', default: null })
-  public description!: string;
-
   @Column({ type: 'uuid' })
   public owner_id!: string;
 

@@ -11,7 +11,6 @@ import { RestaurantService } from './restaurants.service';
 export class RestaurantDishService {
   constructor(
     @InjectRepository(RestaurantDishEntity)
-    @InjectRepository(RestaurantEntity)
     private restaurantDishRepo: Repository<RestaurantDishEntity>,
     private readonly restaurantService: RestaurantService,
     private logger: Logger,
@@ -62,7 +61,9 @@ export class RestaurantDishService {
     const query = this.restaurantDishRepo.createQueryBuilder('dish');
     query.skip((page - 1) * 10);
     query.take(10);
-    const dishes = await query.getMany();
+    const dishes = await query
+      .leftJoinAndSelect('dish.restaurant', 'restaurant')
+      .getMany();
     return dishes;
   }
   async getDish(id: string): Promise<RestaurantDishEntity> {
@@ -84,5 +85,36 @@ export class RestaurantDishService {
       dishes,
       restaurant,
     };
+  }
+  async updateDish(
+    userId: string,
+    dishId: string,
+    restaurantId: string,
+    updateDishInput: UpdateDishInput,
+  ): Promise<RestaurantDishEntity> {
+    await this.restaurantService.validateAuthorization(userId, restaurantId);
+    const dish = await this.getDish(dishId);
+    if (!dish) {
+      throw new NotFoundException(`Dish with this Id not found ${dishId}`);
+    }
+    dish.name = updateDishInput.name;
+    dish.description = updateDishInput.description;
+    dish.price = updateDishInput.price;
+    dish.thumbnails = updateDishInput.thumbnails;
+    await this.restaurantDishRepo.save(dish);
+    return dish;
+  }
+  async deleteDish(
+    id: string,
+    restaurantId: string,
+    userId: string,
+  ): Promise<any> {
+    await this.restaurantService.validateAuthorization(userId, restaurantId);
+    const dish = await this.getDish(id);
+    if (!dish) {
+      throw new NotFoundException(`Dish with this Id not found ${id}`);
+    }
+    await this.restaurantDishRepo.delete(id);
+    return `Dish with id ${id} deleted successfully`;
   }
 }
