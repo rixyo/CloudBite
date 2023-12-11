@@ -74,6 +74,7 @@ const handleAuth = ({ req }) => {
           subgraphs: [
             { name: 'User', url: 'http://localhost:5001/graphql' },
             { name: 'Restaurant', url: 'http://localhost:5002/graphql' },
+            { name: 'Order', url: 'http://localhost:5003/graphql' },
           ],
         }),
       },

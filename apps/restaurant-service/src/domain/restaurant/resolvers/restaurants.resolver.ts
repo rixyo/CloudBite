@@ -6,6 +6,7 @@ import {
   Context,
   ResolveField,
   Parent,
+  ResolveReference,
 } from '@nestjs/graphql';
 import { RestaurantEntity } from '../entity/restaurant.entity';
 import {
@@ -121,5 +122,13 @@ export class RestaurantsResolver {
       'ResolveField::user::RestaurantResolver' + restaurant.owner_id,
     );
     return { __typename: 'User', id: restaurant.owner_id };
+  }
+  @ResolveReference()
+  async resolveReference(reference: {
+    __typename: string;
+    id: string;
+  }): Promise<RestaurantEntity> {
+    this.logger.http('ResolveReference :: restaurant');
+    return await this.restaurantsService.getRestaurantById(reference.id);
   }
 }

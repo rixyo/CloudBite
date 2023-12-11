@@ -141,7 +141,6 @@ export class UsersResolver {
     id: string;
   }): Promise<UserEntity> {
     this.logger.http('ResolveReference :: user');
-    console.log(reference.id);
     return await this.usersService.findOneByUserId(reference.id);
   }
 }

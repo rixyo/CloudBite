@@ -20,6 +20,17 @@ services:
       - restaurant_api_data:/data/postgres
     ports:
       - 5432:5432
+  postgres-order:
+    environment:
+      - POSTGRES_USER=api
+      - POSTGRES_PASSWORD=development_pass
+      - POSTGRES_MULTIPLE_DATABASES="order-api","order-api-testing"
+    volumes:
+      - ./docker-utils:/docker-entrypoint-initdb.d
+      - order_api_data:/data/postgres
+    ports:
+      - 5433:5432
 volumes:
   auth_api_data: {}
   restaurant_api_data: {}
+  order_api_data: {}

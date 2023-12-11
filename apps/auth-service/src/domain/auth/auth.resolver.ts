@@ -22,7 +22,7 @@ export class AuthResolver {
       throw new AuthenticationError(
         'Could not log-in with the provided credentials',
       );
-    this.logger.log(`User logged in: ${JSON.stringify(result)}`);
+    this.logger.log(`User logged in: ${JSON.stringify(result.user.id)}`);
     return result;
   }
   @Query('refreshToken')

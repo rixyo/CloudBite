@@ -331,6 +331,115 @@
         "tags": []
       }
     },
+    "order-service": {
+      "name": "order-service",
+      "type": "lib",
+      "data": {
+        "root": "apps/order-service",
+        "sourceRoot": "apps/order-service",
+        "name": "order-service",
+        "projectType": "library",
+        "targets": {
+          "build": {
+            "dependsOn": [
+              "^build"
+            ],
+            "executor": "nx:run-script",
+            "options": {
+              "script": "build"
+            },
+            "configurations": {}
+          },
+          "format": {
+            "executor": "nx:run-script",
+            "options": {
+              "script": "format"
+            },
+            "configurations": {}
+          },
+          "start": {
+            "executor": "nx:run-script",
+            "options": {
+              "script": "start"
+            },
+            "configurations": {}
+          },
+          "start:dev": {
+            "executor": "nx:run-script",
+            "options": {
+              "script": "start:dev"
+            },
+            "configurations": {}
+          },
+          "start:debug": {
+            "executor": "nx:run-script",
+            "options": {
+              "script": "start:debug"
+            },
+            "configurations": {}
+          },
+          "start:prod": {
+            "executor": "nx:run-script",
+            "options": {
+              "script": "start:prod"
+            },
+            "configurations": {}
+          },
+          "lint": {
+            "executor": "nx:run-script",
+            "options": {
+              "script": "lint"
+            },
+            "configurations": {}
+          },
+          "test": {
+            "executor": "nx:run-script",
+            "options": {
+              "script": "test"
+            },
+            "configurations": {}
+          },
+          "test:watch": {
+            "executor": "nx:run-script",
+            "options": {
+              "script": "test:watch"
+            },
+            "configurations": {}
+          },
+          "test:cov": {
+            "executor": "nx:run-script",
+            "options": {
+              "script": "test:cov"
+            },
+            "configurations": {}
+          },
+          "test:debug": {
+            "executor": "nx:run-script",
+            "options": {
+              "script": "test:debug"
+            },
+            "configurations": {}
+          },
+          "test:e2e": {
+            "executor": "nx:run-script",
+            "options": {
+              "script": "test:e2e"
+            },
+            "configurations": {}
+          },
+          "nx-release-publish": {
+            "dependsOn": [
+              "^nx-release-publish"
+            ],
+            "executor": "@nx/js:release-publish",
+            "options": {},
+            "configurations": {}
+          }
+        },
+        "implicitDependencies": [],
+        "tags": []
+      }
+    },
     "auth-service": {
       "name": "auth-service",
       "type": "lib",
@@ -891,18 +1000,18 @@
         "hash": "sha512-xCcXpoz52rI4ksJSdOCxeOCn2DLocxwHf9dVT/Q90Pte1LX+LY+91SFtJF3KXVHH8kEin+g1KKCQPKBjZJfWNA=="
       }
     },
-    "npm:@babel/code-frame": {
+    "npm:@babel/code-frame@7.22.13": {
       "type": "npm",
-      "name": "npm:@babel/code-frame",
+      "name": "npm:@babel/code-frame@7.22.13",
       "data": {
         "version": "7.22.13",
         "packageName": "@babel/code-frame",
         "hash": "sha512-XktuhWlJ5g+3TJXc5upd9Ks1HutSArik6jf2eAjYFyIOf4ej3RN+184cZbzDvbPnuTJIUhPKKJE3cIsYTiAT3w=="
       }
     },
-    "npm:@babel/code-frame@7.23.4": {
+    "npm:@babel/code-frame": {
       "type": "npm",
-      "name": "npm:@babel/code-frame@7.23.4",
+      "name": "npm:@babel/code-frame",
       "data": {
         "version": "7.23.4",
         "packageName": "@babel/code-frame",
@@ -1134,18 +1243,18 @@
         "hash": "sha512-lzchcp8SjTSVe/fPmLwtWVBFC7+Tbn8LGHDVfDp9JGxpAY5opSaEFgt8UQvrnECWOTdji2mOWMz1rOhkHscmGQ=="
       }
     },
-    "npm:@babel/highlight@7.22.20": {
+    "npm:@babel/highlight": {
       "type": "npm",
-      "name": "npm:@babel/highlight@7.22.20",
+      "name": "npm:@babel/highlight",
       "data": {
         "version": "7.22.20",
         "packageName": "@babel/highlight",
         "hash": "sha512-dkdMCN3py0+ksCgYmGG8jKeGA/8Tk+gJwSYYlFGxG5lmhfKNoAy004YpLxpS1W2J8m/EK2Ew+yOs9pVRwO89mg=="
       }
     },
-    "npm:@babel/highlight": {
+    "npm:@babel/highlight@7.23.4": {
       "type": "npm",
-      "name": "npm:@babel/highlight",
+      "name": "npm:@babel/highlight@7.23.4",
       "data": {
         "version": "7.23.4",
         "packageName": "@babel/highlight",
@@ -9882,18 +9991,18 @@
         "hash": "sha512-LA0Y9kxMYv47GIPJy6MI84fqTd2HmYZI83W/kM/SkKfDlajnZYfmXFTxkbY+xSBPkLJxltMa9hIkmdc29eguMA=="
       }
     },
-    "npm:qs": {
+    "npm:qs@6.11.0": {
       "type": "npm",
-      "name": "npm:qs",
+      "name": "npm:qs@6.11.0",
       "data": {
         "version": "6.11.0",
         "packageName": "qs",
         "hash": "sha512-MvjoMCJwEarSbUYk5O+nmoSzSutSsTwF85zcHPQ9OrlFoZOYIjaqBAJIqIXjptyD5vThxGq52Xu/MaJzRkIk4Q=="
       }
     },
-    "npm:qs@6.11.2": {
+    "npm:qs": {
       "type": "npm",
-      "name": "npm:qs@6.11.2",
+      "name": "npm:qs",
       "data": {
         "version": "6.11.2",
         "packageName": "qs",
@@ -10897,6 +11006,15 @@
         "version": "3.1.1",
         "packageName": "strip-json-comments",
         "hash": "sha512-6fPc+R4ihwqP6N/aIv2f1gMH8lOVtWQHoqC4yK6oSDVVocumAsfCqjkXnqiYMhmMwS/mEHLp7Vehlt3ql6lEig=="
+      }
+    },
+    "npm:stripe": {
+      "type": "npm",
+      "name": "npm:stripe",
+      "data": {
+        "version": "14.8.0",
+        "packageName": "stripe",
+        "hash": "sha512-Qdecqk7lx095BE829NWxrG1+69NjPuHrpZqeR61i2KO00fpKkjMX9TYjwFU+WjQD6ZcNmCGOwNfnz5VnI5bjIg=="
       }
     },
     "npm:strong-log-transformer": {
@@ -12722,6 +12840,253 @@
         "type": "static"
       }
     ],
+    "order-service": [
+      {
+        "source": "order-service",
+        "target": "npm:@apollo/federation",
+        "type": "static"
+      },
+      {
+        "source": "order-service",
+        "target": "npm:@apollo/server",
+        "type": "static"
+      },
+      {
+        "source": "order-service",
+        "target": "npm:@apollo/subgraph",
+        "type": "static"
+      },
+      {
+        "source": "order-service",
+        "target": "npm:@nestjs/apollo",
+        "type": "static"
+      },
+      {
+        "source": "order-service",
+        "target": "npm:@nestjs/common",
+        "type": "static"
+      },
+      {
+        "source": "order-service",
+        "target": "npm:@nestjs/core",
+        "type": "static"
+      },
+      {
+        "source": "order-service",
+        "target": "npm:@nestjs/graphql",
+        "type": "static"
+      },
+      {
+        "source": "order-service",
+        "target": "npm:@nestjs/jwt",
+        "type": "static"
+      },
+      {
+        "source": "order-service",
+        "target": "npm:@nestjs/passport",
+        "type": "static"
+      },
+      {
+        "source": "order-service",
+        "target": "npm:@nestjs/platform-express",
+        "type": "static"
+      },
+      {
+        "source": "order-service",
+        "target": "npm:@nestjs/typeorm",
+        "type": "static"
+      },
+      {
+        "source": "order-service",
+        "target": "npm:apollo-server-core",
+        "type": "static"
+      },
+      {
+        "source": "order-service",
+        "target": "npm:body-parser",
+        "type": "static"
+      },
+      {
+        "source": "order-service",
+        "target": "npm:class-transformer",
+        "type": "static"
+      },
+      {
+        "source": "order-service",
+        "target": "npm:class-validator",
+        "type": "static"
+      },
+      {
+        "source": "order-service",
+        "target": "npm:graphql",
+        "type": "static"
+      },
+      {
+        "source": "order-service",
+        "target": "npm:jsonwebtoken",
+        "type": "static"
+      },
+      {
+        "source": "order-service",
+        "target": "npm:moment",
+        "type": "static"
+      },
+      {
+        "source": "order-service",
+        "target": "npm:passport-jwt",
+        "type": "static"
+      },
+      {
+        "source": "order-service",
+        "target": "npm:pg",
+        "type": "static"
+      },
+      {
+        "source": "order-service",
+        "target": "npm:reflect-metadata",
+        "type": "static"
+      },
+      {
+        "source": "order-service",
+        "target": "npm:rxjs",
+        "type": "static"
+      },
+      {
+        "source": "order-service",
+        "target": "npm:stripe",
+        "type": "static"
+      },
+      {
+        "source": "order-service",
+        "target": "npm:typeorm",
+        "type": "static"
+      },
+      {
+        "source": "order-service",
+        "target": "npm:uuid",
+        "type": "static"
+      },
+      {
+        "source": "order-service",
+        "target": "npm:winston",
+        "type": "static"
+      },
+      {
+        "source": "order-service",
+        "target": "npm:@nestjs/cli",
+        "type": "static"
+      },
+      {
+        "source": "order-service",
+        "target": "npm:@nestjs/schematics",
+        "type": "static"
+      },
+      {
+        "source": "order-service",
+        "target": "npm:@nestjs/testing",
+        "type": "static"
+      },
+      {
+        "source": "order-service",
+        "target": "npm:@types/body-parser",
+        "type": "static"
+      },
+      {
+        "source": "order-service",
+        "target": "npm:@types/express",
+        "type": "static"
+      },
+      {
+        "source": "order-service",
+        "target": "npm:@types/jest",
+        "type": "static"
+      },
+      {
+        "source": "order-service",
+        "target": "npm:@types/node",
+        "type": "static"
+      },
+      {
+        "source": "order-service",
+        "target": "npm:@types/passport-jwt",
+        "type": "static"
+      },
+      {
+        "source": "order-service",
+        "target": "npm:@types/supertest",
+        "type": "static"
+      },
+      {
+        "source": "order-service",
+        "target": "npm:@typescript-eslint/eslint-plugin",
+        "type": "static"
+      },
+      {
+        "source": "order-service",
+        "target": "npm:@typescript-eslint/parser",
+        "type": "static"
+      },
+      {
+        "source": "order-service",
+        "target": "npm:eslint",
+        "type": "static"
+      },
+      {
+        "source": "order-service",
+        "target": "npm:eslint-config-prettier",
+        "type": "static"
+      },
+      {
+        "source": "order-service",
+        "target": "npm:eslint-plugin-prettier",
+        "type": "static"
+      },
+      {
+        "source": "order-service",
+        "target": "npm:jest",
+        "type": "static"
+      },
+      {
+        "source": "order-service",
+        "target": "npm:prettier",
+        "type": "static"
+      },
+      {
+        "source": "order-service",
+        "target": "npm:source-map-support",
+        "type": "static"
+      },
+      {
+        "source": "order-service",
+        "target": "npm:supertest",
+        "type": "static"
+      },
+      {
+        "source": "order-service",
+        "target": "npm:ts-jest",
+        "type": "static"
+      },
+      {
+        "source": "order-service",
+        "target": "npm:ts-loader",
+        "type": "static"
+      },
+      {
+        "source": "order-service",
+        "target": "npm:ts-node",
+        "type": "static"
+      },
+      {
+        "source": "order-service",
+        "target": "npm:tsconfig-paths",
+        "type": "static"
+      },
+      {
+        "source": "order-service",
+        "target": "npm:typescript",
+        "type": "static"
+      }
+    ],
     "auth-service": [
       {
         "source": "auth-service",
@@ -14018,26 +14383,26 @@
         "type": "static"
       }
     ],
-    "npm:@babel/code-frame": [
+    "npm:@babel/code-frame@7.22.13": [
       {
-        "source": "npm:@babel/code-frame",
-        "target": "npm:@babel/highlight@7.22.20",
-        "type": "static"
-      },
-      {
-        "source": "npm:@babel/code-frame",
-        "target": "npm:chalk@2.4.2",
-        "type": "static"
-      }
-    ],
-    "npm:@babel/code-frame@7.23.4": [
-      {
-        "source": "npm:@babel/code-frame@7.23.4",
+        "source": "npm:@babel/code-frame@7.22.13",
         "target": "npm:@babel/highlight",
         "type": "static"
       },
       {
-        "source": "npm:@babel/code-frame@7.23.4",
+        "source": "npm:@babel/code-frame@7.22.13",
+        "target": "npm:chalk@2.4.2",
+        "type": "static"
+      }
+    ],
+    "npm:@babel/code-frame": [
+      {
+        "source": "npm:@babel/code-frame",
+        "target": "npm:@babel/highlight@7.23.4",
+        "type": "static"
+      },
+      {
+        "source": "npm:@babel/code-frame",
         "target": "npm:chalk@2.4.2",
         "type": "static"
       }
@@ -14490,23 +14855,6 @@
         "type": "static"
       }
     ],
-    "npm:@babel/highlight@7.22.20": [
-      {
-        "source": "npm:@babel/highlight@7.22.20",
-        "target": "npm:@babel/helper-validator-identifier",
-        "type": "static"
-      },
-      {
-        "source": "npm:@babel/highlight@7.22.20",
-        "target": "npm:chalk@2.4.2",
-        "type": "static"
-      },
-      {
-        "source": "npm:@babel/highlight@7.22.20",
-        "target": "npm:js-tokens",
-        "type": "static"
-      }
-    ],
     "npm:@babel/highlight": [
       {
         "source": "npm:@babel/highlight",
@@ -14520,6 +14868,23 @@
       },
       {
         "source": "npm:@babel/highlight",
+        "target": "npm:js-tokens",
+        "type": "static"
+      }
+    ],
+    "npm:@babel/highlight@7.23.4": [
+      {
+        "source": "npm:@babel/highlight@7.23.4",
+        "target": "npm:@babel/helper-validator-identifier",
+        "type": "static"
+      },
+      {
+        "source": "npm:@babel/highlight@7.23.4",
+        "target": "npm:chalk@2.4.2",
+        "type": "static"
+      },
+      {
+        "source": "npm:@babel/highlight@7.23.4",
         "target": "npm:js-tokens",
         "type": "static"
       }
@@ -14743,7 +15108,7 @@
     "npm:@babel/template": [
       {
         "source": "npm:@babel/template",
-        "target": "npm:@babel/code-frame",
+        "target": "npm:@babel/code-frame@7.22.13",
         "type": "static"
       },
       {
@@ -14760,7 +15125,7 @@
     "npm:@babel/traverse@7.23.2": [
       {
         "source": "npm:@babel/traverse@7.23.2",
-        "target": "npm:@babel/code-frame",
+        "target": "npm:@babel/code-frame@7.22.13",
         "type": "static"
       },
       {
@@ -14812,7 +15177,7 @@
     "npm:@babel/traverse": [
       {
         "source": "npm:@babel/traverse",
-        "target": "npm:@babel/code-frame",
+        "target": "npm:@babel/code-frame@7.22.13",
         "type": "static"
       },
       {
@@ -16676,6 +17041,11 @@
         "source": "npm:@nestjs/schematics",
         "target": "npm:typescript",
         "type": "static"
+      },
+      {
+        "source": "npm:@nestjs/schematics",
+        "target": "npm:typescript@5.3.2",
+        "type": "static"
       }
     ],
     "npm:@nestjs/testing": [
@@ -17982,6 +18352,11 @@
         "source": "npm:@typescript-eslint/eslint-plugin",
         "target": "npm:typescript",
         "type": "static"
+      },
+      {
+        "source": "npm:@typescript-eslint/eslint-plugin",
+        "target": "npm:typescript@5.3.2",
+        "type": "static"
       }
     ],
     "npm:@typescript-eslint/parser": [
@@ -18067,6 +18442,11 @@
       {
         "source": "npm:@typescript-eslint/type-utils",
         "target": "npm:typescript",
+        "type": "static"
+      },
+      {
+        "source": "npm:@typescript-eslint/type-utils",
+        "target": "npm:typescript@5.3.2",
         "type": "static"
       }
     ],
@@ -19355,7 +19735,7 @@
       },
       {
         "source": "npm:body-parser@1.20.1",
-        "target": "npm:qs",
+        "target": "npm:qs@6.11.0",
         "type": "static"
       },
       {
@@ -19417,7 +19797,7 @@
       },
       {
         "source": "npm:body-parser",
-        "target": "npm:qs",
+        "target": "npm:qs@6.11.0",
         "type": "static"
       },
       {
@@ -22028,7 +22408,7 @@
       },
       {
         "source": "npm:express",
-        "target": "npm:qs",
+        "target": "npm:qs@6.11.0",
         "type": "static"
       },
       {
@@ -22322,7 +22702,7 @@
     "npm:fork-ts-checker-webpack-plugin": [
       {
         "source": "npm:fork-ts-checker-webpack-plugin",
-        "target": "npm:@babel/code-frame@7.23.4",
+        "target": "npm:@babel/code-frame",
         "type": "static"
       },
       {
@@ -22445,7 +22825,7 @@
       },
       {
         "source": "npm:formidable",
-        "target": "npm:qs@6.11.2",
+        "target": "npm:qs",
         "type": "static"
       }
     ],
@@ -22626,7 +23006,7 @@
       },
       {
         "source": "npm:glob",
-        "target": "npm:minimatch@3.0.5",
+        "target": "npm:minimatch",
         "type": "static"
       },
       {
@@ -23999,7 +24379,7 @@
     "npm:jest-message-util": [
       {
         "source": "npm:jest-message-util",
-        "target": "npm:@babel/code-frame",
+        "target": "npm:@babel/code-frame@7.22.13",
         "type": "static"
       },
       {
@@ -26047,7 +26427,7 @@
     "npm:parse-json": [
       {
         "source": "npm:parse-json",
-        "target": "npm:@babel/code-frame",
+        "target": "npm:@babel/code-frame@7.22.13",
         "type": "static"
       },
       {
@@ -26409,16 +26789,16 @@
         "type": "static"
       }
     ],
-    "npm:qs": [
+    "npm:qs@6.11.0": [
       {
-        "source": "npm:qs",
+        "source": "npm:qs@6.11.0",
         "target": "npm:side-channel",
         "type": "static"
       }
     ],
-    "npm:qs@6.11.2": [
+    "npm:qs": [
       {
-        "source": "npm:qs@6.11.2",
+        "source": "npm:qs",
         "target": "npm:side-channel",
         "type": "static"
       }
@@ -27460,6 +27840,18 @@
         "type": "static"
       }
     ],
+    "npm:stripe": [
+      {
+        "source": "npm:stripe",
+        "target": "npm:@types/node",
+        "type": "static"
+      },
+      {
+        "source": "npm:stripe",
+        "target": "npm:qs",
+        "type": "static"
+      }
+    ],
     "npm:strong-log-transformer": [
       {
         "source": "npm:strong-log-transformer",
@@ -27606,7 +27998,7 @@
       },
       {
         "source": "npm:superagent",
-        "target": "npm:qs@6.11.2",
+        "target": "npm:qs",
         "type": "static"
       },
       {
@@ -28174,6 +28566,11 @@
         "source": "npm:ts-jest@29.1.0",
         "target": "npm:yargs-parser",
         "type": "static"
+      },
+      {
+        "source": "npm:ts-jest@29.1.0",
+        "target": "npm:typescript@5.3.2",
+        "type": "static"
       }
     ],
     "npm:ts-jest": [
@@ -28267,6 +28664,11 @@
       {
         "source": "npm:ts-loader",
         "target": "npm:webpack@5.89.0",
+        "type": "static"
+      },
+      {
+        "source": "npm:ts-loader",
+        "target": "npm:typescript@5.3.2",
         "type": "static"
       }
     ],
@@ -28368,6 +28770,11 @@
       {
         "source": "npm:ts-node",
         "target": "npm:yn",
+        "type": "static"
+      },
+      {
+        "source": "npm:ts-node",
+        "target": "npm:typescript@5.3.2",
         "type": "static"
       }
     ],

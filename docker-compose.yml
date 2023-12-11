@@ -6,4 +6,7 @@ services:
   postgres-resturant:
     image: postgres:latest
     restart: unless-stopped
+  postgres-order:
+    image: postgres:latest
+    restart: unless-stopped
  

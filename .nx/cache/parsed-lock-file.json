@@ -396,18 +396,18 @@
         "hash": "sha512-xCcXpoz52rI4ksJSdOCxeOCn2DLocxwHf9dVT/Q90Pte1LX+LY+91SFtJF3KXVHH8kEin+g1KKCQPKBjZJfWNA=="
       }
     },
-    "npm:@babel/code-frame": {
+    "npm:@babel/code-frame@7.22.13": {
       "type": "npm",
-      "name": "npm:@babel/code-frame",
+      "name": "npm:@babel/code-frame@7.22.13",
       "data": {
         "version": "7.22.13",
         "packageName": "@babel/code-frame",
         "hash": "sha512-XktuhWlJ5g+3TJXc5upd9Ks1HutSArik6jf2eAjYFyIOf4ej3RN+184cZbzDvbPnuTJIUhPKKJE3cIsYTiAT3w=="
       }
     },
-    "npm:@babel/code-frame@7.23.4": {
+    "npm:@babel/code-frame": {
       "type": "npm",
-      "name": "npm:@babel/code-frame@7.23.4",
+      "name": "npm:@babel/code-frame",
       "data": {
         "version": "7.23.4",
         "packageName": "@babel/code-frame",
@@ -639,18 +639,18 @@
         "hash": "sha512-lzchcp8SjTSVe/fPmLwtWVBFC7+Tbn8LGHDVfDp9JGxpAY5opSaEFgt8UQvrnECWOTdji2mOWMz1rOhkHscmGQ=="
       }
     },
-    "npm:@babel/highlight@7.22.20": {
+    "npm:@babel/highlight": {
       "type": "npm",
-      "name": "npm:@babel/highlight@7.22.20",
+      "name": "npm:@babel/highlight",
       "data": {
         "version": "7.22.20",
         "packageName": "@babel/highlight",
         "hash": "sha512-dkdMCN3py0+ksCgYmGG8jKeGA/8Tk+gJwSYYlFGxG5lmhfKNoAy004YpLxpS1W2J8m/EK2Ew+yOs9pVRwO89mg=="
       }
     },
-    "npm:@babel/highlight": {
+    "npm:@babel/highlight@7.23.4": {
       "type": "npm",
-      "name": "npm:@babel/highlight",
+      "name": "npm:@babel/highlight@7.23.4",
       "data": {
         "version": "7.23.4",
         "packageName": "@babel/highlight",
@@ -9387,18 +9387,18 @@
         "hash": "sha512-LA0Y9kxMYv47GIPJy6MI84fqTd2HmYZI83W/kM/SkKfDlajnZYfmXFTxkbY+xSBPkLJxltMa9hIkmdc29eguMA=="
       }
     },
-    "npm:qs": {
+    "npm:qs@6.11.0": {
       "type": "npm",
-      "name": "npm:qs",
+      "name": "npm:qs@6.11.0",
       "data": {
         "version": "6.11.0",
         "packageName": "qs",
         "hash": "sha512-MvjoMCJwEarSbUYk5O+nmoSzSutSsTwF85zcHPQ9OrlFoZOYIjaqBAJIqIXjptyD5vThxGq52Xu/MaJzRkIk4Q=="
       }
     },
-    "npm:qs@6.11.2": {
+    "npm:qs": {
       "type": "npm",
-      "name": "npm:qs@6.11.2",
+      "name": "npm:qs",
       "data": {
         "version": "6.11.2",
         "packageName": "qs",
@@ -10402,6 +10402,15 @@
         "version": "3.1.1",
         "packageName": "strip-json-comments",
         "hash": "sha512-6fPc+R4ihwqP6N/aIv2f1gMH8lOVtWQHoqC4yK6oSDVVocumAsfCqjkXnqiYMhmMwS/mEHLp7Vehlt3ql6lEig=="
+      }
+    },
+    "npm:stripe": {
+      "type": "npm",
+      "name": "npm:stripe",
+      "data": {
+        "version": "14.8.0",
+        "packageName": "stripe",
+        "hash": "sha512-Qdecqk7lx095BE829NWxrG1+69NjPuHrpZqeR61i2KO00fpKkjMX9TYjwFU+WjQD6ZcNmCGOwNfnz5VnI5bjIg=="
       }
     },
     "npm:strong-log-transformer": {
@@ -12495,22 +12504,22 @@
       "type": "static"
     },
     {
-      "source": "npm:@babel/code-frame",
-      "target": "npm:@babel/highlight@7.22.20",
-      "type": "static"
-    },
-    {
-      "source": "npm:@babel/code-frame",
-      "target": "npm:chalk@2.4.2",
-      "type": "static"
-    },
-    {
-      "source": "npm:@babel/code-frame@7.23.4",
+      "source": "npm:@babel/code-frame@7.22.13",
       "target": "npm:@babel/highlight",
       "type": "static"
     },
     {
-      "source": "npm:@babel/code-frame@7.23.4",
+      "source": "npm:@babel/code-frame@7.22.13",
+      "target": "npm:chalk@2.4.2",
+      "type": "static"
+    },
+    {
+      "source": "npm:@babel/code-frame",
+      "target": "npm:@babel/highlight@7.23.4",
+      "type": "static"
+    },
+    {
+      "source": "npm:@babel/code-frame",
       "target": "npm:chalk@2.4.2",
       "type": "static"
     },
@@ -12925,32 +12934,32 @@
       "type": "static"
     },
     {
-      "source": "npm:@babel/highlight@7.22.20",
+      "source": "npm:@babel/highlight",
       "target": "npm:@babel/helper-validator-identifier",
       "type": "static"
     },
     {
-      "source": "npm:@babel/highlight@7.22.20",
+      "source": "npm:@babel/highlight",
       "target": "npm:chalk@2.4.2",
       "type": "static"
     },
     {
-      "source": "npm:@babel/highlight@7.22.20",
+      "source": "npm:@babel/highlight",
       "target": "npm:js-tokens",
       "type": "static"
     },
     {
-      "source": "npm:@babel/highlight",
+      "source": "npm:@babel/highlight@7.23.4",
       "target": "npm:@babel/helper-validator-identifier",
       "type": "static"
     },
     {
-      "source": "npm:@babel/highlight",
+      "source": "npm:@babel/highlight@7.23.4",
       "target": "npm:chalk@2.4.2",
       "type": "static"
     },
     {
-      "source": "npm:@babel/highlight",
+      "source": "npm:@babel/highlight@7.23.4",
       "target": "npm:js-tokens",
       "type": "static"
     },
@@ -13136,7 +13145,7 @@
     },
     {
       "source": "npm:@babel/template",
-      "target": "npm:@babel/code-frame",
+      "target": "npm:@babel/code-frame@7.22.13",
       "type": "static"
     },
     {
@@ -13151,7 +13160,7 @@
     },
     {
       "source": "npm:@babel/traverse@7.23.2",
-      "target": "npm:@babel/code-frame",
+      "target": "npm:@babel/code-frame@7.22.13",
       "type": "static"
     },
     {
@@ -13201,7 +13210,7 @@
     },
     {
       "source": "npm:@babel/traverse",
-      "target": "npm:@babel/code-frame",
+      "target": "npm:@babel/code-frame@7.22.13",
       "type": "static"
     },
     {
@@ -15155,6 +15164,31 @@
       "type": "static"
     },
     {
+      "source": "npm:@nestjs/schematics",
+      "target": "npm:@angular-devkit/core",
+      "type": "static"
+    },
+    {
+      "source": "npm:@nestjs/schematics",
+      "target": "npm:@angular-devkit/schematics",
+      "type": "static"
+    },
+    {
+      "source": "npm:@nestjs/schematics",
+      "target": "npm:jsonc-parser",
+      "type": "static"
+    },
+    {
+      "source": "npm:@nestjs/schematics",
+      "target": "npm:pluralize",
+      "type": "static"
+    },
+    {
+      "source": "npm:@nestjs/schematics",
+      "target": "npm:typescript@5.3.2",
+      "type": "static"
+    },
+    {
       "source": "npm:@nestjs/testing",
       "target": "npm:@nestjs/common",
       "type": "static"
@@ -16340,6 +16374,71 @@
       "type": "static"
     },
     {
+      "source": "npm:@typescript-eslint/eslint-plugin",
+      "target": "npm:@eslint-community/regexpp",
+      "type": "static"
+    },
+    {
+      "source": "npm:@typescript-eslint/eslint-plugin",
+      "target": "npm:@typescript-eslint/parser",
+      "type": "static"
+    },
+    {
+      "source": "npm:@typescript-eslint/eslint-plugin",
+      "target": "npm:@typescript-eslint/scope-manager",
+      "type": "static"
+    },
+    {
+      "source": "npm:@typescript-eslint/eslint-plugin",
+      "target": "npm:@typescript-eslint/type-utils",
+      "type": "static"
+    },
+    {
+      "source": "npm:@typescript-eslint/eslint-plugin",
+      "target": "npm:@typescript-eslint/utils",
+      "type": "static"
+    },
+    {
+      "source": "npm:@typescript-eslint/eslint-plugin",
+      "target": "npm:debug",
+      "type": "static"
+    },
+    {
+      "source": "npm:@typescript-eslint/eslint-plugin",
+      "target": "npm:eslint",
+      "type": "static"
+    },
+    {
+      "source": "npm:@typescript-eslint/eslint-plugin",
+      "target": "npm:graphemer",
+      "type": "static"
+    },
+    {
+      "source": "npm:@typescript-eslint/eslint-plugin",
+      "target": "npm:ignore",
+      "type": "static"
+    },
+    {
+      "source": "npm:@typescript-eslint/eslint-plugin",
+      "target": "npm:natural-compare-lite",
+      "type": "static"
+    },
+    {
+      "source": "npm:@typescript-eslint/eslint-plugin",
+      "target": "npm:semver",
+      "type": "static"
+    },
+    {
+      "source": "npm:@typescript-eslint/eslint-plugin",
+      "target": "npm:tsutils",
+      "type": "static"
+    },
+    {
+      "source": "npm:@typescript-eslint/eslint-plugin",
+      "target": "npm:typescript@5.3.2",
+      "type": "static"
+    },
+    {
       "source": "npm:@typescript-eslint/parser",
       "target": "npm:@typescript-eslint/scope-manager",
       "type": "static"
@@ -16470,6 +16569,36 @@
       "type": "static"
     },
     {
+      "source": "npm:@typescript-eslint/type-utils",
+      "target": "npm:@typescript-eslint/typescript-estree",
+      "type": "static"
+    },
+    {
+      "source": "npm:@typescript-eslint/type-utils",
+      "target": "npm:@typescript-eslint/utils",
+      "type": "static"
+    },
+    {
+      "source": "npm:@typescript-eslint/type-utils",
+      "target": "npm:debug",
+      "type": "static"
+    },
+    {
+      "source": "npm:@typescript-eslint/type-utils",
+      "target": "npm:eslint",
+      "type": "static"
+    },
+    {
+      "source": "npm:@typescript-eslint/type-utils",
+      "target": "npm:tsutils",
+      "type": "static"
+    },
+    {
+      "source": "npm:@typescript-eslint/type-utils",
+      "target": "npm:typescript@5.3.2",
+      "type": "static"
+    },
+    {
       "source": "npm:@typescript-eslint/typescript-estree",
       "target": "npm:@typescript-eslint/types",
       "type": "static"
@@ -16547,6 +16676,51 @@
     {
       "source": "npm:@typescript-eslint/typescript-estree",
       "target": "npm:typescript@5.3.2",
+      "type": "static"
+    },
+    {
+      "source": "npm:@typescript-eslint/utils",
+      "target": "npm:@eslint-community/eslint-utils",
+      "type": "static"
+    },
+    {
+      "source": "npm:@typescript-eslint/utils",
+      "target": "npm:@types/json-schema",
+      "type": "static"
+    },
+    {
+      "source": "npm:@typescript-eslint/utils",
+      "target": "npm:@types/semver",
+      "type": "static"
+    },
+    {
+      "source": "npm:@typescript-eslint/utils",
+      "target": "npm:@typescript-eslint/scope-manager",
+      "type": "static"
+    },
+    {
+      "source": "npm:@typescript-eslint/utils",
+      "target": "npm:@typescript-eslint/types",
+      "type": "static"
+    },
+    {
+      "source": "npm:@typescript-eslint/utils",
+      "target": "npm:@typescript-eslint/typescript-estree",
+      "type": "static"
+    },
+    {
+      "source": "npm:@typescript-eslint/utils",
+      "target": "npm:eslint",
+      "type": "static"
+    },
+    {
+      "source": "npm:@typescript-eslint/utils",
+      "target": "npm:eslint-scope@5.1.1",
+      "type": "static"
+    },
+    {
+      "source": "npm:@typescript-eslint/utils",
+      "target": "npm:semver",
       "type": "static"
     },
     {
@@ -17666,7 +17840,7 @@
     },
     {
       "source": "npm:body-parser@1.20.1",
-      "target": "npm:qs",
+      "target": "npm:qs@6.11.0",
       "type": "static"
     },
     {
@@ -17726,7 +17900,7 @@
     },
     {
       "source": "npm:body-parser",
-      "target": "npm:qs",
+      "target": "npm:qs@6.11.0",
       "type": "static"
     },
     {
@@ -20506,7 +20680,7 @@
     },
     {
       "source": "npm:express",
-      "target": "npm:qs",
+      "target": "npm:qs@6.11.0",
       "type": "static"
     },
     {
@@ -20766,7 +20940,7 @@
     },
     {
       "source": "npm:fork-ts-checker-webpack-plugin",
-      "target": "npm:@babel/code-frame@7.23.4",
+      "target": "npm:@babel/code-frame",
       "type": "static"
     },
     {
@@ -20881,7 +21055,7 @@
     },
     {
       "source": "npm:formidable",
-      "target": "npm:qs@6.11.2",
+      "target": "npm:qs",
       "type": "static"
     },
     {
@@ -21036,7 +21210,7 @@
     },
     {
       "source": "npm:glob",
-      "target": "npm:minimatch@3.0.5",
+      "target": "npm:minimatch",
       "type": "static"
     },
     {
@@ -22441,7 +22615,7 @@
     },
     {
       "source": "npm:jest-message-util",
-      "target": "npm:@babel/code-frame",
+      "target": "npm:@babel/code-frame@7.22.13",
       "type": "static"
     },
     {
@@ -24301,7 +24475,7 @@
     },
     {
       "source": "npm:parse-json",
-      "target": "npm:@babel/code-frame",
+      "target": "npm:@babel/code-frame@7.22.13",
       "type": "static"
     },
     {
@@ -24615,12 +24789,12 @@
       "type": "static"
     },
     {
-      "source": "npm:qs",
+      "source": "npm:qs@6.11.0",
       "target": "npm:side-channel",
       "type": "static"
     },
     {
-      "source": "npm:qs@6.11.2",
+      "source": "npm:qs",
       "target": "npm:side-channel",
       "type": "static"
     },
@@ -25530,6 +25704,16 @@
       "type": "static"
     },
     {
+      "source": "npm:stripe",
+      "target": "npm:@types/node",
+      "type": "static"
+    },
+    {
+      "source": "npm:stripe",
+      "target": "npm:qs",
+      "type": "static"
+    },
+    {
       "source": "npm:strong-log-transformer",
       "target": "npm:duplexer",
       "type": "static"
@@ -25666,7 +25850,7 @@
     },
     {
       "source": "npm:superagent",
-      "target": "npm:qs@6.11.2",
+      "target": "npm:qs",
       "type": "static"
     },
     {
@@ -26215,6 +26399,61 @@
       "type": "static"
     },
     {
+      "source": "npm:ts-jest@29.1.0",
+      "target": "npm:@babel/core",
+      "type": "static"
+    },
+    {
+      "source": "npm:ts-jest@29.1.0",
+      "target": "npm:bs-logger",
+      "type": "static"
+    },
+    {
+      "source": "npm:ts-jest@29.1.0",
+      "target": "npm:fast-json-stable-stringify",
+      "type": "static"
+    },
+    {
+      "source": "npm:ts-jest@29.1.0",
+      "target": "npm:jest@29.5.0",
+      "type": "static"
+    },
+    {
+      "source": "npm:ts-jest@29.1.0",
+      "target": "npm:jest-util",
+      "type": "static"
+    },
+    {
+      "source": "npm:ts-jest@29.1.0",
+      "target": "npm:json5",
+      "type": "static"
+    },
+    {
+      "source": "npm:ts-jest@29.1.0",
+      "target": "npm:lodash.memoize",
+      "type": "static"
+    },
+    {
+      "source": "npm:ts-jest@29.1.0",
+      "target": "npm:make-error",
+      "type": "static"
+    },
+    {
+      "source": "npm:ts-jest@29.1.0",
+      "target": "npm:semver",
+      "type": "static"
+    },
+    {
+      "source": "npm:ts-jest@29.1.0",
+      "target": "npm:typescript@5.3.2",
+      "type": "static"
+    },
+    {
+      "source": "npm:ts-jest@29.1.0",
+      "target": "npm:yargs-parser",
+      "type": "static"
+    },
+    {
       "source": "npm:ts-jest",
       "target": "npm:@babel/core",
       "type": "static"
@@ -26305,6 +26544,41 @@
       "type": "static"
     },
     {
+      "source": "npm:ts-loader",
+      "target": "npm:chalk",
+      "type": "static"
+    },
+    {
+      "source": "npm:ts-loader",
+      "target": "npm:enhanced-resolve",
+      "type": "static"
+    },
+    {
+      "source": "npm:ts-loader",
+      "target": "npm:micromatch",
+      "type": "static"
+    },
+    {
+      "source": "npm:ts-loader",
+      "target": "npm:semver",
+      "type": "static"
+    },
+    {
+      "source": "npm:ts-loader",
+      "target": "npm:source-map@0.7.4",
+      "type": "static"
+    },
+    {
+      "source": "npm:ts-loader",
+      "target": "npm:typescript@5.3.2",
+      "type": "static"
+    },
+    {
+      "source": "npm:ts-loader",
+      "target": "npm:webpack@5.89.0",
+      "type": "static"
+    },
+    {
       "source": "npm:ts-morph@18.0.0",
       "target": "npm:@ts-morph/common@0.19.0",
       "type": "static"
@@ -26387,6 +26661,81 @@
     {
       "source": "npm:ts-node",
       "target": "npm:typescript",
+      "type": "static"
+    },
+    {
+      "source": "npm:ts-node",
+      "target": "npm:v8-compile-cache-lib",
+      "type": "static"
+    },
+    {
+      "source": "npm:ts-node",
+      "target": "npm:yn",
+      "type": "static"
+    },
+    {
+      "source": "npm:ts-node",
+      "target": "npm:@cspotcode/source-map-support",
+      "type": "static"
+    },
+    {
+      "source": "npm:ts-node",
+      "target": "npm:@tsconfig/node10",
+      "type": "static"
+    },
+    {
+      "source": "npm:ts-node",
+      "target": "npm:@tsconfig/node12",
+      "type": "static"
+    },
+    {
+      "source": "npm:ts-node",
+      "target": "npm:@tsconfig/node14",
+      "type": "static"
+    },
+    {
+      "source": "npm:ts-node",
+      "target": "npm:@tsconfig/node16",
+      "type": "static"
+    },
+    {
+      "source": "npm:ts-node",
+      "target": "npm:@types/node@18.16.12",
+      "type": "static"
+    },
+    {
+      "source": "npm:ts-node",
+      "target": "npm:acorn",
+      "type": "static"
+    },
+    {
+      "source": "npm:ts-node",
+      "target": "npm:acorn-walk",
+      "type": "static"
+    },
+    {
+      "source": "npm:ts-node",
+      "target": "npm:arg@4.1.3",
+      "type": "static"
+    },
+    {
+      "source": "npm:ts-node",
+      "target": "npm:create-require",
+      "type": "static"
+    },
+    {
+      "source": "npm:ts-node",
+      "target": "npm:diff@4.0.2",
+      "type": "static"
+    },
+    {
+      "source": "npm:ts-node",
+      "target": "npm:make-error",
+      "type": "static"
+    },
+    {
+      "source": "npm:ts-node",
+      "target": "npm:typescript@5.3.2",
       "type": "static"
     },
     {
