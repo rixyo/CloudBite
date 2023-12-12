@@ -11,9 +11,15 @@ async function bootstrap() {
   });
   app.use(bodyParser.urlencoded({ verify: rawBodyBuffer, extended: true }));
   app.use(bodyParser.json({ verify: rawBodyBuffer }));
-
+  const allowOrigins = ['http://localhost:3000', 'http://localhost:3001'];
+  app.enableCors({
+    origin: allowOrigins,
+    credentials: true,
+  });
   await app.listen(process.env.PORT || 3000);
-  Logger.log(`🚀 Server ready at http://localhost:${process.env.PORT}/graphql`);
+  Logger.log(
+    `🚀Order Server ready at http://localhost:${process.env.PORT}/graphql`,
+  );
 }
 const rawBodyBuffer = (req, res, buffer, encoding) => {
   if (!req.headers['stripe-signature']) {

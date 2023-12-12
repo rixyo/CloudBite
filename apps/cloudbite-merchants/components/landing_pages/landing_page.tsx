@@ -1,9 +1,12 @@
+'use client'
 import React from 'react';
 import { Button } from "@/components/ui/button";
+import useAuthModal from '@/hooks/useAuthModal';
 const LandingPage:React.FC = () => {
+  const authModal = useAuthModal();
     
     return (
-      <div className="w-[120rem] bg-[#FAFAFA] rounded-[1.5625rem] border-2 p-5">
+      <div className="md:w-[50rem] lg:w-[120rem] bg-[#FAFAFA] rounded-[1.5625rem] border-2 p-5">
         <div className="flex items-center justify-between w-full p-5">
           {/* Left Side */}
 
@@ -28,7 +31,7 @@ const LandingPage:React.FC = () => {
                     cloudBite Merchants!
                   </h1>
                 </div>
-                <div className=" flex gap-5 mt-10">
+                <div className=" flex items-center gap-5 mt-10">
                   <Button
                     variant="default"
                     size="lg"
@@ -41,7 +44,8 @@ const LandingPage:React.FC = () => {
                   <Button
                     variant="default"
                     size="lg"
-                    className="rounded-[ 1.25rem] border-[3px] bg-white  border-[#F14A16]  hover:opacity-80 hover:bg-white"
+                    className="rounded-[ 1.25rem]  border-[3px] bg-white  border-[#F14A16]  hover:opacity-80 hover:bg-white"
+                    onClick={() => authModal.onOpen()}
                   >
                     <span className="text-[#F14A16] text-[1.5rem] font-[700] tracking-[0.06rem] ">
                       Login
@@ -53,7 +57,7 @@ const LandingPage:React.FC = () => {
           </div>
 
           {/* Right Side */}
-          <div className="h-[40rem] border-2 rounded-xl   w-[70rem] bg-cover bg-no-repeat bg-left bg-[url('/imgs/landingImg4.jpg')]" />
+          <div className="hidden lg:block h-[40rem] border-2 rounded-xl   w-[70rem] bg-cover bg-no-repeat bg-left bg-[url('/imgs/landingImg4.jpg')]" />
         </div>
       </div>
     );

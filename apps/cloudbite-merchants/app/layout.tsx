@@ -1,6 +1,9 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
+import { Toaster } from 'react-hot-toast'
+import AuthModalProvider from '@/providers/auth-modal-provider'
+import { Providers } from '@/providers/graqhql-provider'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -16,7 +19,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <Providers>
+
+      <body className={inter.className}>
+        <AuthModalProvider />
+        {children}
+        <Toaster position="top-center" reverseOrder={false} />
+      </body>
+      </Providers>
     </html>
-  )
+  );
 }

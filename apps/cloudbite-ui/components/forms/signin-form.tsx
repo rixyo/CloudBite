@@ -14,6 +14,8 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
+import toast from "react-hot-toast";
+import LocalStorageManager from "@/lib/localstorage";
 
 const formSchema = z.object({
     email: z.string().email({
@@ -25,9 +27,14 @@ const formSchema = z.object({
 });
 
 import React from 'react';
+import { useMutation } from "@apollo/client";
+import SIGNIN_USER from "@/graphql/actions/signin.action";
+import useAuthModal from "@/hooks/useAuthModal";
 
 
 const Signinform:React.FC = () => {
+  const [signinUser, { loading, error }] = useMutation(SIGNIN_USER);
+  const authModal = useAuthModal();
      const form = useForm<z.infer<typeof formSchema>>({
        resolver: zodResolver(formSchema),
        defaultValues: {
@@ -36,9 +43,27 @@ const Signinform:React.FC = () => {
        },
      });
        function onSubmit(values: z.infer<typeof formSchema>) {
-         console.log(values);
+         try {
+          signinUser({
+            variables: {
+              email: values.email,
+              password: values.password,
+            },
+          }).then((res) => {
+            toast.success("Logged in successfully 🎉 ");
+            LocalStorageManager.setItemWithExpiration('token',res.data.login.token,60);
+            authModal.onClose();
+          });
+          
+         } catch (error:any) {
+          toast.error('Invalid credentials');
+          
+         }
        }
     
+       if(error){
+          toast.error(error.message);
+       }
     return (
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
@@ -72,6 +97,7 @@ const Signinform:React.FC = () => {
                     <FormLabel>Password</FormLabel>
                     <FormControl>
                       <Input
+                      type="password"
                         placeholder="********"
                         {...field}
                         className="border-2 border-gray-300 focus:border-2 focus:border-[#39DB4A] w-[19rem] md:w-[30rem]"
@@ -85,7 +111,7 @@ const Signinform:React.FC = () => {
                 className="mt-5 bg-[#39DB4A] hover:bg-[#39DB4A] text-[1rem] font-[500]"
                 type="submit"
               >
-                Submit
+                {loading ? "Loading..." : "Sign in"}
               </Button>
             </div>
           </div>

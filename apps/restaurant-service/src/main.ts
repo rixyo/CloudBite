@@ -6,7 +6,14 @@ import { Logger } from '@nestjs/common';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
+  const allowOrigins = ['http://localhost:3000', 'http://localhost:3001'];
+  app.enableCors({
+    origin: allowOrigins,
+    credentials: true,
+  });
   await app.listen(process.env.PORT || 3002);
-  Logger.log(`🚀 Server ready at http://localhost:${process.env.PORT}/graphql`);
+  Logger.log(
+    `🚀 Restaurant Server ready at http://localhost:${process.env.PORT}/graphql`,
+  );
 }
 bootstrap();

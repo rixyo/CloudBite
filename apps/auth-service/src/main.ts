@@ -12,8 +12,14 @@ async function bootstrap() {
         ? ['error', 'warn']
         : ['log', 'error', 'warn', 'debug', 'verbose'],
   });
-  app.enableCors();
+  const allowOrigins = ['http://localhost:3000', 'http://localhost:3001'];
+  app.enableCors({
+    origin: allowOrigins,
+    credentials: true,
+  });
   await app.listen(process.env.PORT || 3001);
-  Logger.log(`🚀 Server ready at http://localhost:${process.env.PORT}/graphql`);
+  Logger.log(
+    `🚀 Auth Server ready at http://localhost:${process.env.PORT}/graphql`,
+  );
 }
 bootstrap();

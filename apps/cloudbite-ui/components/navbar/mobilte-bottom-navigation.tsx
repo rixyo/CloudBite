@@ -2,14 +2,29 @@
 import React, { Suspense } from 'react';
 import { Avatar, AvatarFallback, AvatarImage } from '../ui/avatar';
 import  useAuthModal  from "@/hooks/useAuthModal";
+import { useQuery } from '@apollo/client';
+import CURRENT_USER from '@/graphql/actions/currentuser.action';
+import { useRouter } from 'next/navigation';
 
 
 
 const MobileBottomNavigation:React.FC = () => {
-      const authModal = useAuthModal();
+       const { data, loading, error } = useQuery(CURRENT_USER);
+       const route= useRouter()
+       const authModal = useAuthModal();
+       const fullName = data?.user?.fullName;
+       const firstLetter = fullName?.charAt(0);
+       const secondLetter = fullName?.charAt(fullName.length - 1).toUpperCase();
+       const handleClick = () => {
+         if (data.user) {
+          route.push(`/${data.user.id}/profile`)
+         } else {
+           authModal.onOpen();
+         }
+       };
     return (
-      <div className=" fixed bottom-0  left-0 right-0 h-[3.5rem] w-[22.5625rem] justify-center gap-5  bg-white p-4 flex md:hidden ">
-        <div className="w-[2.5625rem] h-[2.4375rem] text-[#B3B3B3]">
+      <div className=" fixed bottom-0  left-0 right-0 h-[3.5rem] w-[22.5625rem] justify-center items-center gap-5  bg-white p-4 flex md:hidden ">
+        <div className="w-[2.5625rem] h-[2.4375rem] text-[#B3B3B3] cursor-pointer" onClick={()=>route.push("/")}>
           <svg
             width="25"
             height="19"
@@ -114,12 +129,26 @@ const MobileBottomNavigation:React.FC = () => {
             </div>
           </div>
         </div>
-       
-          <Avatar className="cursor-pointer w-[2rem] h-[2rem] text-[#B3B3B3] -top-1" onClick={authModal.onOpen}>
-            <Suspense fallback={<AvatarFallback>user</AvatarFallback>}>
-              <AvatarImage className='w-[3rem] mt-0' src="https://github.com/shadcn.png" />
-            </Suspense>
-          </Avatar>
+
+        <div
+          className="cursor-pointer"
+          onClick={handleClick}
+        >
+          {data?.user ? (
+            <div className="border-2 border-[#FF3D00]  h-[3rem] w-[3rem] rounded-full   ">
+              <p className="text-2xl font-[800] text-[#53EC62] p-1">
+                {firstLetter}
+                <span className="text-[#FF3D00]"> {secondLetter}</span>
+              </p>
+            </div>
+          ) : (
+            <Avatar>
+              <Suspense fallback={<AvatarFallback>user</AvatarFallback>}>
+                <AvatarImage src="https://github.com/shadcn.png" />
+              </Suspense>
+            </Avatar>
+          )}
+        </div>
       </div>
     );
 }

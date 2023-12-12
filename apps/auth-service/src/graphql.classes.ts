@@ -45,28 +45,11 @@ export class UpdatePasswordInput {
     newPassword: string;
 }
 
-export abstract class IQuery {
+export abstract class IMutation {
     abstract login(loginUserInput: LoginUserInput): LoginResult | Promise<LoginResult>;
 
     abstract refreshToken(): string | Promise<string>;
 
-    abstract users(): User[] | Promise<User[]>;
-
-    abstract user(): User | Promise<User>;
-
-    abstract forgotPassword(email?: Nullable<string>): Nullable<boolean> | Promise<Nullable<boolean>>;
-}
-
-export class LoginResult {
-    user: User;
-    token: string;
-}
-
-export class Messages {
-    message: string;
-}
-
-export abstract class IMutation {
     abstract createUser(createUserInput?: Nullable<CreateUserInput>): User | Promise<User>;
 
     abstract deleteUsers(): Messages | Promise<Messages>;
@@ -84,6 +67,23 @@ export abstract class IMutation {
     abstract removeAdminPermission(email: string): User | Promise<User>;
 
     abstract resetPassword(email: string, code: string, password: string): User | Promise<User>;
+}
+
+export class LoginResult {
+    user: User;
+    token: string;
+}
+
+export abstract class IQuery {
+    abstract users(): User[] | Promise<User[]>;
+
+    abstract user(): User | Promise<User>;
+
+    abstract forgotPassword(email?: Nullable<string>): Nullable<boolean> | Promise<Nullable<boolean>>;
+}
+
+export class Messages {
+    message: string;
 }
 
 export class User {

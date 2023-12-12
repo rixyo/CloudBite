@@ -1,4 +1,4 @@
-"use client";
+'use client'
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
@@ -14,7 +14,7 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-
+import toast from "react-hot-toast";
 const formSchema = z.object({
   fullName: z.string().min(3, {
     message: "Please enter a valid name.",
@@ -28,9 +28,14 @@ const formSchema = z.object({
 });
 
 import React from 'react';
+import { useMutation } from "@apollo/client";
+import REGISTER_USER  from "@/graphql/actions/signup.action";
+import useAuthModal from "@/hooks/useAuthModal";
 
 
-const Signupform:React.FC = () => {
+const Signupform = () => {
+  const [registerUser, { loading }] = useMutation(REGISTER_USER);
+   const authModal = useAuthModal();
      const form = useForm<z.infer<typeof formSchema>>({
        resolver: zodResolver(formSchema),
        defaultValues: {
@@ -40,7 +45,22 @@ const Signupform:React.FC = () => {
        },
      });
        function onSubmit(values: z.infer<typeof formSchema>) {
-         console.log(values);
+         try {
+          registerUser({
+            variables: {
+              fullName: values.fullName,
+              email: values.email,
+              password: values.password,
+            },
+          }).then((res) => {
+            authModal.onClose();
+            toast.success("Account created successfully 🎉 ");
+          });
+         
+         } catch (error:any) {
+          toast.error(error.message);
+
+         }
        }
     
     return (
@@ -106,7 +126,7 @@ const Signupform:React.FC = () => {
                 className="mt-5 bg-[#39DB4A] hover:bg-[#39DB4A] text-[1rem] font-[500]"
                 type="submit"
               >
-                Submit
+                {loading ? "Loading..." : "Sign Up"}
               </Button>
             </div>
           </div>

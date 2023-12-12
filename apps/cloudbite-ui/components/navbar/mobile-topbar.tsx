@@ -1,13 +1,33 @@
-import React from 'react';
-import { Input } from '../ui/input';
-
+"use client"
+import React, { Suspense } from 'react';
+import { Avatar, AvatarFallback, AvatarImage } from '../ui/avatar';
+import { useQuery } from '@apollo/client';
+import CURRENT_USER from '@/graphql/actions/currentuser.action';
+import useAuthModal from '@/hooks/useAuthModal';
+import {useRouter} from 'next/navigation'
 
 
 const MobileTopBar:React.FC = () => {
+    const { data, loading, error } = useQuery(CURRENT_USER);
+    const route = useRouter();
+    const authModal = useAuthModal();
+    const fullName = data?.user?.fullName;
+    const firstLetter = fullName?.charAt(0);
+    const secondLetter = fullName?.charAt(fullName.length - 1).toUpperCase();
+    const handleClick = () => {
+      if (data.user) {
+        route.push(`/${data.user.id}/profile`);
+      } else {
+        authModal.onOpen();
+      }
+    };
     
     return (
       <div className=" left-0 shadow-4xl right-1 top-[1rem] p-2 h-[5rem] gap-3 flex items-center justify-between md:hidden">
-        <div className="flex items-center cursor-pointer">
+        <div
+          className="flex items-center cursor-pointer"
+          onClick={() => route.push("/")}
+        >
           <div className="bg-[#39DB4A] w-[2rem] h-[2rem] p-2 rounded-lg">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -49,29 +69,106 @@ const MobileTopBar:React.FC = () => {
             </svg>
           </div>
         </div>
-        <div className="w-[13rem] ">
-          <div className="relative">
-            <Input
-              placeholder="Enter your location"
-              className="pl-10 pr-3 py-2 border border-gray-300 rounded-md"
-            />
-            <div className="absolute inset-y-0 right-1 pl-3 flex items-center cursor-pointer">
+        <div className="w-[2.5625rem] h-[2.4375rem] text-[#B3B3B3]">
+          <svg
+            width="21"
+            height="21"
+            viewBox="0 0 21 21"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g id="&#240;&#159;&#166;&#134; icon &#34;clutery&#34;">
+              <path
+                id="Vector"
+                d="M3.42447 19.9894H7.09833M7.09833 19.9894H10.7722M7.09833 19.9894V13.8663"
+                stroke="#707070"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                id="Vector_2"
+                d="M16.8953 19.9894V10.1925C16.8953 10.1925 19.9569 8.96784 19.9569 6.5186C19.9569 4.3665 19.9569 1.00781 19.9569 1.00781"
+                stroke="#707070"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                id="Vector_3"
+                d="M16.8953 5.90629V1.00781"
+                stroke="#707070"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                id="Vector_4"
+                d="M1.58756 8.96784C2.81208 11.5739 7.09834 13.8663 7.09834 13.8663C7.09834 13.8663 11.3846 11.5739 12.6091 8.96784C13.9311 6.15436 12.6091 1.00781 12.6091 1.00781H1.58756C1.58756 1.00781 0.265555 6.15436 1.58756 8.96784Z"
+                stroke="#707070"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </g>
+          </svg>
+        </div>
+        <div className="w-[2.5625rem] h-[2.4375rem] text-[#B3B3B3]">
+          <div>
+            <div className="relative cursor-pointer">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="32"
-                height="32"
-                viewBox="0 0 32 32"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
                 fill="none"
               >
-                <path
-                  d="M26.2432 24.3499L23.08 21.2C24.5427 19.3366 25.3363 17.0355 25.3333 14.6667C25.3333 12.557 24.7077 10.4947 23.5357 8.74059C22.3636 6.98646 20.6977 5.61929 18.7486 4.81196C16.7995 4.00462 14.6548 3.79339 12.5857 4.20496C10.5166 4.61654 8.61596 5.63244 7.1242 7.1242C5.63244 8.61596 4.61654 10.5166 4.20496 12.5857C3.79339 14.6548 4.00462 16.7995 4.81196 18.7486C5.61929 20.6977 6.98646 22.3636 8.74059 23.5357C10.4947 24.7077 12.557 25.3333 14.6667 25.3333C17.0355 25.3363 19.3366 24.5427 21.2 23.08L24.3499 26.2432C24.4738 26.3682 24.6213 26.4674 24.7838 26.535C24.9462 26.6027 25.1205 26.6376 25.2965 26.6376C25.4725 26.6376 25.6468 26.6027 25.8093 26.535C25.9718 26.4674 26.1192 26.3682 26.2432 26.2432C26.3682 26.1192 26.4674 25.9718 26.535 25.8093C26.6027 25.6468 26.6376 25.4725 26.6376 25.2965C26.6376 25.1205 26.6027 24.9462 26.535 24.7838C26.4674 24.6213 26.3682 24.4738 26.2432 24.3499ZM6.66667 14.6667C6.66667 13.0844 7.13586 11.5377 8.01491 10.2221C8.89397 8.90652 10.1434 7.88114 11.6052 7.27563C13.067 6.67013 14.6755 6.51171 16.2274 6.82039C17.7792 7.12907 19.2047 7.891 20.3235 9.00982C21.4423 10.1286 22.2043 11.5541 22.513 13.1059C22.8216 14.6578 22.6632 16.2663 22.0577 17.7281C21.4522 19.1899 20.4268 20.4394 19.1112 21.3184C17.7956 22.1975 16.2489 22.6667 14.6667 22.6667C12.5449 22.6667 10.5101 21.8238 9.00982 20.3235C7.50953 18.8232 6.66667 16.7884 6.66667 14.6667Z"
-                  fill="#272727"
-                />
+                <g clip-path="url(#clip0_1_198)">
+                  <path
+                    d="M21 6H18C18 4.4087 17.3679 2.88258 16.2426 1.75736C15.1174 0.632141 13.5913 0 12 0C10.4087 0 8.88258 0.632141 7.75736 1.75736C6.63214 2.88258 6 4.4087 6 6H3C2.20435 6 1.44129 6.31607 0.87868 6.87868C0.31607 7.44129 0 8.20435 0 9L0 19C0.00158786 20.3256 0.528882 21.5964 1.46622 22.5338C2.40356 23.4711 3.67441 23.9984 5 24H19C20.3256 23.9984 21.5964 23.4711 22.5338 22.5338C23.4711 21.5964 23.9984 20.3256 24 19V9C24 8.20435 23.6839 7.44129 23.1213 6.87868C22.5587 6.31607 21.7956 6 21 6ZM12 2C13.0609 2 14.0783 2.42143 14.8284 3.17157C15.5786 3.92172 16 4.93913 16 6H8C8 4.93913 8.42143 3.92172 9.17157 3.17157C9.92172 2.42143 10.9391 2 12 2ZM22 19C22 19.7956 21.6839 20.5587 21.1213 21.1213C20.5587 21.6839 19.7956 22 19 22H5C4.20435 22 3.44129 21.6839 2.87868 21.1213C2.31607 20.5587 2 19.7956 2 19V9C2 8.73478 2.10536 8.48043 2.29289 8.29289C2.48043 8.10536 2.73478 8 3 8H6V10C6 10.2652 6.10536 10.5196 6.29289 10.7071C6.48043 10.8946 6.73478 11 7 11C7.26522 11 7.51957 10.8946 7.70711 10.7071C7.89464 10.5196 8 10.2652 8 10V8H16V10C16 10.2652 16.1054 10.5196 16.2929 10.7071C16.4804 10.8946 16.7348 11 17 11C17.2652 11 17.5196 10.8946 17.7071 10.7071C17.8946 10.5196 18 10.2652 18 10V8H21C21.2652 8 21.5196 8.10536 21.7071 8.29289C21.8946 8.48043 22 8.73478 22 9V19Z"
+                    fill="#272727"
+                  />
+                </g>
+                <defs>
+                  <clipPath id="clip0_1_198">
+                    <rect width="24" height="24" fill="white" />
+                  </clipPath>
+                </defs>
               </svg>
+              <div className="absolute top-[27%] left-5 text-[#FF6868] text-[1.25rem] font-[600]  transform -translate-x-1/2 -translate-y-1/2 p-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                >
+                  <circle cx="10" cy="10" r="10" fill="#39DB4A" />
+                </svg>
+                <h1 className="absolute text-white top-[50%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 ">
+                  1
+                </h1>
+              </div>
             </div>
           </div>
         </div>
-        
+
+        <div className="cursor-pointer" onClick={handleClick}>
+          {data?.user ? (
+            <div className="border-2 border-[#FF3D00]  h-[3rem] w-[3rem] rounded-full   ">
+              <p className="text-2xl font-[800] text-[#53EC62] p-1">
+                {firstLetter}
+                <span className="text-[#FF3D00]"> {secondLetter}</span>
+              </p>
+            </div>
+          ) : (
+            <Avatar>
+              <Suspense fallback={<AvatarFallback>user</AvatarFallback>}>
+                <AvatarImage src="https://github.com/shadcn.png" />
+              </Suspense>
+            </Avatar>
+          )}
+        </div>
       </div>
     );
 }

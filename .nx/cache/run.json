@@ -1,18 +1,18 @@
 {
   "run": {
-    "command": "nx run order-service:start:dev",
-    "startTime": "2023-12-11T15:23:55.605Z",
-    "endTime": "2023-12-11T15:28:57.044Z",
+    "command": "nx run gateway-service:start:dev",
+    "startTime": "2023-12-12T17:08:00.838Z",
+    "endTime": "2023-12-12T20:07:53.132Z",
     "inner": false
   },
   "tasks": [
     {
-      "taskId": "order-service:start:dev",
+      "taskId": "gateway-service:start:dev",
       "target": "start:dev",
-      "projectName": "order-service",
-      "hash": "9868506162248582910",
-      "startTime": "2023-12-11T15:23:55.613Z",
-      "endTime": "2023-12-11T15:28:57.044Z",
+      "projectName": "gateway-service",
+      "hash": "3698955358300482765",
+      "startTime": "2023-12-12T17:08:00.846Z",
+      "endTime": "2023-12-12T20:07:53.127Z",
       "params": "",
       "cacheStatus": "cache-miss",
       "status": 1

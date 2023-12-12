@@ -3,13 +3,34 @@ import React, { Suspense, useState } from 'react';
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Input } from '../ui/input';
 import  useAuthModal  from "@/hooks/useAuthModal";
+import { useQuery } from '@apollo/client';
+import CURRENT_USER from '@/graphql/actions/currentuser.action';
+import { useRouter } from 'next/navigation';
 
 const TopNavigation:React.FC = () => {
       const [search, setSearch] = useState("");
+       const { data, loading, error } = useQuery(CURRENT_USER);
+       const router= useRouter();
        const authModal = useAuthModal();
+         const fullName = data?.user?.fullName;
+         const firstLetter = fullName?.charAt(0);
+         const secondLetter = fullName
+           ?.charAt(fullName.length - 1)
+           .toUpperCase();
+       const handleClick=()=>{
+        if(data.user){
+        router.push(`/${data.user.id}/profile`);
+        }
+        else{
+          authModal.onOpen();
+        }
+
+       }
     return (
       <div className="hidden lg:flex justify-between items-center">
-        <div className="flex items-center cursor-pointer">
+        <div
+          className="flex items-center cursor-pointer"
+          onClick={() => router.push("/")}>
           <div className="bg-[#39DB4A] w-[2rem] h-[2rem] p-2 rounded-lg">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -51,7 +72,7 @@ const TopNavigation:React.FC = () => {
             </svg>
           </div>
         </div>
-       {/** probabley add someting in future */}
+        {/** probabley add someting in future */}
         <div className="flex w-1/3 items-center justify-between  p-2">
           <div className="w-[25rem] h-[2rem] ">
             <div className="relative">
@@ -112,12 +133,21 @@ const TopNavigation:React.FC = () => {
               </div>
             </div>
           </div>
-          <div className="cursor-pointer" onClick={authModal.onOpen}>
-            <Avatar>
-              <Suspense fallback={<AvatarFallback>user</AvatarFallback>}>
-              <AvatarImage src="https://github.com/shadcn.png" />
-              </Suspense>
-            </Avatar>
+          <div className="cursor-pointer" onClick={handleClick}>
+            {data?.user ? (
+              <div className="border-2 border-[#FF3D00]  md:h-[5rem] md:w-[5rem] p-2 md:p-5 rounded-full">
+                <p className="text-2xl font-[800] text-[#53EC62] ">
+                  {firstLetter}
+                  <span className="text-black"> {secondLetter}</span>
+                </p>
+              </div>
+            ) : (
+              <Avatar>
+                <Suspense fallback={<AvatarFallback>user</AvatarFallback>}>
+                  <AvatarImage src="https://github.com/shadcn.png" />
+                </Suspense>
+              </Avatar>
+            )}
           </div>
         </div>
       </div>
