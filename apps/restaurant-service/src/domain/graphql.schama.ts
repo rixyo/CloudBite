@@ -18,6 +18,16 @@ export class CreateDishInput {
   price: string;
   thumbnails: string[];
 }
+export class CreateMenuInput {
+  name: string;
+  banner: string;
+}
+export class Menu{
+    id: string;
+    name: string;
+    banner: string;
+    restaurant: Restaurant;
+}
 export class UpdateDishInput {
   name: string;
   description: string;
@@ -90,6 +100,7 @@ export abstract class IMutation {
     abstract updateRestaurant(id: string, fieldToUpdate:UpdateRestaurantInput): Nullable<Restaurant> | Promise<Nullable<Restaurant>>;
     abstract createDish(createDishInput:CreateDishInput): Nullable<RestaurantDish> | Promise<Nullable<RestaurantDish>>;
     abstract updateDish(id: string, fieldToUpdate:UpdateDishInput): Nullable<RestaurantDish> | Promise<Nullable<RestaurantDish>>;
+    abstract createMenu(createMenuInput:CreateMenuInput): Nullable<Menu> | Promise<Nullable<Menu>>;
 }
 
 

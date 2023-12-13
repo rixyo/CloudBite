@@ -16,9 +16,9 @@ export class RestaurantDishResolver {
   ) {}
 
   @Query('restaurantDishes')
-  async restaurants(
+  async RestaurantDishes(
+    @Args('restaurantId') id: string,
     @Args('page', { defaultValue: 1 }) page: number,
-    @Args('id') id: string,
   ): Promise<RestaurantDishEntity[]> {
     return await this.restauranDishService.getAllDishByRestaurant(id, page);
   }

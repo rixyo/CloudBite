@@ -9,10 +9,7 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-      const { data, loading, error } = useQuery(USER_RESTAURANT);
-        if(error){
-           
-        }
+      const { data } = useQuery(USER_RESTAURANT);
   return (
     <>
       <div className="flex flex-col h-screen w-screen">

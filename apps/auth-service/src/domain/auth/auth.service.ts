@@ -1,14 +1,14 @@
 import { Inject, Injectable } from '@nestjs/common/decorators';
 import { JwtPayload } from './interfaces/jwt-payload.interface';
 import { UserEntity } from '../users/enity/user.entity';
-import { forwardRef } from '@nestjs/common';
+import { NotFoundException, forwardRef } from '@nestjs/common';
 import { UsersService } from '../users/users.service';
 import { JwtService } from '@nestjs/jwt';
 import { ConfigService } from '../../config/config.service';
 import { LoginResult, LoginUserInput } from '../../graphql.classes';
 import * as bcrypt from 'bcryptjs';
 import { Logger } from '../../logger/logger';
-
+import { UnauthorizedException } from '@nestjs/common';
 @Injectable()
 export class AuthService {
   constructor(
@@ -21,13 +21,15 @@ export class AuthService {
 
   async validateUserByPassword(
     loginAttempt: LoginUserInput,
-  ): Promise<LoginResult | undefined> {
-    let userToAttempt: UserEntity | undefined;
-    if (loginAttempt.email) {
-      userToAttempt = await this.usersService.findOneByEmail(
-        loginAttempt.email,
-      );
+  ): Promise<LoginResult> {
+    const userToAttempt = await this.usersService.findOneByEmail(
+      loginAttempt.email,
+    );
+
+    if (!userToAttempt) {
+      throw new UnauthorizedException('Invalid credentials');
     }
+
     let isMatch = false;
     try {
       isMatch = await this.comparePassword(
@@ -36,22 +38,23 @@ export class AuthService {
       );
     } catch (error) {
       this.logger.error(`Error validating user: ${JSON.stringify(error)}`);
-      return undefined;
+      throw new UnauthorizedException('Invalid credentials');
     }
 
     if (isMatch) {
-      // If there is a successful match, generate a JWT for the user
       const token = this.createJwt(userToAttempt!).token;
-      const result: any = {
-        user: userToAttempt!,
+      const result: LoginResult = {
+        user: { ...userToAttempt }, // clone to avoid modifying the original entity
         token,
       };
       userToAttempt.updated_at = new Date();
-      userToAttempt.save();
+      await userToAttempt.save(); // ensure you await the save operation
       return result;
     }
-    return null;
+
+    throw new UnauthorizedException('Invalid credentials');
   }
+
   createJwt(user: UserEntity): { data: JwtPayload; token: string } {
     const expiresIn = this.configService.get().auth.expireIn as number;
     let expiration: Date | undefined;
@@ -73,13 +76,14 @@ export class AuthService {
       token: jwt,
     };
   }
-  private async comparePassword(enteredPassword, dbPassword) {
+  private async comparePassword(
+    enteredPassword: string,
+    dbPassword: string,
+  ): Promise<boolean> {
     const match = await bcrypt.compare(enteredPassword, dbPassword);
     return match;
   }
-  async validateJwtPayload(
-    payload: JwtPayload,
-  ): Promise<UserEntity | undefined> {
+  async validateJwtPayload(payload: JwtPayload): Promise<UserEntity> {
     // This will be used when the user has already logged in and has a JWT
     const user = await this.usersService.findOneByEmail(payload.email);
     // Ensure the user exists and their account isn't disabled
@@ -89,6 +93,6 @@ export class AuthService {
       return user;
     }
 
-    return undefined;
+    throw new NotFoundException('User not found');
   }
 }

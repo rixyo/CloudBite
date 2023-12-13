@@ -16,6 +16,8 @@ type Mutation {
     deleteRestaurant(id: ID!): Restaurant!
     createDish(restaurantId: ID!, createDishInput:CreateDishInput): RestaurantDish!
     updateDish(restaurantId: ID!, dishId: ID!, updateDishInput:UpdateDishInput): RestaurantDish!
+
+    createMenu(restaurantId: ID!, createRestaurantMenuInput:createRestaurantMenuInput): RestaurantMenu!
 }
 input AddressInput {
   street: String!
@@ -54,10 +56,22 @@ type Restaurant @key(fields: "id") {
   createdAt: Date!
   updatedAt: Date!
 }
+type RestaurantMenu @key(fields: "id") {
+  id: ID!
+  name: String!
+  banner: String!
+  restaurant: Restaurant!
+  createdAt: Date!
+  updatedAt: Date!
+}
  input CreateRestaurantInput{
     name: String!
     banner: String!
     address: AddressInput!
+ }
+ input createRestaurantMenuInput {
+    name: String!
+    banner: String!
  }
  extend type User @key(fields: "id") {
   id: ID! @external

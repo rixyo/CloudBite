@@ -4,7 +4,8 @@ const CURRENT_USER: DocumentNode = gql`
   query CurrentUser {
     user {
       id
-     fullName
+      fullName
+      permissions
     }
   }
 `;

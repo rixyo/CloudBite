@@ -1,15 +1,16 @@
 import React from 'react';
 
 type pageProps = {
-    
+  params: {
+    restaurantId: string;
+  };
 };
 
-const page:React.FC<pageProps> = () => {
-    
+const page:React.FC<pageProps> = ({params}) => {
+
     return (
         <div>
-            <div>a</div>
-            <div></div>
+
         </div>
     )
 }

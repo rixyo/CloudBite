@@ -131,7 +131,6 @@ export class UsersResolver {
   @Query(() => UserEntity, { name: 'user' })
   @UseGuards(JwtAuthGuard)
   async user(@CurrentUser() cuser: JwtPayload): Promise<UserEntity> {
-    console.log(cuser, 'cuser.');
     const user = await this.usersService.findOneByUserId(cuser.userId);
     return user;
   }

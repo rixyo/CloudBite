@@ -71,7 +71,10 @@ export class RestaurantDishService {
       where: { id },
     });
   }
-  async getAllDishByRestaurant(id: string, page: number): Promise<any> {
+  async getAllDishByRestaurant(
+    id: string,
+    page: number,
+  ): Promise<RestaurantDishEntity[]> {
     const restaurant = await this.restaurantService.getRestaurantById(id);
     if (!restaurant) {
       throw new NotFoundException(`restaurant with this Id not found ${id}`);
@@ -79,12 +82,11 @@ export class RestaurantDishService {
     const query = this.restaurantDishRepo.createQueryBuilder('dish');
     query.skip((page - 1) * 10);
     query.take(10);
-    query.where('dish.restaurant = :id', { id: id });
-    const dishes = await query.getMany();
-    return {
-      dishes,
-      restaurant,
-    };
+    const dishes = await query
+      .leftJoinAndSelect('dish.restaurant', 'restaurant')
+      .andWhere('restaurant.id = :id', { id: restaurant.id })
+      .getMany();
+    return dishes;
   }
   async updateDish(
     userId: string,

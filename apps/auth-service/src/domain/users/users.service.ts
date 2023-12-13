@@ -26,14 +26,14 @@ export class UsersService {
    */
   async getAllUsers(): Promise<UserEntity[]> {
     const users = await this.userRepo.find();
-    this.logger.info(`Users found: ${users}`);
+    this.logger.info(`Users found: ${JSON.stringify(users)}`);
     if (!users) return [];
     return users;
   }
   // this function is used to find a user by their id
   async findOneByUserId(id: string): Promise<UserEntity | null> {
     const user = await this.userRepo.findOne({ where: { id } });
-    this.logger.info(`User found: ${user}`);
+    this.logger.info(`User found: ${JSON.stringify(user.id)}`);
     if (user) return user;
     return null;
   }

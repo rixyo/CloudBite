@@ -9,6 +9,7 @@ import { RestaurantEntity } from './restaurant/entity/restaurant.entity';
 import { RestaurantDishEntity } from './restaurant/entity/restaurant.dish.entity';
 import { GraphQLError, GraphQLFormattedError } from 'graphql';
 import { RestaurantModule } from './restaurant/restaurant.module';
+import { RestaurantMenuEntity } from './restaurant/entity/restaurant.menu.entity';
 @Module({
   imports: [
     GraphQLModule.forRoot<ApolloDriverConfig>({
@@ -33,6 +34,7 @@ import { RestaurantModule } from './restaurant/restaurant.module';
         RestaurantEntity,
         RestaurantAddressEntity,
         RestaurantDishEntity,
+        RestaurantMenuEntity,
       ],
     }),
 

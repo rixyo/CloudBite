@@ -1,7 +1,7 @@
 'use client'
 import React, { useEffect } from 'react';
 import { useParams, usePathname, useRouter } from "next/navigation";
-import {UtensilsCrossed, ListOrderedIcon, Settings} from 'lucide-react'
+import {UtensilsCrossed, WalletCards, BadgePlus, Settings, Home } from 'lucide-react'
 
 export function Navigationbar({
   className,
@@ -17,35 +17,36 @@ export function Navigationbar({
         setIsMutating(true);
     }, []);
 
-    const params = useParams();
     const pathname = usePathname();
+     const params=useParams()
     const router=useRouter();
 
   const routes = [
     {
-      href: `/`,
-      label: "Dashboard",
-      isActive: pathname.includes("dashboard"),
-      icon: UtensilsCrossed,
+      href: `/${params.userId}`,
+      label: "Home",
+      isActive: pathname.includes(`${params.userId}`) || pathname.includes("home"),
+      icon: Home,
     },
     {
-      href: `/${params.storeId}/products`,
-      label: "Dishes",
-      icon: UtensilsCrossed,
-      isActive: false,
+      href: `/${params.userId}/create-restaurant`,
+      label: "Create Restaurant",
+      isActive: pathname.includes("create-restaurant"),
+      icon: BadgePlus,
+
     },
     {
-      href: `/${params.storeId}/orders`,
-      label: "Orders",
-      isActive: false,
-      icon: ListOrderedIcon,
+      href: `/${params.userId}/wallet`,
+      label: "Wallet",
+      isActive: pathname.includes("wallet"),
+      icon: WalletCards,
     },
     {
-      href: `/${params.storeId}/settings`,
+      href: `/${params.userId}/settings`,
       label: "Settings",
-      isActive: false,
+      isActive: pathname.includes("settings"),
       icon: Settings,
-    },
+    }
   ];
   if(!isMutating) return null;
     const handleItemClick = (item: MenuItem) => {
@@ -54,7 +55,7 @@ export function Navigationbar({
   return (
     <div className="p-[4px] lg:px-2 lg:w-[260px]">
       {routes.map((item) => (
-        <div
+        <div key={item.href}
           className={`flex flex-col lg:flex-row gap-1 lg:gap-6 p-4 lg:py-2 items-center  ${
             item.isActive ? "text-[#F14A16] ":"text-[#555]"
           } rounded-lg cursor-pointer`}
@@ -66,4 +67,4 @@ export function Navigationbar({
       ))}
     </div>
   );
-};
+}

@@ -36,6 +36,7 @@ import { useRouter } from "next/navigation";
 const Signinform:React.FC = () => {
   const [signinUser, { loading, error }] = useMutation(SIGNIN_USER);
   const router =useRouter();
+  
   const authModal = useAuthModal();
      const form = useForm<z.infer<typeof formSchema>>({
        resolver: zodResolver(formSchema),
@@ -52,11 +53,16 @@ const Signinform:React.FC = () => {
               password: values.password,
             },
           }).then((res) => {
-            toast.success("Logged in successfully 🎉 ");
             LocalStorageManager.setItemWithExpiration('token',res.data.login.token,60);
             authModal.onClose();
-            console.log(res?.data?.login?.user?.id)
-            router.push(`/${res?.data?.login?.user?.id}/dashboard`)
+            if (
+              res?.data?.login?.user?.permissions.includes("restaurant_owner")
+            ){
+              router.push(`/${res?.data?.login?.user?.id}`);
+            }else{
+              router.push(`/`);
+            }
+            toast.success("Logged in successfully 🎉 ");
           });
           
          } catch (error:any) {

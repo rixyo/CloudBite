@@ -6,6 +6,7 @@ const SIGNIN_USER: DocumentNode = gql`
       token
       user {
         id
+        permissions
       }
     }
   }

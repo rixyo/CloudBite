@@ -24,15 +24,24 @@ const getToken = (authToken: string): string => {
 };
 
 const decodeToken = (tokenString: string) => {
-  //console.log(process.env.SECRET_KEY,'secret');
-  const decoded = verify(tokenString, process.env.SECRET_KEY);
-  if (!decoded) {
+  try {
+    if (!process.env.SECRET_KEY) {
+      throw new Error('SECRET_KEY environment variable is not set');
+    }
+    const decoded = verify(tokenString, process.env.SECRET_KEY);
+    return decoded;
+  } catch (error) {
+    if (error.name === 'TokenExpiredError') {
+      throw new HttpException(
+        { message: 'Token has expired' },
+        HttpStatus.UNAUTHORIZED,
+      );
+    }
     throw new HttpException(
       { message: INVALID_AUTH_TOKEN },
       HttpStatus.UNAUTHORIZED,
     );
   }
-  return decoded;
 };
 const handleAuth = ({ req }) => {
   try {
@@ -45,7 +54,8 @@ const handleAuth = ({ req }) => {
         authorization: `${req.headers.authorization}`,
       };
     }
-  } catch (err) {
+  } catch (error) {
+    console.error('Authentication error:', error);
     throw new UnauthorizedException(
       'User unauthorized with invalid authorization Headers',
     );
@@ -72,9 +82,9 @@ const handleAuth = ({ req }) => {
         },
         supergraphSdl: new IntrospectAndCompose({
           subgraphs: [
-            { name: 'User', url: 'http://localhost:5001/graphql' },
             { name: 'Restaurant', url: 'http://localhost:5002/graphql' },
             { name: 'Order', url: 'http://localhost:5003/graphql' },
+            { name: 'User', url: 'http://localhost:5001/graphql' },
           ],
         }),
       },

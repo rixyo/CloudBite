@@ -19,6 +19,7 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover";
 import { cn } from "@/lib/utils";
+import { useStoreModal } from "@/hooks/useStoreModal";
 
 type Store = {
   id: string;
@@ -50,7 +51,7 @@ export default function StoreSwitcher({
   );
   const onStoreChange = (store: { label: string; value: string }) => {
     setOpen(false);
-    router.push(`/${store.value}`);
+    router.push(`/restaurant/${store.value}`);
   };
   return (
     <Popover open={open} onOpenChange={setOpen}>
@@ -80,8 +81,8 @@ export default function StoreSwitcher({
                   onSelect={() => onStoreChange(store)}
                   className="text-sm"
                 >
-                  <Store className="mr-2 h-4 w-4 " />
-                  <p className="cursor-pointer">{store.label}</p>
+                  <Store className="mr-2 h-4 w-4 cursor-pointer" />
+                  {store.label}
                   <Check
                     className={cn(
                       "ml-auto h-4 w-4 ",
@@ -97,7 +98,13 @@ export default function StoreSwitcher({
           <CommandSeparator />
           <CommandList>
             <CommandGroup>
-              <CommandItem onSelect={() => {}}>
+              <CommandItem
+                onSelect={() => {
+                  setOpen(false);
+                  router.push(`/${params.userId}/create-restaurant`);
+                  
+                }}
+              >
                 <PlusCircle className="mr-2 h-5 w-5 cursor-pointer" />
                 Create Store
               </CommandItem>

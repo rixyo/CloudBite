@@ -10,6 +10,7 @@ import { RestaurantAddressEntity } from './entity/restaurant.address.entity';
 import { RestaurantDishResolver } from './resolvers/restauant.dish.resolver';
 import { RestaurantDishService } from './services/restaurant.dish.service';
 import { RestaurantDishEntity } from './entity/restaurant.dish.entity';
+import { RestaurantMenuEntity } from './entity/restaurant.menu.entity';
 
 @Module({
   imports: [
@@ -20,6 +21,7 @@ import { RestaurantDishEntity } from './entity/restaurant.dish.entity';
       RestaurantEntity,
       RestaurantDishEntity,
       RestaurantAddressEntity,
+      RestaurantMenuEntity,
     ]),
   ],
   providers: [

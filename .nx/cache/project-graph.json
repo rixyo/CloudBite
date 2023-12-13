@@ -1486,6 +1486,42 @@
         "hash": "sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw=="
       }
     },
+    "npm:@cloudinary-util/url-loader": {
+      "type": "npm",
+      "name": "npm:@cloudinary-util/url-loader",
+      "data": {
+        "version": "3.22.0",
+        "packageName": "@cloudinary-util/url-loader",
+        "hash": "sha512-8HElCEMsGk1xHvrXY5D2takyKP4yORo9YnU1EGr601T146Tbz/9jotM1YzTP8GcrNfFtt0eEEny/zrRfmhVlHQ=="
+      }
+    },
+    "npm:@cloudinary-util/util": {
+      "type": "npm",
+      "name": "npm:@cloudinary-util/util",
+      "data": {
+        "version": "2.3.0",
+        "packageName": "@cloudinary-util/util",
+        "hash": "sha512-0Gojd+ZRQjJQmlBEAa8Ua94amvx7uWHoUzVUEGi1S8bgF1wPcMqG07cSUGQfRwHsFQ/9XOesx76Df622E+CevA=="
+      }
+    },
+    "npm:@cloudinary/transformation-builder-sdk": {
+      "type": "npm",
+      "name": "npm:@cloudinary/transformation-builder-sdk",
+      "data": {
+        "version": "1.9.0",
+        "packageName": "@cloudinary/transformation-builder-sdk",
+        "hash": "sha512-19ZV3r2dE2mYMZTN/ytP7p7hmqiD7PC6EoWdQwJByabN4JXtNwgotElHYC509/eD7j5xJajghgHiIXTonrgMhQ=="
+      }
+    },
+    "npm:@cloudinary/url-gen": {
+      "type": "npm",
+      "name": "npm:@cloudinary/url-gen",
+      "data": {
+        "version": "1.14.0",
+        "packageName": "@cloudinary/url-gen",
+        "hash": "sha512-XbG8QgD5fkTUO/YYUWftfz3sUpKzRZJkXhp6xLSxmK/36iyMy2wA4SF5FLCOnv6fLLUneQzXbc4OAwaDM0EWCQ=="
+      }
+    },
     "npm:@colors/colors@1.5.0": {
       "type": "npm",
       "name": "npm:@colors/colors@1.5.0",
@@ -2260,18 +2296,18 @@
         "hash": "sha512-Gd6D4IaYj01o14Bwv81ukidn4w3bPHCblMUq+SmUmWLyosK+XQmInCS09SbDDZyL8jy86PngtBLTdhJ2bXSUig=="
       }
     },
-    "npm:@nestjs/core": {
+    "npm:@nestjs/core@8.4.7": {
       "type": "npm",
-      "name": "npm:@nestjs/core",
+      "name": "npm:@nestjs/core@8.4.7",
       "data": {
         "version": "8.4.7",
         "packageName": "@nestjs/core",
         "hash": "sha512-XB9uexHqzr2xkPo6QSiQWJJttyYYLmvQ5My64cFvWFi7Wk2NIus0/xUNInwX3kmFWB6pF1ab5Y2ZBvWdPwGBhw=="
       }
     },
-    "npm:@nestjs/core@9.4.3": {
+    "npm:@nestjs/core": {
       "type": "npm",
-      "name": "npm:@nestjs/core@9.4.3",
+      "name": "npm:@nestjs/core",
       "data": {
         "version": "9.4.3",
         "packageName": "@nestjs/core",
@@ -3095,6 +3131,15 @@
         "version": "1.0.4",
         "packageName": "@radix-ui/react-roving-focus",
         "hash": "sha512-2mUg5Mgcu001VkGy+FfzZyzbmuUWzgWkj3rvv4yu+mLw03+mTzbxZHvfcGyFp2b8EkQeMkpRQ5FiA2Vr2O6TeQ=="
+      }
+    },
+    "npm:@radix-ui/react-separator": {
+      "type": "npm",
+      "name": "npm:@radix-ui/react-separator",
+      "data": {
+        "version": "1.0.3",
+        "packageName": "@radix-ui/react-separator",
+        "hash": "sha512-itYmTy/kokS21aiV5+Z56MZB54KrhPgn6eHDKkFeOLR34HMN2s8PaN47qZZAGnvupcjxHaFZnW4pQEh0BvvVuw=="
       }
     },
     "npm:@radix-ui/react-slot@1.0.0": {
@@ -9469,6 +9514,15 @@
         "hash": "sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw=="
       }
     },
+    "npm:next-cloudinary": {
+      "type": "npm",
+      "name": "npm:next-cloudinary",
+      "data": {
+        "version": "5.13.0",
+        "packageName": "next-cloudinary",
+        "hash": "sha512-977Tbgiys+VyLbNKn2in+xvCuFHCzzsriWIZspKhWuKn3/LrrhJrj1mspfu2kzXjpObbxcqAsao6clWHP0uNQQ=="
+      }
+    },
     "npm:next@14.0.1": {
       "type": "npm",
       "name": "npm:next@14.0.1",
@@ -12861,6 +12915,11 @@
       },
       {
         "source": "cloudbite-merchants",
+        "target": "npm:@radix-ui/react-separator",
+        "type": "static"
+      },
+      {
+        "source": "cloudbite-merchants",
         "target": "npm:@radix-ui/react-slot",
         "type": "static"
       },
@@ -12897,6 +12956,11 @@
       {
         "source": "cloudbite-merchants",
         "target": "npm:next",
+        "type": "static"
+      },
+      {
+        "source": "cloudbite-merchants",
+        "target": "npm:next-cloudinary",
         "type": "static"
       },
       {
@@ -15953,6 +16017,32 @@
         "type": "static"
       }
     ],
+    "npm:@cloudinary-util/url-loader": [
+      {
+        "source": "npm:@cloudinary-util/url-loader",
+        "target": "npm:@cloudinary-util/util",
+        "type": "static"
+      },
+      {
+        "source": "npm:@cloudinary-util/url-loader",
+        "target": "npm:@cloudinary/url-gen",
+        "type": "static"
+      }
+    ],
+    "npm:@cloudinary/transformation-builder-sdk": [
+      {
+        "source": "npm:@cloudinary/transformation-builder-sdk",
+        "target": "npm:@cloudinary/url-gen",
+        "type": "static"
+      }
+    ],
+    "npm:@cloudinary/url-gen": [
+      {
+        "source": "npm:@cloudinary/url-gen",
+        "target": "npm:@cloudinary/transformation-builder-sdk",
+        "type": "static"
+      }
+    ],
     "npm:@cspotcode/source-map-support": [
       {
         "source": "npm:@cspotcode/source-map-support",
@@ -17077,7 +17167,7 @@
       },
       {
         "source": "npm:@nestjs/apollo",
-        "target": "npm:@nestjs/core",
+        "target": "npm:@nestjs/core@8.4.7",
         "type": "static"
       },
       {
@@ -17088,11 +17178,6 @@
       {
         "source": "npm:@nestjs/apollo",
         "target": "npm:apollo-server-core",
-        "type": "static"
-      },
-      {
-        "source": "npm:@nestjs/apollo",
-        "target": "npm:apollo-server-express",
         "type": "static"
       },
       {
@@ -17113,6 +17198,16 @@
       {
         "source": "npm:@nestjs/apollo",
         "target": "npm:tslib@2.5.0",
+        "type": "static"
+      },
+      {
+        "source": "npm:@nestjs/apollo",
+        "target": "npm:@nestjs/core",
+        "type": "static"
+      },
+      {
+        "source": "npm:@nestjs/apollo",
+        "target": "npm:apollo-server-express",
         "type": "static"
       }
     ],
@@ -17139,7 +17234,7 @@
       },
       {
         "source": "npm:@nestjs/apollo@12.0.11",
-        "target": "npm:@nestjs/core@9.4.3",
+        "target": "npm:@nestjs/core",
         "type": "static"
       },
       {
@@ -17317,6 +17412,63 @@
         "type": "static"
       }
     ],
+    "npm:@nestjs/core@8.4.7": [
+      {
+        "source": "npm:@nestjs/core@8.4.7",
+        "target": "npm:@nestjs/common",
+        "type": "static"
+      },
+      {
+        "source": "npm:@nestjs/core@8.4.7",
+        "target": "npm:@nestjs/platform-express",
+        "type": "static"
+      },
+      {
+        "source": "npm:@nestjs/core@8.4.7",
+        "target": "npm:@nuxtjs/opencollective",
+        "type": "static"
+      },
+      {
+        "source": "npm:@nestjs/core@8.4.7",
+        "target": "npm:fast-safe-stringify",
+        "type": "static"
+      },
+      {
+        "source": "npm:@nestjs/core@8.4.7",
+        "target": "npm:iterare",
+        "type": "static"
+      },
+      {
+        "source": "npm:@nestjs/core@8.4.7",
+        "target": "npm:object-hash",
+        "type": "static"
+      },
+      {
+        "source": "npm:@nestjs/core@8.4.7",
+        "target": "npm:path-to-regexp",
+        "type": "static"
+      },
+      {
+        "source": "npm:@nestjs/core@8.4.7",
+        "target": "npm:reflect-metadata",
+        "type": "static"
+      },
+      {
+        "source": "npm:@nestjs/core@8.4.7",
+        "target": "npm:rxjs",
+        "type": "static"
+      },
+      {
+        "source": "npm:@nestjs/core@8.4.7",
+        "target": "npm:tslib@2.4.0",
+        "type": "static"
+      },
+      {
+        "source": "npm:@nestjs/core@8.4.7",
+        "target": "npm:uuid@8.3.2",
+        "type": "static"
+      }
+    ],
     "npm:@nestjs/core": [
       {
         "source": "npm:@nestjs/core",
@@ -17345,11 +17497,6 @@
       },
       {
         "source": "npm:@nestjs/core",
-        "target": "npm:object-hash",
-        "type": "static"
-      },
-      {
-        "source": "npm:@nestjs/core",
         "target": "npm:path-to-regexp",
         "type": "static"
       },
@@ -17365,63 +17512,11 @@
       },
       {
         "source": "npm:@nestjs/core",
-        "target": "npm:tslib@2.4.0",
-        "type": "static"
-      },
-      {
-        "source": "npm:@nestjs/core",
-        "target": "npm:uuid@8.3.2",
-        "type": "static"
-      }
-    ],
-    "npm:@nestjs/core@9.4.3": [
-      {
-        "source": "npm:@nestjs/core@9.4.3",
-        "target": "npm:@nestjs/common",
-        "type": "static"
-      },
-      {
-        "source": "npm:@nestjs/core@9.4.3",
-        "target": "npm:@nestjs/platform-express",
-        "type": "static"
-      },
-      {
-        "source": "npm:@nestjs/core@9.4.3",
-        "target": "npm:@nuxtjs/opencollective",
-        "type": "static"
-      },
-      {
-        "source": "npm:@nestjs/core@9.4.3",
-        "target": "npm:fast-safe-stringify",
-        "type": "static"
-      },
-      {
-        "source": "npm:@nestjs/core@9.4.3",
-        "target": "npm:iterare",
-        "type": "static"
-      },
-      {
-        "source": "npm:@nestjs/core@9.4.3",
-        "target": "npm:path-to-regexp",
-        "type": "static"
-      },
-      {
-        "source": "npm:@nestjs/core@9.4.3",
-        "target": "npm:reflect-metadata",
-        "type": "static"
-      },
-      {
-        "source": "npm:@nestjs/core@9.4.3",
-        "target": "npm:rxjs",
-        "type": "static"
-      },
-      {
-        "source": "npm:@nestjs/core@9.4.3",
         "target": "npm:tslib@2.5.3",
         "type": "static"
       },
       {
-        "source": "npm:@nestjs/core@9.4.3",
+        "source": "npm:@nestjs/core",
         "target": "npm:uid",
         "type": "static"
       }
@@ -17454,7 +17549,7 @@
       },
       {
         "source": "npm:@nestjs/graphql",
-        "target": "npm:@nestjs/core",
+        "target": "npm:@nestjs/core@8.4.7",
         "type": "static"
       },
       {
@@ -17534,6 +17629,11 @@
       },
       {
         "source": "npm:@nestjs/graphql",
+        "target": "npm:@nestjs/core",
+        "type": "static"
+      },
+      {
+        "source": "npm:@nestjs/graphql",
         "target": "npm:ts-morph",
         "type": "static"
       }
@@ -17561,7 +17661,7 @@
       },
       {
         "source": "npm:@nestjs/graphql@12.0.11",
-        "target": "npm:@nestjs/core@9.4.3",
+        "target": "npm:@nestjs/core",
         "type": "static"
       },
       {
@@ -17706,7 +17806,7 @@
       },
       {
         "source": "npm:@nestjs/platform-express",
-        "target": "npm:@nestjs/core",
+        "target": "npm:@nestjs/core@8.4.7",
         "type": "static"
       },
       {
@@ -17736,7 +17836,7 @@
       },
       {
         "source": "npm:@nestjs/platform-express",
-        "target": "npm:@nestjs/core@9.4.3",
+        "target": "npm:@nestjs/core",
         "type": "static"
       }
     ],
@@ -17785,7 +17885,7 @@
       },
       {
         "source": "npm:@nestjs/testing",
-        "target": "npm:@nestjs/core",
+        "target": "npm:@nestjs/core@8.4.7",
         "type": "static"
       },
       {
@@ -17800,7 +17900,7 @@
       },
       {
         "source": "npm:@nestjs/testing",
-        "target": "npm:@nestjs/core@9.4.3",
+        "target": "npm:@nestjs/core",
         "type": "static"
       }
     ],
@@ -17812,7 +17912,7 @@
       },
       {
         "source": "npm:@nestjs/typeorm",
-        "target": "npm:@nestjs/core",
+        "target": "npm:@nestjs/core@8.4.7",
         "type": "static"
       },
       {
@@ -17833,6 +17933,11 @@
       {
         "source": "npm:@nestjs/typeorm",
         "target": "npm:uuid",
+        "type": "static"
+      },
+      {
+        "source": "npm:@nestjs/typeorm",
+        "target": "npm:@nestjs/core",
         "type": "static"
       }
     ],
@@ -19008,6 +19113,38 @@
       },
       {
         "source": "npm:@radix-ui/react-roving-focus",
+        "target": "npm:react-dom",
+        "type": "static"
+      }
+    ],
+    "npm:@radix-ui/react-separator": [
+      {
+        "source": "npm:@radix-ui/react-separator",
+        "target": "npm:@babel/runtime",
+        "type": "static"
+      },
+      {
+        "source": "npm:@radix-ui/react-separator",
+        "target": "npm:@radix-ui/react-primitive",
+        "type": "static"
+      },
+      {
+        "source": "npm:@radix-ui/react-separator",
+        "target": "npm:@types/react",
+        "type": "static"
+      },
+      {
+        "source": "npm:@radix-ui/react-separator",
+        "target": "npm:@types/react-dom",
+        "type": "static"
+      },
+      {
+        "source": "npm:@radix-ui/react-separator",
+        "target": "npm:react",
+        "type": "static"
+      },
+      {
+        "source": "npm:@radix-ui/react-separator",
         "target": "npm:react-dom",
         "type": "static"
       }
@@ -27336,6 +27473,28 @@
       {
         "source": "npm:mz",
         "target": "npm:thenify-all",
+        "type": "static"
+      }
+    ],
+    "npm:next-cloudinary": [
+      {
+        "source": "npm:next-cloudinary",
+        "target": "npm:@cloudinary-util/url-loader",
+        "type": "static"
+      },
+      {
+        "source": "npm:next-cloudinary",
+        "target": "npm:@cloudinary-util/util",
+        "type": "static"
+      },
+      {
+        "source": "npm:next-cloudinary",
+        "target": "npm:next",
+        "type": "static"
+      },
+      {
+        "source": "npm:next-cloudinary",
+        "target": "npm:react",
         "type": "static"
       }
     ],
