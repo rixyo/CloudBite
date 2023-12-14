@@ -14,12 +14,11 @@ export class RestaurantDishResolver {
     private readonly restauranDishService: RestaurantDishService,
     private readonly logger: Logger,
   ) {}
-
   @Query('restaurantDishes')
   async RestaurantDishes(
     @Args('restaurantId') id: string,
     @Args('page', { defaultValue: 1 }) page: number,
-  ): Promise<RestaurantDishEntity[]> {
+  ): Promise<any> {
     return await this.restauranDishService.getAllDishByRestaurant(id, page);
   }
   @Mutation('createDish')

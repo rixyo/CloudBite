@@ -35,13 +35,19 @@ export class RestaurantDishService {
         restaurant,
         queryRunner,
       );
-      const menus = await this.restaurantDishRepo.find({
+      await this.restaurantDishRepo.find({
         where: { restaurant: { id: restaurant.id } },
       });
       await queryRunner.commitTransaction();
+      this.logger.log(
+        `Dish created successfully dish ID${dish.id}, restaurant ID ${restaurant.id}`,
+      );
       return dish;
     } catch (error) {
       await queryRunner.rollbackTransaction();
+      this.logger.error(
+        `Error creating dish dish , restaurant ID ${restaurant.id}`,
+      );
       throw new Error(error);
     } finally {
       await queryRunner.release();
@@ -84,7 +90,7 @@ export class RestaurantDishService {
     query.take(10);
     const dishes = await query
       .leftJoinAndSelect('dish.restaurant', 'restaurant')
-      .andWhere('restaurant.id = :id', { id: restaurant.id })
+      .where('restaurant.id = :id', { id })
       .getMany();
     return dishes;
   }
@@ -104,6 +110,9 @@ export class RestaurantDishService {
     dish.price = updateDishInput.price;
     dish.thumbnails = updateDishInput.thumbnails;
     await this.restaurantDishRepo.save(dish);
+    this.logger.log(
+      `Dish updated successfully dish ID${dish.id}, restaurant ID ${restaurantId}`,
+    );
     return dish;
   }
   async deleteDish(

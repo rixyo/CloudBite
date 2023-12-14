@@ -38,7 +38,7 @@ export class RestaurantService {
         userid,
         queryRunner,
       );
-      const address = await this.createAddress(
+      await this.createAddress(
         createRestaurantInput.address,
         restaurant,
         queryRunner,

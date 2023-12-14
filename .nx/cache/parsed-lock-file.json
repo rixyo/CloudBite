@@ -2259,6 +2259,15 @@
         "hash": "sha512-Vvn3zZrhQZkkBE8LSuW3em98c0FwgO4nxzv6OdSxPKJIEKY2bGbHn+mhGIPerzI4twdxaP8/0+06HBpwf345Lw=="
       }
     },
+    "npm:@radix-ui/number": {
+      "type": "npm",
+      "name": "npm:@radix-ui/number",
+      "data": {
+        "version": "1.0.1",
+        "packageName": "@radix-ui/number",
+        "hash": "sha512-T5gIdVO2mmPW3NNhjNgEP3cqMXjXL9UbO0BzWcXfvdBs+BohbQxvd/K5hSVKmn9/lbTdsQVKbUcP5WLCwvUbBg=="
+      }
+    },
     "npm:@radix-ui/primitive@1.0.0": {
       "type": "npm",
       "name": "npm:@radix-ui/primitive@1.0.0",
@@ -2385,6 +2394,15 @@
         "hash": "sha512-aJeDjQhywg9LBu2t/At58hCvr7pEm0o2Ke1x33B+MhjNmmZ17sy4KImo0KPLgsnc/zN7GPdce8Cnn0SWvwZO7g=="
       }
     },
+    "npm:@radix-ui/react-dropdown-menu": {
+      "type": "npm",
+      "name": "npm:@radix-ui/react-dropdown-menu",
+      "data": {
+        "version": "2.0.6",
+        "packageName": "@radix-ui/react-dropdown-menu",
+        "hash": "sha512-i6TuFOoWmLWq+M/eCLGd/bQ2HfAX1RJgvrBQ6AQLmzfvsLdefxbWu8G9zczcPFfcSPehz9GcpF6K9QYreFV8hA=="
+      }
+    },
     "npm:@radix-ui/react-focus-guards@1.0.0": {
       "type": "npm",
       "name": "npm:@radix-ui/react-focus-guards@1.0.0",
@@ -2446,6 +2464,15 @@
         "version": "2.0.2",
         "packageName": "@radix-ui/react-label",
         "hash": "sha512-N5ehvlM7qoTLx7nWPodsPYPgMzA5WM8zZChQg8nyFJKnDO5WHdba1vv5/H6IO5LtJMfD2Q3wh1qHFGNtK0w3bQ=="
+      }
+    },
+    "npm:@radix-ui/react-menu": {
+      "type": "npm",
+      "name": "npm:@radix-ui/react-menu",
+      "data": {
+        "version": "2.0.6",
+        "packageName": "@radix-ui/react-menu",
+        "hash": "sha512-BVkFLS+bUC8HcImkRKPSiVumA1VPOOEC5WBMiT+QAVsPzW1FJzI9KnqgGxVDPBcql5xXrHkD3JOVoXWEXD8SYA=="
       }
     },
     "npm:@radix-ui/react-popover": {
@@ -2527,6 +2554,15 @@
         "version": "1.0.4",
         "packageName": "@radix-ui/react-roving-focus",
         "hash": "sha512-2mUg5Mgcu001VkGy+FfzZyzbmuUWzgWkj3rvv4yu+mLw03+mTzbxZHvfcGyFp2b8EkQeMkpRQ5FiA2Vr2O6TeQ=="
+      }
+    },
+    "npm:@radix-ui/react-select": {
+      "type": "npm",
+      "name": "npm:@radix-ui/react-select",
+      "data": {
+        "version": "2.0.0",
+        "packageName": "@radix-ui/react-select",
+        "hash": "sha512-RH5b7af4oHtkcHS7pG6Sgv5rk5Wxa7XI8W5gvB1N/yiuDGZxko1ynvOiVhFM7Cis2A8zxF9bTOUVbRDzPepe6w=="
       }
     },
     "npm:@radix-ui/react-separator": {
@@ -2637,6 +2673,15 @@
         "hash": "sha512-v/5RegiJWYdoCvMnITBkNNx6bCj20fiaJnWtRkU18yITptraXjffz5Qbn05uOiQnOvi+dbkznkoaMltz1GnszQ=="
       }
     },
+    "npm:@radix-ui/react-use-previous": {
+      "type": "npm",
+      "name": "npm:@radix-ui/react-use-previous",
+      "data": {
+        "version": "1.0.1",
+        "packageName": "@radix-ui/react-use-previous",
+        "hash": "sha512-cV5La9DPwiQ7S0gf/0qiD6YgNqM5Fk97Kdrlc5yBcrF3jyEZQwm7vYFqMo4IfeHgJXsRaMvLABFtd0OVEmZhDw=="
+      }
+    },
     "npm:@radix-ui/react-use-rect": {
       "type": "npm",
       "name": "npm:@radix-ui/react-use-rect",
@@ -2653,6 +2698,15 @@
         "version": "1.0.1",
         "packageName": "@radix-ui/react-use-size",
         "hash": "sha512-ibay+VqrgcaI6veAojjofPATwledXiSmX+C0KrBk/xgpX9rBzPV3OsfwlhQdUOFbh+LKQorLYT+xTXW9V8yd0g=="
+      }
+    },
+    "npm:@radix-ui/react-visually-hidden": {
+      "type": "npm",
+      "name": "npm:@radix-ui/react-visually-hidden",
+      "data": {
+        "version": "1.0.3",
+        "packageName": "@radix-ui/react-visually-hidden",
+        "hash": "sha512-D4w41yN5YRKtu464TLnByKzMDG/JlMPHtfZgQAu9v6mNakUqGUI9vUrfQKz8NK41VMm/xbZbh76NUTVtIYqOMA=="
       }
     },
     "npm:@radix-ui/rect": {
@@ -2752,6 +2806,24 @@
         "version": "0.5.2",
         "packageName": "@swc/helpers",
         "hash": "sha512-E4KcWTpoLHqwPHLxidpOqQbcrZVgi0rsmmZXUle1jXmJfuIf/UWpczUJ7MZZ5tlxytgJXyp0w4PGkkeLiuIdZw=="
+      }
+    },
+    "npm:@tanstack/react-table": {
+      "type": "npm",
+      "name": "npm:@tanstack/react-table",
+      "data": {
+        "version": "8.10.7",
+        "packageName": "@tanstack/react-table",
+        "hash": "sha512-bXhjA7xsTcsW8JPTTYlUg/FuBpn8MNjiEPhkNhIGCUR6iRQM2+WEco4OBpvDeVcR9SE+bmWLzdfiY7bCbCSVuA=="
+      }
+    },
+    "npm:@tanstack/table-core": {
+      "type": "npm",
+      "name": "npm:@tanstack/table-core",
+      "data": {
+        "version": "8.10.7",
+        "packageName": "@tanstack/table-core",
+        "hash": "sha512-KQk5OMg5OH6rmbHZxuNROvdI+hKDIUxANaHlV+dPlNN7ED3qYQ/WkpY2qlXww1SIdeMlkIhpN/2L00rof0fXFw=="
       }
     },
     "npm:@tootallnate/once": {
@@ -16219,6 +16291,11 @@
       "type": "static"
     },
     {
+      "source": "npm:@radix-ui/number",
+      "target": "npm:@babel/runtime",
+      "type": "static"
+    },
+    {
       "source": "npm:@radix-ui/primitive@1.0.0",
       "target": "npm:@babel/runtime",
       "type": "static"
@@ -16684,6 +16761,66 @@
       "type": "static"
     },
     {
+      "source": "npm:@radix-ui/react-dropdown-menu",
+      "target": "npm:@babel/runtime",
+      "type": "static"
+    },
+    {
+      "source": "npm:@radix-ui/react-dropdown-menu",
+      "target": "npm:@radix-ui/primitive",
+      "type": "static"
+    },
+    {
+      "source": "npm:@radix-ui/react-dropdown-menu",
+      "target": "npm:@radix-ui/react-compose-refs",
+      "type": "static"
+    },
+    {
+      "source": "npm:@radix-ui/react-dropdown-menu",
+      "target": "npm:@radix-ui/react-context",
+      "type": "static"
+    },
+    {
+      "source": "npm:@radix-ui/react-dropdown-menu",
+      "target": "npm:@radix-ui/react-id",
+      "type": "static"
+    },
+    {
+      "source": "npm:@radix-ui/react-dropdown-menu",
+      "target": "npm:@radix-ui/react-menu",
+      "type": "static"
+    },
+    {
+      "source": "npm:@radix-ui/react-dropdown-menu",
+      "target": "npm:@radix-ui/react-primitive",
+      "type": "static"
+    },
+    {
+      "source": "npm:@radix-ui/react-dropdown-menu",
+      "target": "npm:@radix-ui/react-use-controllable-state",
+      "type": "static"
+    },
+    {
+      "source": "npm:@radix-ui/react-dropdown-menu",
+      "target": "npm:@types/react",
+      "type": "static"
+    },
+    {
+      "source": "npm:@radix-ui/react-dropdown-menu",
+      "target": "npm:@types/react-dom",
+      "type": "static"
+    },
+    {
+      "source": "npm:@radix-ui/react-dropdown-menu",
+      "target": "npm:react",
+      "type": "static"
+    },
+    {
+      "source": "npm:@radix-ui/react-dropdown-menu",
+      "target": "npm:react-dom",
+      "type": "static"
+    },
+    {
       "source": "npm:@radix-ui/react-focus-guards@1.0.0",
       "target": "npm:@babel/runtime",
       "type": "static"
@@ -16841,6 +16978,121 @@
     {
       "source": "npm:@radix-ui/react-label",
       "target": "npm:react-dom",
+      "type": "static"
+    },
+    {
+      "source": "npm:@radix-ui/react-menu",
+      "target": "npm:@babel/runtime",
+      "type": "static"
+    },
+    {
+      "source": "npm:@radix-ui/react-menu",
+      "target": "npm:@radix-ui/primitive",
+      "type": "static"
+    },
+    {
+      "source": "npm:@radix-ui/react-menu",
+      "target": "npm:@radix-ui/react-collection",
+      "type": "static"
+    },
+    {
+      "source": "npm:@radix-ui/react-menu",
+      "target": "npm:@radix-ui/react-compose-refs",
+      "type": "static"
+    },
+    {
+      "source": "npm:@radix-ui/react-menu",
+      "target": "npm:@radix-ui/react-context",
+      "type": "static"
+    },
+    {
+      "source": "npm:@radix-ui/react-menu",
+      "target": "npm:@radix-ui/react-direction",
+      "type": "static"
+    },
+    {
+      "source": "npm:@radix-ui/react-menu",
+      "target": "npm:@radix-ui/react-dismissable-layer",
+      "type": "static"
+    },
+    {
+      "source": "npm:@radix-ui/react-menu",
+      "target": "npm:@radix-ui/react-focus-guards",
+      "type": "static"
+    },
+    {
+      "source": "npm:@radix-ui/react-menu",
+      "target": "npm:@radix-ui/react-focus-scope",
+      "type": "static"
+    },
+    {
+      "source": "npm:@radix-ui/react-menu",
+      "target": "npm:@radix-ui/react-id",
+      "type": "static"
+    },
+    {
+      "source": "npm:@radix-ui/react-menu",
+      "target": "npm:@radix-ui/react-popper",
+      "type": "static"
+    },
+    {
+      "source": "npm:@radix-ui/react-menu",
+      "target": "npm:@radix-ui/react-portal",
+      "type": "static"
+    },
+    {
+      "source": "npm:@radix-ui/react-menu",
+      "target": "npm:@radix-ui/react-presence",
+      "type": "static"
+    },
+    {
+      "source": "npm:@radix-ui/react-menu",
+      "target": "npm:@radix-ui/react-primitive",
+      "type": "static"
+    },
+    {
+      "source": "npm:@radix-ui/react-menu",
+      "target": "npm:@radix-ui/react-roving-focus",
+      "type": "static"
+    },
+    {
+      "source": "npm:@radix-ui/react-menu",
+      "target": "npm:@radix-ui/react-slot",
+      "type": "static"
+    },
+    {
+      "source": "npm:@radix-ui/react-menu",
+      "target": "npm:@radix-ui/react-use-callback-ref",
+      "type": "static"
+    },
+    {
+      "source": "npm:@radix-ui/react-menu",
+      "target": "npm:@types/react",
+      "type": "static"
+    },
+    {
+      "source": "npm:@radix-ui/react-menu",
+      "target": "npm:@types/react-dom",
+      "type": "static"
+    },
+    {
+      "source": "npm:@radix-ui/react-menu",
+      "target": "npm:aria-hidden",
+      "type": "static"
+    },
+    {
+      "source": "npm:@radix-ui/react-menu",
+      "target": "npm:react",
+      "type": "static"
+    },
+    {
+      "source": "npm:@radix-ui/react-menu",
+      "target": "npm:react-dom",
+      "type": "static"
+    },
+    {
+      "source": "npm:@radix-ui/react-menu",
+      "target": "npm:react-remove-scroll",
       "type": "static"
     },
     {
@@ -17249,6 +17501,136 @@
       "type": "static"
     },
     {
+      "source": "npm:@radix-ui/react-select",
+      "target": "npm:@babel/runtime",
+      "type": "static"
+    },
+    {
+      "source": "npm:@radix-ui/react-select",
+      "target": "npm:@radix-ui/number",
+      "type": "static"
+    },
+    {
+      "source": "npm:@radix-ui/react-select",
+      "target": "npm:@radix-ui/primitive",
+      "type": "static"
+    },
+    {
+      "source": "npm:@radix-ui/react-select",
+      "target": "npm:@radix-ui/react-collection",
+      "type": "static"
+    },
+    {
+      "source": "npm:@radix-ui/react-select",
+      "target": "npm:@radix-ui/react-compose-refs",
+      "type": "static"
+    },
+    {
+      "source": "npm:@radix-ui/react-select",
+      "target": "npm:@radix-ui/react-context",
+      "type": "static"
+    },
+    {
+      "source": "npm:@radix-ui/react-select",
+      "target": "npm:@radix-ui/react-direction",
+      "type": "static"
+    },
+    {
+      "source": "npm:@radix-ui/react-select",
+      "target": "npm:@radix-ui/react-dismissable-layer",
+      "type": "static"
+    },
+    {
+      "source": "npm:@radix-ui/react-select",
+      "target": "npm:@radix-ui/react-focus-guards",
+      "type": "static"
+    },
+    {
+      "source": "npm:@radix-ui/react-select",
+      "target": "npm:@radix-ui/react-focus-scope",
+      "type": "static"
+    },
+    {
+      "source": "npm:@radix-ui/react-select",
+      "target": "npm:@radix-ui/react-id",
+      "type": "static"
+    },
+    {
+      "source": "npm:@radix-ui/react-select",
+      "target": "npm:@radix-ui/react-popper",
+      "type": "static"
+    },
+    {
+      "source": "npm:@radix-ui/react-select",
+      "target": "npm:@radix-ui/react-portal",
+      "type": "static"
+    },
+    {
+      "source": "npm:@radix-ui/react-select",
+      "target": "npm:@radix-ui/react-primitive",
+      "type": "static"
+    },
+    {
+      "source": "npm:@radix-ui/react-select",
+      "target": "npm:@radix-ui/react-slot",
+      "type": "static"
+    },
+    {
+      "source": "npm:@radix-ui/react-select",
+      "target": "npm:@radix-ui/react-use-callback-ref",
+      "type": "static"
+    },
+    {
+      "source": "npm:@radix-ui/react-select",
+      "target": "npm:@radix-ui/react-use-controllable-state",
+      "type": "static"
+    },
+    {
+      "source": "npm:@radix-ui/react-select",
+      "target": "npm:@radix-ui/react-use-layout-effect",
+      "type": "static"
+    },
+    {
+      "source": "npm:@radix-ui/react-select",
+      "target": "npm:@radix-ui/react-use-previous",
+      "type": "static"
+    },
+    {
+      "source": "npm:@radix-ui/react-select",
+      "target": "npm:@radix-ui/react-visually-hidden",
+      "type": "static"
+    },
+    {
+      "source": "npm:@radix-ui/react-select",
+      "target": "npm:@types/react",
+      "type": "static"
+    },
+    {
+      "source": "npm:@radix-ui/react-select",
+      "target": "npm:@types/react-dom",
+      "type": "static"
+    },
+    {
+      "source": "npm:@radix-ui/react-select",
+      "target": "npm:aria-hidden",
+      "type": "static"
+    },
+    {
+      "source": "npm:@radix-ui/react-select",
+      "target": "npm:react",
+      "type": "static"
+    },
+    {
+      "source": "npm:@radix-ui/react-select",
+      "target": "npm:react-dom",
+      "type": "static"
+    },
+    {
+      "source": "npm:@radix-ui/react-select",
+      "target": "npm:react-remove-scroll",
+      "type": "static"
+    },
+    {
       "source": "npm:@radix-ui/react-separator",
       "target": "npm:@babel/runtime",
       "type": "static"
@@ -17499,6 +17881,21 @@
       "type": "static"
     },
     {
+      "source": "npm:@radix-ui/react-use-previous",
+      "target": "npm:@babel/runtime",
+      "type": "static"
+    },
+    {
+      "source": "npm:@radix-ui/react-use-previous",
+      "target": "npm:@types/react",
+      "type": "static"
+    },
+    {
+      "source": "npm:@radix-ui/react-use-previous",
+      "target": "npm:react",
+      "type": "static"
+    },
+    {
       "source": "npm:@radix-ui/react-use-rect",
       "target": "npm:@babel/runtime",
       "type": "static"
@@ -17536,6 +17933,36 @@
     {
       "source": "npm:@radix-ui/react-use-size",
       "target": "npm:react",
+      "type": "static"
+    },
+    {
+      "source": "npm:@radix-ui/react-visually-hidden",
+      "target": "npm:@babel/runtime",
+      "type": "static"
+    },
+    {
+      "source": "npm:@radix-ui/react-visually-hidden",
+      "target": "npm:@radix-ui/react-primitive",
+      "type": "static"
+    },
+    {
+      "source": "npm:@radix-ui/react-visually-hidden",
+      "target": "npm:@types/react",
+      "type": "static"
+    },
+    {
+      "source": "npm:@radix-ui/react-visually-hidden",
+      "target": "npm:@types/react-dom",
+      "type": "static"
+    },
+    {
+      "source": "npm:@radix-ui/react-visually-hidden",
+      "target": "npm:react",
+      "type": "static"
+    },
+    {
+      "source": "npm:@radix-ui/react-visually-hidden",
+      "target": "npm:react-dom",
       "type": "static"
     },
     {
@@ -17706,6 +18133,21 @@
     {
       "source": "npm:@swc/helpers",
       "target": "npm:tslib",
+      "type": "static"
+    },
+    {
+      "source": "npm:@tanstack/react-table",
+      "target": "npm:@tanstack/table-core",
+      "type": "static"
+    },
+    {
+      "source": "npm:@tanstack/react-table",
+      "target": "npm:react",
+      "type": "static"
+    },
+    {
+      "source": "npm:@tanstack/react-table",
+      "target": "npm:react-dom",
       "type": "static"
     },
     {

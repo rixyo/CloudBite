@@ -1,18 +1,18 @@
 {
   "run": {
-    "command": "nx run auth-service:start:dev",
-    "startTime": "2023-12-13T14:45:35.260Z",
-    "endTime": "2023-12-13T17:44:44.429Z",
+    "command": "nx run order-service:start:dev",
+    "startTime": "2023-12-14T20:22:57.332Z",
+    "endTime": "2023-12-14T21:11:08.742Z",
     "inner": false
   },
   "tasks": [
     {
-      "taskId": "auth-service:start:dev",
+      "taskId": "order-service:start:dev",
       "target": "start:dev",
-      "projectName": "auth-service",
-      "hash": "10958443587557889795",
-      "startTime": "2023-12-13T14:45:35.267Z",
-      "endTime": "2023-12-13T17:44:44.421Z",
+      "projectName": "order-service",
+      "hash": "2263290353526351855",
+      "startTime": "2023-12-14T20:22:57.342Z",
+      "endTime": "2023-12-14T21:11:08.737Z",
       "params": "",
       "cacheStatus": "cache-miss",
       "status": 1

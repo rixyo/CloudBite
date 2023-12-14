@@ -5,7 +5,9 @@ const GET_RESTAURANTDISHES: DocumentNode = gql`
     restaurantDishes(restaurantId: $restaurantId, page: $page) {
       id
       name
-      description
+     price
+     dish_type
+     
     }
   }
 `;

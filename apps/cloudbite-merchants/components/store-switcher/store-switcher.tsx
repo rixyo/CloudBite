@@ -19,12 +19,10 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover";
 import { cn } from "@/lib/utils";
-import { useStoreModal } from "@/hooks/useStoreModal";
 
 type Store = {
   id: string;
   name: string;
-  userId: string;
 };
 
 type PopoverTriggerProps = React.ComponentPropsWithoutRef<
@@ -47,7 +45,7 @@ export default function StoreSwitcher({
     value: item.id,
   }));
   const activeStore = formattedItems.find(
-    (item) => item.value === params.storeId
+    (item) => item.value === params.restaurantId
   );
   const onStoreChange = (store: { label: string; value: string }) => {
     setOpen(false);

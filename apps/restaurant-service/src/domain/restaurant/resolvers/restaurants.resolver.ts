@@ -28,7 +28,6 @@ export class RestaurantsResolver {
     private readonly restaurantsService: RestaurantService,
     private readonly logger: Logger,
   ) {}
-
   @Query('restaurants')
   async restaurants(
     @Args('page', { defaultValue: 1 }) page: number,

@@ -1,6 +1,6 @@
 import { gql, DocumentNode } from "@apollo/client";
 
-const CREATE_RESTAURANT = gql`
+const CREATE_RESTAURANT:DocumentNode = gql`
   mutation CreateRestaurant(
     $name: String!
     $banner: String!
