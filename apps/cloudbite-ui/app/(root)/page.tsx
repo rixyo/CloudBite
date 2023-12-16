@@ -2,6 +2,7 @@ import Catagorie from "@/components/catagories/catagorie";
 import LandingPage from "@/components/landingpages/landing-page-desktop";
 import OtherLandingPage from "@/components/landingpages/other-landing-page";
 import SearchPage from "@/components/mobile-search/search-page";
+import Search from "@/components/search/search";
 import SpecialDishes from "@/components/special-dishes/special-dishes";
 import Testimonial from "@/components/testimonial/testimonial";
 
@@ -19,11 +20,8 @@ export default function Home() {
       <div className="block md:hidden">
 <SearchPage/>
       </div>
-      <div className="p-5 w-full">
-        <Catagorie />
-      </div>
-      <div className="p-5 w-full">
-        <SpecialDishes />
+      <div className="hidden md:block md:p-5">
+   <Search/>
       </div>
       <div className="hidden md:block md:p-5 ">
     <Testimonial/>

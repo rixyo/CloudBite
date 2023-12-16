@@ -128,11 +128,10 @@ export class UsersResolver {
     await this.usersService.deleteUsers();
     return { message: 'Users deleted' };
   }
-  @Query(() => UserEntity, { name: 'user' })
+  @Query('user')
   @UseGuards(JwtAuthGuard)
-  async user(@CurrentUser() cuser: JwtPayload): Promise<UserEntity> {
-    const user = await this.usersService.findOneByUserId(cuser.userId);
-    return user;
+  async user(@CurrentUser() cuser: UserEntity): Promise<UserEntity> {
+    return await this.usersService.findOneByUserId(cuser.id);
   }
   @ResolveReference()
   async resolveReference(reference: {

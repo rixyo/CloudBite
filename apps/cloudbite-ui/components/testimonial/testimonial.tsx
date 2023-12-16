@@ -17,7 +17,7 @@ const Testimonial:React.FC = () => {
               </h1>
             </div>
             <div>
-              <h1 className="font-[700]   md:leading-[4.91rem]  md:tracking-[0.21875rem] max-w-[50%] md:max-w-[80%] lg:max-w-[70%] uppercase text-[#000] text-[1.5rem] md:text-[3.75rem]">
+              <h1 className="font-[700]   lg:leading-[4.91rem]  lg:tracking-[0.21875rem] max-w-[50%] md:max-w-[80%] lg:max-w-[70%] uppercase text-[#000] text-[1.5rem] md:text-[3.75rem]">
                 What Our Customers Say About Us
               </h1>
             </div>

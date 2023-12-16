@@ -55,7 +55,6 @@ const handleAuth = ({ req }) => {
       };
     }
   } catch (error) {
-    console.error('Authentication error:', error);
     throw new UnauthorizedException(
       'User unauthorized with invalid authorization Headers',
     );

@@ -69,12 +69,13 @@ export class RestaurantDishResolver {
   @UseGuards(RestaurantOwnerGuard)
   async updateRestaurant(
     @Args('restaurantId') restaurantId: string,
-    @Args('id') id: string,
+    @Args('dishId') id: string,
     @Context() context: any,
     @Args('updateDishInput') updateDishInput: UpdateDishInput,
   ): Promise<RestaurantDishEntity> {
     try {
       const userId = context.req.headers.userid;
+      if (!userId) throw new BadRequestException('Unauthorized');
       const { name, description, price, thumbnails, dish_type } =
         updateDishInput;
       const createRestaurantDish = new CreateRestaurantDishDto();
@@ -110,11 +111,9 @@ export class RestaurantDishResolver {
   ): Promise<any> {
     try {
       const userId = context.req.headers.userid;
-      return await this.restauranDishService.deleteDish(
-        id,
-        restaurantId,
-        userId,
-      );
+      if (!userId) throw new BadRequestException('Unauthorized');
+      await this.restauranDishService.deleteDish(id, restaurantId, userId);
+      return { message: 'Dish deleted successfully' };
     } catch (error) {
       throw new BadRequestException(error.message);
     }

@@ -18,7 +18,11 @@ import {
   UpdateRestaurantDto,
 } from '../dto/restaurant.dto';
 import { validate } from 'class-validator';
-import { BadRequestException, UseGuards } from '@nestjs/common';
+import {
+  BadRequestException,
+  UnauthorizedException,
+  UseGuards,
+} from '@nestjs/common';
 import { Logger } from 'src/logger/logger';
 import { RestaurantService } from '../services/restaurants.service';
 import { RestaurantOwnerGuard } from '../../auth/guards/restaurant-owner.guard';
@@ -34,6 +38,13 @@ export class RestaurantsResolver {
   ): Promise<RestaurantEntity[]> {
     return await this.restaurantsService.getAllRestaurants(page);
   }
+  @Query('getRestaurantByLocation')
+  async getRestaurantByLocation(
+    @Args('page', { defaultValue: 1 }) page: number,
+    @Args('location', { nullable: true }) search: string,
+  ): Promise<RestaurantEntity[]> {
+    return await this.restaurantsService.getRestaurantsByAddress(page, search);
+  }
   @Mutation('createRestaurant')
   @UseGuards(RestaurantOwnerGuard)
   async createRestaurant(
@@ -43,6 +54,7 @@ export class RestaurantsResolver {
   ): Promise<RestaurantEntity> {
     try {
       const userId = context.req.headers.userid;
+      if (!userId) throw new UnauthorizedException('Unauthorized');
       const { name, address, banner } = createRestaurantInput;
       const createRestaurant = new CreateRestaurantDto();
       createRestaurant.name = name;
@@ -98,10 +110,25 @@ export class RestaurantsResolver {
   async userRestaurants(@Context() context: any): Promise<RestaurantEntity[]> {
     try {
       const userId = context.req.headers.userid;
+      if (!userId) throw new UnauthorizedException('Unauthorized');
       const restaurants = await this.restaurantsService.getUserRestaurants(
         userId,
       );
       return restaurants;
+    } catch (error) {
+      throw new BadRequestException(error.message);
+    }
+  }
+  @Mutation('deleteRestaurant')
+  @UseGuards(RestaurantOwnerGuard)
+  async deleteRestaurant(
+    @Args('id') id: string,
+    @Context() context: any,
+  ): Promise<any> {
+    try {
+      const userId = context.req.headers.userid;
+      if (!userId) throw new UnauthorizedException('Unauthorized');
+      return await this.restaurantsService.deleteRestaurant(id);
     } catch (error) {
       throw new BadRequestException(error.message);
     }

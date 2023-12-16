@@ -11,7 +11,6 @@ const httpLink = createHttpLink({
 const authLink = new ApolloLink((operation, forward) => {
   // Get the token from wherever you store it (e.g., localStorage, cookies, etc.)
   const token = LocalStorageManager.getItemWithExpiration("token");
-
   // Set the Authorization header
   operation.setContext(({ headers = {} }) => ({
     headers: {

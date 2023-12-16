@@ -35,7 +35,7 @@ export class UsersService {
     const user = await this.userRepo.findOne({ where: { id } });
     this.logger.info(`User found: ${JSON.stringify(user.id)}`);
     if (user) return user;
-    return null;
+    throw new Error('User not found');
   }
   // this function is used to register a user
   async create(createUserInput: CreateUserInput): Promise<UserEntity> {

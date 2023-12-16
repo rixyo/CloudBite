@@ -1,5 +1,7 @@
 "use client";
+import CURRENT_USER from "@/graphql/actions/currentuser.action";
 import { cn } from "@/lib/utils";
+import { useQuery } from "@apollo/client";
 import Link from "next/link";
 import { useParams, usePathname } from "next/navigation";
 import React from "react";
@@ -10,11 +12,19 @@ export function RestaurantNav({
 }: React.HTMLAttributes<HTMLElement>) {
   const pathname = usePathname();
   const params = useParams();
+    const {
+      data: user,
+    } = useQuery(CURRENT_USER);
   const routes = [
+    {
+      href: `/${user.user?.id}`,
+      label: "Admin Dashboard",
+      isActive: pathname.includes(`${user.user?.id}`),
+    },
     {
       href: `/restaurant/${params.restaurantId}`,
       label: "Dashboard",
-      isActive: pathname.includes("/"),
+      isActive: pathname.includes(`/restaurant/${params.restaurantId}`),
     },
     {
       href: `/restaurant/${params.restaurantId}/dishes`,

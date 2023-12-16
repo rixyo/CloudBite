@@ -2,7 +2,7 @@
 import { useQuery } from "@apollo/client";
 import USER_RESTAURANT from "@/graphql/actions/userRestaurant.action";
 import StoreSwitcher from "@/components/store-switcher/store-switcher";
-import { useRouter } from "next/navigation";
+import { redirect, useRouter } from "next/navigation";
 import { RestaurantNav } from "@/components/navbar/restaurant-navbar";
 import CURRENT_USER from "@/graphql/actions/currentuser.action";
 export default function RootLayout({
@@ -11,6 +11,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   const { data, loading, error } = useQuery(USER_RESTAURANT);
+  const { data: user, loading: userLoading, error: userError } = useQuery(CURRENT_USER);
+  if (loading || userLoading) return <div>Loading...</div>;
+  if (!user?.user?.permissions?.includes("restaurant_owner")) redirect("/");
+
+
  
   return (
     <>

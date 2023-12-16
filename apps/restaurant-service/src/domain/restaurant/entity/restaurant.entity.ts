@@ -6,10 +6,11 @@ import {
   Entity,
   PrimaryGeneratedColumn,
   OneToMany,
+  OneToOne,
 } from 'typeorm';
 import { RestaurantDishEntity } from './restaurant.dish.entity';
 import { RestaurantMenuEntity } from './restaurant.menu.entity';
-
+import { RestaurantAddressEntity } from './restaurant.address.entity';
 @Entity('restaurants')
 export class RestaurantEntity extends BaseEntity {
   @PrimaryGeneratedColumn('uuid')
@@ -36,8 +37,14 @@ export class RestaurantEntity extends BaseEntity {
   @Column({ type: 'varchar', default: null })
   public pickup_options!: string;
 
-  @OneToMany(() => RestaurantDishEntity, (event) => event.restaurant)
+  @OneToMany(() => RestaurantDishEntity, (event) => event.restaurant, {
+    onDelete: 'CASCADE',
+  })
   public dishes!: RestaurantDishEntity[];
+  @OneToOne(() => RestaurantAddressEntity, (event) => event.restaurant, {
+    onDelete: 'CASCADE',
+  })
+  public address!: RestaurantAddressEntity;
   @OneToMany(() => RestaurantMenuEntity, (event) => event.restaurant)
   public menues!: RestaurantMenuEntity[];
 

@@ -1,0 +1,1 @@
+SELECT * FROM restaurant_address WHERE restaurant_id = '7ad248d9-b494-4604-8cbc-024988d5ff53'

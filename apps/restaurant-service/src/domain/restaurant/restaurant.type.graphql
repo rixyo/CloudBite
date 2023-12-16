@@ -2,11 +2,12 @@ scalar Date
 
 type Query{
     restaurants(page:Int!): [Restaurant!]!
-    restaurant(id: ID!): Restaurant
+    restaurant(id: ID!): Restaurant!
     userRestaurants: [Restaurant!]!
     restaurantDishes(page:Int!, restaurantId: ID!): [RestaurantDish!]!
     dishes(page:Int!): [RestaurantDish!]!
     dish(id: ID!): RestaurantDish
+    getRestaurantByLocation(page:Int!, location: String!): [RestaurantWithLocation!]!
 
 }
 
@@ -16,7 +17,7 @@ type Mutation {
     deleteRestaurant(id: ID!): Restaurant!
     createDish(restaurantId: ID!, createDishInput:CreateDishInput): RestaurantDish!
     updateDish(restaurantId: ID!, dishId: ID!, updateDishInput:UpdateDishInput): RestaurantDish!
-
+    deleteDish(id: ID!,restaurantId: ID!): Message!
     createMenu(restaurantId: ID!, createRestaurantMenuInput:createRestaurantMenuInput): RestaurantMenu!
 }
 input AddressInput {
@@ -30,9 +31,14 @@ type AddressType {
   city: String!
   state: String!
   country: String!
-
 }
-
+type Message {
+  message: String!
+}
+type RestaurantWithLocation {
+ id: ID!
+ restaurant: Restaurant!
+}
 
 type RestaurantDish @key(fields: "id"){
     id: ID!

@@ -11,6 +11,7 @@ export interface JwtPayload {
 export const CurrentUser = createParamDecorator(
   (data: unknown, context: ExecutionContext) => {
     const ctx = GqlExecutionContext.create(context);
-    return ctx.getContext().req.user as JwtPayload;
+    const user = ctx.getContext().req.user as JwtPayload;
+    return user;
   },
 );

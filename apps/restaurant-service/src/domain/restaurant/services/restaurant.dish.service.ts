@@ -35,9 +35,6 @@ export class RestaurantDishService {
         restaurant,
         queryRunner,
       );
-      await this.restaurantDishRepo.find({
-        where: { restaurant: { id: restaurant.id } },
-      });
       await queryRunner.commitTransaction();
       this.logger.log(
         `Dish created successfully dish ID${dish.id}, restaurant ID ${restaurant.id}`,
@@ -46,7 +43,7 @@ export class RestaurantDishService {
     } catch (error) {
       await queryRunner.rollbackTransaction();
       this.logger.error(
-        `Error creating dish dish , restaurant ID ${restaurant.id}`,
+        `Error creating dish  , restaurant ID ${restaurant.id}`,
       );
       throw new Error(error);
     } finally {
@@ -58,10 +55,15 @@ export class RestaurantDishService {
     restaurant: RestaurantEntity,
     queryRunner: QueryRunner,
   ) {
-    return await queryRunner.manager.save(RestaurantDishEntity, {
-      restaurant: restaurant,
-      ...payload,
-    });
+    const newDish = new RestaurantDishEntity();
+    newDish.restaurant = restaurant;
+    newDish.name = payload.name;
+    newDish.description = payload.description;
+    newDish.dish_type = payload.dish_type;
+    newDish.thumbnails = payload.thumbnails;
+    newDish.price = payload.price;
+
+    return await queryRunner.manager.save(RestaurantDishEntity, newDish);
   }
   async getDishes(page: number): Promise<RestaurantDishEntity[]> {
     const query = this.restaurantDishRepo.createQueryBuilder('dish');
@@ -119,7 +121,7 @@ export class RestaurantDishService {
     id: string,
     restaurantId: string,
     userId: string,
-  ): Promise<any> {
+  ): Promise<string> {
     await this.restaurantService.validateAuthorization(userId, restaurantId);
     const dish = await this.getDish(id);
     if (!dish) {

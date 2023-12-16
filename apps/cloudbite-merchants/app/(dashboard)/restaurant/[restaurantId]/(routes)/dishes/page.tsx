@@ -30,7 +30,6 @@ const Page:React.FC = () => {
             createdAt: item.createdAt,
           })
         );
-        console.log(data);
     return (
       <div className="flex-col mt-16">
         <div className="flex-1 space-y-4 p-8 pt-6">

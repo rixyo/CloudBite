@@ -1,6 +1,6 @@
 'use client'
 import React, { useState } from "react";
-import { useForm, useFieldArray, Controller } from "react-hook-form";
+import { useForm,Controller } from "react-hook-form";
 import * as z from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import ImageUpload from "@/components/ui/image-upload";
@@ -16,14 +16,18 @@ import toast from "react-hot-toast";
 import { useRouter } from "next/navigation";
 import { useMutation } from "@apollo/client";
 import CREATE_DISH  from "@/graphql/actions/create-dish.action"
+import Image from "next/image";
+import UPDATE_DISH from "@/graphql/actions/update-dish.action";
+import DELETE_DISH from "@/graphql/actions/delete-dish.action";
 type dishFormProps = {
   restaurantId: string;
   initialData:
     | {
+        id: string;
         name: string;
         price: string;
         description: string;
-        thumbnails: { url: string }[];
+        thumbnails:[string];
         dish_type: string;
       }
     | undefined;
@@ -40,9 +44,9 @@ type Image = {
 };
 
 const DishForm:React.FC<dishFormProps> = ({initialData, restaurantId}) => {
-  console.log(restaurantId);
       const [loading, setLoading] = useState<boolean>(false);
        const [open, setOpen] = useState<boolean>(false);
+       const router=useRouter()
        const title = initialData ? "Edit Dishes" : "Add Dishes";
        const description = initialData
          ? "Edit this Dishes in your restaurant"
@@ -63,7 +67,7 @@ const DishForm:React.FC<dishFormProps> = ({initialData, restaurantId}) => {
          price: initialData?.name ?? "",
          description: initialData?.description ?? "",
          thumbnails: initialData?.thumbnails
-           ? [{ url: initialData?.thumbnails[0].url }]
+           ? [{ url: initialData?.thumbnails[0]}]
            : [],
          dish_type: initialData?.dish_type ?? "",
        },
@@ -88,6 +92,8 @@ const DishForm:React.FC<dishFormProps> = ({initialData, restaurantId}) => {
       },
     ];
     const [createDish] = useMutation(CREATE_DISH);
+    const [updateDish] = useMutation(UPDATE_DISH);
+    const [deleteDish] = useMutation(DELETE_DISH)
     const clearForm = () => {
       setValue("name", "");
       setValue("price", "");
@@ -95,9 +101,24 @@ const DishForm:React.FC<dishFormProps> = ({initialData, restaurantId}) => {
       setValue("thumbnails", []);
       setValue("dish_type", "");
     };
+    //create dish
     const onSubmit =async(value:z.infer<typeof formSchema>) => {
         setLoading(true);
         try {
+          if(initialData){
+            await updateDish({
+              variables: {
+               dishId:initialData.id,
+               restaurantId: restaurantId,
+                name: value.name,
+                description: value.description,
+                price: value.price,
+                thumbnails: value.thumbnails.map((image: Image) => image.url),
+                dish_type: value.dish_type,
+              },
+            });
+            toast.success(toastMessage);
+          }
             await createDish({
                 variables: {
                     restaurantId: restaurantId,
@@ -110,18 +131,35 @@ const DishForm:React.FC<dishFormProps> = ({initialData, restaurantId}) => {
             });
             toast.success(toastMessage);
             clearForm();
-
         } catch (error:any) {
             toast.error(`Something Went Wrong!`);
         }
         setLoading(false);
     };
+    //delete dish
+    const deleteAction=async()=>{
+        setLoading(true);
+        try {
+          await deleteDish({
+            variables:{
+              id:initialData?.id,
+              restaurantId:restaurantId
+            }
+          })
+          toast.success(`Dish has been deleted successfully`);
+          setOpen(false);
+          router.push(`/restaurant/${restaurantId}/dishes`)
+        }catch(error:any){
+          toast.error('Someting went Wrong')
+
+        }
+    }
     return (
       <>
         <AlertModal
           isOpen={open}
           onClose={() => setOpen(false)}
-          onConfirm={() => console.log("delete")}
+          onConfirm={deleteAction}
           loading={loading}
         />
         <div className="flex items-center justify-between">
@@ -143,27 +181,41 @@ const DishForm:React.FC<dishFormProps> = ({initialData, restaurantId}) => {
             <div className="flex-col">
               <Heading title={title} description={description} />
               <Separator />
-              <div className="mx-20 md:mx-40">
-                <ImageUpload
-                  value={getValues("thumbnails").map(
-                    (image: Image) => image.url
-                  )}
-                  onChange={(value) =>
-                    setValue("thumbnails", [
-                      ...getValues("thumbnails"),
-                      { url: value },
-                    ])
-                  }
-                  onRemove={(value) =>
-                    setValue(
-                      "thumbnails",
-                      getValues("thumbnails").filter(
-                        (image: Image) => image.url !== value
+              {initialData && (
+              initialData?.thumbnails.map((image: any) => (
+                  <div className="mx-20 md:mx-40 border-2 rounded-lg mt-5" key={image}>
+                    <Image
+                      src={image}
+                      alt="dish image"
+                      width={200}
+                      height={200}
+                    />
+                  </div>
+              ))
+              )}
+              {!initialData && (
+                <div className="mx-20 md:mx-40">
+                  <ImageUpload
+                    value={getValues("thumbnails").map(
+                      (image: Image) => image.url
+                    )}
+                    onChange={(value) =>
+                      setValue("thumbnails", [
+                        ...getValues("thumbnails"),
+                        { url: value },
+                      ])
+                    }
+                    onRemove={(value) =>
+                      setValue(
+                        "thumbnails",
+                        getValues("thumbnails").filter(
+                          (image: Image) => image.url !== value
+                        )
                       )
-                    )
-                  }
-                />
-              </div>
+                    }
+                  />
+                </div>
+              )}
 
               <div className="flex-col justify-center items-center  md:w-[40rem]">
                 {errors.name && (
@@ -174,7 +226,6 @@ const DishForm:React.FC<dishFormProps> = ({initialData, restaurantId}) => {
                   className="mt-2 border-2 border-gray-300 focus:border-2 focus:border-[#F14A16]"
                   {...register("name")}
                   disabled={loading}
-                  
                 />
               </div>
               <div className="flex-col justify-center items-center md:w-[40rem]">
@@ -223,7 +274,7 @@ const DishForm:React.FC<dishFormProps> = ({initialData, restaurantId}) => {
                             Select Category
                           </option>
                           {categories.map((category) => (
-                            <option key={category.id} value={category.id}>
+                            <option key={category.id} value={category.name}>
                               {category.name}
                             </option>
                           ))}

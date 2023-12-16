@@ -15,6 +15,8 @@ export class RestaurantService {
   constructor(
     @InjectRepository(RestaurantEntity)
     private restaurantRepo: Repository<RestaurantEntity>,
+    @InjectRepository(RestaurantAddressEntity)
+    private restaurantAddressRepo: Repository<RestaurantAddressEntity>,
     private logger: Logger,
     private readonly connection: Connection,
   ) {}
@@ -44,6 +46,7 @@ export class RestaurantService {
         queryRunner,
       );
       await queryRunner.commitTransaction();
+      this.logger.log('Restaurant created successfully');
       return restaurant;
     } catch (error) {
       await queryRunner.rollbackTransaction();
@@ -100,6 +103,7 @@ export class RestaurantService {
   async getAllRestaurants(page: number): Promise<RestaurantEntity[]> {
     const query = this.restaurantRepo.createQueryBuilder('restaurant');
     query.skip((page - 1) * 10);
+    query.leftJoinAndSelect('restaurant.address', 'address');
     const restaurents = await query.take(10).getMany();
     if (!restaurents) return [];
     return restaurents;
@@ -122,11 +126,51 @@ export class RestaurantService {
     return restaurant;
   }
   async getRestaurantById(id: string): Promise<RestaurantEntity> {
-    const restaurant = await this.restaurantRepo.findOne({
-      where: { id: id },
-    });
+    const query = this.restaurantRepo.createQueryBuilder('restaurant');
+    query.where('restaurant.id = :id', { id: id });
+    query.leftJoinAndSelect('restaurant.address', 'address');
+    const restaurant = await query.getOne();
     if (!restaurant) {
       throw new NotFoundException(`restaurant with this Id not found ${id}`);
+    }
+    return restaurant;
+  }
+  async getRestaurantsByAddress(page: number, search: string): Promise<any> {
+    const query = this.restaurantAddressRepo.createQueryBuilder('address');
+    query.skip((page - 1) * 10);
+    query.where(
+      'LOWER(address.city) LIKE LOWER(:city) OR LOWER(address.street) LIKE LOWER(:street) OR LOWER(address.country) LIKE LOWER(:country) OR LOWER(address.state) LIKE LOWER(:state)',
+      {
+        city: search,
+        street: search,
+        country: search,
+        state: search,
+      },
+    );
+    query
+      .leftJoinAndSelect('address.restaurant', 'restaurant')
+      .select([
+        'address.id',
+        'restaurant.id',
+        'restaurant.name',
+        'restaurant.banner',
+        'restaurant.delivery_options',
+        'restaurant.pickup_options',
+      ]);
+    const restaurants = await query.take(10).getMany();
+    if (!restaurants) return [];
+    return restaurants;
+  }
+  async deleteRestaurant(id: string): Promise<RestaurantEntity> {
+    const query = this.restaurantRepo.createQueryBuilder('restaurant');
+    query.where('restaurant.id = :id', { id: id });
+    const restaurant = await query.getOne();
+    if (!restaurant) {
+      throw new NotFoundException(`restaurant with this Id not found ${id}`);
+    }
+    const restaurantDelete = await this.restaurantRepo.delete(id);
+    if (restaurantDelete.affected === 0) {
+      throw new Error('Restaurant not deleted');
     }
     return restaurant;
   }

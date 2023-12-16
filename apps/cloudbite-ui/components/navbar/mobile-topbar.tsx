@@ -15,7 +15,7 @@ const MobileTopBar:React.FC = () => {
     const firstLetter = fullName?.charAt(0);
     const secondLetter = fullName?.charAt(fullName.length - 1).toUpperCase();
     const handleClick = () => {
-      if (data.user) {
+      if (data?.user) {
         route.push(`/${data.user.id}/profile`);
       } else {
         authModal.onOpen();
