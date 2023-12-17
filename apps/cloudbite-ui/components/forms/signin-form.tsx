@@ -30,11 +30,13 @@ import React from 'react';
 import { useMutation } from "@apollo/client";
 import SIGNIN_USER from "@/graphql/actions/signin.action";
 import useAuthModal from "@/hooks/useAuthModal";
+import { useRouter } from "next/navigation";
 
 
 const Signinform:React.FC = () => {
   const [signinUser, { loading, error }] = useMutation(SIGNIN_USER);
   const authModal = useAuthModal();
+  const router = useRouter();
      const form = useForm<z.infer<typeof formSchema>>({
        resolver: zodResolver(formSchema),
        defaultValues: {
@@ -53,6 +55,8 @@ const Signinform:React.FC = () => {
             toast.success("Logged in successfully 🎉 ");
             LocalStorageManager.setItemWithExpiration('token',res.data.login.token,60);
             authModal.onClose();
+            router.push(`/${res?.data?.login?.user?.id}/profile`)
+            
           });
           
          } catch (error:any) {

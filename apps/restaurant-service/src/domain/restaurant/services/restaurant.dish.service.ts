@@ -75,9 +75,12 @@ export class RestaurantDishService {
     return dishes;
   }
   async getDish(id: string): Promise<RestaurantDishEntity> {
-    return await this.restaurantDishRepo.findOne({
-      where: { id },
-    });
+    const query = this.restaurantDishRepo.createQueryBuilder('dish');
+    const dish = await query
+      .leftJoinAndSelect('dish.restaurant', 'restaurant')
+      .where('dish.id = :id', { id })
+      .getOne();
+    return dish;
   }
   async getAllDishByRestaurant(
     id: string,

@@ -1,21 +1,46 @@
 scalar Date
 
 type Query {
-  orders: [Order]
+  orders: [OrderResponse!]
   order(id: ID!): Order
   userOrders: [Order!]!
 }
 
 type Mutation {
-    createOrder(restaurantId: ID!,input: CreateOrderInput!): CreateOrderReturn!
     updateOrder(id: ID!, input: UpdateOrderInput!): Order!
     deleteOrder(id: ID!): Order!
+    checkout(createOrderInput: CreateOrderInput!): ChekoutRespone!
+}
+input OrderItemInput {
+itemId: ID!
+quantity: Int!
+price: String!
+restaurantId: ID!
+itemName: String!
+}
+type OrderItem {
+  id: ID!
+  users: User!
+  payment_status: String!
+  delivery_status: String!
+  address: String!
+  phone: String!
+  createdAt: Date!
+  updatedAt: Date!
+}
+type OrderResponse{
+  id: ID!
+  order_item_id: ID!
+  restaurant_id: ID!
+  quantity: Int!
+  order_item_name: String!
+  order_item_price: String!
+  createdAt: Date!
+  updatedAt: Date!
+  order: Order!
 }
 input CreateOrderInput {
-  orderItemsIds: [ID!]!
-  orderItemsQuantities: [Int!]!
-  orderItemsPrices: [Float!]!
-  orderItemsNames: [String!]!
+  orderItems: [OrderItemInput!]!
 }
 input UpdateOrderInput {
   payment_status: String
@@ -25,33 +50,27 @@ type CreateOrderReturn {
   id: ID!
   url: String!
 }
+type ChekoutRespone{
+  id: ID!
+  url: String!
+}
 
 type Order @key(fields: "id") {
   id: ID!
-  restaurant: Restaurant!
-  customer: User!
-  orderItems: [OrderItem!]!
-  payment_status: String!
-  delivery_status: String!
+  users: User!
+  address: String!
+  phone: String!
   createdAt: Date!
   updatedAt: Date!
 }
-type OrderItem @key(fields: "id") {
-  id: ID!
-  order: Order!
-  item: RestaurantDish!
-  quantity: Int!
-  price: Float!
-  name: String!
-  createdAt: Date!
-  updatedAt: Date!
-}
+
 extend type User @key(fields: "id") {
   id: ID! @external
 }
 extend type Restaurant @key(fields: "id") {
   id: ID! @external
 }
-extend type RestaurantDish@key(fields: "id") {
+
+extend type RestaurantDish @key(fields: "id") {
   id: ID! @external
 }

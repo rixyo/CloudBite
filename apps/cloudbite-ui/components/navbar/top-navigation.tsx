@@ -1,16 +1,22 @@
 "use client"
-import React, { Suspense, useState } from 'react';
+import React, { Suspense, useEffect, useState } from 'react';
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Input } from '../ui/input';
 import  useAuthModal  from "@/hooks/useAuthModal";
 import { useQuery } from '@apollo/client';
 import CURRENT_USER from '@/graphql/actions/currentuser.action';
 import { useRouter } from 'next/navigation';
+import useCart from '@/hooks/useCart';
 
 const TopNavigation:React.FC = () => {
+  const [mutation,setMutation] = useState(false);
        const { data, loading, error } = useQuery(CURRENT_USER);
+         const cart = useCart();
        const router= useRouter();
        const authModal = useAuthModal();
+       useEffect(() => {
+        setMutation(true);
+       }, []);
          const fullName = data?.user?.fullName;
          const firstLetter = fullName?.charAt(0);
          const secondLetter = fullName
@@ -23,13 +29,21 @@ const TopNavigation:React.FC = () => {
         else{
           authModal.onOpen();
         }
-
        }
+           const handleCart = () => {
+              if (!data?.user) {
+                authModal.onOpen();
+                return;
+              }
+             router.push(`/${data?.user?.id}/cart`);
+           };
+           if(!mutation) return null;
     return (
       <div className="hidden lg:flex justify-between items-center">
         <div
           className="flex items-center cursor-pointer"
-          onClick={() => router.push("/")}>
+          onClick={() => router.push("/")}
+        >
           <div className="bg-[#39DB4A] w-[2rem] h-[2rem] p-2 rounded-lg">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -73,7 +87,7 @@ const TopNavigation:React.FC = () => {
         </div>
         {/** probabley add someting in future */}
         <div className="flex w-1/3 items-center justify-end gap-10 p-2">
-          <div>
+          <div onClick={handleCart}>
             <div className="relative cursor-pointer">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -105,7 +119,7 @@ const TopNavigation:React.FC = () => {
                   <circle cx="10" cy="10" r="10" fill="#39DB4A" />
                 </svg>
                 <h1 className="absolute text-white top-[50%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 ">
-                  1
+                  {cart.items.length}
                 </h1>
               </div>
             </div>

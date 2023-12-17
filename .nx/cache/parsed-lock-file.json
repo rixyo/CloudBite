@@ -2763,6 +2763,15 @@
         "hash": "sha512-Uy0+khmZqUrUGm5dmMqVlnvufZRSK0FbYzVgp0UMstm+F5+W2/jnEEQyc9vo1ZR/E5ZI/B1WjjoTqBqwJL6Krw=="
       }
     },
+    "npm:@stripe/stripe-js": {
+      "type": "npm",
+      "name": "npm:@stripe/stripe-js",
+      "data": {
+        "version": "2.2.1",
+        "packageName": "@stripe/stripe-js",
+        "hash": "sha512-Wd81A0u8EwT3cf+Xv1mpMI18RbXVhgh19MtPcF9ojNTlG3kl36B1+XFe1KQfnJxD3WRnVfDuI0rNCK53mcGm6g=="
+      }
+    },
     "npm:@sveltejs/adapter-auto": {
       "type": "npm",
       "name": "npm:@sveltejs/adapter-auto",

@@ -1,4 +1,11 @@
-import { Args, Mutation, Resolver, Query, Context } from '@nestjs/graphql';
+import {
+  Args,
+  Mutation,
+  Resolver,
+  Query,
+  Context,
+  ResolveReference,
+} from '@nestjs/graphql';
 import { CreateDishInput, UpdateDishInput } from '../../graphql.schama';
 import { CreateRestaurantDishDto } from '../dto/restaurant.dish.dto';
 import { validate } from 'class-validator';
@@ -117,5 +124,13 @@ export class RestaurantDishResolver {
     } catch (error) {
       throw new BadRequestException(error.message);
     }
+  }
+  @ResolveReference()
+  async resolveReference(reference: {
+    __typename: string;
+    id: string;
+  }): Promise<RestaurantDishEntity> {
+    this.logger.http('ResolveReference :: restaurant');
+    return await this.restauranDishService.getDish(reference.id);
   }
 }

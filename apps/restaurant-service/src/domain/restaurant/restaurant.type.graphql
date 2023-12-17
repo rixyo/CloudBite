@@ -8,6 +8,8 @@ type Query{
     dishes(page:Int!): [RestaurantDish!]!
     dish(id: ID!): RestaurantDish
     getRestaurantByLocation(page:Int!, location: String!): [RestaurantWithLocation!]!
+    getRestaurantByName(name: String!): Restaurant!
+    getRestaurantByIds(ids: [ID!]!): [Restaurant!]!
 
 }
 

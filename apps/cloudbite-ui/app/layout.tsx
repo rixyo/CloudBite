@@ -8,6 +8,7 @@ import AuthModalProvider from '@/providers/auth-modal-provider'
 import { Providers } from '@/providers/graqhql-provider'
 import { Metadata } from 'next'
 import { Toaster } from "react-hot-toast";
+import PreviewModalProvider from '@/providers/preview-modal-provider'
 export const metadata: Metadata = {
   title: "CloudBite: A Cloud-Native Food Delivery Experience​",
   description: "CloudBite: A Cloud-Native Food Delivery Experience​",
@@ -27,6 +28,7 @@ export default function RootLayout({
           <TabTopbar />
         </div>
         <AuthModalProvider />
+    <PreviewModalProvider/>
           {children}
         <Toaster position="top-center" reverseOrder={false} />
       </body>

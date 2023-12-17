@@ -19,112 +19,86 @@ export class OrderService {
     private orderItemRepo: Repository<OrderItemEntity>,
     private readonly connection: Connection,
   ) {
-    this.stripe = new Stripe(configService.get().stripe.apiKey, {
+    this.stripe = new Stripe(process.env.STRIPE_SECRET_KEY, {
       apiVersion: '2023-10-16',
       typescript: true,
     });
   }
-  async createCheckout(
-    data: CreateOrderInput,
-    customerId: string,
-    restaurantId: string,
-  ) {
+  async createCheckout(data: CreateOrderInput, customerId: string) {
     const line_items: Stripe.Checkout.SessionCreateParams.LineItem[] = [];
-    let createOrder = null;
+    let createOrder: OrderEntity;
     try {
-      data.orderItemsIds.forEach((id, index) => {
+      data.orderItems.forEach((id, index) => {
         line_items.push({
-          quantity: data.orderItemsQuantities.find(
-            (quantity, index) => data.orderItemsIds[index] === id,
-          ),
           price_data: {
             currency: 'BDT',
             product_data: {
-              name: data.orderItemsNames[index],
+              name: data.orderItems[index].itemName,
             },
-            unit_amount: parseInt(data.orderItemsPrices[index]) * 100,
+            unit_amount: parseInt(data.orderItems[index].price) * 100,
           },
+          quantity: data.orderItems.map((item) => item.quantity)[index],
         });
       });
-    } catch (error) {
-      throw new Error(error);
-    }
-    const queryRunner = this.connection.createQueryRunner();
-    try {
-      await queryRunner.connect();
-      await queryRunner.startTransaction();
-      createOrder = await this.createUserOrder(
-        customerId,
-        restaurantId,
-        queryRunner,
-      );
-      data.orderItemsIds.forEach(async (id, index) => {
-        await this.createOrderItem(
-          createOrder.id,
-          id,
-          data.orderItemsQuantities[index],
-          queryRunner,
-        );
-      });
-      await queryRunner.commitTransaction();
-    } catch (error) {
-      await queryRunner.rollbackTransaction();
-      throw new Error(error);
-    } finally {
-      await queryRunner.release();
-    }
+      const queryRunner = this.connection.createQueryRunner();
+      const createOrder = new OrderEntity();
+      createOrder.userId = customerId;
+      createOrder.payment_status = 'pending';
+      createOrder.delivery_status = 'pending';
 
-    // create stripe checkout session and return session id and url
-    const session = await this.stripe.checkout.sessions.create({
-      line_items,
-      mode: 'payment',
-      billing_address_collection: 'required',
-      phone_number_collection: {
-        enabled: true,
-      },
-      success_url: `${process.env.DEV_CLIENT_URL}/cart?success=1`,
-      cancel_url: `${process.env.DEV_CLIENT_URL}/cart?canceled=1`,
-      metadata: {
-        orderId: createOrder.id,
-      },
-    });
-    return {
-      id: session.id,
-      url: session.url,
-    };
-  }
-  private async createOrderItem(
-    orderId: string,
-    menu_item_id: string,
-    quantity: number,
-    queryRunner: QueryRunner,
-  ) {
-    return await queryRunner.manager.save(OrderItemEntity, {
-      orderId,
-      menu_item_id,
-      quantity,
-    });
-  }
-  private async createUserOrder(
-    userId: string,
-    restaurantId: string,
-    queryRunner: QueryRunner,
-  ) {
-    return await queryRunner.manager.save(OrderEntity, {
-      userId,
-      restaurantId,
-      payment_status: 'pending',
-      delivery_status: 'pending',
-    });
+      await queryRunner.manager.save(OrderEntity, createOrder);
+
+      const orderItems = data.orderItems.map((item) => ({
+        order_item_id: item.itemId,
+        order_item_name: item.itemName,
+        order_item_price: item.price,
+        quantity: item.quantity,
+        restaurant_id: item.restaurantId,
+        order: createOrder, // Assign order relation
+      }));
+
+      await queryRunner.manager.save(OrderItemEntity, orderItems);
+      const session = await this.stripe.checkout.sessions.create({
+        line_items,
+        mode: 'payment',
+        billing_address_collection: 'required',
+        phone_number_collection: {
+          enabled: true,
+        },
+        success_url: `http://localhost:3000/${customerId}/cart?success=1`,
+        cancel_url: `http://localhost:3000/${customerId}/cart?canceled=1`,
+        metadata: {
+          orderId: createOrder.id,
+        },
+      });
+      return {
+        id: session.id,
+        url: session.url,
+      };
+
+      // create stripe checkout session and return session id and url
+    } catch (error) {
+      throw new Error(error);
+    }
   }
   async getOrdersByUserId(userId: string): Promise<OrderEntity[]> {
     const orders = await this.orderRepo.find({
       where: {
         userId: userId,
       },
-      relations: ['orderItems'],
     });
     if (!orders) return [];
     return orders;
+  }
+  async getAllOrders(): Promise<any> {
+    const query = this.orderRepo.createQueryBuilder('order');
+    query.leftJoinAndSelect('order.orderItem', 'orderItem');
+    const orders = await query.getMany();
+    const query1 = this.orderItemRepo.createQueryBuilder('orderItem');
+    query1.leftJoinAndSelect('orderItem.order', 'order');
+    const orderItems = await query1.getMany();
+    console.log(orderItems[2].order, 'orderItems');
+    if (!orderItems) return [];
+    return orderItems;
   }
 }

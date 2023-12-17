@@ -23,7 +23,7 @@ const RestaurantCard:React.FC<restaurantcardProps> = ({restaurent}) => {
             className="border-2 rounded-lg w-[30rem] md:w-auto  hover:-translate-y-1 hover:scale-110 lg:mx-16"
           />
           <div className="flex items-center gap-5 lg:mx-5">
-            <div className="max-w-[90%] lg:ml-16 mt-3 text-[1rem] hover:underline cursor-pointer font-[600]" onClick={()=>router.push(`{/restaurant/${restaurent.name}}`)}>
+            <div className="max-w-[90%] lg:ml-16 mt-3 text-[1rem] hover:underline cursor-pointer font-[600]" onClick={()=>router.push(`/restaurant/${restaurent.id}`)}>
               <h1>{restaurent.name}</h1>
             </div>
             <div>

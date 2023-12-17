@@ -1,4 +1,4 @@
-import { Controller, Post, Headers, Req } from '@nestjs/common';
+import { Controller, Post, Headers, Req, Get } from '@nestjs/common';
 import { WebhookService } from './webhook.service';
 
 @Controller('webhook')
@@ -10,5 +10,9 @@ export class WebhookController {
     @Headers('stripe-signature') signature: string,
   ) {
     return await this.webhook.webhook(req.rawBody, signature);
+  }
+  @Get('')
+  async test() {
+    return { status: 'ok' };
   }
 }

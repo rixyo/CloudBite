@@ -137,6 +137,7 @@ export class RestaurantService {
   }
   async getRestaurantsByAddress(page: number, search: string): Promise<any> {
     const query = this.restaurantAddressRepo.createQueryBuilder('address');
+    console.log(search);
     query.skip((page - 1) * 10);
     query.where(
       'LOWER(address.city) LIKE LOWER(:city) OR LOWER(address.street) LIKE LOWER(:street) OR LOWER(address.country) LIKE LOWER(:country) OR LOWER(address.state) LIKE LOWER(:state)',
@@ -173,6 +174,29 @@ export class RestaurantService {
       throw new Error('Restaurant not deleted');
     }
     return restaurant;
+  }
+  async getRestaurantByName(name: string): Promise<RestaurantEntity> {
+    const query = this.restaurantRepo.createQueryBuilder('restaurant');
+    query.where('restaurant.name = :name', { name: name });
+    const restaurant = await query.getOne();
+    if (!restaurant) {
+      throw new NotFoundException(
+        `restaurant with this name not found ${name}`,
+      );
+    }
+    return restaurant;
+  }
+  async getRestaurantsByIds(ids: string[]): Promise<RestaurantEntity[]> {
+    const query = this.restaurantRepo.createQueryBuilder('restaurant');
+    query.where('restaurant.id IN (:...ids)', { ids });
+    query.leftJoinAndSelect('restaurant.address', 'address');
+    const restaurants = await query.getMany();
+
+    if (!restaurants || restaurants.length === 0) {
+      throw new NotFoundException(`No restaurants found with the provided IDs`);
+    }
+
+    return restaurants;
   }
   private evaluateDBError(
     error: Error,

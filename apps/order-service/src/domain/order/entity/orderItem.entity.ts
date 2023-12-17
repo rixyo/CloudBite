@@ -6,25 +6,28 @@ import {
   PrimaryGeneratedColumn,
   UpdateDateColumn,
   ManyToOne,
+  JoinColumn,
 } from 'typeorm';
-import { OrderEntity } from './order.entity'; // Import OrderEntity and ProductEntity based on your project structure
+import { OrderEntity } from './order.entity';
 
-@Entity('order_items')
+@Entity('order_item')
 export class OrderItemEntity extends BaseEntity {
   @PrimaryGeneratedColumn('uuid')
   public id!: string;
 
   @Column({ type: 'uuid', select: true })
-  public orderId!: string;
-
-  @ManyToOne(() => OrderEntity, (order) => order.orderItems)
-  public order!: OrderEntity;
-
+  public order_item_id!: string;
   @Column({ type: 'uuid', select: true })
-  public menu_item_id!: string;
-
+  public restaurant_id!: string;
   @Column()
   public quantity!: number;
+  @Column({ type: 'varchar', default: null })
+  public order_item_name!: string;
+  @Column({ type: 'varchar', default: null })
+  public order_item_price!: string;
+  @ManyToOne(() => OrderEntity, (event) => event.orderItem)
+  @JoinColumn({ name: 'order_id', referencedColumnName: 'id' })
+  public order!: OrderEntity;
 
   @CreateDateColumn({
     type: 'timestamptz',

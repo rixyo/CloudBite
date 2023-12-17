@@ -8,26 +8,17 @@ import {
   UpdateDateColumn,
 } from 'typeorm';
 import { OrderItemEntity } from './orderItem.entity';
+
 @Entity('orders')
 export class OrderEntity extends BaseEntity {
   @PrimaryGeneratedColumn('uuid')
   public id!: string;
-
-  @Column({ type: 'uuid', select: true })
-  public restaurantId!: string;
-
   @Column({ type: 'uuid', select: true })
   public userId!: string;
 
-  @OneToMany(() => OrderItemEntity, (orderItem) => orderItem.order, {
-    cascade: true,
-  })
-  public orderItems!: OrderItemEntity[];
   @Column({ type: 'varchar', default: null })
   public payment_status!: string;
 
-  @Column({ type: 'varchar', default: null })
-  public total!: string;
   @Column({ type: 'varchar', default: null })
   public delivery_status!: string;
 
@@ -39,7 +30,8 @@ export class OrderEntity extends BaseEntity {
 
   @Column({ type: 'timestamptz', nullable: true })
   public deliveredAt!: Date | null;
-
+  @OneToMany(() => OrderItemEntity, (event) => event.order)
+  public orderItem!: OrderItemEntity[];
   @CreateDateColumn({
     type: 'timestamptz',
     default: () => 'CURRENT_TIMESTAMP',

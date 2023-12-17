@@ -42,8 +42,9 @@ export class WebhookService {
       .filter((c) => c !== null)
       .join(', ');
     if (event.type === 'checkout.session.completed') {
+      console.log(`${session?.metadata?.orderId} is completed}`);
       const order = await this.orderRepo.findOne({
-        where: { id: session.id },
+        where: { id: session?.metadata?.orderId },
       });
       if (order) {
         order.address = addressString;

@@ -6,14 +6,20 @@
 
 /* tslint:disable */
 /* eslint-disable */
-export class CreateOrderInput {
-  orderItemsIds: string[];
-  orderItemsQuantities: number[];
-  orderItemsPrices: string[];
-  orderItemsNames: string[];
-  
+
+class OrderItemInput {
+  itemId: string;
+  quantity: number;
+  price: string;
+  itemName: string;
+  restaurantId: string;
 }
 
+
+export class CreateOrderInput {
+  orderItems: OrderItemInput[];
+ 
+}
 export class OrderItem {
     id: string;
     order: Order;

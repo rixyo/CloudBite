@@ -1,6 +1,5 @@
 'use client';
 import Restaurents from '@/components/all-restaurants/page';
-import Catagorie from '@/components/catagories/catagorie';
 import { Input } from '@/components/ui/input';
 import { useSearchParams } from 'next/navigation';
 import React from 'react';
@@ -9,7 +8,6 @@ const Page:React.FC = () => {
         const search = useSearchParams();
         const serachQuery = search ? search.get("new") : null;
         const encodedSearchQuery = encodeURI(serachQuery as string);
-        console.log(serachQuery);
     return (
       <div className="flex justify-center items-center">
         <div className="flex-col ml-10 ">
@@ -37,12 +35,8 @@ const Page:React.FC = () => {
               </div>
             </div>
           </div>
-          <Catagorie />
           <div className="flex items-center mx-5 md:mx-0">
             <div className="flex-col md:mx-24">
-              <div className="md:font-[700] text-[2rem]  text-[#333]  md:leading-[1.5rem] md:tracking-[.5rem] mb-1 mx-10 md:mx-16">
-                <h1>All Restaurents</h1>
-              </div>
               <div>
                 <Restaurents location={encodedSearchQuery} page={1} />
               </div>

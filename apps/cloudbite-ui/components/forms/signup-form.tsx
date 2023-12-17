@@ -116,6 +116,7 @@ const Signupform = () => {
                         placeholder="********"
                         {...field}
                         className="border-2 border-gray-300 focus:border-2 focus:border-[#39DB4A] w-[19rem] md:w-[30rem]"
+                        type="password"
                       />
                     </FormControl>
                     <FormMessage />

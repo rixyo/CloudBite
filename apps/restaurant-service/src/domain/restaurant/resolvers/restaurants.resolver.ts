@@ -133,10 +133,34 @@ export class RestaurantsResolver {
       throw new BadRequestException(error.message);
     }
   }
+  @Query('getRestaurantByName')
+  async restaurantByName(
+    @Args('name') name: string,
+  ): Promise<RestaurantEntity> {
+    try {
+      const restaurant = await this.restaurantsService.getRestaurantByName(
+        name,
+      );
+      return restaurant;
+    } catch (error) {
+      throw new BadRequestException(error.message);
+    }
+  }
   @Query('restaurant')
   async restaurant(@Args('id') id: string): Promise<RestaurantEntity> {
     try {
       const restaurant = await this.restaurantsService.getRestaurantById(id);
+      return restaurant;
+    } catch (error) {
+      throw new BadRequestException(error.message);
+    }
+  }
+  @Query('getRestaurantByIds')
+  async restaurantByIds(
+    @Args('ids') ids: string[],
+  ): Promise<RestaurantEntity[]> {
+    try {
+      const restaurant = await this.restaurantsService.getRestaurantsByIds(ids);
       return restaurant;
     } catch (error) {
       throw new BadRequestException(error.message);
@@ -152,9 +176,9 @@ export class RestaurantsResolver {
   @ResolveReference()
   async resolveReference(reference: {
     __typename: string;
-    id: string;
-  }): Promise<RestaurantEntity> {
+    ids: string[];
+  }): Promise<RestaurantEntity[]> {
     this.logger.http('ResolveReference :: restaurant');
-    return await this.restaurantsService.getRestaurantById(reference.id);
+    return await this.restaurantsService.getRestaurantsByIds(reference.ids);
   }
 }
