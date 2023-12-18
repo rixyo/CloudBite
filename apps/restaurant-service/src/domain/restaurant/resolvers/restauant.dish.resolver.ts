@@ -130,7 +130,7 @@ export class RestaurantDishResolver {
     __typename: string;
     id: string;
   }): Promise<RestaurantDishEntity> {
-    this.logger.http('ResolveReference :: restaurant');
+    this.logger.http('ResolveReference :: restaurantDish');
     return await this.restauranDishService.getDish(reference.id);
   }
 }

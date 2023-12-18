@@ -106,6 +106,7 @@ export class RestaurantService {
     query.leftJoinAndSelect('restaurant.address', 'address');
     const restaurents = await query.take(10).getMany();
     if (!restaurents) return [];
+    console.log(restaurents);
     return restaurents;
   }
   async validateAuthorization(

@@ -5833,13 +5833,22 @@
         "hash": "sha512-0R9ikRb668HB7QDxT1vkpuUBtqc53YyAwMwGeUFKRojY/NWKvdZ+9UYtRfGmhqNbRkTSVpMbmyhXipFFv2cb/A=="
       }
     },
-    "npm:date-fns": {
+    "npm:date-fns@2.30.0": {
       "type": "npm",
-      "name": "npm:date-fns",
+      "name": "npm:date-fns@2.30.0",
       "data": {
         "version": "2.30.0",
         "packageName": "date-fns",
         "hash": "sha512-fnULvOpxnC5/Vg3NCiWelDsLiUc9bRwAPs/+LfTLNvetFCtCTN+yQz15C/fs4AwX1R9K5GLtLfn8QW+dWisaAw=="
+      }
+    },
+    "npm:date-fns": {
+      "type": "npm",
+      "name": "npm:date-fns",
+      "data": {
+        "version": "3.0.0",
+        "packageName": "date-fns",
+        "hash": "sha512-xjDz3rNN9jp+Lh3P/4MeY4E5HkaRnEnrJCcrdRZnKdn42gJlIe6hwrrwVXePRwVR2kh1UcMnz00erYBnHF8PFA=="
       }
     },
     "npm:debug@2.6.9": {
@@ -13037,6 +13046,11 @@
       {
         "source": "cloudbite-merchants",
         "target": "npm:cmdk",
+        "type": "static"
+      },
+      {
+        "source": "cloudbite-merchants",
+        "target": "npm:date-fns",
         "type": "static"
       },
       {
@@ -22750,9 +22764,9 @@
         "type": "static"
       }
     ],
-    "npm:date-fns": [
+    "npm:date-fns@2.30.0": [
       {
-        "source": "npm:date-fns",
+        "source": "npm:date-fns@2.30.0",
         "target": "npm:@babel/runtime",
         "type": "static"
       }
@@ -31516,7 +31530,7 @@
       },
       {
         "source": "npm:typeorm",
-        "target": "npm:date-fns",
+        "target": "npm:date-fns@2.30.0",
         "type": "static"
       },
       {

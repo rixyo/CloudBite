@@ -267,6 +267,9 @@ importers:
       cmdk:
         specifier: ^0.2.0
         version: 0.2.0(@types/react@18.2.37)(react-dom@18.2.0)(react@18.2.0)
+      date-fns:
+        specifier: ^3.0.0
+        version: 3.0.0
       graphql:
         specifier: ^16.8.1
         version: 16.8.1
@@ -6662,6 +6665,10 @@ packages:
     engines: {node: '>=0.11'}
     dependencies:
       '@babel/runtime': 7.23.2
+    dev: false
+
+  /date-fns@3.0.0:
+    resolution: {integrity: sha512-xjDz3rNN9jp+Lh3P/4MeY4E5HkaRnEnrJCcrdRZnKdn42gJlIe6hwrrwVXePRwVR2kh1UcMnz00erYBnHF8PFA==}
     dev: false
 
   /debug@2.6.9:

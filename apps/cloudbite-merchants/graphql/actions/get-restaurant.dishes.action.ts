@@ -7,6 +7,8 @@ const GET_RESTAURANTDISHES: DocumentNode = gql`
       name
      price
      dish_type
+     created_at
+     
      
     }
   }

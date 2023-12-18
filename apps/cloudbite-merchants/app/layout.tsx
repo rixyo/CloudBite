@@ -5,6 +5,8 @@ import { Toaster } from 'react-hot-toast'
 import AuthModalProvider from '@/providers/auth-modal-provider'
 import { Providers } from '@/providers/graqhql-provider'
 import StoreModalProvider from '@/providers/store-modal-provider'
+import WalletModalProvider from '@/providers/wallet-modal-provider'
+import SecretKeyModalProvider from '@/providers/secretkey-modal-provider'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -24,6 +26,8 @@ export default function RootLayout({
       <body className={inter.className}>
         <AuthModalProvider />
         <StoreModalProvider />
+        <WalletModalProvider />
+        <SecretKeyModalProvider />
         {children}
         <Toaster position="top-center" reverseOrder={false} />
       </body>

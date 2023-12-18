@@ -27,7 +27,7 @@ const Page:React.FC = () => {
             name: item.name,
             price: formatter.format(item.price),
             category: item.dish_type,
-            createdAt: item.createdAt,
+            createdAt: item.created_at,
           })
         );
     return (

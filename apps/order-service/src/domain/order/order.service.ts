@@ -2,17 +2,16 @@ import { Injectable } from '@nestjs/common';
 import Stripe from 'stripe';
 import { CreateOrderInput } from '../../graphql.schama';
 import { InjectRepository } from '@nestjs/typeorm';
-import { Like, Repository, Connection, QueryRunner } from 'typeorm';
+import { Repository, Connection, QueryRunner } from 'typeorm';
 import { Logger } from 'src/logger/logger';
 import { OrderEntity } from './entity/order.entity';
 import { OrderItemEntity } from './entity/orderItem.entity';
-import { ConfigService } from 'src/config/config.service';
+
 @Injectable()
 export class OrderService {
   private stripe: Stripe;
   constructor(
     private readonly logger: Logger,
-    private configService: ConfigService,
     @InjectRepository(OrderEntity)
     private orderRepo: Repository<OrderEntity>,
     @InjectRepository(OrderItemEntity)
@@ -26,7 +25,6 @@ export class OrderService {
   }
   async createCheckout(data: CreateOrderInput, customerId: string) {
     const line_items: Stripe.Checkout.SessionCreateParams.LineItem[] = [];
-    let createOrder: OrderEntity;
     try {
       data.orderItems.forEach((id, index) => {
         line_items.push({
@@ -71,6 +69,7 @@ export class OrderService {
           orderId: createOrder.id,
         },
       });
+      this.logger.log(`Created checkout session: ${session.id}`);
       return {
         id: session.id,
         url: session.url,
@@ -94,11 +93,25 @@ export class OrderService {
     const query = this.orderRepo.createQueryBuilder('order');
     query.leftJoinAndSelect('order.orderItem', 'orderItem');
     const orders = await query.getMany();
-    const query1 = this.orderItemRepo.createQueryBuilder('orderItem');
-    query1.leftJoinAndSelect('orderItem.order', 'order');
-    const orderItems = await query1.getMany();
-    console.log(orderItems[2].order, 'orderItems');
-    if (!orderItems) return [];
-    return orderItems;
+    if (!orders) return [];
+    console.log(orders, 'orders');
+    return orders;
+  }
+  async getOrdersByRestaurantId(restaurantId: string): Promise<any> {
+    const query = this.orderItemRepo.createQueryBuilder('orderItem');
+    query.leftJoinAndSelect('orderItem.order', 'order');
+    query.where('orderItem.restaurant_id = :restaurantId', { restaurantId });
+    const orderItems = await query.getMany();
+
+    if (!orderItems || orderItems.length === 0) {
+      return [];
+    }
+    const orderIds = orderItems.map((item) => item.order.id);
+    const query2 = this.orderRepo.createQueryBuilder('order');
+    query2.leftJoinAndSelect('order.orderItem', 'orderItem');
+    query2.where('order.id IN (:...orderIds)', { orderIds });
+    query2.orderBy('order.id', 'DESC');
+    const orders = await query2.getMany();
+    return orders;
   }
 }

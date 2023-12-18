@@ -33,7 +33,6 @@ export class Order {
     userId: string;
     orderItems: OrderItem[];
     payment_status: string;
-    total: string;
     delivery_status: string;
     phone: string;
     address: string;

@@ -56,10 +56,31 @@ export class OrderResolver {
       throw new Error(error);
     }
   }
-
-  @ResolveField('users')
+  @Query('getRestaurantOrders')
+  async getRestaurantOrders(
+    @Args('restaurantId') restaurantId: string,
+  ): Promise<any> {
+    console.log(`restaurantId ${restaurantId}`);
+    return await this.orderServ.getOrdersByRestaurantId(restaurantId);
+  }
+  @ResolveField('user')
   user(@Parent() order: OrderEntity) {
     this.logger.http('ResolveField::user::OrderResolver' + order.userId);
     return { __typename: 'User', id: order.userId };
+  }
+  @ResolveField('restaurant')
+  restaurant(@Parent() orderItem: OrderItemEntity) {
+    console.log(`orderItem ${orderItem.restaurant_id}`);
+    this.logger.http(
+      'ResolveField::restaurant::OrderResolver' + orderItem.restaurant_id,
+    );
+    return { __typename: 'Restaurant', id: orderItem.restaurant_id };
+  }
+  @ResolveField('dish')
+  dish(@Parent() orderItem: OrderItemEntity) {
+    this.logger.http(
+      'ResolveField::dish::OrderResolver' + orderItem.order_item_id,
+    );
+    return { __typename: 'RestaurantDish', id: orderItem.order_item_id };
   }
 }

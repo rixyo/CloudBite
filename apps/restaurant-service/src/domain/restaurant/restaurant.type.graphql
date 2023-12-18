@@ -1,26 +1,38 @@
-scalar Date
+scalar DateTime
 
-type Query{
-    restaurants(page:Int!): [Restaurant!]!
-    restaurant(id: ID!): Restaurant!
-    userRestaurants: [Restaurant!]!
-    restaurantDishes(page:Int!, restaurantId: ID!): [RestaurantDish!]!
-    dishes(page:Int!): [RestaurantDish!]!
-    dish(id: ID!): RestaurantDish
-    getRestaurantByLocation(page:Int!, location: String!): [RestaurantWithLocation!]!
-    getRestaurantByName(name: String!): Restaurant!
-    getRestaurantByIds(ids: [ID!]!): [Restaurant!]!
-
+type Query {
+  restaurants(page: Int!): [Restaurant!]!
+  restaurant(id: ID!): Restaurant!
+  userRestaurants: [Restaurant!]!
+  restaurantDishes(page: Int!, restaurantId: ID!): [RestaurantDish!]!
+  dishes(page: Int!): [RestaurantDish!]!
+  dish(id: ID!): RestaurantDish
+  getRestaurantByLocation(
+    page: Int!
+    location: String!
+  ): [RestaurantWithLocation!]!
+  getRestaurantByName(name: String!): Restaurant!
+  getRestaurantByIds(ids: [ID!]!): [Restaurant!]!
 }
 
 type Mutation {
-    createRestaurant(createRestaurantInput:CreateRestaurantInput): Restaurant!
-    updateRestaurant(id: ID!, fieldToUpdate:UpdateRestaurantInput): Restaurant!
-    deleteRestaurant(id: ID!): Restaurant!
-    createDish(restaurantId: ID!, createDishInput:CreateDishInput): RestaurantDish!
-    updateDish(restaurantId: ID!, dishId: ID!, updateDishInput:UpdateDishInput): RestaurantDish!
-    deleteDish(id: ID!,restaurantId: ID!): Message!
-    createMenu(restaurantId: ID!, createRestaurantMenuInput:createRestaurantMenuInput): RestaurantMenu!
+  createRestaurant(createRestaurantInput: CreateRestaurantInput): Restaurant!
+  updateRestaurant(id: ID!, fieldToUpdate: UpdateRestaurantInput): Restaurant!
+  deleteRestaurant(id: ID!): Restaurant!
+  createDish(
+    restaurantId: ID!
+    createDishInput: CreateDishInput
+  ): RestaurantDish!
+  updateDish(
+    restaurantId: ID!
+    dishId: ID!
+    updateDishInput: UpdateDishInput
+  ): RestaurantDish!
+  deleteDish(id: ID!, restaurantId: ID!): Message!
+  createMenu(
+    restaurantId: ID!
+    createRestaurantMenuInput: createRestaurantMenuInput
+  ): RestaurantMenu!
 }
 input AddressInput {
   street: String!
@@ -38,20 +50,20 @@ type Message {
   message: String!
 }
 type RestaurantWithLocation {
- id: ID!
- restaurant: Restaurant!
+  id: ID!
+  restaurant: Restaurant!
 }
 
-type RestaurantDish @key(fields: "id"){
-    id: ID!
-    name: String!
-    description: String!
-    price: String!
-    thumbnails: [String!]!
-    dish_type: String!
-    restaurant: Restaurant!
-    createdAt: Date!
-    updatedAt: Date!
+type RestaurantDish @key(fields: "id") {
+  id: ID!
+  name: String!
+  description: String!
+  price: String!
+  thumbnails: [String!]!
+  dish_type: String!
+  restaurant: Restaurant!
+  created_at: DateTime!
+  updatedAt: DateTime!
 }
 
 type Restaurant @key(fields: "id") {
@@ -62,46 +74,46 @@ type Restaurant @key(fields: "id") {
   pickup_options: String
   address: AddressType!
   user: User!
-  createdAt: Date!
-  updatedAt: Date!
+  created_at:DateTime!
+   updated_at: DateTime!
 }
 type RestaurantMenu @key(fields: "id") {
   id: ID!
   name: String!
   banner: String!
   restaurant: Restaurant!
-  createdAt: Date!
-  updatedAt: Date!
+   created_at:DateTime!
+   updated_at: DateTime!
 }
- input CreateRestaurantInput{
-    name: String!
-    banner: String!
-    address: AddressInput!
- }
- input createRestaurantMenuInput {
-    name: String!
-    banner: String!
- }
- extend type User @key(fields: "id") {
+input CreateRestaurantInput {
+  name: String!
+  banner: String!
+  address: AddressInput!
+}
+input createRestaurantMenuInput {
+  name: String!
+  banner: String!
+}
+extend type User @key(fields: "id") {
   id: ID! @external
 }
- input UpdateRestaurantInput {
-    name: String!
-    banner: String!
-    delivery_options: String
-    pickup_options: String
- }
-  input CreateDishInput {
-      name: String!
-      description: String!
-      price: String!
-      thumbnails: [String!]!
-      dish_type: String!
-  }
-  input UpdateDishInput {
-      name: String!
-      description: String!
-      price: String!
-      thumbnails: [String!]!
-      dish_type: String!
-  }
+input UpdateRestaurantInput {
+  name: String!
+  banner: String!
+  delivery_options: String
+  pickup_options: String
+}
+input CreateDishInput {
+  name: String!
+  description: String!
+  price: String!
+  thumbnails: [String!]!
+  dish_type: String!
+}
+input UpdateDishInput {
+  name: String!
+  description: String!
+  price: String!
+  thumbnails: [String!]!
+  dish_type: String!
+}

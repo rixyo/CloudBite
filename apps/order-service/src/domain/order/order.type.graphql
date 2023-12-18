@@ -1,9 +1,10 @@
 scalar Date
 
 type Query {
-  orders: [OrderResponse!]
-  order(id: ID!): Order
+  orders: [Order!]
+  order(id: ID!): Order!
   userOrders: [Order!]!
+  getRestaurantOrders(restaurantId: ID!): [Order!]!
 }
 
 type Mutation {
@@ -11,6 +12,8 @@ type Mutation {
     deleteOrder(id: ID!): Order!
     checkout(createOrderInput: CreateOrderInput!): ChekoutRespone!
 }
+
+
 input OrderItemInput {
 itemId: ID!
 quantity: Int!
@@ -18,17 +21,7 @@ price: String!
 restaurantId: ID!
 itemName: String!
 }
-type OrderItem {
-  id: ID!
-  users: User!
-  payment_status: String!
-  delivery_status: String!
-  address: String!
-  phone: String!
-  createdAt: Date!
-  updatedAt: Date!
-}
-type OrderResponse{
+type OrderItem{
   id: ID!
   order_item_id: ID!
   restaurant_id: ID!
@@ -37,7 +30,15 @@ type OrderResponse{
   order_item_price: String!
   createdAt: Date!
   updatedAt: Date!
-  order: Order!
+}
+type Order{
+  id: ID!
+  user: User!
+  payment_status: String!
+  delivery_status: String!
+  address: String!
+  orderItem: [OrderItem]!
+  phone: String!
 }
 input CreateOrderInput {
   orderItems: [OrderItemInput!]!
@@ -57,10 +58,10 @@ type ChekoutRespone{
 
 type Order @key(fields: "id") {
   id: ID!
-  users: User!
+  user: User!
   address: String!
   phone: String!
-  createdAt: Date!
+    createdAt: Date!
   updatedAt: Date!
 }
 

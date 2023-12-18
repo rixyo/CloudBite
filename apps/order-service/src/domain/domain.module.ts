@@ -9,6 +9,7 @@ import { OrderEntity } from './order/entity/order.entity';
 import { OrderItemEntity } from './order/entity/orderItem.entity';
 import { OrderModule } from './order/order.module';
 import { WebhookModule } from './order/webhook/webhook.module';
+import { RevenueModule } from './revenue/revenue.module';
 @Module({
   imports: [
     GraphQLModule.forRoot<ApolloDriverConfig>({
@@ -35,6 +36,7 @@ import { WebhookModule } from './order/webhook/webhook.module';
     ConfigModule,
     LoggerModule,
     OrderModule,
+    RevenueModule,
     WebhookModule,
   ],
 })

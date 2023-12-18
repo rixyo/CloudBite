@@ -2,8 +2,10 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import useAuthModal from '@/hooks/useAuthModal';
+import useSecretKeyModal from '@/hooks/useSecretKeyModal';
 const LandingPage:React.FC = () => {
   const authModal = useAuthModal();
+  const keyModal = useSecretKeyModal();
     
     return (
       <div className="md:w-[50rem] lg:w-[120rem] bg-[#FAFAFA] rounded-[1.5625rem] border-2 p-5">
@@ -33,6 +35,7 @@ const LandingPage:React.FC = () => {
                 </div>
                 <div className=" flex items-center gap-5 mt-10">
                   <Button
+                    onClick={() =>keyModal.onOpen()}
                     variant="default"
                     size="lg"
                     className="rounded-[ 1.25rem] bg-[#F14A16] hover:bg-[#F14A16] hover:opacity-80"

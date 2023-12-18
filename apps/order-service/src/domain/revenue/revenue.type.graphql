@@ -1,0 +1,19 @@
+scalar Date 
+type Query {
+    previousMonthRevenue(restaurentId: ID!): PreviousMonthResponse
+    currentMonthRevenue(restaurentId: ID!): CurrentMonthResponse
+    revenue(restaurantId: ID!): RevenueResponse
+    totalOrders(restaurentId: ID!): String
+    graphRevenue(restaurentId: ID!): [String] 
+}
+type RevenueResponse{
+  total: String
+}
+type CurrentMonthResponse{
+  total: String
+}
+type PreviousMonthResponse{
+  total: String
+}
+
+

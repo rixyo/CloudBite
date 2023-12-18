@@ -18,7 +18,7 @@ export function RestaurantNav({
   const routes = [
     {
       href: `/${user.user?.id}`,
-      label: "Admin Dashboard",
+      label: "Owner Dashboard",
       isActive: pathname.includes(`${user.user?.id}`),
     },
     {

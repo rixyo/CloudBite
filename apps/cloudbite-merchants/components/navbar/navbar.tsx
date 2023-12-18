@@ -25,21 +25,8 @@ export function Navigationbar({
     {
       href: `/${params.userId}`,
       label: "Home",
-      isActive: pathname.includes(`${params.userId}`) || pathname.includes("home"),
+      isActive:pathname.includes("home"),
       icon: Home,
-    },
-    {
-      href: `/${params.userId}/create-restaurant`,
-      label: "Create Restaurant",
-      isActive: pathname.includes("create-restaurant"),
-      icon: BadgePlus,
-
-    },
-    {
-      href: `/${params.userId}/wallet`,
-      label: "Wallet",
-      isActive: pathname.includes("wallet"),
-      icon: WalletCards,
     },
     {
       href: `/${params.userId}/settings`,
