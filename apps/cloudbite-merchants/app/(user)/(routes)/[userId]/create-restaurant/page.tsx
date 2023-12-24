@@ -48,7 +48,7 @@ const Page: React.FC = () => {
   });
   const onSubmit = async (value: z.infer<typeof formSchema>) => {
     const banner = value.images[0].url;
-    try {
+
     createRestaurantMutation({
         variables: {
           name: value.name,
@@ -61,11 +61,10 @@ const Page: React.FC = () => {
     }).then((res) => {
       toast.success("Restaurant created successfully 🎉 ");
       router.push(`/${res?.data?.createRestaurant?.id}`);
+    }).catch((err) => {
+      toast.error(err.message);
     });
-    } catch (error: any) {
-      console.log(error);
-      toast.error("Invalid credentials");
-    }
+    
   };
   return (
     <>

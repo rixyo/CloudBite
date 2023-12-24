@@ -44,9 +44,9 @@ const Signupform = () => {
          password: "",
        },
      });
-       function onSubmit(values: z.infer<typeof formSchema>) {
+     async  function onSubmit(values: z.infer<typeof formSchema>) {
          try {
-          registerUser({
+          await registerUser({
             variables: {
               fullName: values.fullName,
               email: values.email,

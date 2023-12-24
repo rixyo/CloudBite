@@ -1,5 +1,5 @@
 {
-  "name": "cloudbite-ui",
+  "name": "cloudbite",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -18,7 +18,6 @@
     "@radix-ui/react-tabs": "^1.0.4",
     "@stripe/stripe-js": "^2.2.1",
     "add": "^2.0.6",
-    "avatar-initials": "^6.0.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.0.0",
     "dlx": "^0.2.1",

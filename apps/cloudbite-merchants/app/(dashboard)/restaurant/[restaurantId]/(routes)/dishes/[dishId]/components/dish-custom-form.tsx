@@ -39,7 +39,7 @@ const formSchema = z.object({
   thumbnails: z.object({ url: z.string() }).array(),
     dish_type: z.string()
 });
-type Image = {
+type img = {
   url: string;
 };
 
@@ -113,7 +113,7 @@ const DishForm:React.FC<dishFormProps> = ({initialData, restaurantId}) => {
                 name: value.name,
                 description: value.description,
                 price: value.price,
-                thumbnails: value.thumbnails.map((image: Image) => image.url),
+                thumbnails: value.thumbnails.map((image: img) => image.url),
                 dish_type: value.dish_type,
               },
             });
@@ -125,7 +125,7 @@ const DishForm:React.FC<dishFormProps> = ({initialData, restaurantId}) => {
                     name: value.name,
                     description: value.description,
                     price: value.price,
-                    thumbnails: value.thumbnails.map((image: Image) => image.url),
+                    thumbnails: value.thumbnails.map((image: img) => image.url),
                     dish_type: value.dish_type,
                 },
             });
@@ -197,7 +197,7 @@ const DishForm:React.FC<dishFormProps> = ({initialData, restaurantId}) => {
                 <div className="mx-20 md:mx-40">
                   <ImageUpload
                     value={getValues("thumbnails").map(
-                      (image: Image) => image.url
+                      (image: img) => image.url
                     )}
                     onChange={(value) =>
                       setValue("thumbnails", [
@@ -209,7 +209,7 @@ const DishForm:React.FC<dishFormProps> = ({initialData, restaurantId}) => {
                       setValue(
                         "thumbnails",
                         getValues("thumbnails").filter(
-                          (image: Image) => image.url !== value
+                          (image: img) => image.url !== value
                         )
                       )
                     }

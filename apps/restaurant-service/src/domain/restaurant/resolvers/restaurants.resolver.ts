@@ -105,16 +105,16 @@ export class RestaurantsResolver {
       throw new BadRequestException(error.message);
     }
   }
-  @Query('userRestaurants')
+  @Query('userRestaurant')
   @UseGuards(RestaurantOwnerGuard)
-  async userRestaurants(@Context() context: any): Promise<RestaurantEntity[]> {
+  async userRestaurants(@Context() context: any): Promise<RestaurantEntity> {
     try {
       const userId = context.req.headers.userid;
       if (!userId) throw new UnauthorizedException('Unauthorized');
-      const restaurants = await this.restaurantsService.getUserRestaurants(
+      const restaurant = await this.restaurantsService.getUserRestaurant(
         userId,
       );
-      return restaurants;
+      return restaurant;
     } catch (error) {
       throw new BadRequestException(error.message);
     }

@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <>
       <div className="flex items-center justify-center my-5 gap-10">
-        <StoreSwitcher items={data?.userRestaurants} />
+        <StoreSwitcher item={data?.userRestaurant} />
           <RestaurantNav/>
       </div>
         <div className="">

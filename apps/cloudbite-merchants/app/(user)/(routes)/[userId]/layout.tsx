@@ -18,7 +18,7 @@ export default function RootLayout({
   return (
     <>
       <div className="flex flex-col h-screen w-screen">
-        <StoreSwitcher items={data?.userRestaurants} />
+        <StoreSwitcher item={data?.userRestaurant} />
         <div className="flex flex-1 mt-10">
           <Navigationbar />
           {children}

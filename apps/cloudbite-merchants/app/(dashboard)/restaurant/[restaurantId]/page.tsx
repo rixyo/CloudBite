@@ -4,7 +4,6 @@ import { useQuery } from '@apollo/client';
 import React from 'react';
 import Image from 'next/image';
 import GET_REVENUE from '@/graphql/actions/get-revenue.action';
-import { DollarSign } from 'lucide-react';
 import CURRENT_MONTH_REVENUE from '@/graphql/actions/getCurrentMonthRevenue';
 import Revenue from './(routes)/components/Revenue';
 
@@ -42,37 +41,20 @@ const currentYear = currentDate.getFullYear();
     
     return (
       <>
-        <div className=" flex justify-center items-center">
-          <div className="flex-col p-5">
-            <div className="w-[30rem] flex items-center justify-center h-[10rem] rounded-xl border-2 border-gray-400 p-5">
-              <div className="rounded-lg">
-                <Image
-                  src={data?.restaurant?.banner}
-                  alt="restaurant"
-                  width={200}
-                  height={200}
-                  className="rounded-full w-[5rem] h-[5rem] border-2"
-                />
-              </div>
-              <div className="mt-5">
-                <h1 className="text-lg leading-[2rem] tracking-tighter ml-5 hover:underline cursor-pointer">
-                  {data?.restaurant?.name}
-                </h1>
-                <h1 className="text-lg leading-[2rem] tracking-tighter ml-5 max-w-[70%]">
-                  {data?.restaurant?.address?.street}{" "}
-                  {data?.restaurant?.address?.city}{" "}
-                  {data?.restaurant?.address?.state}{" "}
-                  {data?.restaurant?.address?.country}
-                </h1>
-              </div>
-            </div>
-          </div>
-        </div>
         <div className="flex items-center justify-center  p-5 gap-5">
-         <Revenue title='Total Revenue' revenue={totalRevenue} color="red-500" />
-         <Revenue title={monthName + ',' + currentYear} revenue={currentMonthRevenue} color="green-500" />
+          <Revenue
+            title="Total Revenue"
+            revenue={totalRevenue}
+            color="#39DB4A"
+          />
+          <Revenue
+            title={monthName + "," + currentYear}
+            revenue={currentMonthRevenue}
+            color="#39DB4A"
+          />
         </div>
       </>
     );
 }
+
 export default Page;

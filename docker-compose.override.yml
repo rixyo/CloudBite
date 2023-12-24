@@ -30,7 +30,18 @@ services:
       - order_api_data:/data/postgres
     ports:
       - 5433:5432
+  postgres-admin:
+    environment:
+      - POSTGRES_USER=api
+      - POSTGRES_PASSWORD=development_pass
+      - POSTGRES_MULTIPLE_DATABASES="admin-api","admin-api-testing"
+    volumes:
+      - ./docker-utils:/docker-entrypoint-initdb.d
+      - admin_api_data:/data/postgres
+    ports:
+      - 5433:5432
 volumes:
   auth_api_data: {}
   restaurant_api_data: {}
   order_api_data: {}
+  admin_api_data: {}

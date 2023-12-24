@@ -3,7 +3,7 @@ scalar DateTime
 type Query {
   restaurants(page: Int!): [Restaurant!]!
   restaurant(id: ID!): Restaurant!
-  userRestaurants: [Restaurant!]!
+  userRestaurant: Restaurant!
   restaurantDishes(page: Int!, restaurantId: ID!): [RestaurantDish!]!
   dishes(page: Int!): [RestaurantDish!]!
   dish(id: ID!): RestaurantDish

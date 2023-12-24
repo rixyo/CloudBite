@@ -9,6 +9,7 @@ import { LoginResult, LoginUserInput } from '../../graphql.classes';
 import * as bcrypt from 'bcryptjs';
 import { Logger } from '../../logger/logger';
 import { UnauthorizedException } from '@nestjs/common';
+
 @Injectable()
 export class AuthService {
   constructor(
@@ -36,23 +37,22 @@ export class AuthService {
         loginAttempt.password,
         userToAttempt.password,
       );
+      if (isMatch) {
+        const token = this.createJwt(userToAttempt!).token;
+        const result: LoginResult = {
+          user: { ...userToAttempt }, // clone to avoid modifying the original entity
+          token,
+        };
+        userToAttempt.updated_at = new Date();
+        await userToAttempt.save(); // ensure you await the save operation
+        return result;
+      } else {
+        throw new UnauthorizedException('Invalid credentials');
+      }
     } catch (error) {
       this.logger.error(`Error validating user: ${JSON.stringify(error)}`);
       throw new UnauthorizedException('Invalid credentials');
     }
-
-    if (isMatch) {
-      const token = this.createJwt(userToAttempt!).token;
-      const result: LoginResult = {
-        user: { ...userToAttempt }, // clone to avoid modifying the original entity
-        token,
-      };
-      userToAttempt.updated_at = new Date();
-      await userToAttempt.save(); // ensure you await the save operation
-      return result;
-    }
-
-    throw new UnauthorizedException('Invalid credentials');
   }
 
   createJwt(user: UserEntity): { data: JwtPayload; token: string } {
@@ -81,6 +81,7 @@ export class AuthService {
     dbPassword: string,
   ): Promise<boolean> {
     const match = await bcrypt.compare(enteredPassword, dbPassword);
+    if (!match) throw new UnauthorizedException('Invalid credentials');
     return match;
   }
   async validateJwtPayload(payload: JwtPayload): Promise<UserEntity> {

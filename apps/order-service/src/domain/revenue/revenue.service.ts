@@ -8,6 +8,7 @@ import { OrderItemEntity } from '../order/entity/orderItem.entity';
 export class RevenueService {
   constructor(
     @InjectRepository(OrderEntity)
+    private orderRepo: Repository<OrderEntity>, // though we don't need this repo, but we need to inject it to use the orderItemRepo
     @InjectRepository(OrderItemEntity)
     private orderItemRepo: Repository<OrderItemEntity>,
   ) {}
@@ -23,6 +24,7 @@ export class RevenueService {
       'total_revenue',
     );
     const result = await query.getRawOne();
+    if (!result) return { total_revenue: 0 };
     return result;
   }
   async currentMonthRevenue(restaurantId: string): Promise<any> {

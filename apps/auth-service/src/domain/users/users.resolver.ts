@@ -19,7 +19,7 @@ import { UsersService } from './users.service';
 import { Logger } from '../../logger/logger';
 import { AdminGuard } from '../auth/guards/admin.guard';
 import { JwtAuthGuard } from '../auth/guards/jwtauth.guard';
-import { CurrentUser, JwtPayload } from './decorator/user.decorator';
+import { CurrentUser } from './decorator/user.decorator';
 
 @Resolver('User')
 export class UsersResolver {

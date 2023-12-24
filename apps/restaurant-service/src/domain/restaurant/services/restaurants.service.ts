@@ -40,6 +40,7 @@ export class RestaurantService {
         userid,
         queryRunner,
       );
+      if (!restaurant) throw new Error('Restaurant not created');
       await this.createAddress(
         createRestaurantInput.address,
         restaurant,
@@ -61,6 +62,8 @@ export class RestaurantService {
     userid: string,
     queryRunner: QueryRunner,
   ): Promise<RestaurantEntity> {
+    const isRestaurantExist = await this.getUserRestaurant(userid);
+    if (isRestaurantExist) throw new Error('Only one restaurant is allowed');
     return await queryRunner.manager.save(RestaurantEntity, {
       ...createRestaurantInput,
       owner_id: userid,
@@ -78,8 +81,8 @@ export class RestaurantService {
     });
   }
   // get User Restaurant method is used to get a restaurant by user id
-  async getUserRestaurants(userid: string): Promise<RestaurantEntity[]> {
-    const restaurnt = await this.restaurantRepo.find({
+  async getUserRestaurant(userid: string): Promise<RestaurantEntity> {
+    const restaurnt = await this.restaurantRepo.findOne({
       where: { owner_id: userid },
     });
     if (!restaurnt) throw new Error('No restaurant found');
@@ -106,7 +109,6 @@ export class RestaurantService {
     query.leftJoinAndSelect('restaurant.address', 'address');
     const restaurents = await query.take(10).getMany();
     if (!restaurents) return [];
-    console.log(restaurents);
     return restaurents;
   }
   async validateAuthorization(

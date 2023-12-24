@@ -45,13 +45,13 @@ const Signinform:React.FC = () => {
          password: "",
        },
      });
-       function onSubmit(values: z.infer<typeof formSchema>) {
-         try {
-          signinUser({
+       async function onSubmit(values: z.infer<typeof formSchema>) {
+       
+         await signinUser({
             variables: {
               email: values.email,
               password: values.password,
-            },
+            }
           }).then((res) => {
             LocalStorageManager.setItemWithExpiration('token',res.data.login.token,60);
             authModal.onClose();
@@ -63,17 +63,12 @@ const Signinform:React.FC = () => {
               router.push(`/`);
             }
             toast.success("Logged in successfully 🎉 ");
+          }).catch((error) => {
+
+            toast.error('Invalid credentials');
           });
-          
-         } catch (error:any) {
-          toast.error('Invalid credentials');
-          
-         }
        }
     
-       if(error){
-          toast.error(error.message);
-       }
     return (
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
