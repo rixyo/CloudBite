@@ -69,13 +69,6 @@ export class CreateRestaurantDto {
   public address!: AddressDto;
 }
 export class UpdateRestaurantDto {
-  @IsDefined()
-  @IsString()
-  public name!: string;
-
-  @IsOptional()
-  public description!: string;
-
   @IsOptional()
   @IsString()
   @IsUrl()

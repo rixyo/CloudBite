@@ -1,5 +1,8 @@
 "use client";
 import CURRENT_USER from "@/graphql/actions/currentuser.action";
+import GET_REVENUE from "@/graphql/actions/get-revenue.action";
+import GET_WITHDRAWAMOUNT from "@/graphql/actions/get-withdrawAmount";
+import USER_RESTAURANT from "@/graphql/actions/userRestaurant.action";
 import useWalletModal from "@/hooks/useWalletModal";
 import { useQuery } from "@apollo/client";
 import { BadgePlus, Wallet } from "lucide-react";
@@ -14,6 +17,7 @@ type pageProps = {
 
 const Page: React.FC<pageProps> = ({params}) => {
   const { data, loading, error } = useQuery(CURRENT_USER);
+  const {data:restaurant,loading:restaurantLoading,error:restaurantError} = useQuery(USER_RESTAURANT)
   const walletModal = useWalletModal();
   const router = useRouter();
   const currentDate = new Date();
@@ -25,9 +29,20 @@ const Page: React.FC<pageProps> = ({params}) => {
   const fullName = data?.user?.fullName;
   const firstLetter = fullName?.charAt(0);
   const secondLetter = fullName?.charAt(fullName.length - 1).toUpperCase();
+const { data: rev, loading:rl } = useQuery(GET_REVENUE, {
+  variables: {
+    restaurantId: restaurant?.userRestaurant?.id,
+  },
+});
+const { data: totalwithdraw, loading:wl } = useQuery(GET_WITHDRAWAMOUNT, {
+  variables: {
+    email: data?.user?.email,
+  },
+});
+const availableBlance = parseFloat(rev?.revenue?.total) - parseFloat(totalwithdraw?.UserWithdrowalAmount?.total);
 
   return (
-    <div>
+    <div className=" w-[80rem] p-5">
       <div className="bg-[#EB5B3B] rounded-tl rounded-tr rounded-br-sm rounded-bl-sm p-5">
         <div className="mb-3 md:mb-0">
           <h1 className="text-white text-2xl font-bold">{localTime}</h1>
@@ -92,16 +107,16 @@ const Page: React.FC<pageProps> = ({params}) => {
                 </svg>
               </div>
               <div className="text-[#FFF]  font-[700] text-[1rem] mt-2">
-                <p>Revenue</p>
+                <p>Available Blance</p>
                 <p>
-                  BDT <span>2.801.000</span>
+                  BDT {rl||wl ? "0.00": availableBlance.toFixed(2)}
                 </p>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div className="w-[24.1875rem] h-[8.375rem] rounded-[0.625rem] bg-[#fff] md:mx-36 xl:mx-[50rem] shadow-md flex md:justify-center items-center mx-5 gap-16">
+      <div className="w-[24.1875rem] h-[8.375rem] rounded-[0.625rem] bg-[#fff] mt-5 md:mx-28 xl:mx-[30rem] shadow-md flex md:justify-center items-center mx-5 gap-16">
         <div className="border-2 flex justify-center border-green-400 rounded-lg p-2 w-[8rem] cursor-pointer" onClick={()=>walletModal.onOpen()}>
             <div className="flex-col">
           <div>

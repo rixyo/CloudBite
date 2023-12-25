@@ -83,10 +83,9 @@ export class RestaurantsResolver {
     @Args('updateRestaurantInput') updateRestaurantInput: UpdateRestaurantInput,
   ): Promise<RestaurantEntity> {
     try {
-      const { name, banner, delivery_options, pickup_options } =
+      const { banner, delivery_options, pickup_options } =
         updateRestaurantInput;
       const createRestaurant = new UpdateRestaurantDto();
-      createRestaurant.name = name;
       createRestaurant.banner = banner;
       createRestaurant.delivery_options = delivery_options;
       createRestaurant.pickup_options = pickup_options;

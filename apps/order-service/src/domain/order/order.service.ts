@@ -74,8 +74,6 @@ export class OrderService {
         id: session.id,
         url: session.url,
       };
-
-      // create stripe checkout session and return session id and url
     } catch (error) {
       throw new Error(error);
     }
@@ -94,7 +92,6 @@ export class OrderService {
     query.leftJoinAndSelect('order.orderItem', 'orderItem');
     const orders = await query.getMany();
     if (!orders) return [];
-    console.log(orders, 'orders');
     return orders;
   }
   async getOrdersByRestaurantId(restaurantId: string): Promise<any> {
@@ -113,5 +110,26 @@ export class OrderService {
     query2.orderBy('order.id', 'DESC');
     const orders = await query2.getMany();
     return orders;
+  }
+  async getOrderByOrderId(orderId: string): Promise<any> {
+    const query = this.orderRepo.createQueryBuilder('order');
+    query.leftJoinAndSelect('order.orderItem', 'orderItem');
+    query.where('order.id = :orderId', { orderId });
+    const order = await query.getOne();
+    if (!order) throw new Error('Order not found');
+    return order;
+  }
+  async deleteOrder(orderId: string): Promise<OrderEntity> {
+    const query = this.orderRepo.createQueryBuilder('order');
+    query.where('order.id = :orderId', { orderId: orderId });
+    const order = await query.getOne();
+    if (!order) {
+      throw new Error(`Order with this Id not found ${orderId}`);
+    }
+    const orderDelete = await this.orderRepo.delete(orderId);
+    if (orderDelete.affected === 0) {
+      throw new Error('Order not deleted');
+    }
+    return order;
   }
 }

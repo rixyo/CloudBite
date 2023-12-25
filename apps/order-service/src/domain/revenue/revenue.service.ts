@@ -24,7 +24,9 @@ export class RevenueService {
       'total_revenue',
     );
     const result = await query.getRawOne();
-    if (!result) return { total_revenue: 0 };
+    if (result.total_revenue == null) {
+      return { total_revenue: 0 };
+    }
     return result;
   }
   async currentMonthRevenue(restaurantId: string): Promise<any> {
@@ -43,6 +45,9 @@ export class RevenueService {
     );
     query.groupBy('orderItem.restaurant_id');
     const result = await query.getRawOne();
+    if (result.total_revenue == null) {
+      return { total_revenue: 0 };
+    }
     return result;
   }
   async previousMonthRevenue(restaurantId: string): Promise<any> {
@@ -60,6 +65,29 @@ export class RevenueService {
       'total_revenue',
     );
     const result = await query.getRawOne();
+    if (result.total_revenue == null) {
+      return { total_revenue: 0 };
+    }
+    return result;
+  }
+  async todaysRevenue(restaurantId: string): Promise<any> {
+    const query = this.orderItemRepo.createQueryBuilder('orderItem');
+    query.innerJoinAndSelect('orderItem.order', 'order');
+    query.where('orderItem.restaurant_id = :restaurantId', { restaurantId });
+    query.andWhere('order.payment_status = :payment_status', {
+      payment_status: 'completed',
+    });
+    query.andWhere(
+      'EXTRACT(DAY FROM order.createdAt) = EXTRACT(DAY FROM CURRENT_DATE)',
+    );
+    query.select(
+      "SUM(COALESCE(CAST(NULLIF(orderItem.order_item_price, '') AS NUMERIC), 0) * COALESCE(orderItem.quantity, 0))",
+      'total_revenue',
+    );
+    const result = await query.getRawOne();
+    if (result.total_revenue == null) {
+      return { total_revenue: 0 };
+    }
     return result;
   }
 }

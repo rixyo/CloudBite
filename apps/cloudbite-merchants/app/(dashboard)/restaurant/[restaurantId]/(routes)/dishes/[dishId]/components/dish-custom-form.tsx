@@ -104,7 +104,7 @@ const DishForm:React.FC<dishFormProps> = ({initialData, restaurantId}) => {
     //create dish
     const onSubmit =async(value:z.infer<typeof formSchema>) => {
         setLoading(true);
-        try {
+      
           if(initialData){
             await updateDish({
               variables: {
@@ -116,8 +116,11 @@ const DishForm:React.FC<dishFormProps> = ({initialData, restaurantId}) => {
                 thumbnails: value.thumbnails.map((image: img) => image.url),
                 dish_type: value.dish_type,
               },
-            });
-            toast.success(toastMessage);
+            }).then(()=>{
+              toast.success(toastMessage);
+            }).catch(()=>{
+              toast.error('Something went wrong')
+            })
           }
             await createDish({
                 variables: {
@@ -128,12 +131,13 @@ const DishForm:React.FC<dishFormProps> = ({initialData, restaurantId}) => {
                     thumbnails: value.thumbnails.map((image: img) => image.url),
                     dish_type: value.dish_type,
                 },
-            });
-            toast.success(toastMessage);
-            clearForm();
-        } catch (error:any) {
-            toast.error(`Something Went Wrong!`);
-        }
+            }).then(()=>{
+              toast.success(toastMessage);
+              clearForm();
+            }).catch(()=>{
+              toast.error('Something went wrong')
+            })
+       
         setLoading(false);
     };
     //delete dish
@@ -181,19 +185,7 @@ const DishForm:React.FC<dishFormProps> = ({initialData, restaurantId}) => {
             <div className="flex-col">
               <Heading title={title} description={description} />
               <Separator />
-              {initialData && (
-              initialData?.thumbnails.map((image: any) => (
-                  <div className="mx-20 md:mx-40 border-2 rounded-lg mt-5" key={image}>
-                    <Image
-                      src={image}
-                      alt="dish image"
-                      width={200}
-                      height={200}
-                    />
-                  </div>
-              ))
-              )}
-              {!initialData && (
+          
                 <div className="mx-20 md:mx-40">
                   <ImageUpload
                     value={getValues("thumbnails").map(
@@ -215,7 +207,7 @@ const DishForm:React.FC<dishFormProps> = ({initialData, restaurantId}) => {
                     }
                   />
                 </div>
-              )}
+              
 
               <div className="flex-col justify-center items-center  md:w-[40rem]">
                 {errors.name && (
@@ -271,8 +263,7 @@ const DishForm:React.FC<dishFormProps> = ({initialData, restaurantId}) => {
                           placeholder="Select Category"
                         >
                           <option value={initialData?.dish_type || ""} disabled>
-                            Select Category
-                          </option>
+                            {initialData?.dish_type? initialData.dish_type : 'Select Category'}</option>
                           {categories.map((category) => (
                             <option key={category.id} value={category.name}>
                               {category.name}

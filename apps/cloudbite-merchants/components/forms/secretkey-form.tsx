@@ -1,8 +1,10 @@
 "use client";
+import React from "react";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
-
+import { useMutation } from "@apollo/client";
+import SECRETkey_APPLICATION from "@/graphql/actions/secretkey-application.action";
 import { Button } from "@/components/ui/button";
 import {
   Form,
@@ -15,6 +17,7 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import toast from "react-hot-toast";
+import useSecretKeyModal from "@/hooks/useSecretKeyModal";
 const formSchema = z.object({
   licence: z.string().min(7, {
     message: "Please enter Your Restaurent licence.",
@@ -31,13 +34,10 @@ const formSchema = z.object({
   }),
 });
 
-import React from "react";
-import { useMutation } from "@apollo/client";
-import REGISTER_USER from "@/graphql/actions/signup.action";
-import useAuthModal from "@/hooks/useAuthModal";
 
 const Secretkeyform = () => {
-  const authModal = useAuthModal();
+  const [secretkeyApplication] = useMutation(SECRETkey_APPLICATION);
+  const secretkeyModal = useSecretKeyModal();
   const [loading, setLoading] = React.useState(false);
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -48,7 +48,27 @@ const Secretkeyform = () => {
       mobileNumber: "",
     },
   });
-  function onSubmit(values: z.infer<typeof formSchema>) {}
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    setLoading(true);
+    await secretkeyApplication({
+      variables: {
+        email: values.email,
+        restaurant_license: values.licence,
+        mobile_number: values.mobileNumber,
+        passport_nid: values.nid,
+      },
+    })
+      .then(() => {
+        setLoading(false);
+        toast.success("Application submitted successfully 🎉 ");
+        secretkeyModal.onClose();
+      })
+      .catch(() => {
+        setLoading(false);
+        toast.error('Something went wrong');
+      });
+
+  }
 
   return (
     <Form {...form}>
@@ -68,6 +88,9 @@ const Secretkeyform = () => {
                       className="border-2 border-gray-300 focus:border-2 focus:border-[#F14A16] w-[19rem] md:w-[30rem]"
                     />
                   </FormControl>
+                  <FormDescription>
+                   Enter a valid email for  Secretkey Application receipt.
+                  </FormDescription>
                   <FormMessage />
                 </FormItem>
               )}

@@ -98,7 +98,6 @@ extend type User @key(fields: "id") {
   id: ID! @external
 }
 input UpdateRestaurantInput {
-  name: String!
   banner: String!
   delivery_options: String
   pickup_options: String

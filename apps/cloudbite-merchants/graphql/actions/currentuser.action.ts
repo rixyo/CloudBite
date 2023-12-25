@@ -5,6 +5,7 @@ const CURRENT_USER: DocumentNode = gql`
     user {
       id
       fullName
+      email
       permissions
     }
   }

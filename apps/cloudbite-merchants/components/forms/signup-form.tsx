@@ -45,22 +45,20 @@ const Signupform = () => {
        },
      });
      async  function onSubmit(values: z.infer<typeof formSchema>) {
-         try {
+       
           await registerUser({
             variables: {
               fullName: values.fullName,
               email: values.email,
               password: values.password,
             },
-          }).then((res) => {
+          }).then(() => {
             authModal.onClose();
             toast.success("Account created successfully 🎉 ");
+          }).catch((err) => {
+            toast.error(err.message);
           });
          
-         } catch (error:any) {
-          toast.error(error.message);
-
-         }
        }
     
     return (
@@ -99,7 +97,7 @@ const Signupform = () => {
                       />
                     </FormControl>
                     <FormDescription>
-                      We will never share your email.
+                      Use the email you provided to get your secret key.
                     </FormDescription>
                     <FormMessage />
                   </FormItem>
@@ -113,7 +111,6 @@ const Signupform = () => {
                     <FormLabel>Secret Key</FormLabel>
                     <FormControl>
                       <Input
-                        type="password"
                         placeholder="********"
                         {...field}
                         className="border-2 border-gray-300 focus:border-2 focus:border-[#F14A16] w-[19rem] md:w-[30rem]"
@@ -131,6 +128,7 @@ const Signupform = () => {
                     <FormLabel>Password</FormLabel>
                     <FormControl>
                       <Input
+                        type="password"
                         placeholder="********"
                         {...field}
                         className="border-2 border-gray-300 focus:border-2 focus:border-[#F14A16] w-[19rem] md:w-[30rem]"

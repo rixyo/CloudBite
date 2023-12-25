@@ -40,7 +40,8 @@ export default function StoreSwitcher({
   const [open, setOpen] = useState<boolean>(false);
   const params = useParams();
   const router = useRouter();
-  const activeStore = item;
+  const activeStore = item?.id === params.restaurantId;
+
 
   const onStoreChange = (store: Store) => {
     setOpen(false);
@@ -58,16 +59,16 @@ export default function StoreSwitcher({
           className={cn("w-[200px] justify-between", className)}
         >
           <Store className="mr-2 h-4 w-4" />
-          {activeStore?.name || "Select a store"}
+          {activeStore? item?.name : "Select a store"}
           <ChevronsUpDown className="ml-auto h-4 w-4 shrink-0 opacity-50" />
         </Button>
       </PopoverTrigger>
       <PopoverContent className="w-[200px] p-0">
         <Command>
           <CommandList>
-            <CommandInput placeholder="Search store..." />
+            <CommandInput placeholder="Search Restaurant..." />
             <CommandEmpty>No store found.</CommandEmpty>
-            <CommandGroup heading="Store">
+            <CommandGroup heading="Restaurant">
               <CommandItem onSelect={() => onStoreChange(item)}>
                 <Check className="mr-2 h-5 w-5 cursor-pointer" />
                 {item?.name || "Select a store"}
@@ -75,19 +76,6 @@ export default function StoreSwitcher({
             </CommandGroup>
           </CommandList>
           <CommandSeparator />
-          <CommandList>
-            <CommandGroup>
-              <CommandItem
-                onSelect={() => {
-                  setOpen(false);
-                  router.push(`/${params.userId}/create-restaurant`);
-                }}
-              >
-                <PlusCircle className="mr-2 h-5 w-5 cursor-pointer" />
-                Create a Restaurent
-              </CommandItem>
-            </CommandGroup>
-          </CommandList>
         </Command>
       </PopoverContent>
     </Popover>

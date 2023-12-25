@@ -6,7 +6,6 @@ import {
   Context,
   ResolveField,
   Parent,
-  ResolveReference,
 } from '@nestjs/graphql';
 
 import { OrderEntity } from './entity/order.entity';
@@ -20,6 +19,7 @@ import { BadRequestException, UseGuards } from '@nestjs/common';
 import { Logger } from 'src/logger/logger';
 import { OrderItemEntity } from './entity/orderItem.entity';
 import { OrderService } from './order.service';
+import { RestaurantOwnerGuard } from '../auth/guards/restaurant-owner.guard';
 
 @Resolver('Order')
 export class OrderResolver {
@@ -28,9 +28,8 @@ export class OrderResolver {
     private readonly orderServ: OrderService,
   ) {}
   @Query('orders')
-  // @UseGuards(JwtAuthGuard)
-  async orders(@Context() context: any): Promise<any> {
-    const userId = context.req.headers.userid;
+  @UseGuards(RestaurantOwnerGuard)
+  async orders(): Promise<any> {
     return await this.orderServ.getAllOrders();
   }
   @Mutation('checkout')
@@ -56,13 +55,24 @@ export class OrderResolver {
       throw new Error(error);
     }
   }
+  @Mutation('deleteOrder')
+  @UseGuards(RestaurantOwnerGuard)
+  async deleteOrder(@Args('id') orderId: string): Promise<OrderEntity> {
+    return await this.orderServ.deleteOrder(orderId);
+  }
   @Query('getRestaurantOrders')
+  @UseGuards(RestaurantOwnerGuard)
   async getRestaurantOrders(
     @Args('restaurantId') restaurantId: string,
   ): Promise<any> {
-    console.log(`restaurantId ${restaurantId}`);
     return await this.orderServ.getOrdersByRestaurantId(restaurantId);
   }
+  @Query('order')
+  @UseGuards(RestaurantOwnerGuard)
+  async getOrderByOrderId(@Args('id') orderId: string): Promise<any> {
+    return await this.orderServ.getOrderByOrderId(orderId);
+  }
+
   @ResolveField('user')
   user(@Parent() order: OrderEntity) {
     this.logger.http('ResolveField::user::OrderResolver' + order.userId);

@@ -28,32 +28,68 @@ const formSchema = z.object({
     amount: z.string().min(1, {
         message: "Please enter a valid amount.",
     }),
-    email: z.string().email({
-        message: "Please enter a valid email for transaction receipt.",
-    }),
-
-
 });
 
 import React from "react";
-import { useMutation } from "@apollo/client";
-import REGISTER_USER from "@/graphql/actions/signup.action";
-import useAuthModal from "@/hooks/useAuthModal";
+import { useMutation, useQuery } from "@apollo/client";
+import CURRENT_USER from "@/graphql/actions/currentuser.action";
+import GET_REVENUE from "@/graphql/actions/get-revenue.action";
+import GET_WITHDRAWAMOUNT from "@/graphql/actions/get-withdrawAmount";
+import USER_RESTAURANT from "@/graphql/actions/userRestaurant.action";
+import Withdraw_APPLICATION from "@/graphql/actions/withdraw-application";
+import useWalletModal from "@/hooks/useWalletModal";
 
 const Withdrawform = () => {
-  const authModal = useAuthModal();
   const [loading, setLoading] = React.useState(false);
+  const witdrawModal = useWalletModal();
+   const [withdrowApplication] = useMutation(Withdraw_APPLICATION);
+    const { data} = useQuery(CURRENT_USER);
+     const {
+       data: restaurant,
+     } = useQuery(USER_RESTAURANT);
+    const { data: rev } = useQuery(GET_REVENUE, {
+      variables: {
+        restaurantId: restaurant?.userRestaurant?.id,
+      },
+    });
+    const { data: totalwithdraw} = useQuery(GET_WITHDRAWAMOUNT, {
+      variables: {
+        email: data?.user?.email,
+      },
+    });
+    const availableBlance =
+      parseFloat(rev?.revenue?.total) -
+      parseFloat(totalwithdraw?.UserWithdrowalAmount?.total);
+
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
       accountNumber: "",
       branchName: "",
-      nid: "",
       amount: "",
-        email: "",
+      nid: "",
     },
   });
-  function onSubmit(values: z.infer<typeof formSchema>) {
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    setLoading(true);
+    await withdrowApplication({
+      variables: {
+        email: data?.user?.email,
+        account_number: values.accountNumber,
+        branch_name: values.branchName,
+        amount: values.amount,
+        passport_nid: values.nid,
+      },
+    })
+      .then(() => {
+        setLoading(false);
+        toast.success("Withdrawal request sent successfully");
+        witdrawModal.onClose();
+      })
+      .catch(() => {
+        setLoading(false);
+        toast.error("Something went wrong");
+      });
    
   }
 
@@ -133,26 +169,10 @@ const Withdrawform = () => {
                 </FormItem>
               )}
             />
-            <FormField
-              control={form.control}
-              name="email"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Email</FormLabel>
-                  <FormControl>
-                    <Input
-                      placeholder="Enter your email for transaction receipt"
-                      {...field}
-                      className="border-2 border-gray-300 focus:border-2 focus:border-[#F14A16] w-[19rem] md:w-[30rem]"
-                    />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
             <Button
               className="mt-5 bg-[#F14A16] hover:bg-[#F14A16] text-[1rem] font-[500]"
               type="submit"
+              disabled={availableBlance < parseFloat(form.getValues("amount"))}
             >
               {loading ? "Loading..." : "Withdraw"}
             </Button>

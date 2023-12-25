@@ -30,7 +30,9 @@ export class OrderEntity extends BaseEntity {
 
   @Column({ type: 'timestamptz', nullable: true })
   public deliveredAt!: Date | null;
-  @OneToMany(() => OrderItemEntity, (event) => event.order)
+  @OneToMany(() => OrderItemEntity, (event) => event.order, {
+    onDelete: 'CASCADE',
+  })
   public orderItem!: OrderItemEntity[];
   @CreateDateColumn({
     type: 'timestamptz',

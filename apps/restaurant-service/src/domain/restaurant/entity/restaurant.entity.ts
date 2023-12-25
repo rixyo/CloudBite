@@ -45,7 +45,9 @@ export class RestaurantEntity extends BaseEntity {
     onDelete: 'CASCADE',
   })
   public address!: RestaurantAddressEntity;
-  @OneToMany(() => RestaurantMenuEntity, (event) => event.restaurant)
+  @OneToMany(() => RestaurantMenuEntity, (event) => event.restaurant, {
+    onDelete: 'CASCADE',
+  })
   public menues!: RestaurantMenuEntity[];
 
   @CreateDateColumn({

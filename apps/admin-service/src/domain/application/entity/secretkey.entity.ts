@@ -16,13 +16,16 @@ export class SecretkeyEntity extends BaseEntity {
   public email!: string;
 
   @Column({ type: 'varchar', default: null })
-  public restaurant_licence!: string;
+  public restaurant_license!: string;
 
   @Column({ type: 'varchar', default: true })
   public mobile_number!: string;
 
   @Column({ type: 'varchar', default: null })
   public passport_nid!: string;
+
+  @Column({ type: 'varchar', default: null })
+  public status!: string;
 
   @CreateDateColumn({
     type: 'timestamptz',

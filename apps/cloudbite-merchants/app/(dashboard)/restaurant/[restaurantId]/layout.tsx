@@ -5,14 +5,17 @@ import StoreSwitcher from "@/components/store-switcher/store-switcher";
 import { redirect, useRouter } from "next/navigation";
 import { RestaurantNav } from "@/components/navbar/restaurant-navbar";
 import CURRENT_USER from "@/graphql/actions/currentuser.action";
+import Loader from "@/components/ui/loader";
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  const { data, loading, error } = useQuery(USER_RESTAURANT);
-  const { data: user, loading: userLoading, error: userError } = useQuery(CURRENT_USER);
-  if (loading || userLoading) return <div>Loading...</div>;
+  const { data, loading } = useQuery(USER_RESTAURANT);
+  const { data: user, loading: userLoading } = useQuery(CURRENT_USER);
+  if (loading || userLoading) return (
+    <Loader/>
+  )
   if (!user?.user?.permissions?.includes("restaurant_owner")) redirect("/");
 
 

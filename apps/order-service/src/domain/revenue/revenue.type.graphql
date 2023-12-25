@@ -3,6 +3,7 @@ type Query {
     previousMonthRevenue(restaurentId: ID!): PreviousMonthResponse
     currentMonthRevenue(restaurentId: ID!): CurrentMonthResponse
     revenue(restaurantId: ID!): RevenueResponse
+    todaysRevenue(restaurantId: ID!): RevenueResponse
     totalOrders(restaurentId: ID!): String
     graphRevenue(restaurentId: ID!): [String] 
 }

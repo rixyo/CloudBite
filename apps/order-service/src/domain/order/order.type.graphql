@@ -44,7 +44,6 @@ input CreateOrderInput {
   orderItems: [OrderItemInput!]!
 }
 input UpdateOrderInput {
-  payment_status: String
   delivery_status: String
 }
 type CreateOrderReturn {

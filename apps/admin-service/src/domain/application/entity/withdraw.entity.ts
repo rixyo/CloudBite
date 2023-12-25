@@ -27,6 +27,9 @@ export class WithdrawEntity extends BaseEntity {
   @Column({ type: 'varchar', default: null })
   public passport_nid!: string;
 
+  @Column({ type: 'varchar', default: null })
+  public status!: string;
+
   @CreateDateColumn({
     type: 'timestamptz',
     default: () => 'CURRENT_TIMESTAMP',

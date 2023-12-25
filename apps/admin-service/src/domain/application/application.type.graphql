@@ -1,0 +1,59 @@
+scalar Date
+
+type Query {
+    SecretkeyApplications: [SecretkeyApplication!]!
+    SecretkeyApplication(id: ID!): SecretkeyApplication!
+    WithdrowalApplications: [WithdrowalApplication!]!
+    WithdrowalApplication(id: ID!): WithdrowalApplication!
+    UserWithdrowalAmount(email:String!): WithdrowAmountResponse!
+
+}
+
+type Mutation{
+    secretkeyApplication(input: SecretkeyApplicationInput!): SecretkeyApplication!
+    updateSecretkeyApplication(id: ID!, input: SecretkeyApplicationInput!): SecretkeyApplication!
+    deleteSecretkeyApplication(id: ID!): SecretkeyApplication!
+   withdrowApplication(input: WithdrowalApplicationInput!): WithdrowalApplication!
+    updateWithdrowalApplication(id: ID!, input: WithdrowalApplicationInput!): WithdrowalApplication!
+    deleteWithdrowalApplication(id: ID!): WithdrowalApplication!
+
+}
+
+type SecretkeyApplication @key(fields: "id") {
+    id: ID!
+    email: String!
+    restaurant_license: String!
+    mobile_number: String!
+    passport_nid: String!
+    status: String!
+    created_at: Date!
+    updated_at: Date!
+}
+input SecretkeyApplicationInput {
+    email: String!
+    restaurant_license: String!
+    mobile_number: String!
+    passport_nid: String!
+}
+
+type WithdrowalApplication @key(fields: "id") {
+    id: ID!
+    email: String!
+    amount: String!
+    branch_name: String!
+    passport_nid: String!
+    status: String!
+    created_at: Date!
+    updated_at: Date!
+}
+input WithdrowalApplicationInput {
+    email: String!
+    amount: String!
+    branch_name: String!
+    passport_nid: String!
+    account_number: String!
+}
+
+type WithdrowAmountResponse{
+  total: String!
+}

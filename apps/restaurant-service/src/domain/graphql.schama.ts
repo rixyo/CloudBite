@@ -65,7 +65,6 @@ class Address{
     state: string;
 }
 export class UpdateRestaurantInput {
-  name: string;
   banner: string;
   delivery_options: string;
   pickup_options: string;
