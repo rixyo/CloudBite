@@ -10,6 +10,7 @@ import { LoggerModule } from '../logger/logger.module';
 import { SecretkeyEntity } from './application/entity/secretkey.entity';
 import { WithdrawEntity } from './application/entity/withdraw.entity';
 import { ApplicationModule } from './application/application.module';
+import { EmailModule } from './email/email.module';
 @Module({
   imports: [
     GraphQLModule.forRoot<ApolloDriverConfig>({
@@ -25,6 +26,7 @@ import { ApplicationModule } from './application/application.module';
       entities: [SecretkeyEntity, WithdrawEntity],
     }),
     ApplicationModule,
+    EmailModule,
     AuthModule,
     ConfigModule,
     LoggerModule,

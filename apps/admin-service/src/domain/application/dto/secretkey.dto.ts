@@ -17,3 +17,9 @@ export class SecretKeyDto {
   @IsString()
   public passport_nid!: string;
 }
+export class UpdatSecretKeyDto {
+  @IsDefined()
+  @IsNotEmpty()
+  @IsString()
+  public status!: string;
+}

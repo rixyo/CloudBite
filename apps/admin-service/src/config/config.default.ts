@@ -7,13 +7,9 @@ export const DEFAULT_CONFIG: ConfigData = {
   db: {
     url: process.env.DATABASE_URL,
   },
-  /* sendGrid: {
-    apiKey: '',
+ sendEmail: {
     verifiedEmail: '',
-  },
-  */
-  stripe: {
-    apiKey: '',
+    verifiedEmailPassword: '',
   },
 
   auth: {

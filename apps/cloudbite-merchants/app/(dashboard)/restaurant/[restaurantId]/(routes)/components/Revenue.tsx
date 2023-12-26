@@ -22,7 +22,7 @@ const Revenue:React.FC<RevenueProps> = ({revenue,color,title,titleColor}) => {
         </h1>
         <div className="flex gap-3 justify-center mt-3">
           <DollarSign
-            style={{ color: color }}
+            style={{ color: titleColor }}
             size={40}
             className={`text-center`}
           />

@@ -51,13 +51,13 @@ const currentYear = currentDate.getFullYear();
             title="Total Revenue"
             revenue={totalRevenue}
             color="#39DB4A"
-            titleColor='#39DB4A'
+            titleColor='#000'
           />
           <Revenue
             title={currentDate.toDateString()}
             revenue={todayRevenueAmount}
             color="#39DB4A"
-            titleColor='#39DB4A'
+            titleColor='#000'
           />
           <Revenue
             title={monthName + "," + currentYear}

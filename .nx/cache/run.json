@@ -1,8 +1,8 @@
 {
   "run": {
     "command": "nx run gateway-service:start:dev",
-    "startTime": "2023-12-25T20:00:35.914Z",
-    "endTime": "2023-12-25T20:48:19.281Z",
+    "startTime": "2023-12-26T19:21:39.802Z",
+    "endTime": "2023-12-26T20:00:11.968Z",
     "inner": false
   },
   "tasks": [
@@ -10,9 +10,9 @@
       "taskId": "gateway-service:start:dev",
       "target": "start:dev",
       "projectName": "gateway-service",
-      "hash": "14169745340374332689",
-      "startTime": "2023-12-25T20:00:35.919Z",
-      "endTime": "2023-12-25T20:48:19.275Z",
+      "hash": "6453934373669064409",
+      "startTime": "2023-12-26T19:21:39.811Z",
+      "endTime": "2023-12-26T20:00:11.962Z",
       "params": "",
       "cacheStatus": "cache-miss",
       "status": 1

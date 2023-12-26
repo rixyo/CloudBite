@@ -11,11 +11,12 @@ type Query {
 
 type Mutation{
     secretkeyApplication(input: SecretkeyApplicationInput!): SecretkeyApplication!
-    updateSecretkeyApplication(id: ID!, input: SecretkeyApplicationInput!): SecretkeyApplication!
+    updateSecretkeyApplication(id: ID!, input: UpdateSecretkeyApplicationInput!): SecretkeyApplication!
     deleteSecretkeyApplication(id: ID!): SecretkeyApplication!
    withdrowApplication(input: WithdrowalApplicationInput!): WithdrowalApplication!
-    updateWithdrowalApplication(id: ID!, input: WithdrowalApplicationInput!): WithdrowalApplication!
+    updateWithdrowalApplication(id: ID!, input: UpdateWithdrowalApplicationInput!): WithdrowalApplication!
     deleteWithdrowalApplication(id: ID!): WithdrowalApplication!
+    sentEmail(email:String!,message:String!):EmailResponse!
 
 }
 
@@ -35,6 +36,9 @@ input SecretkeyApplicationInput {
     mobile_number: String!
     passport_nid: String!
 }
+type EmailResponse{
+  message:String!
+}
 
 type WithdrowalApplication @key(fields: "id") {
     id: ID!
@@ -42,9 +46,16 @@ type WithdrowalApplication @key(fields: "id") {
     amount: String!
     branch_name: String!
     passport_nid: String!
+    account_number: String!
     status: String!
     created_at: Date!
     updated_at: Date!
+}
+input UpdateWithdrowalApplicationInput {
+  status: String!
+}
+input UpdateSecretkeyApplicationInput {
+  status: String!
 }
 input WithdrowalApplicationInput {
     email: String!

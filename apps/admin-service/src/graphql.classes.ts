@@ -15,6 +15,14 @@ export class SecretkeyApplicationInput {
     passport_nid: string;
 }
 
+export class UpdateWithdrowalApplicationInput {
+    status: string;
+}
+
+export class UpdateSecretkeyApplicationInput {
+    status: string;
+}
+
 export class WithdrowalApplicationInput {
     email: string;
     amount: string;
@@ -38,15 +46,17 @@ export abstract class IQuery {
 export abstract class IMutation {
     abstract secretkeyApplication(input: SecretkeyApplicationInput): SecretkeyApplication | Promise<SecretkeyApplication>;
 
-    abstract updateSecretkeyApplication(id: string, input: SecretkeyApplicationInput): SecretkeyApplication | Promise<SecretkeyApplication>;
+    abstract updateSecretkeyApplication(id: string, input: UpdateSecretkeyApplicationInput): SecretkeyApplication | Promise<SecretkeyApplication>;
 
     abstract deleteSecretkeyApplication(id: string): SecretkeyApplication | Promise<SecretkeyApplication>;
 
     abstract withdrowApplication(input: WithdrowalApplicationInput): WithdrowalApplication | Promise<WithdrowalApplication>;
 
-    abstract updateWithdrowalApplication(id: string, input: WithdrowalApplicationInput): WithdrowalApplication | Promise<WithdrowalApplication>;
+    abstract updateWithdrowalApplication(id: string, input: UpdateWithdrowalApplicationInput): WithdrowalApplication | Promise<WithdrowalApplication>;
 
     abstract deleteWithdrowalApplication(id: string): WithdrowalApplication | Promise<WithdrowalApplication>;
+
+    abstract sentEmail(email: string, message: string): EmailResponse | Promise<EmailResponse>;
 }
 
 export class SecretkeyApplication {
@@ -60,12 +70,17 @@ export class SecretkeyApplication {
     updated_at: Date;
 }
 
+export class EmailResponse {
+    message: string;
+}
+
 export class WithdrowalApplication {
     id: string;
     email: string;
     amount: string;
     branch_name: string;
     passport_nid: string;
+    account_number: string;
     status: string;
     created_at: Date;
     updated_at: Date;

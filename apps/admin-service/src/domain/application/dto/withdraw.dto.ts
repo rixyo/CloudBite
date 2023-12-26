@@ -21,3 +21,9 @@ export class WithdrawDto {
   @IsString()
   public account_number!: string;
 }
+export class UdpatWithdrawDto {
+  @IsDefined()
+  @IsNotEmpty()
+  @IsString()
+  public status!: string;
+}

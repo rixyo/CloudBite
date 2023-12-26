@@ -1,15 +1,20 @@
 import { Args, Mutation, Query, Resolver } from '@nestjs/graphql';
 import { ApplicationService } from './application.service';
-import { SecretKeyDto } from './dto/secretkey.dto';
+import { SecretKeyDto, UpdatSecretKeyDto } from './dto/secretkey.dto';
 import { validate } from 'class-validator';
 import { BadRequestException, UseGuards } from '@nestjs/common';
 import { SecretkeyEntity } from './entity/secretkey.entity';
 import { WithdrawDto } from './dto/withdraw.dto';
 import { RestaurantOwnerGuard } from '../auth/guards/restaurant-owner.guard';
+import { EmailService } from '../email/email.service';
+import { AdminGuard } from '../auth/guards/admin.guard';
 
 @Resolver('Application')
 export class ApplicationResolver {
-  constructor(private readonly applicationService: ApplicationService) {}
+  constructor(
+    private readonly applicationService: ApplicationService,
+    private readonly emailService: EmailService,
+  ) {}
   @Mutation('secretkeyApplication')
   async secretkeyApplication(@Args('input') secretkeyInput: SecretKeyDto) {
     const { email, mobile_number, passport_nid, restaurant_license } =
@@ -29,6 +34,7 @@ export class ApplicationResolver {
     return await this.applicationService.createSecretKey(secretkeyInput);
   }
   @Mutation('withdrowApplication')
+  @UseGuards(RestaurantOwnerGuard)
   async withdrowApplication(@Args('input') withdrowInput: WithdrawDto) {
     const { email, amount, passport_nid, branch_name, account_number } =
       withdrowInput;
@@ -47,6 +53,47 @@ export class ApplicationResolver {
     }
     return await this.applicationService.createWithdraw(withdrowInput);
   }
+  @Mutation('sentEmail')
+  @UseGuards(AdminGuard)
+  async sentEmail(
+    @Args('email') email: string,
+    @Args('message') message: string,
+  ) {
+    await this.emailService.sendEmail(email, message);
+    return { message: 'Email sent successfully' };
+  }
+  @Mutation('updateSecretkeyApplication')
+  @UseGuards(AdminGuard)
+  async updateSecretkeyApplication(
+    @Args('id') id: string,
+    @Args('input') input: UpdatSecretKeyDto,
+  ) {
+    return await this.applicationService.updateSecretkeyApplication(
+      id,
+      input.status,
+    );
+  }
+  @Mutation('updateWithdrowalApplication')
+  @UseGuards(AdminGuard)
+  async updateWithdrowalApplication(
+    @Args('id') id: string,
+    @Args('input') input: UpdatSecretKeyDto,
+  ) {
+    return await this.applicationService.updateWithdrawApplication(
+      id,
+      input.status,
+    );
+  }
+  @Mutation('deleteSecretkeyApplication')
+  @UseGuards(AdminGuard)
+  async deleteSecretkeyApplication(@Args('id') id: string) {
+    return await this.applicationService.deleteSecretkeyApplication(id);
+  }
+  @Mutation('deleteWithdrowalApplication')
+  @UseGuards(AdminGuard)
+  async deleteWithdrowalApplication(@Args('id') id: string) {
+    return await this.applicationService.deleteWithdrawApplication(id);
+  }
   @Query('SecretkeyApplications')
   async getApplication(): Promise<SecretkeyEntity[]> {
     return await this.applicationService.getSecretkeyApplications();
@@ -60,5 +107,15 @@ export class ApplicationResolver {
   async getUserWithdrowalAmount(@Args('email') email: string) {
     const response = await this.applicationService.getUserWithdrawAmount(email);
     return { total: response };
+  }
+  @Query('WithdrowalApplications')
+  @UseGuards(AdminGuard)
+  async getWithdrowalApplications() {
+    return await this.applicationService.getWithdrawApplications();
+  }
+  @Query('WithdrowalApplication')
+  @UseGuards(AdminGuard)
+  async getWithdrowalApplicationById(@Args('id') id: string) {
+    return await this.applicationService.getWithdrawApplication(id);
   }
 }

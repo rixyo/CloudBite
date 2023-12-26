@@ -1,5 +1,5 @@
 'use client';
-import { format } from "date-fns";
+
 import GET_RESTAURANTORDERS from '@/graphql/actions/getRestaurantOrders.action';
 import { useQuery } from '@apollo/client';
 import React from 'react';
@@ -9,6 +9,7 @@ import { formatter } from "@/lib/formatter";
 import { Heading } from "@/components/ui/heading";
 import { Separator } from "@/components/ui/separator";
 import { DataTable } from "@/components/ui/data-table";
+import Loader from "@/components/ui/loader";
 
 
 type pageProps = {
@@ -24,7 +25,9 @@ const Page:React.FC<pageProps> = ({params}) => {
             restaurantId:params.restaurantId
         }
     })
-    console.log(Orders);
+     if (loading) {
+       return <Loader />;
+     }
     const data: OrderColumn[] | undefined = Orders?.getRestaurantOrders?.map(
       (item: Order) => ({
         id: item.id,
@@ -43,7 +46,7 @@ const Page:React.FC<pageProps> = ({params}) => {
         orderItemsQuantity: item.orderItem
           .map((item) => item.quantity)
           .join(", "),
-        createdAt: format(new Date(item.createdAt), "MMMM do, yyyy").toString(),
+        createdAt: item.createdAt,
       })
     );
     

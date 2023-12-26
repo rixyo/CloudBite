@@ -10,6 +10,7 @@ import { Separator } from '@/components/ui/separator';
 import { ProductColumn, columns } from './components/columns';
 import { formatter } from '@/lib/formatter';
 import { DataTable } from '@/components/ui/data-table';
+import Loader from '@/components/ui/loader';
 
 const Page:React.FC = () => {
     const { restaurantId } = useParams();
@@ -21,6 +22,11 @@ const Page:React.FC = () => {
             page:page
         }
     });
+    if(loading){
+      return(
+        <Loader/>
+      )
+    }
         const data: ProductColumn[] | undefined = Dishes?.restaurantDishes?.map(
           (item: any) => ({
             id: item.id,

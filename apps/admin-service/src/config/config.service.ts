@@ -4,7 +4,7 @@ import {
   ConfigData,
   ConfigDBData,
   AuthConfig,
-  StripeConfig,
+  SendEmailConfig,
 } from './config.interface';
 
 /**
@@ -33,9 +33,8 @@ export class ConfigService {
       logLevel: env.LOG_LEVEL || DEFAULT_CONFIG.logLevel,
       debug: env.DEBUG || 'qapi:*',
       newRelicKey: env.NEW_RELIC_KEY || DEFAULT_CONFIG.newRelicKey,
-      //sendGrid: this.parseSendGridConfigFromEnv(env),
+      sendEmail: this.parseSendEmailConfigFromEnv(env),
       auth: this.parseAuthConfigFromEnv(env),
-      stripe: this.parseStripeConfigFromEnv(env, DEFAULT_CONFIG.stripe),
     };
   }
 
@@ -46,13 +45,13 @@ export class ConfigService {
     };
   }
 
-  /* private parseSendGridConfigFromEnv(env: NodeJS.ProcessEnv): SendGridConfig {
+   private parseSendEmailConfigFromEnv(env: NodeJS.ProcessEnv): SendEmailConfig {
     return {
-      apiKey: env.SENDGRID_API_KEY || '',
-      verifiedEmail: env.SENDGRID_VERIFIED_SENDER_EMAIL || '',
+      verifiedEmailPassword: env.VERIFIED_SENDER_PASSWORD || '',
+      verifiedEmail: env.VERIFIED_SENDER_EMAIL || '',
     };
   }
-  */
+  
 
   private parseDbConfigFromEnv(
     env: NodeJS.ProcessEnv,
@@ -62,14 +61,7 @@ export class ConfigService {
       url: env.DATABASE_URL || defaultConfig.url,
     };
   }
-  private parseStripeConfigFromEnv(
-    env: NodeJS.ProcessEnv,
-    defaultConfig: Readonly<StripeConfig>,
-  ): StripeConfig {
-    return {
-      apiKey: env.STRIPE_API_KEY || defaultConfig.apiKey,
-    };
-  }
+
 
   /**
    * Retrieves the config.

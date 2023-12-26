@@ -5,15 +5,13 @@ export interface ConfigDBData {
   url?: string;
 }
 
-/*export interface SendGridConfig {
-  apiKey: string;
+export interface SendEmailConfig {
   verifiedEmail: string;
+  verifiedEmailPassword: string;
 }
-*/
 
-export interface StripeConfig {
-  apiKey: string;
-}
+
+
 
 export interface AuthConfig {
   jwtSecret: string;
@@ -38,9 +36,8 @@ export interface ConfigData {
 
   /** Database connection details. */
   db: ConfigDBData;
-  stripe: StripeConfig;
+  sendEmail: SendEmailConfig;
 
-  // sendGrid: SendGridConfig;
   /**
    * The log level to use.
    * @example 'verbose', 'info', 'warn', 'error'
