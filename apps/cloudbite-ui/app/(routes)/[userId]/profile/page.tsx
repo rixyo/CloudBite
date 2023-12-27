@@ -1,6 +1,8 @@
 "use client";
 import { Button } from '@/components/ui/button';
+import Loader from '@/components/ui/loader';
 import CURRENT_USER from '@/graphql/actions/currentuser.action';
+import USE_PENDING_ORDERS from '@/graphql/actions/getUsePendingOrders';
 import useAuthModal from '@/hooks/useAuthModal';
 import { useQuery } from '@apollo/client';
 import { useRouter } from 'next/navigation';
@@ -12,6 +14,12 @@ type profileProps = {
 
 const Profile:React.FC<profileProps> = () => {
     const {data,loading,error} = useQuery(CURRENT_USER)
+    const {
+      data: pendingOrders,
+      loading: loadingOrders,
+      error: errorOrders,
+    } = useQuery(USE_PENDING_ORDERS);
+    console.log(pendingOrders?.getUserOrders);
      const authModal = useAuthModal();
      const router=useRouter()
    const currentDate = new Date();
@@ -24,6 +32,9 @@ const Profile:React.FC<profileProps> = () => {
     router.push('/')
     authModal.onOpen();
    }
+     if (loading) {
+       return <Loader />;
+     }
    if(error){
        return (
          <div className="text-center text-[1rem] font-[500]">
@@ -67,44 +78,8 @@ const Profile:React.FC<profileProps> = () => {
                       fill="#FFC700"
                     />
                   </svg>
-                  <p className="font-[500] text-[0.4375rem] tracking-[-0.012rem] text-[#fff]">
+                  <p className="font-[600] text-[.9rem] tracking-[-0.012rem] text-[#fff]">
                     Gold Member
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div>
-              <div className="flex">
-                <div className="p-2">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="25"
-                    height="23"
-                    viewBox="0 0 25 23"
-                    fill="none"
-                  >
-                    <text
-                      x="50%" // Set the x-coordinate to the middle of the SVG
-                      y="50%" // Set the y-coordinate to the middle of the SVG
-                      dominantBaseline="middle" // Align the text vertically in the middle
-                      textAnchor="middle" // Align the text horizontally in the middle
-                      fill="white" // Set the text color
-                      fontSize="12" // Set the font size
-                      fontFamily="Arial, sans-serif" // Set the font family
-                      className="text-[0.75rem] font-[500] tracking-[-0.012rem] mt-1"
-                    >
-                      S
-                    </text>
-                    <path
-                      d="M18.9625 0.502257C19.3079 0.419116 19.6685 0.412794 20.0168 0.483768C20.3651 0.554743 20.692 0.70115 20.9728 0.911874C21.2535 1.1226 21.4807 1.3921 21.637 1.69992C21.7933 2.00774 21.8747 2.34579 21.875 2.6884V4.52272H22.6562C23.2779 4.52272 23.874 4.76033 24.3135 5.18328C24.7531 5.60623 25 6.17988 25 6.77802V20.3099C25 20.908 24.7531 21.4817 24.3135 21.9046C23.874 22.3276 23.2779 22.5652 22.6562 22.5652H2.34375C1.72215 22.5652 1.12601 22.3276 0.686469 21.9046C0.24693 21.4817 1.53268e-07 20.908 1.53268e-07 20.3099V6.77802C-0.000217907 6.19744 0.232254 5.63914 0.649027 5.21933C1.0658 4.79952 1.63477 4.55054 2.2375 4.52422L18.9625 0.502257ZM8.69062 4.52272H20.3125V2.6884C20.3122 2.57434 20.285 2.46183 20.2328 2.35939C20.1807 2.25696 20.105 2.16728 20.0115 2.09716C19.918 2.02704 19.8092 1.97832 19.6932 1.95467C19.5772 1.93103 19.4572 1.93308 19.3422 1.96069L8.69062 4.52272ZM2.34375 6.02625C2.13655 6.02625 1.93784 6.10546 1.79132 6.24644C1.64481 6.38743 1.5625 6.57864 1.5625 6.77802V20.3099C1.5625 20.5092 1.64481 20.7005 1.79132 20.8414C1.93784 20.9824 2.13655 21.0616 2.34375 21.0616H22.6562C22.8635 21.0616 23.0622 20.9824 23.2087 20.8414C23.3552 20.7005 23.4375 20.5092 23.4375 20.3099V6.77802C23.4375 6.57864 23.3552 6.38743 23.2087 6.24644C23.0622 6.10546 22.8635 6.02625 22.6562 6.02625H2.34375Z"
-                      fill="white"
-                    />
-                  </svg>
-                </div>
-                <div className="text-[#FFF] font-[700] text-[0.5rem] mt-2">
-                  <p>Foodi Pay</p>
-                  <p>
-                    BDT <span>2.801.000</span>
                   </p>
                 </div>
               </div>
@@ -150,14 +125,14 @@ const Profile:React.FC<profileProps> = () => {
                     <circle cx="10" cy="10" r="10" fill="#39DB4A" />
                   </svg>
                   <h1 className="absolute text-white top-[50%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 ">
-                    1
+                    {pendingOrders?.getUserOrders.length}
                   </h1>
                 </div>
               </div>
             </div>
             <div className="mt-5">
               <p className="text-[#2E2D2D] text-[0.625rem] font-[500]  tracking-[-0.012rem]">
-                To Pay
+                To Receive
               </p>
             </div>
           </div>
@@ -192,46 +167,25 @@ const Profile:React.FC<profileProps> = () => {
                     stroke-linejoin="round"
                   />
                 </svg>
+                <div className="absolute top-[27%] left-5  text-[1.25rem] font-[600]  transform -translate-x-1/2 -translate-y-1/2 p-2">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                  >
+                    <circle cx="10" cy="10" r="10" fill="#39DB4A" />
+                  </svg>
+                  <h1 className="absolute text-white top-[50%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 ">
+                   0
+                  </h1>
+                </div>
               </div>
             </div>
             <div className="mt-3">
               <p className="text-[#2E2D2D] text-[0.625rem] font-[500]  tracking-[-0.012rem]">
-                To Ship
-              </p>
-            </div>
-          </div>
-          <div>
-            <div>
-              <div className="relative cursor-pointer">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="31"
-                  height="30"
-                  viewBox="0 0 31 30"
-                  fill="none"
-                >
-                  <g clip-path="url(#clip0_2_35)">
-                    <path
-                      d="M0.5 5.625V7.5H18.3125V21.5625H12.5413C12.1231 19.9509 10.6737 18.75 8.9375 18.75C7.20125 18.75 5.75187 19.9509 5.33375 21.5625H4.25V16.875H2.375V23.4375H5.33375C5.75187 25.0491 7.20125 26.25 8.9375 26.25C10.6737 26.25 12.1231 25.0491 12.5413 23.4375H20.3337C20.7519 25.0491 22.2013 26.25 23.9375 26.25C25.6737 26.25 27.1231 25.0491 27.5413 23.4375H30.5V15.7913L30.4409 15.6441L28.5659 10.0191L28.3625 9.375H20.1875V5.625H0.5ZM1.4375 9.375V11.25H9.875V9.375H1.4375ZM20.1875 11.25H27.0134L28.625 16.0547V21.5625H27.5413C27.1231 19.9509 25.6737 18.75 23.9375 18.75C22.2013 18.75 20.7519 19.9509 20.3337 21.5625H20.1875V11.25ZM2.375 13.125V15H8V13.125H2.375ZM8.9375 20.625C9.98469 20.625 10.8125 21.4528 10.8125 22.5C10.8125 23.5472 9.98469 24.375 8.9375 24.375C7.89031 24.375 7.0625 23.5472 7.0625 22.5C7.0625 21.4528 7.89031 20.625 8.9375 20.625ZM23.9375 20.625C24.9847 20.625 25.8125 21.4528 25.8125 22.5C25.8125 23.5472 24.9847 24.375 23.9375 24.375C22.8903 24.375 22.0625 23.5472 22.0625 22.5C22.0625 21.4528 22.8903 20.625 23.9375 20.625Z"
-                      fill="#3E3E3E"
-                    />
-                  </g>
-                  <defs>
-                    <clipPath id="clip0_2_35">
-                      <rect
-                        width="30"
-                        height="30"
-                        fill="white"
-                        transform="translate(0.5)"
-                      />
-                    </clipPath>
-                  </defs>
-                </svg>
-              </div>
-            </div>
-            <div className="mt-3">
-              <p className="text-[#2E2D2D] text-[0.625rem] font-[500]  tracking-[-0.012rem]">
-                To Receive
+                Delivered
               </p>
             </div>
           </div>

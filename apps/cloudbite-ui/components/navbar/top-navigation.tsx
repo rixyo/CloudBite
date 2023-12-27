@@ -1,12 +1,12 @@
 "use client"
 import React, { Suspense, useEffect, useState } from 'react';
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Input } from '../ui/input';
+import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import  useAuthModal  from "@/hooks/useAuthModal";
 import { useQuery } from '@apollo/client';
 import CURRENT_USER from '@/graphql/actions/currentuser.action';
 import { useRouter } from 'next/navigation';
 import useCart from '@/hooks/useCart';
+import {User} from 'lucide-react';
 
 const TopNavigation:React.FC = () => {
   const [mutation,setMutation] = useState(false);
@@ -119,7 +119,7 @@ const TopNavigation:React.FC = () => {
                   <circle cx="10" cy="10" r="10" fill="#39DB4A" />
                 </svg>
                 <h1 className="absolute text-white top-[50%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 ">
-                  {cart.items.length}
+                  {cart?.items?.length}
                 </h1>
               </div>
             </div>
@@ -135,7 +135,8 @@ const TopNavigation:React.FC = () => {
             ) : (
               <Avatar>
                 <Suspense fallback={<AvatarFallback>user</AvatarFallback>}>
-                  <AvatarImage src="https://github.com/shadcn.png" />
+                  <User/>
+                  
                 </Suspense>
               </Avatar>
             )}

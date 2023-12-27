@@ -5,6 +5,7 @@ type Query {
   order(id: ID!): Order!
   userOrders: [Order!]!
   getRestaurantOrders(restaurantId: ID!): [Order!]!
+  getUserOrders: [Order!]!
 }
 
 type Mutation {
@@ -12,6 +13,7 @@ type Mutation {
     deleteOrder(id: ID!): Order!
     checkout(createOrderInput: CreateOrderInput!): ChekoutRespone!
 }
+
 
 
 input OrderItemInput {

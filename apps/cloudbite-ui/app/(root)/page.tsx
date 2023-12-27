@@ -5,6 +5,7 @@ import SearchPage from "@/components/mobile-search/search-page";
 import Search from "@/components/search/search";
 import SpecialDishes from "@/components/special-dishes/special-dishes";
 import Testimonial from "@/components/testimonial/testimonial";
+import Footer from "@/components/ui/footer";
 
 export default function Home() {
   return (
@@ -25,6 +26,9 @@ export default function Home() {
       </div>
       <div className="hidden md:block md:p-5 ">
     <Testimonial/>
+      </div>
+      <div>
+       <Footer/>
       </div>
     </main>
   );

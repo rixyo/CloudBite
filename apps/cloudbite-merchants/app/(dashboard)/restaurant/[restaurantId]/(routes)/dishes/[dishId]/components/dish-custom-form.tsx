@@ -16,7 +16,6 @@ import toast from "react-hot-toast";
 import { useRouter } from "next/navigation";
 import { useMutation } from "@apollo/client";
 import CREATE_DISH  from "@/graphql/actions/create-dish.action"
-import Image from "next/image";
 import UPDATE_DISH from "@/graphql/actions/update-dish.action";
 import DELETE_DISH from "@/graphql/actions/delete-dish.action";
 type dishFormProps = {
@@ -64,7 +63,7 @@ const DishForm:React.FC<dishFormProps> = ({initialData, restaurantId}) => {
        resolver: zodResolver(formSchema),
        defaultValues: {
          name: initialData?.name ?? "",
-         price: initialData?.name ?? "",
+         price: initialData?.price ?? "",
          description: initialData?.description ?? "",
          thumbnails: initialData?.thumbnails
            ? [{ url: initialData?.thumbnails[0]}]
@@ -117,11 +116,14 @@ const DishForm:React.FC<dishFormProps> = ({initialData, restaurantId}) => {
                 dish_type: value.dish_type,
               },
             }).then(()=>{
+              setLoading(false);
               toast.success(toastMessage);
             }).catch(()=>{
+              setLoading(false);
               toast.error('Something went wrong')
             })
           }
+          else{
             await createDish({
                 variables: {
                     restaurantId: restaurantId,
@@ -132,31 +134,35 @@ const DishForm:React.FC<dishFormProps> = ({initialData, restaurantId}) => {
                     dish_type: value.dish_type,
                 },
             }).then(()=>{
+              setLoading(false);
               toast.success(toastMessage);
               clearForm();
             }).catch(()=>{
+              setLoading(false);
               toast.error('Something went wrong')
             })
        
-        setLoading(false);
+
+          }
     };
     //delete dish
     const deleteAction=async()=>{
         setLoading(true);
-        try {
+        
           await deleteDish({
             variables:{
               id:initialData?.id,
               restaurantId:restaurantId
             }
+          }).then(()=>{
+            setLoading(false);
+            toast.success(`Dish has been deleted successfully`);
+            router.push(`/restaurant/${restaurantId}/dishes`)
+          }).catch(()=>{
+            setLoading(false);
+            toast.error('Something went wrong')
           })
-          toast.success(`Dish has been deleted successfully`);
-          setOpen(false);
-          router.push(`/restaurant/${restaurantId}/dishes`)
-        }catch(error:any){
-          toast.error('Someting went Wrong')
-
-        }
+        
     }
     return (
       <>

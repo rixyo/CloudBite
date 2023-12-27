@@ -1,16 +1,22 @@
 "use client"
-import React, { Suspense } from 'react';
+import React, { Suspense, useEffect } from 'react';
 import { Avatar, AvatarFallback, AvatarImage } from '../ui/avatar';
 import { useQuery } from '@apollo/client';
 import CURRENT_USER from '@/graphql/actions/currentuser.action';
 import useAuthModal from '@/hooks/useAuthModal';
 import {useRouter} from 'next/navigation'
+import useCart from '@/hooks/useCart';
 
 
 const MobileTopBar:React.FC = () => {
     const { data, loading, error } = useQuery(CURRENT_USER);
+    const [mutation, setMutation] = React.useState(false);
+      const cart = useCart();
     const route = useRouter();
     const authModal = useAuthModal();
+       useEffect(() => {
+         setMutation(true);
+       }, []);
     const fullName = data?.user?.fullName;
     const firstLetter = fullName?.charAt(0);
     const secondLetter = fullName?.charAt(fullName.length - 1).toUpperCase();
@@ -21,6 +27,14 @@ const MobileTopBar:React.FC = () => {
         authModal.onOpen();
       }
     };
+    const handleCart = () => {
+      if (!data?.user) {
+        authModal.onOpen();
+        return;
+      }
+      route.push(`/${data?.user?.id}/cart`);
+    };
+    if (!mutation) return null;
     
     return (
       <div className=" left-0 shadow-4xl right-1 top-[1rem] p-2 h-[5rem] gap-3 flex items-center justify-between md:hidden">
@@ -114,7 +128,7 @@ const MobileTopBar:React.FC = () => {
           </svg>
         </div>
         <div className="w-[2.5625rem] h-[2.4375rem] text-[#B3B3B3]">
-          <div>
+          <div onClick={handleCart}>
             <div className="relative cursor-pointer">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -146,7 +160,7 @@ const MobileTopBar:React.FC = () => {
                   <circle cx="10" cy="10" r="10" fill="#39DB4A" />
                 </svg>
                 <h1 className="absolute text-white top-[50%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 ">
-                  1
+                  {cart?.items?.length}
                 </h1>
               </div>
             </div>

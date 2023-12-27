@@ -132,4 +132,19 @@ export class OrderService {
     }
     return order;
   }
+  async getUserOrders(userId: string): Promise<OrderEntity[]> {
+    const query = this.orderRepo.createQueryBuilder('order');
+    query.leftJoinAndSelect('order.orderItem', 'orderItem');
+    query.where('order.userId = :userId', { userId });
+    query.where('order.delivery_status = :delivery_status', {
+      delivery_status: 'pending',
+    });
+    query.where('order.payment_status = :payment_status', {
+      payment_status: 'completed',
+    });
+    query.orderBy('order.id', 'DESC');
+    const orders = await query.getMany();
+    if (!orders) return [];
+    return orders;
+  }
 }

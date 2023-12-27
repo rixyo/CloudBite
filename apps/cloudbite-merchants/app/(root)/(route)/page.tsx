@@ -1,10 +1,11 @@
 import LandingPage from '@/components/landing_pages/landing_page'
 import MobileLandingPage from '@/components/landing_pages/mobile_landing_page'
+import Footer from '@/components/ui/footer'
 import MobileWhyUs from '@/components/why-us/mobile_why_us'
 import MobileWhyUsSecond from '@/components/why-us/mobile_why_us_second '
 import WhyUs from '@/components/why-us/why_us'
 import WhyUsSecond from '@/components/why-us/why_us_second'
-import Image from 'next/image'
+
 
 export default function Home() {
   return (
@@ -27,6 +28,9 @@ export default function Home() {
       </div>
       <div className='block lg:hidden mt-10'>
         <MobileWhyUsSecond/>
+      </div>
+      <div>
+        <Footer/>
       </div>
     </div>
   )

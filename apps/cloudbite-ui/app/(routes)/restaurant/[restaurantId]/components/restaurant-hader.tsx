@@ -36,7 +36,7 @@ const RestaurantHader:React.FC<restauranthaderProps> = ({restaurant}) => {
                 <div className="flex items-center mt-2 md:mx-5">
                   <Bike className="w-5 h-5 text-[#F14A16]" />
                   <div className="ml-2 text-[#333] text-[1rem] font-[600]">
-                    60 Taka
+                    Free
                   </div>
                 </div>
               </div>
@@ -44,7 +44,7 @@ const RestaurantHader:React.FC<restauranthaderProps> = ({restaurant}) => {
                 <div className="flex items-center mt-2 md:mx-5">
                   <Star className="w-5 h-5 text-[#F14A16]" />
                   <div className="ml-2 text-[#F14A16] text-[1rem] font-[600]">
-                    4.5
+                    0
                   </div>
                 </div>
                 <div className='mt-2'>

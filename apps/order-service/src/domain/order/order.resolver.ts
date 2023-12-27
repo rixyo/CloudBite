@@ -72,7 +72,12 @@ export class OrderResolver {
   async getOrderByOrderId(@Args('id') orderId: string): Promise<any> {
     return await this.orderServ.getOrderByOrderId(orderId);
   }
-
+  @Query('getUserOrders')
+  @UseGuards(JwtAuthGuard)
+  async getUserOrders(@Context() context: any): Promise<any> {
+    const userId = context.req.headers.userid;
+    return await this.orderServ.getUserOrders(userId);
+  }
   @ResolveField('user')
   user(@Parent() order: OrderEntity) {
     this.logger.http('ResolveField::user::OrderResolver' + order.userId);

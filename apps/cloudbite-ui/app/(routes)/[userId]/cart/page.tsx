@@ -9,6 +9,7 @@ import CartItem from "./components/cart-item";
 import { useQuery } from "@apollo/client";
 import CURRENT_USER from "@/graphql/actions/currentuser.action";
 import Summary from "./components/summery";
+import Loader from "@/components/ui/loader";
 
 const CartPage: React.FC = () => {
   const [mounted, setIsMounted] = useState<boolean>(false);
@@ -18,6 +19,9 @@ const CartPage: React.FC = () => {
     setIsMounted(true);
   }, []);
   if (!mounted) return null;
+    if (loading) {
+      return <Loader />;
+    }
   return (
     <div className="bg-white">
       <Container>

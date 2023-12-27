@@ -47,7 +47,6 @@ const Summary = () => {
     return total + Number(item.price * item.quantity);
   }, 0);
   const onCheckout: () => Promise<void> = async () => {
-    try {
       const response = (await checkoutMutation({
         variables: {
           createOrderInput: {
@@ -61,6 +60,8 @@ const Summary = () => {
             ],
           },
         },
+      }).catch(()=>{
+        toast.error("Something went wrong");
       })) as { data: CheckoutMutationResponse };
 
       const stripe = await stripePromise;
@@ -68,10 +69,7 @@ const Summary = () => {
         sessionId: response.data.checkout.id,
       });
       window.location.href = response.data.checkout.url;
-    } catch (error: any) {
-      console.log(error.message);
-      toast.error(error.message);
-    }
+    
   };
   return (
     <div className="mt-16 rounded-lg bg-gray-50 px-4 py-6 sm:p-6 lg:col-span-5 lg:mt-0 lg:p-8">
