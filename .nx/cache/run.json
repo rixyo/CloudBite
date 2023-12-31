@@ -1,18 +1,18 @@
 {
   "run": {
-    "command": "nx run gateway-service:start:dev",
-    "startTime": "2023-12-27T13:11:28.531Z",
-    "endTime": "2023-12-27T13:38:46.386Z",
+    "command": "nx run cloudbite:dev",
+    "startTime": "2023-12-27T12:22:45.304Z",
+    "endTime": "2023-12-27T14:52:54.428Z",
     "inner": false
   },
   "tasks": [
     {
-      "taskId": "gateway-service:start:dev",
-      "target": "start:dev",
-      "projectName": "gateway-service",
-      "hash": "16589655458480595817",
-      "startTime": "2023-12-27T13:11:28.537Z",
-      "endTime": "2023-12-27T13:38:46.382Z",
+      "taskId": "cloudbite:dev",
+      "target": "dev",
+      "projectName": "cloudbite",
+      "hash": "5312151562202504154",
+      "startTime": "2023-12-27T12:22:45.310Z",
+      "endTime": "2023-12-27T14:52:54.411Z",
       "params": "",
       "cacheStatus": "cache-miss",
       "status": 1

@@ -16,6 +16,8 @@ import {
 import { AlertModal } from "@/components/modal/alert-modal";
 
 import { ApplicationColumn } from "./columns";
+import { useMutation } from "@apollo/client";
+import DELETE_SECRETKEY_APPLICATION from "@/graphql/actions/deleteSecretkeyApplication.action";
 
 
 interface CellActionProps {
@@ -26,9 +28,25 @@ export const CellAction: React.FC<CellActionProps> = ({ data }) => {
   const router = useRouter();
   const [open, setOpen] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [deleteSecretkeyApplication,{loading:deleteLoading}] = useMutation(DELETE_SECRETKEY_APPLICATION);
+
 
   const onConfirm = async () => {
     setLoading(true);
+    await deleteSecretkeyApplication({
+      variables: {
+        id: data.id,
+      },
+    })
+      .then(() => {
+        setLoading(false);
+        setOpen(false);
+        router.refresh();
+      })
+      .catch(() => {
+        setLoading(false);
+        setOpen(false);
+      });
  
   };
 

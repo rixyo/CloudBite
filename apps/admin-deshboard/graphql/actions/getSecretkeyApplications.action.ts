@@ -5,6 +5,8 @@ const GET_SECRETKEYAPPLICATIONS: DocumentNode = gql`
     SecretkeyApplications {
       id
       email
+      restaurant_license
+      passport_nid
       created_at
     }
   }

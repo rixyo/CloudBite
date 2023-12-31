@@ -133,7 +133,7 @@ const TopNavigation:React.FC = () => {
                 </p>
               </div>
             ) : (
-              <Avatar>
+              <Avatar className='mt-5'>
                 <Suspense fallback={<AvatarFallback>user</AvatarFallback>}>
                   <User/>
                   
