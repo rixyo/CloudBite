@@ -27,14 +27,16 @@ const formSchema = z.object({
     }),
 });
 
-import React from 'react';
+import React, { useState } from 'react';
 import { useMutation } from "@apollo/client";
 import REGISTER_USER  from "@/graphql/actions/signup.action";
 import useAuthModal from "@/hooks/useAuthModal";
+import { EyeIcon, EyeOffIcon } from "lucide-react";
 
 
 const Signupform = () => {
   const [registerUser, { loading }] = useMutation(REGISTER_USER);
+   const [passwordType, setPasswordType] = useState<string>("password");
    const authModal = useAuthModal();
      const form = useForm<z.infer<typeof formSchema>>({
        resolver: zodResolver(formSchema),
@@ -53,7 +55,7 @@ const Signupform = () => {
               password: values.password,
             },
           }).then((res) => {
-            authModal.onClose();
+            clearForm();
             toast.success("Account created successfully 🎉 ");
           });
          
@@ -62,6 +64,16 @@ const Signupform = () => {
 
          }
        }
+        const ShowPassword = () => {
+          if (passwordType === "password") {
+            setPasswordType("text");
+          } else {
+            setPasswordType("password");
+          }
+        };
+        const clearForm = () => {
+          form.reset();
+        }
     
     return (
       <Form {...form}>
@@ -112,12 +124,28 @@ const Signupform = () => {
                   <FormItem>
                     <FormLabel>Password</FormLabel>
                     <FormControl>
-                      <Input
-                        placeholder="********"
-                        {...field}
-                        className="border-2 border-gray-300 focus:border-2 focus:border-[#39DB4A] w-[19rem] md:w-[30rem]"
-                        type="password"
-                      />
+                      <div className="relative">
+                        <Input
+                          type={passwordType}
+                          placeholder="********"
+                          {...field}
+                          className="border-2 border-gray-300 focus:border-2 focus:border-[#F14A16] w-[19rem] md:w-[30rem]"
+                        />
+                        {passwordType === "password" && (
+                          <EyeIcon
+                            className="absolute top-1/2 right-1 -translate-y-1/2  cursor-pointer text-gray-400"
+                            onClick={ShowPassword}
+                            size={20}
+                          />
+                        )}
+                        {passwordType === "text" && (
+                          <EyeOffIcon
+                            className="absolute top-1/2 right-1 -translate-y-1/2  cursor-pointer text-gray-400"
+                            onClick={ShowPassword}
+                            size={20}
+                          />
+                        )}
+                      </div>
                     </FormControl>
                     <FormMessage />
                   </FormItem>

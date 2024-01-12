@@ -62,7 +62,9 @@ export class RestaurantService {
     userid: string,
     queryRunner: QueryRunner,
   ): Promise<RestaurantEntity> {
-    const isRestaurantExist = await this.getUserRestaurant(userid);
+    const isRestaurantExist = await this.restaurantRepo.findOne({
+      where: { owner_id: userid },
+    });
     if (isRestaurantExist) throw new Error('Only one restaurant is allowed');
     return await queryRunner.manager.save(RestaurantEntity, {
       ...createRestaurantInput,

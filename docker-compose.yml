@@ -12,5 +12,13 @@ services:
   postgres-admin:
     image: postgres:latest
     restart: unless-stopped
-
+  
+  auth-service:
+    build:
+      context: ./app/auth-service
+      dockerfile: Dockerfile
+    ports:
+      - 5001:5001
+    env_file:
+      - ./apps/auth-service/.env
  

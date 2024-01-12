@@ -4,8 +4,13 @@ import { Button } from "@/components/ui/button";
 import useAuthModal from '@/hooks/useAuthModal';
 import useSecretKeyModal from '@/hooks/useSecretKeyModal';
 const LandingPage:React.FC = () => {
+  const [muted, setMuted] = React.useState(false);
   const authModal = useAuthModal();
   const keyModal = useSecretKeyModal();
+  React.useEffect(() => {
+    setMuted(true);
+  }, []);
+  if(!muted) return null;
     
     return (
       <div className="md:w-[50rem] lg:w-[120rem] bg-[#FAFAFA] rounded-[1.5625rem] border-2 p-5">

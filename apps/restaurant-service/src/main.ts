@@ -6,13 +6,7 @@ import { Logger } from '@nestjs/common';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
-  const allowOrigins = [
-    'http://localhost:3000',
-    'http://localhost:3001',
-    'http://localhost:3002',
-  ];
   app.enableCors({
-    origin: allowOrigins,
     credentials: true,
   });
   await app.listen(process.env.PORT || 3002);

@@ -3,6 +3,11 @@ import React from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 const MobileWhyUs: React.FC = () => {
+    const [muted, setMuted] = React.useState(false);
+    React.useEffect(() => {
+      setMuted(true);
+    }, []);
+    if (!muted) return null;
      
     const responsive = {
       desktop: {

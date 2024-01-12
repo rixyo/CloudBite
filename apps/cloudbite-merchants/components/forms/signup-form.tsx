@@ -19,22 +19,27 @@ const formSchema = z.object({
   fullName: z.string().min(3, {
     message: "Please enter a valid name.",
   }),
-    email: z.string().email({
-        message: "Please enter a valid email.",
-    }),
-    password: z.string().min(8, {
-        message: "Password must be at least 8 characters.",
-    }),
+  email: z.string().email({
+    message: "Please enter a valid email.",
+  }),
+  password: z.string().min(8, {
+    message: "Password must be at least 8 characters.",
+  }),
+  secretKey: z.string().min(8, {
+    message: "Enter a valid secret key."
+  }),
 });
 
-import React from 'react';
+import React, { useState } from 'react';
 import { useMutation } from "@apollo/client";
 import REGISTER_USER  from "@/graphql/actions/signup.action";
 import useAuthModal from "@/hooks/useAuthModal";
+import { EyeIcon, EyeOffIcon } from "lucide-react";
 
 
 const Signupform = () => {
-  const [registerUser, { loading }] = useMutation(REGISTER_USER);
+  const [passwordType, setPasswordType] = useState<string>("password");
+  const [createRestaurantOwner, { loading }] = useMutation(REGISTER_USER);
    const authModal = useAuthModal();
      const form = useForm<z.infer<typeof formSchema>>({
        resolver: zodResolver(formSchema),
@@ -42,24 +47,34 @@ const Signupform = () => {
         fullName: "",
          email: "",
          password: "",
+         secretKey: "",
        },
      });
      async  function onSubmit(values: z.infer<typeof formSchema>) {
        
-          await registerUser({
+          await createRestaurantOwner({
             variables: {
               fullName: values.fullName,
               email: values.email,
               password: values.password,
+              secretKey: values.secretKey,
             },
-          }).then(() => {
-            authModal.onClose();
-            toast.success("Account created successfully 🎉 ");
-          }).catch((err) => {
-            toast.error(err.message);
-          });
+          })
+            .then(() => {
+              toast.success("Account created successfully 🎉 ");
+            })
+            .catch((err) => {
+              toast.error("Something went wrong");
+            });
          
        }
+        const ShowPassword = () => {
+          if (passwordType === "password") {
+            setPasswordType("text");
+          } else {
+            setPasswordType("password");
+          }
+        };
     
     return (
       <Form {...form}>
@@ -96,26 +111,6 @@ const Signupform = () => {
                         className="border-2 border-gray-300 focus:border-2 focus:border-[#F14A16] w-[19rem] md:w-[30rem]"
                       />
                     </FormControl>
-                    <FormDescription>
-                      Use the email you provided to get your secret key.
-                    </FormDescription>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-              <FormField
-                control={form.control}
-                name="password"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Secret Key</FormLabel>
-                    <FormControl>
-                      <Input
-                        placeholder="********"
-                        {...field}
-                        className="border-2 border-gray-300 focus:border-2 focus:border-[#F14A16] w-[19rem] md:w-[30rem]"
-                      />
-                    </FormControl>
                     <FormMessage />
                   </FormItem>
                 )}
@@ -127,8 +122,41 @@ const Signupform = () => {
                   <FormItem>
                     <FormLabel>Password</FormLabel>
                     <FormControl>
+                      <div className="relative">
+                        <Input
+                          type={passwordType}
+                          placeholder="********"
+                          {...field}
+                          className="border-2 border-gray-300 focus:border-2 focus:border-[#F14A16] w-[19rem] md:w-[30rem]"
+                        />
+                        {passwordType === "password" && (
+                          <EyeIcon
+                            className="absolute top-1/2 right-1 -translate-y-1/2  cursor-pointer text-gray-400"
+                            onClick={ShowPassword}
+                            size={20}
+                          />
+                        )}
+                        {passwordType === "text" && (
+                          <EyeOffIcon
+                            className="absolute top-1/2 right-1 -translate-y-1/2  cursor-pointer text-gray-400"
+                            onClick={ShowPassword}
+                            size={20}
+                          />
+                        )}
+                      </div>
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="secretKey"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Secretkey</FormLabel>
+                    <FormControl>
                       <Input
-                        type="password"
                         placeholder="********"
                         {...field}
                         className="border-2 border-gray-300 focus:border-2 focus:border-[#F14A16] w-[19rem] md:w-[30rem]"

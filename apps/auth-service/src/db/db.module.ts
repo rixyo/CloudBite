@@ -34,11 +34,7 @@ export class DbModule {
       type: 'postgres',
       url: dbdata.url,
       keepConnectionAlive: true,
-      ssl:
-        process.env.NODE_ENV !== 'development' &&
-        process.env.NODE_ENV !== 'test'
-          ? { rejectUnauthorized: false }
-          : false,
+      ssl: true,
     };
   }
   public static forRoot(dbconfig: DbConfig): DynamicModule {

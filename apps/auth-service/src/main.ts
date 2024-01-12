@@ -12,9 +12,7 @@ async function bootstrap() {
         ? ['error', 'warn']
         : ['log', 'error', 'warn', 'debug', 'verbose'],
   });
-  const allowOrigins = ['http://localhost:3000', 'http://localhost:3001'];
   app.enableCors({
-    origin: allowOrigins,
     credentials: true,
   });
   await app.listen(process.env.PORT || 3001);

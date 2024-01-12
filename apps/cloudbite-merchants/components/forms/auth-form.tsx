@@ -6,6 +6,11 @@ import SignupForm from './signup-form';
 
 
 const AuthForm:React.FC = () => {
+    const [muted, setMuted] = React.useState(false);
+    React.useEffect(() => {
+      setMuted(true);
+    }, []);
+    if (!muted) return null;
     
     return (
       <div className="bg-white rounded-lg">

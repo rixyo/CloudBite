@@ -1,18 +1,18 @@
 {
   "run": {
-    "command": "nx run cloudbite:dev",
-    "startTime": "2023-12-27T12:22:45.304Z",
-    "endTime": "2023-12-27T14:52:54.428Z",
+    "command": "nx run auth-service:start:dev",
+    "startTime": "2024-01-12T14:35:57.315Z",
+    "endTime": "2024-01-12T14:37:01.116Z",
     "inner": false
   },
   "tasks": [
     {
-      "taskId": "cloudbite:dev",
-      "target": "dev",
-      "projectName": "cloudbite",
-      "hash": "5312151562202504154",
-      "startTime": "2023-12-27T12:22:45.310Z",
-      "endTime": "2023-12-27T14:52:54.411Z",
+      "taskId": "auth-service:start:dev",
+      "target": "start:dev",
+      "projectName": "auth-service",
+      "hash": "11971681220498091716",
+      "startTime": "2024-01-12T14:35:57.320Z",
+      "endTime": "2024-01-12T14:37:01.115Z",
       "params": "",
       "cacheStatus": "cache-miss",
       "status": 1

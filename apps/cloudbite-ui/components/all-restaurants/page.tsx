@@ -26,7 +26,7 @@ const Restaurents:React.FC<pageProps> = ({location,page}) => {
                 <div className="flex-col ml-10 ">
                     <div className="flex items-center mx-5 md:mx-0">
                         <div className="flex-col md:mx-24">
-                            <div className="md:font-[700] text-[2rem]  text-[#333]  md:leading-[1.5rem] md:tracking-[.5rem] mb-1 mx-10 md:mx-16">
+                            <div className="md:font-[700] text-[2rem] mt-10  text-[#333]  md:leading-[1.5rem] md:tracking-[.5rem] mb-1 mx-10 md:mx-16">
                                 <h1>Sorry, no results found!</h1>
                             </div>
                         </div>

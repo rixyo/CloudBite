@@ -39,15 +39,20 @@ const Secretkeyform = () => {
   const [secretkeyApplication] = useMutation(SECRETkey_APPLICATION);
   const secretkeyModal = useSecretKeyModal();
   const [loading, setLoading] = React.useState(false);
-  const form = useForm<z.infer<typeof formSchema>>({
-    resolver: zodResolver(formSchema),
-    defaultValues: {
-      email: "",
-      licence: "",
-      nid: "",
-      mobileNumber: "",
-    },
-  });
+    const [muted, setMuted] = React.useState(false);
+    React.useEffect(() => {
+      setMuted(true);
+    }, []);
+    const form = useForm<z.infer<typeof formSchema>>({
+      resolver: zodResolver(formSchema),
+      defaultValues: {
+        email: "",
+        licence: "",
+        nid: "",
+        mobileNumber: "",
+      },
+    });
+    if (!muted) return null;
   async function onSubmit(values: z.infer<typeof formSchema>) {
     setLoading(true);
     await secretkeyApplication({

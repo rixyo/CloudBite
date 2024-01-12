@@ -2,8 +2,12 @@
 import React from 'react';
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import { Button } from '../ui/button';
 const WhyUsSecond:React.FC = () => {
+    const [muted, setMuted] = React.useState(false);
+    React.useEffect(() => {
+      setMuted(true);
+    }, []);
+    if (!muted) return null;
    
     const responsive = {
       desktop: {

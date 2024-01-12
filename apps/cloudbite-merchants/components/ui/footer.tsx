@@ -1,6 +1,12 @@
+'use client'
 import React from "react";
 
 const Footer: React.FC = () => {
+    const [muted, setMuted] = React.useState(false);
+    React.useEffect(() => {
+      setMuted(true);
+    }, []);
+    if (!muted) return null;
   return (
     <div className="mx-10 p-5">
       <div className="flex items-center gap-32 justify-center">

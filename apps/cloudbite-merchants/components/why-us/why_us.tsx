@@ -1,7 +1,13 @@
+'use client'
 import React from 'react';
 
 
 const WhyUs:React.FC = () => {
+  const [muted, setMuted] = React.useState(false);
+  React.useEffect(() => {
+    setMuted(true);
+  }, []);
+  if(!muted) return null;
     
     return (
       <div className="">

@@ -7,6 +7,11 @@ import useAuthModal from '@/hooks/useAuthModal';
 
 const MobileLandingPage:React.FC= () => {
      const authModal = useAuthModal();
+     const [muted, setMuted] = React.useState(false);
+      React.useEffect(() => {
+        setMuted(true);
+      }, []);
+      if(!muted) return null;
     return (
       <div className="max-w-[108rem] max-h-[74rem] bg-gradient-to-b from-#FAFAFA via-#FCFCFC to-#FCFCFC md:p-5 ">
         <div className="flex-col items-center justify-between w-full p-5 ">
