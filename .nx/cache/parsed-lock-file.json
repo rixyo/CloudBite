@@ -14827,51 +14827,6 @@
     },
     {
       "source": "npm:@nestjs/apollo",
-      "target": "npm:graphql",
-      "type": "static"
-    },
-    {
-      "source": "npm:@nestjs/apollo",
-      "target": "npm:iterall",
-      "type": "static"
-    },
-    {
-      "source": "npm:@nestjs/apollo",
-      "target": "npm:lodash.omit",
-      "type": "static"
-    },
-    {
-      "source": "npm:@nestjs/apollo",
-      "target": "npm:tslib@2.5.0",
-      "type": "static"
-    },
-    {
-      "source": "npm:@nestjs/apollo",
-      "target": "npm:@apollo/subgraph",
-      "type": "static"
-    },
-    {
-      "source": "npm:@nestjs/apollo",
-      "target": "npm:@nestjs/common",
-      "type": "static"
-    },
-    {
-      "source": "npm:@nestjs/apollo",
-      "target": "npm:@nestjs/core",
-      "type": "static"
-    },
-    {
-      "source": "npm:@nestjs/apollo",
-      "target": "npm:@nestjs/graphql",
-      "type": "static"
-    },
-    {
-      "source": "npm:@nestjs/apollo",
-      "target": "npm:apollo-server-core",
-      "type": "static"
-    },
-    {
-      "source": "npm:@nestjs/apollo",
       "target": "npm:apollo-server-express",
       "type": "static"
     },
@@ -14918,6 +14873,11 @@
     {
       "source": "npm:@nestjs/apollo",
       "target": "npm:apollo-server-core",
+      "type": "static"
+    },
+    {
+      "source": "npm:@nestjs/apollo",
+      "target": "npm:apollo-server-express",
       "type": "static"
     },
     {
@@ -15433,6 +15393,11 @@
     {
       "source": "npm:@nestjs/graphql",
       "target": "npm:subscriptions-transport-ws",
+      "type": "static"
+    },
+    {
+      "source": "npm:@nestjs/graphql",
+      "target": "npm:ts-morph",
       "type": "static"
     },
     {

@@ -8,9 +8,7 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   await app.listen(process.env.PORT || 3000);
   Logger.log(
-    `🚀 Application Server running on http://localhost:${
-      process.env.PORT || 3000
-    }`,
+    `🚀 Application Server running on ${process.env.PORT || 3000}`,
     'Bootstrap',
   );
 }

@@ -12991,7 +12991,27 @@
       },
       {
         "source": "restaurant-service",
+        "target": "npm:@apollo/subgraph",
+        "type": "static"
+      },
+      {
+        "source": "restaurant-service",
+        "target": "npm:@nestjs/apollo",
+        "type": "static"
+      },
+      {
+        "source": "restaurant-service",
         "target": "npm:@nestjs/common",
+        "type": "static"
+      },
+      {
+        "source": "restaurant-service",
+        "target": "npm:@nestjs/core",
+        "type": "static"
+      },
+      {
+        "source": "restaurant-service",
+        "target": "npm:@nestjs/graphql",
         "type": "static"
       },
       {
@@ -13017,6 +13037,11 @@
       {
         "source": "restaurant-service",
         "target": "npm:apollo-server-core",
+        "type": "static"
+      },
+      {
+        "source": "restaurant-service",
+        "target": "npm:apollo-server-express",
         "type": "static"
       },
       {
@@ -13071,6 +13096,11 @@
       },
       {
         "source": "restaurant-service",
+        "target": "npm:uuid",
+        "type": "static"
+      },
+      {
+        "source": "restaurant-service",
         "target": "npm:winston",
         "type": "static"
       },
@@ -13087,6 +13117,11 @@
       {
         "source": "restaurant-service",
         "target": "npm:@nestjs/testing",
+        "type": "static"
+      },
+      {
+        "source": "restaurant-service",
+        "target": "npm:@types/express",
         "type": "static"
       },
       {
@@ -13142,6 +13177,11 @@
       {
         "source": "restaurant-service",
         "target": "npm:prettier",
+        "type": "static"
+      },
+      {
+        "source": "restaurant-service",
+        "target": "npm:source-map-support",
         "type": "static"
       },
       {
@@ -13537,6 +13577,11 @@
       },
       {
         "source": "admin-service",
+        "target": "npm:apollo-server-express",
+        "type": "static"
+      },
+      {
+        "source": "admin-service",
         "target": "npm:body-parser",
         "type": "static"
       },
@@ -13598,6 +13643,11 @@
       {
         "source": "admin-service",
         "target": "npm:stripe",
+        "type": "static"
+      },
+      {
+        "source": "admin-service",
+        "target": "npm:ts-morph",
         "type": "static"
       },
       {
@@ -13749,7 +13799,27 @@
       },
       {
         "source": "order-service",
+        "target": "npm:@apollo/subgraph",
+        "type": "static"
+      },
+      {
+        "source": "order-service",
+        "target": "npm:@nestjs/apollo",
+        "type": "static"
+      },
+      {
+        "source": "order-service",
         "target": "npm:@nestjs/common",
+        "type": "static"
+      },
+      {
+        "source": "order-service",
+        "target": "npm:@nestjs/core",
+        "type": "static"
+      },
+      {
+        "source": "order-service",
+        "target": "npm:@nestjs/graphql",
         "type": "static"
       },
       {
@@ -13775,6 +13845,16 @@
       {
         "source": "order-service",
         "target": "npm:apollo-server-core",
+        "type": "static"
+      },
+      {
+        "source": "order-service",
+        "target": "npm:apollo-server-express",
+        "type": "static"
+      },
+      {
+        "source": "order-service",
+        "target": "npm:body-parser",
         "type": "static"
       },
       {
@@ -13834,6 +13914,11 @@
       },
       {
         "source": "order-service",
+        "target": "npm:uuid",
+        "type": "static"
+      },
+      {
+        "source": "order-service",
         "target": "npm:winston",
         "type": "static"
       },
@@ -13850,6 +13935,16 @@
       {
         "source": "order-service",
         "target": "npm:@nestjs/testing",
+        "type": "static"
+      },
+      {
+        "source": "order-service",
+        "target": "npm:@types/body-parser",
+        "type": "static"
+      },
+      {
+        "source": "order-service",
+        "target": "npm:@types/express",
         "type": "static"
       },
       {
@@ -13905,6 +14000,11 @@
       {
         "source": "order-service",
         "target": "npm:prettier",
+        "type": "static"
+      },
+      {
+        "source": "order-service",
+        "target": "npm:source-map-support",
         "type": "static"
       },
       {
@@ -17343,6 +17443,11 @@
       },
       {
         "source": "npm:@nestjs/apollo",
+        "target": "npm:apollo-server-express",
+        "type": "static"
+      },
+      {
+        "source": "npm:@nestjs/apollo",
         "target": "npm:graphql",
         "type": "static"
       },
@@ -17364,11 +17469,6 @@
       {
         "source": "npm:@nestjs/apollo",
         "target": "npm:@nestjs/core",
-        "type": "static"
-      },
-      {
-        "source": "npm:@nestjs/apollo",
-        "target": "npm:apollo-server-express",
         "type": "static"
       }
     ],

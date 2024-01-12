@@ -40,6 +40,7 @@ services:
       - admin_api_data:/data/postgres
     ports:
       - 5434:5432
+
   auth-service:
     build:
       context: ./apps/auth-service
@@ -48,8 +49,30 @@ services:
       - 5001:5001
     env_file:
       - ./apps/auth-service/.env
-    
-    
+  restaurant-service:
+    build:
+      context: ./apps/restaurant-service
+      dockerfile: Dockerfile
+    ports:
+      - 5002:5002
+    env_file:
+      - ./apps/restaurant-service/.env
+  order-service:
+    build:
+      context: ./apps/order-service
+      dockerfile: Dockerfile
+    ports:
+      - 5003:5003
+    env_file:
+      - ./apps/order-service/.env  
+  admin-service:
+    build:
+      context: ./apps/admin-service
+      dockerfile: Dockerfile
+    ports:
+      - 5004:5004
+    env_file:
+      - ./apps/admin-service/.env
 volumes:
   auth_api_data: {}
   restaurant_api_data: {}
