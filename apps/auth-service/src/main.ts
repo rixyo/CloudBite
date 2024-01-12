@@ -16,8 +16,6 @@ async function bootstrap() {
     credentials: true,
   });
   await app.listen(process.env.PORT || 3001);
-  Logger.log(
-    `🚀 Auth Server ready at http://localhost:${process.env.PORT}/graphql`,
-  );
+  Logger.log(`🚀 Auth Server ready at PORT ${process.env.PORT}`);
 }
 bootstrap();
