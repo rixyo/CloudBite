@@ -34,7 +34,7 @@ export class DbModule {
       type: 'postgres',
       url: dbdata.url,
       keepConnectionAlive: true,
-      ssl: false,
+      ssl: true,
     };
   }
   public static forRoot(dbconfig: DbConfig): DynamicModule {
