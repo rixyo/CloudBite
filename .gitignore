@@ -1,7 +1,6 @@
 node_modules
 dist
 buils
-.env
 .gitignore
 .nx
 .nx/cache
