@@ -1,24 +1,13 @@
 version: "3.6"
 services:
-  postgres-auth:
-    image: postgres:latest
-    restart: unless-stopped
-  postgres-resturant:
-    image: postgres:latest
-    restart: unless-stopped
-  postgres-order:
-    image: postgres:latest
-    restart: unless-stopped
-  postgres-admin:
-    image: postgres:latest
-    restart: unless-stopped
-  
-  auth-service:
+
+  restaurant-service:
     build:
-      context: ./apps/auth-service
+      context: ./apps/restaurant-service
       dockerfile: Dockerfile
     ports:
-      - 5001:5001
+      - 5002:5002
     env_file:
-      - ./apps/auth-service/.env
+      - ./apps/restaurant-service/.env
+ 
   
