@@ -1,13 +1,14 @@
 version: "3.6"
 services:
 
-  restaurant-service:
+  order-service:
     build:
-      context: ./apps/restaurant-service
+      context: ./apps/order-service
       dockerfile: Dockerfile
     ports:
-      - 5002:5002
+      - 5003:5003
     env_file:
-      - ./apps/restaurant-service/.env
+      - ./apps/order-service/.env  
+
  
   
