@@ -1,12 +1,12 @@
 version: "3.6"
 services:
  
-  admin-service:
+ gateway-service:
     build:
-      context: ./apps/admin-service
+      context: ./apps/gateway-service
       dockerfile: Dockerfile
     ports:
-      - 5004:5004
+      - 5000:5000
     env_file:
-      - ./apps/admin-service/.env
+      - ./apps/gateway-service/.env 
 

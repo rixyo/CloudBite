@@ -16,8 +16,6 @@ async function bootstrap() {
     credentials: true,
   });
   await app.listen(process.env.PORT || 5002);
-  Logger.log(
-    `🚀 Gateway Server ready at http://localhost:${process.env.PORT}/graphql`,
-  );
+  Logger.log(`🚀 Gateway Server ready at ${process.env.PORT}/graphql`);
 }
 bootstrap();

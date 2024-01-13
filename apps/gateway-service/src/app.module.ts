@@ -84,7 +84,7 @@ const handleAuth = ({ req }) => {
             { name: 'Restaurant', url: 'http://3.87.225.72:5002/graphql' },
             { name: 'Order', url: 'http://34.201.36.252:5003/graphql' },
             { name: 'User', url: 'http://34.227.112.193:5001/graphql' },
-            { name: 'Application', url: 'http://localhost:5004/graphql' },
+            { name: 'Application', url: 'http://52.23.164.126:5004/graphql' },
           ],
         }),
       },
