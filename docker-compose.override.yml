@@ -1,12 +1,12 @@
 version: "3.6"
 services:
-  order-service:
+ 
+  admin-service:
     build:
-      context: ./apps/order-service
+      context: ./apps/admin-service
       dockerfile: Dockerfile
     ports:
-      - 5003:5003
+      - 5004:5004
     env_file:
-      - ./apps/order-service/.env
-
+      - ./apps/admin-service/.env
 
