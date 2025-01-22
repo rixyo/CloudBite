@@ -8,3 +8,5 @@ buils
 .husky
 .vscode
 .nx/cache
+.next
+.nx

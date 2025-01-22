@@ -36,11 +36,6 @@ export function RestaurantNav({
       label: "Orders",
       isActive: pathname.includes("orders"),
     },
-    {
-      href: `/restaurant/${params.restaurantId}/settings`,
-      label: "Settings",
-      isActive: pathname.includes("settings"),
-    },
   ];
   return (
     <nav

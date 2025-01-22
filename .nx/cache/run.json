@@ -1,18 +1,18 @@
 {
   "run": {
-    "command": "nx run admin-service:start:dev",
-    "startTime": "2024-01-12T22:44:21.107Z",
-    "endTime": "2024-01-12T22:45:05.759Z",
+    "command": "nx run cloudbite:dev",
+    "startTime": "2024-01-13T03:49:05.671Z",
+    "endTime": "2024-01-13T16:21:45.320Z",
     "inner": false
   },
   "tasks": [
     {
-      "taskId": "admin-service:start:dev",
-      "target": "start:dev",
-      "projectName": "admin-service",
-      "hash": "1115950309235790288",
-      "startTime": "2024-01-12T22:44:21.113Z",
-      "endTime": "2024-01-12T22:45:05.758Z",
+      "taskId": "cloudbite:dev",
+      "target": "dev",
+      "projectName": "cloudbite",
+      "hash": "13522547227587919176",
+      "startTime": "2024-01-13T03:49:05.686Z",
+      "endTime": "2024-01-13T16:21:45.308Z",
       "params": "",
       "cacheStatus": "cache-miss",
       "status": 1

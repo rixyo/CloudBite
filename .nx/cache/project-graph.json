@@ -13385,12 +13385,32 @@
       },
       {
         "source": "gateway-service",
+        "target": "npm:@nestjs/apollo",
+        "type": "static"
+      },
+      {
+        "source": "gateway-service",
         "target": "npm:@nestjs/common",
         "type": "static"
       },
       {
         "source": "gateway-service",
+        "target": "npm:@nestjs/core",
+        "type": "static"
+      },
+      {
+        "source": "gateway-service",
+        "target": "npm:@nestjs/graphql",
+        "type": "static"
+      },
+      {
+        "source": "gateway-service",
         "target": "npm:@nestjs/platform-express",
+        "type": "static"
+      },
+      {
+        "source": "gateway-service",
+        "target": "npm:dotenv",
         "type": "static"
       },
       {
@@ -13426,6 +13446,11 @@
       {
         "source": "gateway-service",
         "target": "npm:@nestjs/testing",
+        "type": "static"
+      },
+      {
+        "source": "gateway-service",
+        "target": "npm:@types/express",
         "type": "static"
       },
       {
@@ -13481,6 +13506,11 @@
       {
         "source": "gateway-service",
         "target": "npm:prettier",
+        "type": "static"
+      },
+      {
+        "source": "gateway-service",
+        "target": "npm:source-map-support",
         "type": "static"
       },
       {

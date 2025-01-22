@@ -18,12 +18,70 @@
     }
   },
   "fileMap": {
+    "nonProjectFiles": [
+      {
+        "file": ".eslintignore",
+        "hash": "4660892077869316414"
+      },
+      {
+        "file": ".eslintrc",
+        "hash": "6564936168741561034"
+      },
+      {
+        "file": ".prettierignore",
+        "hash": "8697388935860843068"
+      },
+      {
+        "file": ".prettierrc",
+        "hash": "1010213022241393387"
+      },
+      {
+        "file": "Restaurant_DB.session.sql",
+        "hash": "12349939144639514361"
+      },
+      {
+        "file": "command.txt",
+        "hash": "13665818340886444069"
+      },
+      {
+        "file": "commitlint.config.js",
+        "hash": "15089399635272455297"
+      },
+      {
+        "file": "docker-compose.override.yml",
+        "hash": "14642205290342263024"
+      },
+      {
+        "file": "docker-compose.yml",
+        "hash": "11262872539636211529"
+      },
+      {
+        "file": "docker-utils/postgres-database.sh",
+        "hash": "7549710103623121795"
+      },
+      {
+        "file": "jest.config.ts",
+        "hash": "3847556195209571597"
+      },
+      {
+        "file": "nx.json",
+        "hash": "9900384497774016533"
+      },
+      {
+        "file": "package.json",
+        "hash": "3032574788624168442"
+      },
+      {
+        "file": "pnpm-lock.yaml",
+        "hash": "154304987739797077"
+      },
+      {
+        "file": "pnpm-workspace.yaml",
+        "hash": "13108396804214547201"
+      }
+    ],
     "projectFileMap": {
       "admin-service": [
-        {
-          "file": "apps/admin-service/.env",
-          "hash": "3583103153999057014"
-        },
         {
           "file": "apps/admin-service/.eslintrc.js",
           "hash": "7461846271827386206"
@@ -257,295 +315,7 @@
           "hash": "5073866550243764688"
         }
       ],
-      "admin-deshboard": [
-        {
-          "file": "apps/admin-deshboard/.eslintrc.json",
-          "hash": "10616060546436571437"
-        },
-        {
-          "file": "apps/admin-deshboard/README.md",
-          "hash": "12205685531602560652"
-        },
-        {
-          "file": "apps/admin-deshboard/app/(deshboard)/admin-actions/(routes)/generate-secret/page.tsx",
-          "hash": "16921199982656781412"
-        },
-        {
-          "file": "apps/admin-deshboard/app/(deshboard)/admin-actions/(routes)/layout.tsx",
-          "hash": "10424016342038801241"
-        },
-        {
-          "file": "apps/admin-deshboard/app/(deshboard)/admin-actions/(routes)/page.tsx",
-          "hash": "16705668835445527708"
-        },
-        {
-          "file": "apps/admin-deshboard/app/(deshboard)/admin-actions/(routes)/secretkey-list/[secretkeyId]/components/SecretkeyForm.tsx",
-          "hash": "401484177880721824"
-        },
-        {
-          "file": "apps/admin-deshboard/app/(deshboard)/admin-actions/(routes)/secretkey-list/[secretkeyId]/page.tsx",
-          "hash": "17306643546540301862"
-        },
-        {
-          "file": "apps/admin-deshboard/app/(deshboard)/admin-actions/(routes)/secretkey-list/components/cell-action.tsx",
-          "hash": "1460453724699920417"
-        },
-        {
-          "file": "apps/admin-deshboard/app/(deshboard)/admin-actions/(routes)/secretkey-list/components/columns.tsx",
-          "hash": "17061814196182108845"
-        },
-        {
-          "file": "apps/admin-deshboard/app/(deshboard)/admin-actions/(routes)/secretkey-list/page.tsx",
-          "hash": "17860948157685014343"
-        },
-        {
-          "file": "apps/admin-deshboard/app/(deshboard)/admin-actions/(routes)/sent-email/page.tsx",
-          "hash": "4821609883592554556"
-        },
-        {
-          "file": "apps/admin-deshboard/app/(deshboard)/admin-actions/(routes)/withdrawal/[withdrawalId]/components/WithdrawalForm.tsx",
-          "hash": "11563098477726550623"
-        },
-        {
-          "file": "apps/admin-deshboard/app/(deshboard)/admin-actions/(routes)/withdrawal/[withdrawalId]/page.tsx",
-          "hash": "8558137934038833673"
-        },
-        {
-          "file": "apps/admin-deshboard/app/(deshboard)/admin-actions/(routes)/withdrawal/components/cell-action.tsx",
-          "hash": "5361465941900368715"
-        },
-        {
-          "file": "apps/admin-deshboard/app/(deshboard)/admin-actions/(routes)/withdrawal/components/columns.tsx",
-          "hash": "3563294845312860677"
-        },
-        {
-          "file": "apps/admin-deshboard/app/(deshboard)/admin-actions/(routes)/withdrawal/page.tsx",
-          "hash": "12518774909086534303"
-        },
-        {
-          "file": "apps/admin-deshboard/app/favicon.ico",
-          "hash": "9157999678830540297"
-        },
-        {
-          "file": "apps/admin-deshboard/app/globals.css",
-          "hash": "2048989005741957698"
-        },
-        {
-          "file": "apps/admin-deshboard/app/layout.tsx",
-          "hash": "2774003930638744091"
-        },
-        {
-          "file": "apps/admin-deshboard/app/page.tsx",
-          "hash": "8578601900198377178"
-        },
-        {
-          "file": "apps/admin-deshboard/components/forms/secretkey-form.tsx",
-          "hash": "4929911766359302059"
-        },
-        {
-          "file": "apps/admin-deshboard/components/forms/sentemail-form.tsx",
-          "hash": "11718054101037834343"
-        },
-        {
-          "file": "apps/admin-deshboard/components/forms/signin-form.tsx",
-          "hash": "11627393362835835661"
-        },
-        {
-          "file": "apps/admin-deshboard/components/modal/alert-modal.tsx",
-          "hash": "5343648484245143154"
-        },
-        {
-          "file": "apps/admin-deshboard/components/ui/button.tsx",
-          "hash": "15867611193771364424"
-        },
-        {
-          "file": "apps/admin-deshboard/components/ui/data-table.tsx",
-          "hash": "14482132934878957292"
-        },
-        {
-          "file": "apps/admin-deshboard/components/ui/dialog.tsx",
-          "hash": "4826683649329989396"
-        },
-        {
-          "file": "apps/admin-deshboard/components/ui/dropdown-menu.tsx",
-          "hash": "1522769603090451912"
-        },
-        {
-          "file": "apps/admin-deshboard/components/ui/form.tsx",
-          "hash": "15490598094551137363"
-        },
-        {
-          "file": "apps/admin-deshboard/components/ui/heading.tsx",
-          "hash": "564410798862843929"
-        },
-        {
-          "file": "apps/admin-deshboard/components/ui/input.tsx",
-          "hash": "2763645207712470760"
-        },
-        {
-          "file": "apps/admin-deshboard/components/ui/label.tsx",
-          "hash": "17461498100996495370"
-        },
-        {
-          "file": "apps/admin-deshboard/components/ui/loader.tsx",
-          "hash": "13009120168490715309"
-        },
-        {
-          "file": "apps/admin-deshboard/components/ui/modal.tsx",
-          "hash": "9097770820883679199"
-        },
-        {
-          "file": "apps/admin-deshboard/components/ui/select.tsx",
-          "hash": "9158532778847058189"
-        },
-        {
-          "file": "apps/admin-deshboard/components/ui/separator.tsx",
-          "hash": "1978076718437868180"
-        },
-        {
-          "file": "apps/admin-deshboard/components/ui/table.tsx",
-          "hash": "12220893068497995597"
-        },
-        {
-          "file": "apps/admin-deshboard/components/ui/textarea.tsx",
-          "hash": "7870189487595852833"
-        },
-        {
-          "file": "apps/admin-deshboard/components.json",
-          "hash": "17894175434504906028"
-        },
-        {
-          "file": "apps/admin-deshboard/graphql/actions/currentuser.action.ts",
-          "hash": "9470339740577305427"
-        },
-        {
-          "file": "apps/admin-deshboard/graphql/actions/deleteSecretkeyApplication.action.ts",
-          "hash": "16263836556200887288"
-        },
-        {
-          "file": "apps/admin-deshboard/graphql/actions/deleteWithdrawalApplication.action.ts",
-          "hash": "3198717327197782194"
-        },
-        {
-          "file": "apps/admin-deshboard/graphql/actions/generateKey.action.ts",
-          "hash": "4750568073045884903"
-        },
-        {
-          "file": "apps/admin-deshboard/graphql/actions/getSecretkeyApplication.ts",
-          "hash": "16783220658586023712"
-        },
-        {
-          "file": "apps/admin-deshboard/graphql/actions/getSecretkeyApplications.action.ts",
-          "hash": "11161756664965763672"
-        },
-        {
-          "file": "apps/admin-deshboard/graphql/actions/getWithdrawalApplication.action.ts",
-          "hash": "8612235327261994691"
-        },
-        {
-          "file": "apps/admin-deshboard/graphql/actions/sentemail.action.ts",
-          "hash": "9568195379651958324"
-        },
-        {
-          "file": "apps/admin-deshboard/graphql/actions/signin.action.ts",
-          "hash": "6078117235581359922"
-        },
-        {
-          "file": "apps/admin-deshboard/graphql/actions/update-SecretkeyApplication.ts",
-          "hash": "1883280623125356157"
-        },
-        {
-          "file": "apps/admin-deshboard/graphql/actions/updateWithdrawalApplication.action.ts",
-          "hash": "17188298852224456774"
-        },
-        {
-          "file": "apps/admin-deshboard/graphql/actions/withdrawalApplications.action.ts",
-          "hash": "11460326504769435811"
-        },
-        {
-          "file": "apps/admin-deshboard/graphql/graphql.setup.ts",
-          "hash": "859197602339125964"
-        },
-        {
-          "file": "apps/admin-deshboard/lib/localstorage.ts",
-          "hash": "4981160007116495157"
-        },
-        {
-          "file": "apps/admin-deshboard/lib/utils.ts",
-          "hash": "7693891966047857635"
-        },
-        {
-          "file": "apps/admin-deshboard/next.config.js",
-          "hash": "14594058484359092244"
-        },
-        {
-          "file": "apps/admin-deshboard/package.json",
-          "hash": "10413319998855117796",
-          "deps": [
-            "npm:@apollo/client",
-            "npm:@hookform/resolvers",
-            "npm:@radix-ui/react-dialog",
-            "npm:@radix-ui/react-dropdown-menu",
-            "npm:@radix-ui/react-label",
-            "npm:@radix-ui/react-select",
-            "npm:@radix-ui/react-separator",
-            "npm:@radix-ui/react-slot",
-            "npm:@tanstack/react-table",
-            "npm:add",
-            "npm:class-variance-authority",
-            "npm:clsx",
-            "npm:graphql",
-            "npm:lucide-react",
-            "npm:next",
-            "npm:react",
-            "npm:react-dom",
-            "npm:react-hook-form",
-            "npm:react-hot-toast",
-            "npm:react-spinners",
-            "npm:tailwind-merge",
-            "npm:tailwindcss-animate",
-            "npm:zod",
-            "npm:@types/node",
-            "npm:@types/react",
-            "npm:@types/react-dom",
-            "npm:autoprefixer",
-            "npm:eslint",
-            "npm:eslint-config-next",
-            "npm:postcss",
-            "npm:tailwindcss",
-            "npm:typescript"
-          ]
-        },
-        {
-          "file": "apps/admin-deshboard/postcss.config.js",
-          "hash": "1579725330904862112"
-        },
-        {
-          "file": "apps/admin-deshboard/providers/graqhql-provider.tsx",
-          "hash": "8535360616374702246"
-        },
-        {
-          "file": "apps/admin-deshboard/public/next.svg",
-          "hash": "8300767200008744458"
-        },
-        {
-          "file": "apps/admin-deshboard/public/vercel.svg",
-          "hash": "2376673330454856631"
-        },
-        {
-          "file": "apps/admin-deshboard/tailwind.config.ts",
-          "hash": "14966172118590598082"
-        },
-        {
-          "file": "apps/admin-deshboard/tsconfig.json",
-          "hash": "13566095390403677056"
-        }
-      ],
       "order-service": [
-        {
-          "file": "apps/order-service/.env",
-          "hash": "1161461281514757029"
-        },
         {
           "file": "apps/order-service/.eslintrc.js",
           "hash": "7461846271827386206"
@@ -799,258 +569,7 @@
           "hash": "5073866550243764688"
         }
       ],
-      "restaurant-service": [
-        {
-          "file": "apps/restaurant-service/.env",
-          "hash": "3913584856176983742"
-        },
-        {
-          "file": "apps/restaurant-service/.eslintrc.js",
-          "hash": "7461846271827386206"
-        },
-        {
-          "file": "apps/restaurant-service/.prettierrc",
-          "hash": "4808572120966128913"
-        },
-        {
-          "file": "apps/restaurant-service/Dockerfile",
-          "hash": "4594761044288015787"
-        },
-        {
-          "file": "apps/restaurant-service/README.md",
-          "hash": "8286378509751487236"
-        },
-        {
-          "file": "apps/restaurant-service/nest-cli.json",
-          "hash": "789240945379598733"
-        },
-        {
-          "file": "apps/restaurant-service/package.json",
-          "hash": "1944129699606683568",
-          "deps": [
-            "npm:@apollo/federation",
-            "npm:@apollo/server",
-            "npm:@apollo/subgraph",
-            "npm:@nestjs/apollo",
-            "npm:@nestjs/common",
-            "npm:@nestjs/core",
-            "npm:@nestjs/graphql",
-            "npm:@nestjs/jwt",
-            "npm:@nestjs/passport",
-            "npm:@nestjs/platform-express",
-            "npm:@nestjs/typeorm",
-            "npm:apollo-server-core",
-            "npm:apollo-server-express",
-            "npm:class-transformer",
-            "npm:class-validator",
-            "npm:graphql",
-            "npm:jsonwebtoken",
-            "npm:moment",
-            "npm:passport-jwt",
-            "npm:pg",
-            "npm:reflect-metadata",
-            "npm:rxjs",
-            "npm:typeorm",
-            "npm:uuid",
-            "npm:winston",
-            "npm:@nestjs/cli",
-            "npm:@nestjs/schematics",
-            "npm:@nestjs/testing",
-            "npm:@types/express",
-            "npm:@types/jest",
-            "npm:@types/node",
-            "npm:@types/passport-jwt",
-            "npm:@types/supertest",
-            "npm:@typescript-eslint/eslint-plugin",
-            "npm:@typescript-eslint/parser",
-            "npm:eslint",
-            "npm:eslint-config-prettier",
-            "npm:eslint-plugin-prettier",
-            "npm:jest",
-            "npm:prettier",
-            "npm:source-map-support",
-            "npm:supertest",
-            "npm:ts-jest",
-            "npm:ts-loader",
-            "npm:ts-node",
-            "npm:tsconfig-paths",
-            "npm:typescript"
-          ]
-        },
-        {
-          "file": "apps/restaurant-service/src/app.module.ts",
-          "hash": "18241164477453897799"
-        },
-        {
-          "file": "apps/restaurant-service/src/config/config.default.ts",
-          "hash": "5419642320862044416"
-        },
-        {
-          "file": "apps/restaurant-service/src/config/config.interface.ts",
-          "hash": "15494570587749928678"
-        },
-        {
-          "file": "apps/restaurant-service/src/config/config.module.ts",
-          "hash": "13143047207281215892"
-        },
-        {
-          "file": "apps/restaurant-service/src/config/config.service.ts",
-          "hash": "7126432097134560747"
-        },
-        {
-          "file": "apps/restaurant-service/src/db/db.errors.ts",
-          "hash": "2646672877639124408"
-        },
-        {
-          "file": "apps/restaurant-service/src/db/db.interface.ts",
-          "hash": "12011516664509660283"
-        },
-        {
-          "file": "apps/restaurant-service/src/db/db.logger.ts",
-          "hash": "9157591969086587730"
-        },
-        {
-          "file": "apps/restaurant-service/src/db/db.module.ts",
-          "hash": "369148983236471630"
-        },
-        {
-          "file": "apps/restaurant-service/src/domain/auth/auth.module.ts",
-          "hash": "16699654050739106601"
-        },
-        {
-          "file": "apps/restaurant-service/src/domain/auth/auth.service.ts",
-          "hash": "10532622087662135070"
-        },
-        {
-          "file": "apps/restaurant-service/src/domain/auth/guards/admin.guard.ts",
-          "hash": "800017346527875327"
-        },
-        {
-          "file": "apps/restaurant-service/src/domain/auth/guards/jwtauth.guard.ts",
-          "hash": "9310120318481956847"
-        },
-        {
-          "file": "apps/restaurant-service/src/domain/auth/guards/restaurant-owner.guard.ts",
-          "hash": "16651500931502197256"
-        },
-        {
-          "file": "apps/restaurant-service/src/domain/auth/interfaces/jwt-payload.interface.ts",
-          "hash": "9020398436396176444"
-        },
-        {
-          "file": "apps/restaurant-service/src/domain/auth/strategies/jwt.stragegy.ts",
-          "hash": "16863595006745382817"
-        },
-        {
-          "file": "apps/restaurant-service/src/domain/domain.module.ts",
-          "hash": "16017511131294488704"
-        },
-        {
-          "file": "apps/restaurant-service/src/domain/graphql.schama.ts",
-          "hash": "14469800102373168067"
-        },
-        {
-          "file": "apps/restaurant-service/src/domain/restaurant/dto/restaurant.dish.dto.ts",
-          "hash": "17887376445836614180"
-        },
-        {
-          "file": "apps/restaurant-service/src/domain/restaurant/dto/restaurant.dto.ts",
-          "hash": "14820409543409703322"
-        },
-        {
-          "file": "apps/restaurant-service/src/domain/restaurant/dto/restaurant.menu.dto .ts",
-          "hash": "10724488943097375562"
-        },
-        {
-          "file": "apps/restaurant-service/src/domain/restaurant/entity/restaurant.address.entity.ts",
-          "hash": "16541746298747562689"
-        },
-        {
-          "file": "apps/restaurant-service/src/domain/restaurant/entity/restaurant.dish.entity.ts",
-          "hash": "95055611909853912"
-        },
-        {
-          "file": "apps/restaurant-service/src/domain/restaurant/entity/restaurant.entity.ts",
-          "hash": "16760734253344795604"
-        },
-        {
-          "file": "apps/restaurant-service/src/domain/restaurant/entity/restaurant.menu.entity.ts",
-          "hash": "5900548391540621732"
-        },
-        {
-          "file": "apps/restaurant-service/src/domain/restaurant/resolvers/restauant.dish.resolver.ts",
-          "hash": "5610323088076887080"
-        },
-        {
-          "file": "apps/restaurant-service/src/domain/restaurant/resolvers/restaurant.menu.resolver.ts",
-          "hash": "3244421341483603138"
-        },
-        {
-          "file": "apps/restaurant-service/src/domain/restaurant/resolvers/restaurants.resolver.ts",
-          "hash": "10016206028369945624"
-        },
-        {
-          "file": "apps/restaurant-service/src/domain/restaurant/restaurant.module.ts",
-          "hash": "1706084536709212904"
-        },
-        {
-          "file": "apps/restaurant-service/src/domain/restaurant/restaurant.type.graphql",
-          "hash": "13360645147769578675"
-        },
-        {
-          "file": "apps/restaurant-service/src/domain/restaurant/services/restaurant.dish.service.ts",
-          "hash": "1590644580123853134"
-        },
-        {
-          "file": "apps/restaurant-service/src/domain/restaurant/services/restaurant.menu.service.ts",
-          "hash": "9604113056733877931"
-        },
-        {
-          "file": "apps/restaurant-service/src/domain/restaurant/services/restaurants.service.ts",
-          "hash": "4076207684849924429"
-        },
-        {
-          "file": "apps/restaurant-service/src/logger/logger.middleware.ts",
-          "hash": "4718963090654727106"
-        },
-        {
-          "file": "apps/restaurant-service/src/logger/logger.module.ts",
-          "hash": "15466574737607319651"
-        },
-        {
-          "file": "apps/restaurant-service/src/logger/logger.ts",
-          "hash": "1023051881361434160"
-        },
-        {
-          "file": "apps/restaurant-service/src/logger/loglevel.ts",
-          "hash": "14252412105708514145"
-        },
-        {
-          "file": "apps/restaurant-service/src/main.ts",
-          "hash": "16673029851046855713"
-        },
-        {
-          "file": "apps/restaurant-service/test/app.e2e-spec.ts",
-          "hash": "15142680097789702029"
-        },
-        {
-          "file": "apps/restaurant-service/test/jest-e2e.json",
-          "hash": "7570273541430074424"
-        },
-        {
-          "file": "apps/restaurant-service/tsconfig.build.json",
-          "hash": "276845246908739715"
-        },
-        {
-          "file": "apps/restaurant-service/tsconfig.json",
-          "hash": "5073866550243764688"
-        }
-      ],
       "auth-service": [
-        {
-          "file": "apps/auth-service/.env",
-          "hash": "11328385140872936488"
-        },
         {
           "file": "apps/auth-service/.eslintrc.js",
           "hash": "7461846271827386206"
@@ -1264,6 +783,383 @@
         {
           "file": "apps/auth-service/tsconfig.json",
           "hash": "5073866550243764688"
+        }
+      ],
+      "gateway-service": [
+        {
+          "file": "apps/gateway-service/.eslintrc.js",
+          "hash": "7461846271827386206"
+        },
+        {
+          "file": "apps/gateway-service/.prettierrc",
+          "hash": "4808572120966128913"
+        },
+        {
+          "file": "apps/gateway-service/Dockerfile",
+          "hash": "4594761044288015787"
+        },
+        {
+          "file": "apps/gateway-service/README.md",
+          "hash": "8286378509751487236"
+        },
+        {
+          "file": "apps/gateway-service/nest-cli.json",
+          "hash": "789240945379598733"
+        },
+        {
+          "file": "apps/gateway-service/package.json",
+          "hash": "14776298388011461206",
+          "deps": [
+            "npm:@apollo/gateway",
+            "npm:@nestjs/apollo",
+            "npm:@nestjs/common",
+            "npm:@nestjs/core",
+            "npm:@nestjs/graphql",
+            "npm:@nestjs/platform-express",
+            "npm:dotenv",
+            "npm:jsonwebtoken",
+            "npm:reflect-metadata",
+            "npm:rxjs",
+            "npm:ts-morph",
+            "npm:@nestjs/cli",
+            "npm:@nestjs/schematics",
+            "npm:@nestjs/testing",
+            "npm:@types/express",
+            "npm:@types/jest",
+            "npm:@types/jsonwebtoken",
+            "npm:@types/node",
+            "npm:@types/supertest",
+            "npm:@typescript-eslint/eslint-plugin",
+            "npm:@typescript-eslint/parser",
+            "npm:eslint",
+            "npm:eslint-config-prettier",
+            "npm:eslint-plugin-prettier",
+            "npm:jest",
+            "npm:prettier",
+            "npm:source-map-support",
+            "npm:supertest",
+            "npm:ts-jest",
+            "npm:ts-loader",
+            "npm:ts-node",
+            "npm:tsconfig-paths",
+            "npm:typescript"
+          ]
+        },
+        {
+          "file": "apps/gateway-service/src/app.constants.ts",
+          "hash": "9551429742564215431"
+        },
+        {
+          "file": "apps/gateway-service/src/app.module.ts",
+          "hash": "12660512918443910736"
+        },
+        {
+          "file": "apps/gateway-service/src/main.ts",
+          "hash": "15510665361905482510"
+        },
+        {
+          "file": "apps/gateway-service/test/app.e2e-spec.ts",
+          "hash": "15142680097789702029"
+        },
+        {
+          "file": "apps/gateway-service/test/jest-e2e.json",
+          "hash": "7570273541430074424"
+        },
+        {
+          "file": "apps/gateway-service/tsconfig.build.json",
+          "hash": "276845246908739715"
+        },
+        {
+          "file": "apps/gateway-service/tsconfig.json",
+          "hash": "5073866550243764688"
+        }
+      ],
+      "admin-deshboard": [
+        {
+          "file": "apps/admin-deshboard/.eslintrc.json",
+          "hash": "10616060546436571437"
+        },
+        {
+          "file": "apps/admin-deshboard/README.md",
+          "hash": "12205685531602560652"
+        },
+        {
+          "file": "apps/admin-deshboard/app/(deshboard)/admin-actions/(routes)/generate-secret/page.tsx",
+          "hash": "16921199982656781412"
+        },
+        {
+          "file": "apps/admin-deshboard/app/(deshboard)/admin-actions/(routes)/layout.tsx",
+          "hash": "10424016342038801241"
+        },
+        {
+          "file": "apps/admin-deshboard/app/(deshboard)/admin-actions/(routes)/page.tsx",
+          "hash": "16705668835445527708"
+        },
+        {
+          "file": "apps/admin-deshboard/app/(deshboard)/admin-actions/(routes)/secretkey-list/[secretkeyId]/components/SecretkeyForm.tsx",
+          "hash": "401484177880721824"
+        },
+        {
+          "file": "apps/admin-deshboard/app/(deshboard)/admin-actions/(routes)/secretkey-list/[secretkeyId]/page.tsx",
+          "hash": "17306643546540301862"
+        },
+        {
+          "file": "apps/admin-deshboard/app/(deshboard)/admin-actions/(routes)/secretkey-list/components/cell-action.tsx",
+          "hash": "1460453724699920417"
+        },
+        {
+          "file": "apps/admin-deshboard/app/(deshboard)/admin-actions/(routes)/secretkey-list/components/columns.tsx",
+          "hash": "17061814196182108845"
+        },
+        {
+          "file": "apps/admin-deshboard/app/(deshboard)/admin-actions/(routes)/secretkey-list/page.tsx",
+          "hash": "17860948157685014343"
+        },
+        {
+          "file": "apps/admin-deshboard/app/(deshboard)/admin-actions/(routes)/sent-email/page.tsx",
+          "hash": "4821609883592554556"
+        },
+        {
+          "file": "apps/admin-deshboard/app/(deshboard)/admin-actions/(routes)/withdrawal/[withdrawalId]/components/WithdrawalForm.tsx",
+          "hash": "11563098477726550623"
+        },
+        {
+          "file": "apps/admin-deshboard/app/(deshboard)/admin-actions/(routes)/withdrawal/[withdrawalId]/page.tsx",
+          "hash": "8558137934038833673"
+        },
+        {
+          "file": "apps/admin-deshboard/app/(deshboard)/admin-actions/(routes)/withdrawal/components/cell-action.tsx",
+          "hash": "5361465941900368715"
+        },
+        {
+          "file": "apps/admin-deshboard/app/(deshboard)/admin-actions/(routes)/withdrawal/components/columns.tsx",
+          "hash": "3563294845312860677"
+        },
+        {
+          "file": "apps/admin-deshboard/app/(deshboard)/admin-actions/(routes)/withdrawal/page.tsx",
+          "hash": "12518774909086534303"
+        },
+        {
+          "file": "apps/admin-deshboard/app/favicon.ico",
+          "hash": "9157999678830540297"
+        },
+        {
+          "file": "apps/admin-deshboard/app/globals.css",
+          "hash": "2048989005741957698"
+        },
+        {
+          "file": "apps/admin-deshboard/app/layout.tsx",
+          "hash": "2774003930638744091"
+        },
+        {
+          "file": "apps/admin-deshboard/app/page.tsx",
+          "hash": "8578601900198377178"
+        },
+        {
+          "file": "apps/admin-deshboard/components/forms/secretkey-form.tsx",
+          "hash": "4929911766359302059"
+        },
+        {
+          "file": "apps/admin-deshboard/components/forms/sentemail-form.tsx",
+          "hash": "11718054101037834343"
+        },
+        {
+          "file": "apps/admin-deshboard/components/forms/signin-form.tsx",
+          "hash": "11627393362835835661"
+        },
+        {
+          "file": "apps/admin-deshboard/components/modal/alert-modal.tsx",
+          "hash": "5343648484245143154"
+        },
+        {
+          "file": "apps/admin-deshboard/components/ui/button.tsx",
+          "hash": "15867611193771364424"
+        },
+        {
+          "file": "apps/admin-deshboard/components/ui/data-table.tsx",
+          "hash": "14482132934878957292"
+        },
+        {
+          "file": "apps/admin-deshboard/components/ui/dialog.tsx",
+          "hash": "4826683649329989396"
+        },
+        {
+          "file": "apps/admin-deshboard/components/ui/dropdown-menu.tsx",
+          "hash": "1522769603090451912"
+        },
+        {
+          "file": "apps/admin-deshboard/components/ui/form.tsx",
+          "hash": "15490598094551137363"
+        },
+        {
+          "file": "apps/admin-deshboard/components/ui/heading.tsx",
+          "hash": "564410798862843929"
+        },
+        {
+          "file": "apps/admin-deshboard/components/ui/input.tsx",
+          "hash": "2763645207712470760"
+        },
+        {
+          "file": "apps/admin-deshboard/components/ui/label.tsx",
+          "hash": "17461498100996495370"
+        },
+        {
+          "file": "apps/admin-deshboard/components/ui/loader.tsx",
+          "hash": "13009120168490715309"
+        },
+        {
+          "file": "apps/admin-deshboard/components/ui/modal.tsx",
+          "hash": "9097770820883679199"
+        },
+        {
+          "file": "apps/admin-deshboard/components/ui/select.tsx",
+          "hash": "9158532778847058189"
+        },
+        {
+          "file": "apps/admin-deshboard/components/ui/separator.tsx",
+          "hash": "1978076718437868180"
+        },
+        {
+          "file": "apps/admin-deshboard/components/ui/table.tsx",
+          "hash": "12220893068497995597"
+        },
+        {
+          "file": "apps/admin-deshboard/components/ui/textarea.tsx",
+          "hash": "7870189487595852833"
+        },
+        {
+          "file": "apps/admin-deshboard/components.json",
+          "hash": "17894175434504906028"
+        },
+        {
+          "file": "apps/admin-deshboard/graphql/actions/currentuser.action.ts",
+          "hash": "9470339740577305427"
+        },
+        {
+          "file": "apps/admin-deshboard/graphql/actions/deleteSecretkeyApplication.action.ts",
+          "hash": "16263836556200887288"
+        },
+        {
+          "file": "apps/admin-deshboard/graphql/actions/deleteWithdrawalApplication.action.ts",
+          "hash": "3198717327197782194"
+        },
+        {
+          "file": "apps/admin-deshboard/graphql/actions/generateKey.action.ts",
+          "hash": "4750568073045884903"
+        },
+        {
+          "file": "apps/admin-deshboard/graphql/actions/getSecretkeyApplication.ts",
+          "hash": "16783220658586023712"
+        },
+        {
+          "file": "apps/admin-deshboard/graphql/actions/getSecretkeyApplications.action.ts",
+          "hash": "11161756664965763672"
+        },
+        {
+          "file": "apps/admin-deshboard/graphql/actions/getWithdrawalApplication.action.ts",
+          "hash": "8612235327261994691"
+        },
+        {
+          "file": "apps/admin-deshboard/graphql/actions/sentemail.action.ts",
+          "hash": "9568195379651958324"
+        },
+        {
+          "file": "apps/admin-deshboard/graphql/actions/signin.action.ts",
+          "hash": "6078117235581359922"
+        },
+        {
+          "file": "apps/admin-deshboard/graphql/actions/update-SecretkeyApplication.ts",
+          "hash": "1883280623125356157"
+        },
+        {
+          "file": "apps/admin-deshboard/graphql/actions/updateWithdrawalApplication.action.ts",
+          "hash": "17188298852224456774"
+        },
+        {
+          "file": "apps/admin-deshboard/graphql/actions/withdrawalApplications.action.ts",
+          "hash": "11460326504769435811"
+        },
+        {
+          "file": "apps/admin-deshboard/graphql/graphql.setup.ts",
+          "hash": "859197602339125964"
+        },
+        {
+          "file": "apps/admin-deshboard/lib/localstorage.ts",
+          "hash": "4981160007116495157"
+        },
+        {
+          "file": "apps/admin-deshboard/lib/utils.ts",
+          "hash": "7693891966047857635"
+        },
+        {
+          "file": "apps/admin-deshboard/next-env.d.ts",
+          "hash": "5909181270615354023"
+        },
+        {
+          "file": "apps/admin-deshboard/next.config.js",
+          "hash": "14594058484359092244"
+        },
+        {
+          "file": "apps/admin-deshboard/package.json",
+          "hash": "10413319998855117796",
+          "deps": [
+            "npm:@apollo/client",
+            "npm:@hookform/resolvers",
+            "npm:@radix-ui/react-dialog",
+            "npm:@radix-ui/react-dropdown-menu",
+            "npm:@radix-ui/react-label",
+            "npm:@radix-ui/react-select",
+            "npm:@radix-ui/react-separator",
+            "npm:@radix-ui/react-slot",
+            "npm:@tanstack/react-table",
+            "npm:add",
+            "npm:class-variance-authority",
+            "npm:clsx",
+            "npm:graphql",
+            "npm:lucide-react",
+            "npm:next",
+            "npm:react",
+            "npm:react-dom",
+            "npm:react-hook-form",
+            "npm:react-hot-toast",
+            "npm:react-spinners",
+            "npm:tailwind-merge",
+            "npm:tailwindcss-animate",
+            "npm:zod",
+            "npm:@types/node",
+            "npm:@types/react",
+            "npm:@types/react-dom",
+            "npm:autoprefixer",
+            "npm:eslint",
+            "npm:eslint-config-next",
+            "npm:postcss",
+            "npm:tailwindcss",
+            "npm:typescript"
+          ]
+        },
+        {
+          "file": "apps/admin-deshboard/postcss.config.js",
+          "hash": "1579725330904862112"
+        },
+        {
+          "file": "apps/admin-deshboard/providers/graqhql-provider.tsx",
+          "hash": "8535360616374702246"
+        },
+        {
+          "file": "apps/admin-deshboard/public/next.svg",
+          "hash": "8300767200008744458"
+        },
+        {
+          "file": "apps/admin-deshboard/public/vercel.svg",
+          "hash": "2376673330454856631"
+        },
+        {
+          "file": "apps/admin-deshboard/tailwind.config.ts",
+          "hash": "14966172118590598082"
+        },
+        {
+          "file": "apps/admin-deshboard/tsconfig.json",
+          "hash": "13566095390403677056"
         }
       ],
       "cloudbite": [
@@ -1528,6 +1424,10 @@
           "hash": "4410618641919237161"
         },
         {
+          "file": "apps/cloudbite-ui/next-env.d.ts",
+          "hash": "5909181270615354023"
+        },
+        {
           "file": "apps/cloudbite-ui/next.config.js",
           "hash": "1702874464769641987"
         },
@@ -1664,6 +1564,249 @@
         {
           "file": "apps/cloudbite-ui/types/restaurant.type.ts",
           "hash": "8571649584067220361"
+        }
+      ],
+      "restaurant-service": [
+        {
+          "file": "apps/restaurant-service/.eslintrc.js",
+          "hash": "7461846271827386206"
+        },
+        {
+          "file": "apps/restaurant-service/.prettierrc",
+          "hash": "4808572120966128913"
+        },
+        {
+          "file": "apps/restaurant-service/Dockerfile",
+          "hash": "4594761044288015787"
+        },
+        {
+          "file": "apps/restaurant-service/README.md",
+          "hash": "8286378509751487236"
+        },
+        {
+          "file": "apps/restaurant-service/nest-cli.json",
+          "hash": "789240945379598733"
+        },
+        {
+          "file": "apps/restaurant-service/package.json",
+          "hash": "1944129699606683568",
+          "deps": [
+            "npm:@apollo/federation",
+            "npm:@apollo/server",
+            "npm:@apollo/subgraph",
+            "npm:@nestjs/apollo",
+            "npm:@nestjs/common",
+            "npm:@nestjs/core",
+            "npm:@nestjs/graphql",
+            "npm:@nestjs/jwt",
+            "npm:@nestjs/passport",
+            "npm:@nestjs/platform-express",
+            "npm:@nestjs/typeorm",
+            "npm:apollo-server-core",
+            "npm:apollo-server-express",
+            "npm:class-transformer",
+            "npm:class-validator",
+            "npm:graphql",
+            "npm:jsonwebtoken",
+            "npm:moment",
+            "npm:passport-jwt",
+            "npm:pg",
+            "npm:reflect-metadata",
+            "npm:rxjs",
+            "npm:typeorm",
+            "npm:uuid",
+            "npm:winston",
+            "npm:@nestjs/cli",
+            "npm:@nestjs/schematics",
+            "npm:@nestjs/testing",
+            "npm:@types/express",
+            "npm:@types/jest",
+            "npm:@types/node",
+            "npm:@types/passport-jwt",
+            "npm:@types/supertest",
+            "npm:@typescript-eslint/eslint-plugin",
+            "npm:@typescript-eslint/parser",
+            "npm:eslint",
+            "npm:eslint-config-prettier",
+            "npm:eslint-plugin-prettier",
+            "npm:jest",
+            "npm:prettier",
+            "npm:source-map-support",
+            "npm:supertest",
+            "npm:ts-jest",
+            "npm:ts-loader",
+            "npm:ts-node",
+            "npm:tsconfig-paths",
+            "npm:typescript"
+          ]
+        },
+        {
+          "file": "apps/restaurant-service/src/app.module.ts",
+          "hash": "18241164477453897799"
+        },
+        {
+          "file": "apps/restaurant-service/src/config/config.default.ts",
+          "hash": "5419642320862044416"
+        },
+        {
+          "file": "apps/restaurant-service/src/config/config.interface.ts",
+          "hash": "15494570587749928678"
+        },
+        {
+          "file": "apps/restaurant-service/src/config/config.module.ts",
+          "hash": "13143047207281215892"
+        },
+        {
+          "file": "apps/restaurant-service/src/config/config.service.ts",
+          "hash": "7126432097134560747"
+        },
+        {
+          "file": "apps/restaurant-service/src/db/db.errors.ts",
+          "hash": "2646672877639124408"
+        },
+        {
+          "file": "apps/restaurant-service/src/db/db.interface.ts",
+          "hash": "12011516664509660283"
+        },
+        {
+          "file": "apps/restaurant-service/src/db/db.logger.ts",
+          "hash": "9157591969086587730"
+        },
+        {
+          "file": "apps/restaurant-service/src/db/db.module.ts",
+          "hash": "369148983236471630"
+        },
+        {
+          "file": "apps/restaurant-service/src/domain/auth/auth.module.ts",
+          "hash": "16699654050739106601"
+        },
+        {
+          "file": "apps/restaurant-service/src/domain/auth/auth.service.ts",
+          "hash": "10532622087662135070"
+        },
+        {
+          "file": "apps/restaurant-service/src/domain/auth/guards/admin.guard.ts",
+          "hash": "800017346527875327"
+        },
+        {
+          "file": "apps/restaurant-service/src/domain/auth/guards/jwtauth.guard.ts",
+          "hash": "9310120318481956847"
+        },
+        {
+          "file": "apps/restaurant-service/src/domain/auth/guards/restaurant-owner.guard.ts",
+          "hash": "16651500931502197256"
+        },
+        {
+          "file": "apps/restaurant-service/src/domain/auth/interfaces/jwt-payload.interface.ts",
+          "hash": "9020398436396176444"
+        },
+        {
+          "file": "apps/restaurant-service/src/domain/auth/strategies/jwt.stragegy.ts",
+          "hash": "16863595006745382817"
+        },
+        {
+          "file": "apps/restaurant-service/src/domain/domain.module.ts",
+          "hash": "16017511131294488704"
+        },
+        {
+          "file": "apps/restaurant-service/src/domain/graphql.schama.ts",
+          "hash": "14469800102373168067"
+        },
+        {
+          "file": "apps/restaurant-service/src/domain/restaurant/dto/restaurant.dish.dto.ts",
+          "hash": "17887376445836614180"
+        },
+        {
+          "file": "apps/restaurant-service/src/domain/restaurant/dto/restaurant.dto.ts",
+          "hash": "14820409543409703322"
+        },
+        {
+          "file": "apps/restaurant-service/src/domain/restaurant/dto/restaurant.menu.dto .ts",
+          "hash": "10724488943097375562"
+        },
+        {
+          "file": "apps/restaurant-service/src/domain/restaurant/entity/restaurant.address.entity.ts",
+          "hash": "16541746298747562689"
+        },
+        {
+          "file": "apps/restaurant-service/src/domain/restaurant/entity/restaurant.dish.entity.ts",
+          "hash": "95055611909853912"
+        },
+        {
+          "file": "apps/restaurant-service/src/domain/restaurant/entity/restaurant.entity.ts",
+          "hash": "16760734253344795604"
+        },
+        {
+          "file": "apps/restaurant-service/src/domain/restaurant/entity/restaurant.menu.entity.ts",
+          "hash": "5900548391540621732"
+        },
+        {
+          "file": "apps/restaurant-service/src/domain/restaurant/resolvers/restauant.dish.resolver.ts",
+          "hash": "5610323088076887080"
+        },
+        {
+          "file": "apps/restaurant-service/src/domain/restaurant/resolvers/restaurant.menu.resolver.ts",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "apps/restaurant-service/src/domain/restaurant/resolvers/restaurants.resolver.ts",
+          "hash": "10016206028369945624"
+        },
+        {
+          "file": "apps/restaurant-service/src/domain/restaurant/restaurant.module.ts",
+          "hash": "1706084536709212904"
+        },
+        {
+          "file": "apps/restaurant-service/src/domain/restaurant/restaurant.type.graphql",
+          "hash": "13360645147769578675"
+        },
+        {
+          "file": "apps/restaurant-service/src/domain/restaurant/services/restaurant.dish.service.ts",
+          "hash": "1590644580123853134"
+        },
+        {
+          "file": "apps/restaurant-service/src/domain/restaurant/services/restaurant.menu.service.ts",
+          "hash": "9604113056733877931"
+        },
+        {
+          "file": "apps/restaurant-service/src/domain/restaurant/services/restaurants.service.ts",
+          "hash": "4076207684849924429"
+        },
+        {
+          "file": "apps/restaurant-service/src/logger/logger.middleware.ts",
+          "hash": "4718963090654727106"
+        },
+        {
+          "file": "apps/restaurant-service/src/logger/logger.module.ts",
+          "hash": "15466574737607319651"
+        },
+        {
+          "file": "apps/restaurant-service/src/logger/logger.ts",
+          "hash": "1023051881361434160"
+        },
+        {
+          "file": "apps/restaurant-service/src/logger/loglevel.ts",
+          "hash": "14252412105708514145"
+        },
+        {
+          "file": "apps/restaurant-service/src/main.ts",
+          "hash": "16673029851046855713"
+        },
+        {
+          "file": "apps/restaurant-service/test/app.e2e-spec.ts",
+          "hash": "15142680097789702029"
+        },
+        {
+          "file": "apps/restaurant-service/test/jest-e2e.json",
+          "hash": "7570273541430074424"
+        },
+        {
+          "file": "apps/restaurant-service/tsconfig.build.json",
+          "hash": "276845246908739715"
+        },
+        {
+          "file": "apps/restaurant-service/tsconfig.json",
+          "hash": "5073866550243764688"
         }
       ],
       "cloudbite-merchants": [
@@ -1821,7 +1964,7 @@
         },
         {
           "file": "apps/cloudbite-merchants/components/navbar/restaurant-navbar.tsx",
-          "hash": "10146670765220907653"
+          "hash": "7992544104692903057"
         },
         {
           "file": "apps/cloudbite-merchants/components/store-switcher/store-switcher.tsx",
@@ -2032,6 +2175,10 @@
           "hash": "4410618641919237161"
         },
         {
+          "file": "apps/cloudbite-merchants/next-env.d.ts",
+          "hash": "5909181270615354023"
+        },
+        {
           "file": "apps/cloudbite-merchants/next.config.js",
           "hash": "11379511449010273365"
         },
@@ -2143,156 +2290,7 @@
           "file": "apps/cloudbite-merchants/types/Restaurent.type.ts",
           "hash": "10021516229723427783"
         }
-      ],
-      "gateway-service": [
-        {
-          "file": "apps/gateway-service/.env",
-          "hash": "8638411121487374997"
-        },
-        {
-          "file": "apps/gateway-service/.eslintrc.js",
-          "hash": "7461846271827386206"
-        },
-        {
-          "file": "apps/gateway-service/.prettierrc",
-          "hash": "4808572120966128913"
-        },
-        {
-          "file": "apps/gateway-service/Dockerfile",
-          "hash": "4594761044288015787"
-        },
-        {
-          "file": "apps/gateway-service/README.md",
-          "hash": "8286378509751487236"
-        },
-        {
-          "file": "apps/gateway-service/nest-cli.json",
-          "hash": "789240945379598733"
-        },
-        {
-          "file": "apps/gateway-service/package.json",
-          "hash": "9570528920511756323",
-          "deps": [
-            "npm:@apollo/gateway",
-            "npm:@nestjs/common",
-            "npm:@nestjs/platform-express",
-            "npm:jsonwebtoken",
-            "npm:reflect-metadata",
-            "npm:rxjs",
-            "npm:ts-morph",
-            "npm:@nestjs/cli",
-            "npm:@nestjs/schematics",
-            "npm:@nestjs/testing",
-            "npm:@types/jest",
-            "npm:@types/jsonwebtoken",
-            "npm:@types/node",
-            "npm:@types/supertest",
-            "npm:@typescript-eslint/eslint-plugin",
-            "npm:@typescript-eslint/parser",
-            "npm:eslint",
-            "npm:eslint-config-prettier",
-            "npm:eslint-plugin-prettier",
-            "npm:jest",
-            "npm:prettier",
-            "npm:supertest",
-            "npm:ts-jest",
-            "npm:ts-loader",
-            "npm:ts-node",
-            "npm:tsconfig-paths",
-            "npm:typescript"
-          ]
-        },
-        {
-          "file": "apps/gateway-service/src/app.constants.ts",
-          "hash": "9551429742564215431"
-        },
-        {
-          "file": "apps/gateway-service/src/app.module.ts",
-          "hash": "12660512918443910736"
-        },
-        {
-          "file": "apps/gateway-service/src/main.ts",
-          "hash": "15510665361905482510"
-        },
-        {
-          "file": "apps/gateway-service/test/app.e2e-spec.ts",
-          "hash": "15142680097789702029"
-        },
-        {
-          "file": "apps/gateway-service/test/jest-e2e.json",
-          "hash": "7570273541430074424"
-        },
-        {
-          "file": "apps/gateway-service/tsconfig.build.json",
-          "hash": "276845246908739715"
-        },
-        {
-          "file": "apps/gateway-service/tsconfig.json",
-          "hash": "5073866550243764688"
-        }
       ]
-    },
-    "nonProjectFiles": [
-      {
-        "file": ".eslintignore",
-        "hash": "4660892077869316414"
-      },
-      {
-        "file": ".eslintrc",
-        "hash": "6564936168741561034"
-      },
-      {
-        "file": ".prettierignore",
-        "hash": "8697388935860843068"
-      },
-      {
-        "file": ".prettierrc",
-        "hash": "1010213022241393387"
-      },
-      {
-        "file": "Restaurant_DB.session.sql",
-        "hash": "12349939144639514361"
-      },
-      {
-        "file": "command.txt",
-        "hash": "13665818340886444069"
-      },
-      {
-        "file": "commitlint.config.js",
-        "hash": "15089399635272455297"
-      },
-      {
-        "file": "docker-compose.override.yml",
-        "hash": "14642205290342263024"
-      },
-      {
-        "file": "docker-compose.yml",
-        "hash": "3244421341483603138"
-      },
-      {
-        "file": "docker-utils/postgres-database.sh",
-        "hash": "7549710103623121795"
-      },
-      {
-        "file": "jest.config.ts",
-        "hash": "3847556195209571597"
-      },
-      {
-        "file": "nx.json",
-        "hash": "9900384497774016533"
-      },
-      {
-        "file": "package.json",
-        "hash": "3032574788624168442"
-      },
-      {
-        "file": "pnpm-lock.yaml",
-        "hash": "5030129943077652334"
-      },
-      {
-        "file": "pnpm-workspace.yaml",
-        "hash": "13108396804214547201"
-      }
-    ]
+    }
   }
 }
